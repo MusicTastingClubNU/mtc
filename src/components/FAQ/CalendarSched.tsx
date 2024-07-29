@@ -8,7 +8,7 @@ import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
 import { DayCalendarSkeleton } from '@mui/x-date-pickers/DayCalendarSkeleton';
 import { Grid, styled } from '@mui/material';
 import Paper from '@mui/material/Paper';
-import data from '../WE/picksData2.json';
+import data from '../WE/picksData.json';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 const ItemMobile = styled(Paper)(({ theme }) => ({

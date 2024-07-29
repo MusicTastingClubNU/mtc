@@ -1,43 +1,40 @@
 [
-    {
-        "Reviews":
-            [
-                {
-                    "reviewId":0,
-                    "reviewTitle":"FQ24_WEEK1",
-                    "reviewContent":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quae modi eveniet, vel aliquid, numquam beatae vero assumenda, odit sapiente saepe. Incidunt nemo est eligendi aperiam corporis iste quam asperiores!"
-                },
-                {
-                    "reviewId":1,
-                    "reviewTitle":"FQ24_WEEK2",
-                    "reviewContent":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quae modi eveniet, vel aliquid, numquam beatae vero assumenda, odit sapiente saepe. Incidunt nemo est eligendi aperiam corporis iste quam asperiores!"
-                },
-                {
-                    "reviewId":2,
-                    "reviewTitle":"FQ24_WEEK3",
-                    "reviewContent":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quae modi eveniet, vel aliquid, numquam beatae vero assumenda, odit sapiente saepe. Incidunt nemo est eligendi aperiam corporis iste quam asperiores!"
-                }
-            ]
-    },
-    {
-        "Articles":
-            [
-                {
-                    "articleId":0,
-                    "articleTitle":"aTitle0",
-                    "articleContent":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quae modi eveniet, vel aliquid, numquam beatae vero assumenda, odit sapiente saepe. Incidunt nemo est eligendi aperiam corporis iste quam asperiores!"
-                },
-                {
-                    "articleId":1,
-                    "articleTitle":"aTitle1",
-                    "articleContent":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quae modi eveniet, vel aliquid, numquam beatae vero assumenda, odit sapiente saepe. Incidunt nemo est eligendi aperiam corporis iste quam asperiores!"
-                },
-                {
-                    "articleId":2,
-                    "articleTitle":"aTitle2",
-                    "articleContent":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quae modi eveniet, vel aliquid, numquam beatae vero assumenda, odit sapiente saepe. Incidunt nemo est eligendi aperiam corporis iste quam asperiores!"
-                }
-            ]
-    }
+  {
+    "Reviews": [
+      {
+        "reviewId": 0,
+        "reviewTitle": "FQ24_WEEK1",
+        "reviewContent": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quae modi eveniet, vel aliquid, numquam beatae vero assumenda, odit sapiente saepe. Incidunt nemo est eligendi aperiam corporis iste quam asperiores!"
+      },
+      {
+        "reviewId": 1,
+        "reviewTitle": "FQ24_WEEK2",
+        "reviewContent": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quae modi eveniet, vel aliquid, numquam beatae vero assumenda, odit sapiente saepe. Incidunt nemo est eligendi aperiam corporis iste quam asperiores!"
+      },
+      {
+        "reviewId": 2,
+        "reviewTitle": "FQ24_WEEK3",
+        "reviewContent": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quae modi eveniet, vel aliquid, numquam beatae vero assumenda, odit sapiente saepe. Incidunt nemo est eligendi aperiam corporis iste quam asperiores!"
+      }
+    ]
+  },
+  {
+    "Articles": [
+      {
+        "articleId": 0,
+        "articleTitle": "aTitle0",
+        "articleContent": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quae modi eveniet, vel aliquid, numquam beatae vero assumenda, odit sapiente saepe. Incidunt nemo est eligendi aperiam corporis iste quam asperiores!"
+      },
+      {
+        "articleId": 1,
+        "articleTitle": "aTitle1",
+        "articleContent": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quae modi eveniet, vel aliquid, numquam beatae vero assumenda, odit sapiente saepe. Incidunt nemo est eligendi aperiam corporis iste quam asperiores!"
+      },
+      {
+        "articleId": 2,
+        "articleTitle": "aTitle2",
+        "articleContent": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quae modi eveniet, vel aliquid, numquam beatae vero assumenda, odit sapiente saepe. Incidunt nemo est eligendi aperiam corporis iste quam asperiores!"
+      }
+    ]
+  }
 ]
-    

@@ -1,34 +1,6 @@
 {
-  "AotW": [
-    "Aotw2",
-    "Aotw9",
-    "Aotw3",
-    "Aotw4",
-    "Aotw5",
-    "Aotw7"
-  ],
-  "RUAotW": [
-    "Ruaotw1",
-    "Ruaotw2",
-    "Ruaotw3",
-    "Ruaotw4",
-    "Ruaotw5",
-    "Ruaotw6"
-  ],
-  "SotW": [
-    "Sotw1",
-    "Sotw2",
-    "Sotw3",
-    "Sotw4",
-    "Sotw5",
-    "Sotw6"
-  ],
-  "RUSotW": [
-    "Rusotw1",
-    "Rusotw2",
-    "Rusotw3",
-    "Rusotw4",
-    "Rusotw5",
-    "Rusotw6"
-  ]
+  "AotW": ["Aotw2", "Aotw9", "Aotw3", "Aotw4", "Aotw5", "Aotw7"],
+  "RUAotW": ["Ruaotw1", "Ruaotw2", "Ruaotw3", "Ruaotw4", "Ruaotw5", "Ruaotw6"],
+  "SotW": ["Sotw1", "Sotw2", "Sotw3", "Sotw4", "Sotw5", "Sotw6"],
+  "RUSotW": ["Rusotw1", "Rusotw2", "Rusotw3", "Rusotw4", "Rusotw5", "Rusotw6"]
 }

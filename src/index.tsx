@@ -17,28 +17,30 @@
 // // to log results (for example: reportWebVitals(console.log))
 // // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 // reportWebVitals();
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  gql,
+} from "@apollo/client";
 
 let client = new ApolloClient({
-  uri:'http://localhost:4000/',
-  cache: new InMemoryCache()
+  uri: "http://localhost:4000/",
+  cache: new InMemoryCache(),
 });
 
-
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 
 root.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
-
-    <App />
-
+      <App />
     </ApolloProvider>
   </React.StrictMode>
 );

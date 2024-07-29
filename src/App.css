@@ -1,14 +1,14 @@
-*{
-  font-family:'Roboto-Bold';
+* {
+  font-family: "Roboto-Bold";
 }
 
 .App {
   text-align: center;
 }
 
-.header{
+.header {
   font-size: 50px;
-  text-align:center;
+  text-align: center;
 }
 
 .App-logo {
@@ -16,7 +16,7 @@
   pointer-events: none;
 }
 
-.header2{
+.header2 {
   padding-bottom: 0px;
 }
 
@@ -43,64 +43,62 @@
   left: 0;
   width: 100%;
   height: 100%;
-  padding-top:92px;
+  padding-top: 92px;
   z-index: -1; /* Ensure it is behind SalesPitch and OurMission */
 }
 
-.check-out-picks{
-  font-size:30px;
+.check-out-picks {
+  font-size: 30px;
   text-align: center;
   /* margin-top:-10px; */
-  margin-top:50px;
+  margin-top: 50px;
 }
 
 @font-face {
-  font-family: 'Roboto-Bold';
-  src: url('./fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+  font-family: "Roboto-Bold";
+  src: url("./fonts/Roboto/Roboto-Bold.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Roboto-Regular';
-  src: url('./fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+  font-family: "Roboto-Regular";
+  src: url("./fonts/Roboto/Roboto-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
-.answers{
-  font-style:italic;
-  font-family:'Roboto-Regular';
-  margin-bottom:50px;
+.answers {
+  font-style: italic;
+  font-family: "Roboto-Regular";
+  margin-bottom: 50px;
 }
 
-.answers2{
-  font-style:italic;
-  font-family:'Roboto-Regular';
-  margin-bottom:5px;
+.answers2 {
+  font-style: italic;
+  font-family: "Roboto-Regular";
+  margin-bottom: 5px;
 }
 
-.faq{
-    margin: auto auto auto auto;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 20px;
-    background-color: #fff;
-    max-width: 800px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.faq {
+  margin: auto auto auto auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fff;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.faq2{
+.faq2 {
   margin: auto auto auto auto;
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 20px;
   background-color: #fff;
   max-width: 85%;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-
 
 /* .nav-bar-formatting-left{
   display:flex;
@@ -116,15 +114,14 @@
 
 .nav-item {
   padding-left: 5px;
-  padding-right:5px;
-  padding-top:0px;
-  padding-bottom:0px;
+  padding-right: 5px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
-.nav-bar-cont{
-  display:flex;
+.nav-bar-cont {
+  display: flex;
   justify-content: center;
   align-items: center;
-  padding-left:0px;
+  padding-left: 0px;
 }
-
