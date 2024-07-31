@@ -4,12 +4,16 @@ import MyClubSchedule from "./ClubSchedule";
 import Socials from "./socials";
 import { useMediaQuery } from "@mui/material";
 import DateCalendarServerRequest from "./CalendarSched";
+import TitleAndDirectory from "../HOME/TitleAndDirectory";
 
-export default function FAQComponent() {
+interface Props {}
+
+const FAQComponent = (props: Props) => {
   const isMobile = useMediaQuery("(max-width: 768px)");
 
   return (
     <React.Fragment>
+      <TitleAndDirectory />
       {isMobile ? <br></br> : null}
       <div className={isMobile ? "faq2" : "faq"}>
         <h2 style={{ fontSize: 45, textAlign: "center", marginBottom: 15 }}>
@@ -110,3 +114,6 @@ export default function FAQComponent() {
     </React.Fragment>
   );
 }
+
+
+export default FAQComponent;

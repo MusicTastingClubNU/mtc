@@ -5,8 +5,9 @@ import ConditionalPhoneSignUp from './ConditionalPhoneSignUp';
 import { useMediaQuery } from '@mui/material';
 import './mission.css';
 import img from "../../imgs/logo.png";
+interface Props {}
 
-function SalesPitch(){
+const SalesPitch = (props: Props) => {
     const isMobile =  useMediaQuery('(max-width: 768px)');
  
     return (

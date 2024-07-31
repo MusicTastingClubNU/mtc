@@ -2,6 +2,9 @@ import React from "react";
 import "../SP/mission.css";
 import myimg from "../../imgs/logo.png";
 import { useMediaQuery } from "@mui/material";
+import TitleAndDirectory from "../HOME/TitleAndDirectory";
+
+interface Props {}
 
 const execBoardList: Array<[string, string, string, any]> = [
   [
@@ -54,10 +57,11 @@ const execBoardList: Array<[string, string, string, any]> = [
   ],
 ];
 
-export default function ExecBoard() {
+const ExecBoard = (props: Props) => {
   const isMobile = useMediaQuery("(max-width: 768px)");
   return (
     <React.Fragment>
+      <TitleAndDirectory />
       {isMobile ? <br></br> : null}
       <div className="ebc">
         <h2 className="exec-board-title">MEET THE EXEC BOARD!</h2>
@@ -78,4 +82,5 @@ export default function ExecBoard() {
       </div>
     </React.Fragment>
   );
-}
+};
+export default ExecBoard;

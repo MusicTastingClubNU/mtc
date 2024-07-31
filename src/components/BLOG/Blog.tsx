@@ -11,6 +11,9 @@ import "./blog.css";
 import { useMediaQuery } from "@mui/material";
 import BlackButton from "../../BlackButton1";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import TitleAndDirectory from "../HOME/TitleAndDirectory";
+
+interface Props {}
 
 const StyledCardContent = styled(CardContent)({
   display: "-webkit-box",
@@ -50,7 +53,7 @@ interface ReviewsData {
 interface ArticlesData {
   Articles: Article[];
 }
-const Blog: React.FC = () => {
+const Blog: React.FC = (props: Props) => {
   const isMobile = useMediaQuery("(max-width: 768px)");
 
   const [reviews, setReviews] = useState<Review[]>([]);
@@ -87,6 +90,7 @@ const Blog: React.FC = () => {
 
   return (
     <React.Fragment>
+      <TitleAndDirectory />
       {selectedBlog == null ? (
         <React.Fragment>
           {isMobile ? <br></br> : null}
