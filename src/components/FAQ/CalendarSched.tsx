@@ -1,64 +1,60 @@
-import * as React from 'react';
-import dayjs, { Dayjs } from 'dayjs';
-import Badge from '@mui/material/Badge';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { PickersDay, PickersDayProps } from '@mui/x-date-pickers/PickersDay';
-import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
-import { DayCalendarSkeleton } from '@mui/x-date-pickers/DayCalendarSkeleton';
-import { Grid, styled } from '@mui/material';
-import Paper from '@mui/material/Paper';
-import data from '../WE/picksData.json';
-import useMediaQuery from '@mui/material/useMediaQuery';
+import * as React from "react";
+import dayjs, { Dayjs } from "dayjs";
+import Badge from "@mui/material/Badge";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { PickersDay, PickersDayProps } from "@mui/x-date-pickers/PickersDay";
+import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
+import { DayCalendarSkeleton } from "@mui/x-date-pickers/DayCalendarSkeleton";
+import { Grid, styled } from "@mui/material";
+import Paper from "@mui/material/Paper";
+import data from "../WE/picksData.json";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const ItemMobile = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
   paddingLeft: theme.spacing(2),
   paddingRight: theme.spacing(2),
   paddingBottom: theme.spacing(2),
   paddingTop: theme.spacing(2),
-  textAlign: 'center',
+  textAlign: "center",
   color: theme.palette.text.secondary,
-  flex:'wrap',
+  flex: "wrap",
 }));
 
 const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
   paddingLeft: theme.spacing(2),
   paddingRight: theme.spacing(2),
   paddingBottom: theme.spacing(10),
   paddingTop: theme.spacing(10),
-  textAlign: 'center',
+  textAlign: "center",
   color: theme.palette.text.secondary,
-  flex:'wrap',
+  flex: "wrap",
 }));
 
-
 const Item2 = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
   padding: theme.spacing(2),
-  margin:0,
-  textAlign: 'center',
+  margin: 0,
+  textAlign: "center",
   color: theme.palette.text.secondary,
   // flex:'wrap',
 }));
 
-
-
 const calendarStylesFull = {
-  transform: 'scale(1.5)',
+  transform: "scale(1.5)",
 };
 
 const calendarStylesMobile2 = {
-  transform: 'scale(1)', // Adjust the scale as needed
+  transform: "scale(1)", // Adjust the scale as needed
   // transformOrigin: 'top left',
-  alignItems:"center",
+  alignItems: "center",
   // marginLeft:7,
-  width:"100%"
-  
+  width: "100%",
 };
 
 function getRandomNumber(min: number, max: number) {
@@ -69,32 +65,47 @@ function fakeFetch(date: Dayjs, { signal }: { signal: AbortSignal }) {
   return new Promise<{ daysToHighlight: number[] }>((resolve, reject) => {
     const timeout = setTimeout(() => {
       const daysInMonth = date.daysInMonth();
-      const daysToHighlight = [1, 2, 3].map(() => getRandomNumber(1, daysInMonth));
+      const daysToHighlight = [1, 2, 3].map(() =>
+        getRandomNumber(1, daysInMonth)
+      );
 
       resolve({ daysToHighlight });
     }, 500);
 
     signal.onabort = () => {
       clearTimeout(timeout);
-      reject(new DOMException('aborted', 'AbortError'));
+      reject(new DOMException("aborted", "AbortError"));
     };
   });
 }
 
-const initialValue = dayjs('2024-10-01');
+const initialValue = dayjs("2024-10-01");
 
-function ServerDay(props: PickersDayProps<Dayjs> & { FQ24Meetings?: Dayjs[], emoji?: string }) {
-  const { FQ24Meetings = [], day, outsideCurrentMonth,emoji, ...other } = props;
+function ServerDay(
+  props: PickersDayProps<Dayjs> & { FQ24Meetings?: Dayjs[]; emoji?: string }
+) {
+  const {
+    FQ24Meetings = [],
+    day,
+    outsideCurrentMonth,
+    emoji,
+    ...other
+  } = props;
 
   const isSelected =
-    !props.outsideCurrentMonth && FQ24Meetings.some(meetingDay => meetingDay.isSame(day, 'day'));
+    !props.outsideCurrentMonth &&
+    FQ24Meetings.some((meetingDay) => meetingDay.isSame(day, "day"));
   return (
     <Badge
       key={props.day.toString()}
       overlap="circular"
       badgeContent={isSelected ? emoji : undefined}
     >
-      <PickersDay {...other} outsideCurrentMonth={outsideCurrentMonth} day={day} />
+      <PickersDay
+        {...other}
+        outsideCurrentMonth={outsideCurrentMonth}
+        day={day}
+      />
     </Badge>
   );
 }
@@ -103,9 +114,11 @@ export default function DateCalendarServerRequest() {
   const requestAbortController = React.useRef<AbortController | null>(null);
   const [isLoading, setIsLoading] = React.useState(false);
   const [highlightedDays, setHighlightedDays] = React.useState([1, 2, 15]);
-  const [selectedDate, setSelectedDate] = React.useState<Dayjs | null>(initialValue);
+  const [selectedDate, setSelectedDate] = React.useState<Dayjs | null>(
+    initialValue
+  );
   const currQ = data[2];
-  const isMobile = useMediaQuery('(max-width: 768px)');
+  const isMobile = useMediaQuery("(max-width: 768px)");
 
   const fetchHighlightedDays = (date: Dayjs) => {
     const controller = new AbortController();
@@ -117,7 +130,7 @@ export default function DateCalendarServerRequest() {
         setIsLoading(false);
       })
       .catch((error) => {
-        if (error.name !== 'AbortError') {
+        if (error.name !== "AbortError") {
           throw error;
         }
       });
@@ -144,131 +157,170 @@ export default function DateCalendarServerRequest() {
     setSelectedDate(date);
   };
 
-
-
   // QUARTER SIGNIFIERS
-  const startOfFQ24: Dayjs = dayjs('2024-09-21');
-  const endOfFQ24:Dayjs = dayjs('2024-12-14');
-  const startOfWQ25: Dayjs = dayjs('2025-01-06');
-  const endOfWQ25:Dayjs = dayjs('2025-03-22');
-  const startOfSQ25:Dayjs = dayjs('2025-04-01');
-  const endOfSQ25: Dayjs = dayjs('2025-06-13');
+  const startOfFQ24: Dayjs = dayjs("2024-09-21");
+  const endOfFQ24: Dayjs = dayjs("2024-12-14");
+  const startOfWQ25: Dayjs = dayjs("2025-01-06");
+  const endOfWQ25: Dayjs = dayjs("2025-03-22");
+  const startOfSQ25: Dayjs = dayjs("2025-04-01");
+  const endOfSQ25: Dayjs = dayjs("2025-06-13");
 
-
-  function whichQuarterIndex(selectedDate: Dayjs | null){
-    
+  function whichQuarterIndex(selectedDate: Dayjs | null) {
     // TODO QuarterIndex for testing purposes
     // if (selectedDate == null){ return 0; }
-    if(selectedDate!.isBefore(startOfFQ24)){ return 2; }
+    if (selectedDate!.isBefore(startOfFQ24)) {
+      return 2;
+    }
 
     // Good for 2024-2025 school year
-    if (selectedDate == null){ return 0; }
-    if(selectedDate!.isAfter(startOfFQ24) && selectedDate!.isBefore(endOfFQ24)){ return 2; }
-    if(selectedDate!.isAfter(startOfWQ25) && selectedDate!.isBefore(endOfWQ25)){ return 3; }
-    if(selectedDate!.isAfter(startOfSQ25) && selectedDate!.isBefore(endOfSQ25)){ return 4; }
+    if (selectedDate == null) {
+      return 0;
+    }
+    if (
+      selectedDate!.isAfter(startOfFQ24) &&
+      selectedDate!.isBefore(endOfFQ24)
+    ) {
+      return 2;
+    }
+    if (
+      selectedDate!.isAfter(startOfWQ25) &&
+      selectedDate!.isBefore(endOfWQ25)
+    ) {
+      return 3;
+    }
+    if (
+      selectedDate!.isAfter(startOfSQ25) &&
+      selectedDate!.isBefore(endOfSQ25)
+    ) {
+      return 4;
+    }
     return 0;
   }
 
-  const startOfFQ24W1: Dayjs = dayjs('2024-09-23');
-  const FQ24Meetings: Dayjs[] = [dayjs('2024-10-01'),dayjs('2024-10-08'),dayjs('2024-10-15'),dayjs('2024-10-22'),
-                                 dayjs('2024-10-29'),dayjs('2024-11-05'),dayjs('2024-11-12'),dayjs('2024-11-19')];
+  const startOfFQ24W1: Dayjs = dayjs("2024-09-23");
+  const FQ24Meetings: Dayjs[] = [
+    dayjs("2024-10-01"),
+    dayjs("2024-10-08"),
+    dayjs("2024-10-15"),
+    dayjs("2024-10-22"),
+    dayjs("2024-10-29"),
+    dayjs("2024-11-05"),
+    dayjs("2024-11-12"),
+    dayjs("2024-11-19"),
+  ];
 
- const whichWeekIndex = (selectedDate: Dayjs): number => {
-  if (!selectedDate.isValid()) return -1;
+  const whichWeekIndex = (selectedDate: Dayjs): number => {
+    if (!selectedDate.isValid()) return -1;
 
-  for (let i = 0; i < FQ24Meetings.length; i++) {
-    if (selectedDate.isSame(FQ24Meetings[i])) { return i; }
-  }
-  return -1;
+    for (let i = 0; i < FQ24Meetings.length; i++) {
+      if (selectedDate.isSame(FQ24Meetings[i])) {
+        return i;
+      }
+    }
+    return -1;
   };
 
   return (
+    <>
+      <Grid container spacing={2}>
+        <Grid item xs={12} md={8}>
+          <div>
+            {" "}
+            {isMobile ? (
+              <ItemMobile>
+                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                  <DateCalendar
+                    defaultValue={initialValue}
+                    loading={isLoading}
+                    onMonthChange={handleMonthChange}
+                    onChange={handleDateChange}
+                    renderLoading={() => <DayCalendarSkeleton />}
+                    slots={{
+                      day: (dayProps) => (
+                        <ServerDay
+                          {...dayProps}
+                          FQ24Meetings={FQ24Meetings}
+                          emoji={
+                            selectedDate
+                              ? data[whichQuarterIndex(selectedDate)]?.weeks[
+                                  whichWeekIndex(dayProps.day)
+                                ]?.weekActivity.weekActivityEmoji ?? ""
+                              : ""
+                          }
+                        />
+                      ),
+                    }}
+                    sx={isMobile ? calendarStylesMobile2 : calendarStylesFull}
+                  />
+                </LocalizationProvider>
+              </ItemMobile>
+            ) : (
+              <Item>
+                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                  <DateCalendar
+                    defaultValue={initialValue}
+                    loading={isLoading}
+                    onMonthChange={handleMonthChange}
+                    onChange={handleDateChange}
+                    renderLoading={() => <DayCalendarSkeleton />}
+                    slots={{
+                      day: (dayProps) => (
+                        <ServerDay
+                          {...dayProps}
+                          FQ24Meetings={FQ24Meetings}
+                          emoji={
+                            selectedDate
+                              ? data[whichQuarterIndex(selectedDate)]?.weeks[
+                                  whichWeekIndex(dayProps.day)
+                                ]?.weekActivity.weekActivityEmoji ?? ""
+                              : ""
+                          }
+                        />
+                      ),
+                    }}
+                    sx={isMobile ? calendarStylesMobile2 : calendarStylesFull}
+                  />
+                </LocalizationProvider>
+              </Item>
+            )}
+          </div>
+        </Grid>
+        <Grid item xs={12} md={4}>
+          <Item2>
+            <div style={{ width: "100%" }}>
+              {selectedDate && (
+                <>
+                  <h1 style={{ color: "black", paddingBottom: 10 }}>
+                    {data[whichQuarterIndex(selectedDate)].weeks[
+                      whichWeekIndex(selectedDate)
+                    ]?.weekActivity.weekActivityTitle ?? "No Activity Found"}
+                  </h1>
+                  <h2 style={{ paddingBottom: 20 }}>
+                    {data[whichQuarterIndex(selectedDate)].weeks[
+                      whichWeekIndex(selectedDate)
+                    ]?.weekActivity.weekActivityDetails ?? ""}
+                  </h2>
+                  <h4 style={{ paddingBottom: 40 }}>
+                    Hosted By{" "}
+                    {data[whichQuarterIndex(selectedDate)].weeks[
+                      whichWeekIndex(selectedDate)
+                    ]?.weekActivity.weekActivityHost ?? ""}
+                  </h4>
+                </>
+              )}
 
-       <>
-          <Grid container spacing={2}>
-          <Grid item xs={12} md={8}>
+              {/* <div>{selectedDate && <h2>{selectedDate!.format('YYYY-MM-DD')}</h2>}</div> */}
+            </div>
 
-           <div>  {isMobile ? 
-           (<ItemMobile>
-              <LocalizationProvider dateAdapter={AdapterDayjs}>
-                            <DateCalendar
-                                defaultValue={initialValue}
-                                loading={isLoading}
-                                onMonthChange={handleMonthChange}
-                                onChange={handleDateChange}
-                                renderLoading={() => <DayCalendarSkeleton />}
-                                slots={{
-                                  day: (dayProps) => (
-                                    <ServerDay
-                                      {...dayProps}
-                                      FQ24Meetings={FQ24Meetings}
-                                      emoji={
-                                        selectedDate
-                                          ? data[whichQuarterIndex(selectedDate)]?.weeks[whichWeekIndex(dayProps.day)]
-                                            ?.weekActivity.weekActivityEmoji ?? ''
-                                          : ''
-                                      }
-                                    />
-                                  ),
-                                }}
-                                sx={isMobile ? calendarStylesMobile2: calendarStylesFull}
-                            />
-                        </LocalizationProvider>
-                        </ItemMobile>) : (<Item>
-              <LocalizationProvider dateAdapter={AdapterDayjs}>
-                            <DateCalendar
-                                defaultValue={initialValue}
-                                loading={isLoading}
-                                onMonthChange={handleMonthChange}
-                                onChange={handleDateChange}
-                                renderLoading={() => <DayCalendarSkeleton />}
-                                slots={{
-                                  day: (dayProps) => (
-                                    <ServerDay
-                                      {...dayProps}
-                                      FQ24Meetings={FQ24Meetings}
-                                      emoji={
-                                        selectedDate
-                                          ? data[whichQuarterIndex(selectedDate)]?.weeks[whichWeekIndex(dayProps.day)]
-                                            ?.weekActivity.weekActivityEmoji ?? ''
-                                          : ''
-                                      }
-                                    />
-                                  ),
-                                }}
-                                sx={isMobile ? calendarStylesMobile2: calendarStylesFull}
-                            />
-                        </LocalizationProvider>
-                        </Item>)}
-
-           </div>
-           
-          </Grid>
-  <Grid item xs={12} md={4}>
-    <Item2>
-      <div style={{width:"100%"}}>
-        {selectedDate && (
-           <><h1 style={{color:"black", paddingBottom:10}}>{ data[whichQuarterIndex(selectedDate)].weeks[whichWeekIndex(selectedDate)]?.weekActivity.weekActivityTitle ?? 'No Activity Found'}</h1>
-           <h2 style={{paddingBottom:20}}>{ data[whichQuarterIndex(selectedDate)].weeks[whichWeekIndex(selectedDate)]?.weekActivity.weekActivityDetails ?? ''}</h2>
-           <h4 style={{paddingBottom:40}}>Hosted By { data[whichQuarterIndex(selectedDate)].weeks[whichWeekIndex(selectedDate)]?.weekActivity.weekActivityHost ?? ''}</h4>
-          
-           </>)}
-               
-                
-                {/* <div>{selectedDate && <h2>{selectedDate!.format('YYYY-MM-DD')}</h2>}</div> */}
-                
-                
-                
-                </div>
-
-                <Item2><b>KEY:</b> Trivia=🧠 | History=📻 | Beef Recap=🥩 | Music Edu=🎙️</Item2>
-                </Item2>
-            </Grid>
-            </Grid>
-                <Grid item xs={8}>
-                <br />
-        </Grid>  
-
-  </>
+            <Item2>
+              <b>KEY:</b> Trivia=🧠 | History=📻 | Beef Recap=🥩 | Music Edu=🎙️
+            </Item2>
+          </Item2>
+        </Grid>
+      </Grid>
+      <Grid item xs={8}>
+        <br />
+      </Grid>
+    </>
   );
 }

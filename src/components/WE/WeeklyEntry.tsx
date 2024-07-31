@@ -13,6 +13,8 @@ import {
   TableRow,
   Paper,
   useMediaQuery,
+  TextField,
+  InputAdornment,
 } from "@mui/material";
 import { SelectChangeEvent } from "@mui/material/Select";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
@@ -24,6 +26,7 @@ import PastGenres from "./PastGenres";
 import PrizeWheel from "./NameWheel";
 import ThisWeeksPicks from "../SP/ThisWeeksPicks";
 import NameWheelData from "./NameWheelData.json";
+import { Search } from "@mui/icons-material";
 
 const colors: string[] = [
   "rgba(255, 99, 132, 0.5)",
@@ -171,10 +174,37 @@ export default function WeeklyEntry() {
       </React.Fragment>
     ));
   };
+  const [searchQuery, setSearchQuery] = useState('');
 
+  const handleSearchChange = (event:any) => {
+    setSearchQuery(event.target.value);
+  };
   return (
     <React.Fragment>
-      {isMobile ? <br></br> : null}
+      {isMobile ? <br /> : null}
+      <div style={{ marginBottom: 40 }}>
+        <ThisWeeksPicks></ThisWeeksPicks>
+      </div>
+      <div className={isMobile ? "cont2" : "cont"}>
+        <h3 style={{ fontSize: 35, textAlign: "center" }}>
+          Have We Listened To It Yet?
+        </h3>
+        <TextField
+          variant="outlined"
+          placeholder="Search..."
+          value={searchQuery}
+          onChange={handleSearchChange}
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <Search />
+              </InputAdornment>
+            ),
+          }}
+          fullWidth
+        />
+      </div>
+      <div style={{ marginBottom: 40 }}></div>
       <div className={isMobile ? "cont2" : "cont"}>
         <h3 style={{ fontSize: 35, textAlign: "center", marginBottom: 15 }}>
           PREVIOUS PICKS
@@ -208,10 +238,8 @@ export default function WeeklyEntry() {
           ))}
         </Box>
       </div>
-      <div style={{ marginTop: 40 }}>
-        <ThisWeeksPicks></ThisWeeksPicks>
-      </div>
-      <div style={{ marginTop: 50, padding: 0 }}>
+
+      <div style={{ marginTop: 40, marginBottom: 40, padding: 0 }}>
         {isMobile ? null : (
           <PrizeWheel
             options={wheelOptions}
@@ -221,8 +249,6 @@ export default function WeeklyEntry() {
           />
         )}
       </div>
-      <br></br>
-      <br></br>
     </React.Fragment>
   );
 }
