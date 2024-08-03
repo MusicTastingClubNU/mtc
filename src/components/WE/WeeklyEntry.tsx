@@ -29,7 +29,7 @@ import NameWheelData from "./NameWheelData.json";
 import { Search } from "@mui/icons-material";
 import TitleAndDirectory from "../HOME/TitleAndDirectory";
 
-interface Props {};
+interface Props {}
 
 const colors: string[] = [
   "rgba(255, 99, 132, 0.5)",
@@ -177,9 +177,9 @@ export default function WeeklyEntry() {
       </React.Fragment>
     ));
   };
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
 
-  const handleSearchChange = (event:any) => {
+  const handleSearchChange = (event: any) => {
     setSearchQuery(event.target.value);
   };
   return (

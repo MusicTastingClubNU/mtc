@@ -8,7 +8,7 @@ import BlackButton from "../../BlackButton1";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import MobileComponent from "../../MobileComponent";
 import Blog from "../BLOG/Blog";
-import "../SP/mission.css"
+import "../SP/mission.css";
 import { Link } from "react-router-dom";
 
 interface Props {}
@@ -24,9 +24,7 @@ const Home = (props: Props) => {
 
   return (
     <>
-      <div>
-        {isMobile ? <MobileComponent handleChange={handleChange2} /> : null}
-      </div>
+      <div>{isMobile ? <MobileComponent /> : null}</div>
       <div className="all" style={{ position: "relative" }}>
         <header className="header">MUSIC TASTING CLUB</header>
         <h5 className="header2">
@@ -36,7 +34,7 @@ const Home = (props: Props) => {
         {isMobile ? null : (
           <div className="nav-bar-cont">
             <Link to={`/`}>
-              <p className="nav-item" onClick={() => handleChange2(0)}>
+              <p className="nav-item">
                 <BlackButton buttonText="Home" />
               </p>
             </Link>
@@ -46,21 +44,21 @@ const Home = (props: Props) => {
                 <BlackButton buttonText="Picks" />
               </p>
             </Link>
-        
+
             <Link to={`/faq`}>
-              <p className="nav-item" onClick={() => handleChange2(2)}>
+              <p className="nav-item">
                 <BlackButton buttonText="FAQ" />
               </p>
             </Link>
 
             <Link to={`/about`}>
-              <p className="nav-item" onClick={() => handleChange2(3)}>
+              <p className="nav-item">
                 <BlackButton buttonText="About" />
               </p>
             </Link>
 
             <Link to={`/blog`}>
-              <p className="nav-item" onClick={() => handleChange2(4)}>
+              <p className="nav-item">
                 <BlackButton buttonText="Blog" />
               </p>
             </Link>

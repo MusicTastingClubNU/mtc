@@ -4,12 +4,13 @@ import MenuItem from "@mui/material/MenuItem";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import BlackButton from "./BlackButton1";
+import { Link } from "react-router-dom";
 
 interface MobileMenuProps {
   handleChange: (newValue: number) => void;
 }
 
-const MobileMenu: React.FC<MobileMenuProps> = ({ handleChange }) => {
+const MobileMenu = () => {
   // Declare state variable for the anchor element
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
@@ -39,45 +40,30 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ handleChange }) => {
       {/* Menu component anchored to the anchorEl */}
       <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleClose}>
         {/* Menu items with onClick handlers to handle navigation */}
-        <MenuItem
-          onClick={() => {
-            handleChange(0);
-            handleClose();
-          }}
-        >
-          <BlackButton buttonText="Home" />
+        <MenuItem>
+          <Link to={"/"}>
+            <BlackButton buttonText="Home" />
+          </Link>
         </MenuItem>
-        <MenuItem
-          onClick={() => {
-            handleChange(1);
-            handleClose();
-          }}
-        >
-          <BlackButton buttonText="Picks" />
+        <MenuItem>
+          <Link to={"/picks"}>
+            <BlackButton buttonText="Picks" />
+          </Link>
         </MenuItem>
-        <MenuItem
-          onClick={() => {
-            handleChange(2);
-            handleClose();
-          }}
-        >
-          <BlackButton buttonText="FAQ" />
+        <MenuItem>
+          <Link to={"/faq"}>
+            <BlackButton buttonText="FAQ" />
+          </Link>
         </MenuItem>
-        <MenuItem
-          onClick={() => {
-            handleChange(3);
-            handleClose();
-          }}
-        >
-          <BlackButton buttonText="About" />
+        <MenuItem>
+          <Link to={"/about"}>
+            <BlackButton buttonText="About" />
+          </Link>
         </MenuItem>
-        <MenuItem
-          onClick={() => {
-            handleChange(4);
-            handleClose();
-          }}
-        >
-          <BlackButton buttonText="Blog" />
+        <MenuItem>
+          <Link to={"/blog"}>
+            <BlackButton buttonText="Blog" />
+          </Link>
         </MenuItem>
       </Menu>
     </div>

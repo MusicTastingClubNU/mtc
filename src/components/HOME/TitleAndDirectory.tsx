@@ -23,12 +23,10 @@ const TitleAndDirectory = () => {
 
   return (
     <>
-      <div>
-        {isMobile ? <MobileComponent handleChange={handleChange2} /> : null}
-      </div>
+      <div>{isMobile ? <MobileComponent /> : null}</div>
       <div className="all" style={{ position: "relative" }}>
         <header className="header">MUSIC TASTING CLUB</header>
-        
+
         <h5 className="header2">
           NORTHWESTERN'S PREMEIR MUSIC DISCOURSE GROUP
         </h5>
