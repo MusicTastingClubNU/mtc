@@ -125,3 +125,14 @@
   align-items: center;
   padding-left: 0px;
 }
+
+.dev-album-or-song-art-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dev-album-or-song-art-item {
+  width: 500;
+  height: 500;
+}

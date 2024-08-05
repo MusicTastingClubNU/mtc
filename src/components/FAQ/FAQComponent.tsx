@@ -14,7 +14,7 @@ const FAQComponent = (props: Props) => {
   return (
     <React.Fragment>
       <TitleAndDirectory />
-      {isMobile ? <br></br> : null}
+      {isMobile ? <br /> : null}
       <div className={isMobile ? "faq2" : "faq"}>
         <h2 style={{ fontSize: 45, textAlign: "center", marginBottom: 15 }}>
           FAQ
@@ -113,7 +113,6 @@ const FAQComponent = (props: Props) => {
       </div>
     </React.Fragment>
   );
-}
-
+};
 
 export default FAQComponent;

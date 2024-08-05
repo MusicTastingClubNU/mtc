@@ -189,7 +189,9 @@ export default function WeeklyEntry() {
       <div style={{ marginBottom: 40 }}>
         <ThisWeeksPicks></ThisWeeksPicks>
       </div>
-      <div className={isMobile ? "cont2" : "cont"}>
+
+      {/* COMMENTING OUT TEMPORARILY */}
+      {/* <div className={isMobile ? "cont2" : "cont"}>
         <h3 style={{ fontSize: 35, textAlign: "center" }}>
           Have We Listened To It Yet?
         </h3>
@@ -207,9 +209,16 @@ export default function WeeklyEntry() {
           }}
           fullWidth
         />
+      </div> */}
+      <div
+        className={isMobile ? "cont2" : "cont"}
+        style={{ textAlign: "center" }}
+      >
+        <h1>(UNDER CONSTRUCTION)</h1>
+        <h1>(PLACEHOLDER FOR PICK SEARCHER)</h1>
       </div>
-      <div style={{ marginBottom: 40 }}></div>
-      <div className={isMobile ? "cont2" : "cont"}>
+
+      <div className={isMobile ? "cont2" : "cont"} style={{ marginTop: 40 }}>
         <h3 style={{ fontSize: 35, textAlign: "center", marginBottom: 15 }}>
           PREVIOUS PICKS
         </h3>
