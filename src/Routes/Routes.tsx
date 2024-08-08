@@ -5,7 +5,7 @@ import WeeklyEntry from "../components/WE/WeeklyEntry";
 import FAQComponent from "../components/FAQ/FAQComponent";
 import ExecBoard from "../components/ABOUT/ExecBoard";
 import Blog from "../components/BLOG/Blog";
-import { DevPage } from "../components/DEV/Dev";
+import DevPage from "../components/DEV/Dev";
 
 export const router = createBrowserRouter([
   {
