@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import TitleAndDirectory from "../HOME/TitleAndDirectory";
 import {
   Box,
   Button,
+  IconButton,
   InputAdornment,
   TextField,
   useMediaQuery,
@@ -14,23 +15,91 @@ import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { Search } from "@mui/icons-material";
 import BlackButton from "../../BlackButton1";
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
+
+type CacheType = {
+  [key: string]: string[];
+};
 
 export const DevPage = () => {
   const isMobile = useMediaQuery("(max-width: 768px)");
 
-  const [devPick, setDevPick] = React.useState("");
-  const handleChange = (event: SelectChangeEvent) => {
-    setDevPick(event.target.value as string);
-  };
-
-  const [devTitle, setDevTitle] = React.useState("");
-  const handleSearchChange = (event: any) => {
-    setDevTitle(event.target.value);
-  };
-
   const [searchButtonPressed, setSearchButtonPressed] = useState(false);
   const handleSearchButtonPressed = () => {
-    setSearchButtonPressed(!searchButtonPressed);
+    if (devTitle !== "") fetchAlbumImageUrls();
+  };
+
+  const [accessToken, setAccessToken] = useState("");
+  const [mylist, setMylist] = useState<string[]>([]);
+  const [devTitle, setDevTitle] = useState("");
+
+  const [cache, setCache] = useState<CacheType>({});
+
+  useEffect(() => {
+    const fetchAccessToken = async () => {
+      const authParameters = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: `grant_type=client_credentials&client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`,
+      };
+      try {
+        const res = await fetch(
+          "https://accounts.spotify.com/api/token",
+          authParameters
+        );
+        const data = await res.json();
+        setAccessToken(data.access_token);
+      } catch (error) {
+        console.error("Error fetching access token:", error);
+      }
+    };
+    fetchAccessToken();
+  }, []);
+
+  const handleCopyToClipboard = (url: string) => {
+    navigator.clipboard.writeText(url).catch((err) => {
+      console.error("Failed to copy text: ", err);
+    });
+  };
+
+  const fetchAlbumImageUrls = useCallback(async () => {
+    const cacheKey = `AlbumOrSong-${devTitle}`;
+    if (cache[cacheKey]) {
+      setMylist(cache[cacheKey]);
+      return;
+    }
+    const searchParameters = {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${accessToken}`,
+      },
+    };
+
+    try {
+      const response = await fetch(
+        `https://api.spotify.com/v1/search?q=artist:${devTitle}&type=album`,
+        searchParameters
+      );
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      const data = await response.json();
+      console.log(data);
+      const newMylist = data.albums.items.map(
+        (album: any) => album.images[0].url
+      );
+      setMylist(newMylist);
+      setCache((prevCache) => ({ ...prevCache, [cacheKey]: newMylist }));
+    } catch (error) {
+      console.error("Error fetching albums:", error);
+    }
+  }, [accessToken, devTitle, cache]);
+
+  const handleSearchChange = (event: any) => {
+    setDevTitle(event.target.value);
   };
 
   return (
@@ -38,6 +107,9 @@ export const DevPage = () => {
       <TitleAndDirectory />
       {isMobile ? <br /> : null}
       <div className={isMobile ? "faq2" : "faq"} style={{ marginBottom: 40 }}>
+        <h2 style={{ textAlign: "center", marginBottom: 20 }}>
+          AlbumOrSongArt (Courtesy of the Spotify API)
+        </h2>
         <div
           style={{
             alignItems: "center",
@@ -45,21 +117,6 @@ export const DevPage = () => {
             justifyContent: "center",
           }}
         >
-          <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
-            <InputLabel id="demo-select-small-label">Age</InputLabel>
-            <Select
-              labelId="demo-select-small-label"
-              id="demo-select-small"
-              value={devPick}
-              label="Pick"
-              onChange={handleChange}
-            >
-              <MenuItem value={""}></MenuItem>
-              <MenuItem value={"ALBUM"}>Album</MenuItem>
-              <MenuItem value={"SONG"}>Song</MenuItem>
-            </Select>
-          </FormControl>
-
           <TextField
             variant="outlined"
             placeholder="Search..."
@@ -72,7 +129,7 @@ export const DevPage = () => {
                 </InputAdornment>
               ),
             }}
-            sx={{ width: 250, m: 1 }}
+            sx={{ width: 300, m: 1 }}
             size="small"
           />
 
@@ -86,17 +143,46 @@ export const DevPage = () => {
           </div>
         </div>
       </div>
-      {searchButtonPressed && devPick != "" ? (
-        <div
-          className={isMobile ? "faq2" : "faq"}
-          style={{ textAlign: "center" }}
-        >
-          <h4>{devPick} ART (Courtesy of the Spotify API)</h4>
-          <div className="dev-album-or-song-art-cont"></div>
-        </div>
+      {mylist ? (
+        <>
+          {mylist ? (
+            <div
+              className={isMobile ? "faq2" : "faq"}
+              style={{ marginBottom: 40 }}
+            >
+              <div className="dev-album-or-song-art-cont">
+                <br />
+                {mylist.map((url, index) => (
+                  <div className="dev-album-or-song-art-item">
+                    <img
+                      key={index}
+                      src={url}
+                      alt={`Art ${index}`}
+                      width={100}
+                      height={100}
+                    />
+                    <IconButton
+                      onClick={() => handleCopyToClipboard(url)}
+                      sx={{ color: "lightgray" }}
+                    >
+                      <ContentCopyIcon />
+                    </IconButton>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <></>
+          )}
+        </>
       ) : (
         <></>
       )}
+      {/* <div className={isMobile ? "faq2" : "faq"} style={{ marginBottom: 40 }}>
+        <Box sx={{ backgroundColor: "black", width: 100, height: 100 }}></Box>
+      </div> */}
     </>
   );
 };
+
+export default DevPage;
