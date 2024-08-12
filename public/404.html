@@ -9,7 +9,7 @@
     <script type="text/javascript">
       var pathname = window.location.pathname;
       if (pathname !== "/") {
-        window.location.replace("/?" + pathname.substring(1));
+        window.location.replace("/#" + pathname);
       } else {
         window.location.replace("/");
       }
