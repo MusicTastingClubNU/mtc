@@ -3,12 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="refresh" content="0; url=/" />
     <title>Page Not Found</title>
   </head>
   <body>
     <script type="text/javascript">
-      window.location.href = "/";
+      var pathname = window.location.pathname;
+      if (pathname !== "/") {
+        window.location.replace("/?" + pathname.substring(1));
+      } else {
+        window.location.replace("/");
+      }
     </script>
   </body>
 </html>
