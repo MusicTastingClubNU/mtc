@@ -276,7 +276,7 @@ export default function WeeklyEntry() {
               ]
             </li>
           )}
-          noOptionsText="TEST"
+          noOptionsText="Hmm...looks like we haven't listed to this yet..."
         />
       </div>
 
