@@ -28,27 +28,25 @@ import ThisWeeksPicks from "../SP/ThisWeeksPicks";
 import NameWheelData from "./NameWheelData.json";
 import { Search } from "@mui/icons-material";
 import TitleAndDirectory from "../HOME/TitleAndDirectory";
-
-interface Props {}
-
-const colors: string[] = [
-  "rgba(255, 99, 132, 0.5)",
-  "rgba(54, 162, 235, 0.5)",
-  "rgba(255, 206, 86, 0.5)",
-  "rgba(75, 192, 192, 0.5)",
-  "rgba(153, 102, 255, 0.5)",
-  "rgba(255, 159, 64, 0.5)",
-  "rgba(199, 199, 199, 0.5)",
-  "rgba(83, 102, 255, 0.5)",
-  "rgba(104, 159, 56, 0.5)",
-];
+import Autocomplete from "@mui/material/Autocomplete";
+import YsAlbumArt from "../../imgs/manualAlbumArt/WQ24_W2_AotW.png";
+import NeuAlbumArt from "../../imgs/manualAlbumArt/WQ24_W3_RUSotW.png";
+import TempaTAlbumArt from "../../imgs/manualAlbumArt/WQ24_W9_RUSotW.png";
+import FreeAlbumArt from "../../imgs/manualAlbumArt/SQ24_W2_SotW.png";
 
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
   value: number;
 }
-
+interface Pick {
+  pickId: number;
+  pickType: string;
+  songOrAlbumName: string;
+  artistName: string;
+  memberName: string;
+  songOrAlbumArt: string;
+}
 function CustomTabPanel(props: TabPanelProps) {
   const { children, value, index, ...other } = props;
 
@@ -112,6 +110,30 @@ export default function WeeklyEntry() {
   const handleRowClick = (index: number) => {
     setOpenRow(openRow === index ? null : index);
   };
+
+  const options = picksData.flatMap((quarter) =>
+    quarter.weeks.flatMap((week) =>
+      week.picks
+        .filter((pick) => pick.songOrAlbumName !== "N/A")
+        .map((pick) => ({
+          songOrAlbumName: pick.songOrAlbumName, // The text displayed in the dropdown
+          pickId: pick.pickId,
+          artistName: pick.artistName,
+          songOrAlbumArt:
+            pick.songOrAlbumArt === "Q1W2AotW"
+              ? YsAlbumArt
+              : pick.songOrAlbumArt === "Q1W3RUSotW"
+              ? NeuAlbumArt
+              : pick.songOrAlbumArt === "Q1W9RUSotW"
+              ? TempaTAlbumArt
+              : pick.songOrAlbumArt === "Q2W2SotW"
+              ? FreeAlbumArt
+              : pick.songOrAlbumArt,
+          memberName: pick.memberName,
+          pickType: pick.pickType,
+        }))
+    )
+  );
 
   const renderRows = (weeks: any) => {
     return weeks.map((week: any, index: number) => (
@@ -177,45 +199,85 @@ export default function WeeklyEntry() {
       </React.Fragment>
     ));
   };
-  const [searchQuery, setSearchQuery] = useState("");
-
-  const handleSearchChange = (event: any) => {
-    setSearchQuery(event.target.value);
+  const [selectedOpt, setSelectedOpt] = useState<Pick | null>(null);
+  const [haveWeListenedToIt, setHaveWeListenedToIt] = useState("");
+  const [inputValue, setInputValue] = useState("");
+  const handleInputChange = (event: React.ChangeEvent<{}>, value: string) => {
+    setInputValue(value);
   };
+  const handleChange2 = (event: React.ChangeEvent<{}>, value: Pick | null) => {
+    setSelectedOpt(value);
+    if (value) {
+      setHaveWeListenedToIt("YES");
+    } else if (inputValue === undefined) {
+      setHaveWeListenedToIt("");
+    } else {
+      setHaveWeListenedToIt("");
+    }
+  };
+  const [colorOfHWLToIt, setColorOfHWLToIt] = useState("");
+  useEffect(() => {
+    if (haveWeListenedToIt === "YES") {
+      setColorOfHWLToIt("green");
+    } else {
+      setColorOfHWLToIt("");
+    }
+  }, [haveWeListenedToIt]);
+
   return (
-    <React.Fragment>
+    <>
       <TitleAndDirectory />
       {isMobile ? <br /> : null}
       <div style={{ marginBottom: 40 }}>
         <ThisWeeksPicks></ThisWeeksPicks>
       </div>
 
-      {/* COMMENTING OUT TEMPORARILY */}
-      {/* <div className={isMobile ? "cont2" : "cont"}>
+      <div className={isMobile ? "cont2" : "cont"}>
         <h3 style={{ fontSize: 35, textAlign: "center" }}>
-          Have We Listened To It Yet?
+          Have We Listened To It Yet?{" "}
+          <span style={{ color: colorOfHWLToIt }}>{haveWeListenedToIt}</span>
         </h3>
-        <TextField
-          variant="outlined"
-          placeholder="Search..."
-          value={searchQuery}
-          onChange={handleSearchChange}
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
-                <Search />
-              </InputAdornment>
-            ),
+        <Autocomplete
+          disablePortal
+          id="combo-box-demo"
+          options={options}
+          sx={{
+            width: "100%",
+            height: 50,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            marginTop: 2,
+            marginBottom: 1,
           }}
-          fullWidth
+          onChange={handleChange2}
+          onInputChange={handleInputChange}
+          getOptionLabel={(option) =>
+            `${option.songOrAlbumName} - ${option.artistName} [${option.pickType}]`
+          }
+          renderInput={(params) => <TextField {...params} label="Search Bar" />}
+          renderOption={(props, option) => (
+            <li {...props}>
+              <img
+                src={option.songOrAlbumArt}
+                alt={option.songOrAlbumName}
+                style={{ width: 50, marginRight: 10 }}
+              />
+              {option.songOrAlbumName} - {option.artistName} [
+              {option.pickType.length === 17
+                ? "Album"
+                : option.pickType.length === 27
+                ? "Album"
+                : option.pickType.length === 16
+                ? "Song"
+                : option.pickType.length === 26
+                ? "Song"
+                : ""}
+              ]
+            </li>
+          )}
+          noOptionsText="TEST"
         />
-      </div> */}
-      <div
-        className={isMobile ? "cont2" : "cont"}
-        style={{ textAlign: "center" }}
-      >
-        <h1>(UNDER CONSTRUCTION)</h1>
-        <h1>(PLACEHOLDER FOR PICK SEARCHER)</h1>
       </div>
 
       <div className={isMobile ? "cont2" : "cont"} style={{ marginTop: 40 }}>
@@ -262,6 +324,6 @@ export default function WeeklyEntry() {
           />
         )}
       </div>
-    </React.Fragment>
+    </>
   );
 }
