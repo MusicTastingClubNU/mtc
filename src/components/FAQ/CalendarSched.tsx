@@ -42,7 +42,19 @@ const Item2 = styled(Paper)(({ theme }) => ({
   margin: 0,
   textAlign: "center",
   color: theme.palette.text.secondary,
-  // flex:'wrap',
+}));
+
+const KeyComponent = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+  ...theme.typography.body2,
+  padding: theme.spacing(2),
+  marginTop: 10,
+  textAlign: "center",
+  alignItems: "center",
+  justifyContent: "center",
+  display: "flex",
+  fontSize: 15,
+  color: theme.palette.text.secondary,
 }));
 
 const calendarStylesFull = {
@@ -51,9 +63,7 @@ const calendarStylesFull = {
 
 const calendarStylesMobile2 = {
   transform: "scale(1)", // Adjust the scale as needed
-  // transformOrigin: 'top left',
   alignItems: "center",
-  // marginLeft:7,
   width: "100%",
 };
 
@@ -311,13 +321,13 @@ export default function DateCalendarServerRequest() {
 
               {/* <div>{selectedDate && <h2>{selectedDate!.format('YYYY-MM-DD')}</h2>}</div> */}
             </div>
-
-            <Item2>
-              <b>KEY:</b> Trivia=🧠 | History=📻 | Beef Recap=🥩 | Music Edu=🎙️
-            </Item2>
           </Item2>
         </Grid>
       </Grid>
+      <KeyComponent>
+        <b>KEY: </b>
+        <>&nbsp;</>Trivia=🧠 | History=📻 | Music Tea=☕ | Music Edu=🎙️
+      </KeyComponent>
       <Grid item xs={8}>
         <br />
       </Grid>

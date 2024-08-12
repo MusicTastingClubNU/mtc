@@ -831,8 +831,8 @@
         "weekDate": "(10/01/24)",
         "weekActivity": {
           "weekActivityEmoji": "📻",
-          "weekActivityTitle": "FQ24 W2 Activity HISTORY",
-          "weekActivityDetails": "Ever been curious about the origin of punk music? Come learn about it here!",
+          "weekActivityTitle": "HISTORY",
+          "weekActivityDetails": "Ever been curious about the origin of [GENRE] music? Come learn about it here!",
           "weekActivityHost": "Andrew Barrett"
         },
         "picks": [
@@ -875,9 +875,9 @@
         "weekName": "WEEK 3",
         "weekDate": "(10/08/24)",
         "weekActivity": {
-          "weekActivityEmoji": "🥩",
-          "weekActivityTitle": "FQ24 W3 Activity BEEF RECAP",
-          "weekActivityDetails": "What's happening with the Drake/Kendrick beef? We're going over it all!",
+          "weekActivityEmoji": "☕",
+          "weekActivityTitle": "TEA",
+          "weekActivityDetails": "WHAT'S THE MUSIC TEA??? Come to our session and find out!",
           "weekActivityHost": "Danny"
         },
         "picks": [
@@ -921,7 +921,7 @@
         "weekDate": "(10/15/24)",
         "weekActivity": {
           "weekActivityEmoji": "🎙️",
-          "weekActivityTitle": "FQ24 W3 Activity MUSIC EDU",
+          "weekActivityTitle": "Music Education",
           "weekActivityDetails": "What makes that sound? Why does it sound like that? All that and more in some casual music education!",
           "weekActivityHost": "Andrew Barret"
         },
