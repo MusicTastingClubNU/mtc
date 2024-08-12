@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/mtc/static/css/main.3e5f717d.css",
-    "main.js": "/mtc/static/js/main.96beee84.js",
-    "static/media/SQ24_W2_SotW.png": "/mtc/static/media/SQ24_W2_SotW.f4301b88a5749e3d6e6f.png",
-    "static/media/WQ24_W9_RUSotW.png": "/mtc/static/media/WQ24_W9_RUSotW.5508f1cae5a4329b6c87.png",
-    "static/media/WQ24_W2_AotW.png": "/mtc/static/media/WQ24_W2_AotW.3f6b617402633e9d2554.png",
-    "static/media/instalogo.png": "/mtc/static/media/instalogo.e905e80e3d57cc2b32c7.png",
-    "static/media/WQ24_W3_RUSotW.png": "/mtc/static/media/WQ24_W3_RUSotW.98351e05eea3519de1a1.png",
-    "static/media/Roboto-Regular.ttf": "/mtc/static/media/Roboto-Regular.27f62b53b93858475a7f.ttf",
-    "static/media/Roboto-Bold.ttf": "/mtc/static/media/Roboto-Bold.d50a80138ec4f2fb5e9f.ttf",
-    "static/media/CourierPrime-Regular.ttf": "/mtc/static/media/CourierPrime-Regular.7503a2e9660bb6f608fb.ttf",
-    "static/media/applemusiclogo.png": "/mtc/static/media/applemusiclogo.44976b4b639e2470cd0f.png",
-    "static/media/googleformlogo.png": "/mtc/static/media/googleformlogo.f5e00191489875080207.png",
-    "index.html": "/mtc/index.html",
-    "main.3e5f717d.css.map": "/mtc/static/css/main.3e5f717d.css.map",
-    "main.96beee84.js.map": "/mtc/static/js/main.96beee84.js.map"
+    "main.css": "/static/css/main.b600c96a.css",
+    "main.js": "/static/js/main.f5f8e754.js",
+    "static/media/SQ24_W2_SotW.png": "/static/media/SQ24_W2_SotW.f4301b88a5749e3d6e6f.png",
+    "static/media/WQ24_W9_RUSotW.png": "/static/media/WQ24_W9_RUSotW.5508f1cae5a4329b6c87.png",
+    "static/media/WQ24_W2_AotW.png": "/static/media/WQ24_W2_AotW.3f6b617402633e9d2554.png",
+    "static/media/instalogo.png": "/static/media/instalogo.e905e80e3d57cc2b32c7.png",
+    "static/media/WQ24_W3_RUSotW.png": "/static/media/WQ24_W3_RUSotW.98351e05eea3519de1a1.png",
+    "static/media/Roboto-Regular.ttf": "/static/media/Roboto-Regular.27f62b53b93858475a7f.ttf",
+    "static/media/Roboto-Bold.ttf": "/static/media/Roboto-Bold.d50a80138ec4f2fb5e9f.ttf",
+    "static/media/CourierPrime-Regular.ttf": "/static/media/CourierPrime-Regular.7503a2e9660bb6f608fb.ttf",
+    "static/media/applemusiclogo.png": "/static/media/applemusiclogo.44976b4b639e2470cd0f.png",
+    "static/media/googleformlogo.png": "/static/media/googleformlogo.f5e00191489875080207.png",
+    "index.html": "/index.html",
+    "main.b600c96a.css.map": "/static/css/main.b600c96a.css.map",
+    "main.f5f8e754.js.map": "/static/js/main.f5f8e754.js.map"
   },
   "entrypoints": [
-    "static/css/main.3e5f717d.css",
-    "static/js/main.96beee84.js"
+    "static/css/main.b600c96a.css",
+    "static/js/main.f5f8e754.js"
   ]
 }
