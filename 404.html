@@ -8,9 +8,24 @@
   <body>
     <script type="text/javascript">
       var pathname = window.location.pathname;
-      if (pathname !== "/") {
-        window.location.replace("/?" + pathname);
-      } else {
+      switch (pathname) {
+        case "/picks":
+          window.location.replace("/?" + pathname);
+          break;
+        case "/faq":
+          window.location.replace("/?" + pathname);
+          break;
+        case "/blog":
+          window.location.replace("/?" + pathname);
+          break;
+        case "/about":
+          window.location.replace("/?" + pathname);
+          break;
+        case "/dev":
+          window.location.replace("/?" + pathname);
+          break;
+      }
+      if (pathname == "/") {
         window.location.replace("/");
       }
     </script>
