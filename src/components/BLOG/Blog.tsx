@@ -16,54 +16,47 @@ import Chip from "@mui/material/Chip";
 
 interface Props {}
 
+// const StyledCardContent = styled(CardContent)({
+//   display: "-webkit-box",
+//   WebkitBoxOrient: "vertical",
+//   WebkitLineClamp: 4,
+//   overflow: "hidden",
+//   textOverflow: "ellipsis",
+//   maxHeight: "9em",
+// });
+
 const StyledCardContent = styled(CardContent)({
-  display: "-webkit-box",
-  WebkitBoxOrient: "vertical",
-  WebkitLineClamp: 4,
-  overflow: "hidden",
-  textOverflow: "ellipsis",
-  maxHeight: "9em",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-between",
+  height: "auto",
 });
 
-interface Review {
-  reviewId: number;
-  reviewTitle: string;
-  reviewAuthor: string;
-  reviewContent: string;
+interface Blog {
+  blogId: number;
+  blogTitle: string;
+  blogAuthor: string;
+  blogContent: string;
+  blogImg: string;
 }
 
-interface Article {
-  articleId: number;
-  articleTitle: string;
-  articleAuthor: string;
-  articleContent: string;
-}
-
-interface ReviewsData {
-  Reviews: Review[];
-}
-
-interface ArticlesData {
-  Articles: Article[];
+interface BlogData {
+  Blogs: Blog[];
 }
 const Blog: React.FC = (props: Props) => {
   const isMobile = useMediaQuery("(max-width: 768px)");
 
-  const [reviews, setReviews] = useState<Review[]>([]);
-  const [articles, setArticles] = useState<Article[]>([]);
+  const [blogs, setBlogs] = useState<Blog[]>([]);
   const [selectedBlog, setSelectedBlog] = useState<{
     contId: number;
     contTitle: string;
     contAuthor: string;
     contContent: string;
+    contImg: string;
   } | null>(null);
 
   useEffect(() => {
-    const reviewsData = (data[0] as ReviewsData).Reviews;
-    const articlesData = (data[1] as ArticlesData).Articles;
-
-    setReviews(reviewsData);
-    setArticles(articlesData);
+    setBlogs(data);
   }, []);
 
   useEffect(() => {
@@ -81,17 +74,18 @@ const Blog: React.FC = (props: Props) => {
           <div className="blog-cont2">
             <h2 className="blog-titles">Club Articles</h2>
             <div className="blog-items-cont">
-              {articles.map((article) => (
-                <div className="blog-items" key={article.articleId}>
+              {blogs.map((blog) => (
+                <div className="blog-items" key={blog.blogId}>
                   <Card
                     sx={{ marginBottom: 2 }}
-                    key={article.articleId}
+                    key={blog.blogId}
                     onClick={() => {
                       setSelectedBlog({
-                        contId: article.articleId,
-                        contTitle: article.articleTitle,
-                        contAuthor: article.articleAuthor,
-                        contContent: article.articleContent,
+                        contId: blog.blogId,
+                        contTitle: blog.blogTitle,
+                        contAuthor: blog.blogAuthor,
+                        contContent: blog.blogContent,
+                        contImg: blog.blogImg,
                       });
                     }}
                   >
@@ -99,66 +93,50 @@ const Blog: React.FC = (props: Props) => {
                       <CardMedia
                         component="img"
                         height="140"
-                        image={logo}
+                        image={blog.blogImg ? blog.blogImg : logo}
                         alt="article image"
                       />
                       <StyledCardContent>
                         <Typography gutterBottom variant="h5" component="div">
-                          {article.articleTitle}
+                          {blog.blogTitle}
                         </Typography>
                         <Typography
                           variant="body2"
                           color="text.secondary"
                           sx={{ marginTop: -1 }}
                         >
-                          Written By {article.articleAuthor}
+                          Written By {blog.blogAuthor}
                         </Typography>
+                      </StyledCardContent>
+                      <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "flex-start",
+                          flexWrap: "wrap", // Allows the chips to wrap if there are too many
+                          gap: "8px", // Add some spacing between the chips
+                          // marginTop: "8px", // Optional margin for spacing above the chips
+                        }}
+                      >
                         <Chip
                           label="Short Review"
                           size="small"
-                          sx={{ marginTop: -1, backgroundColor: "lightgreen" }}
+                          sx={{
+                            marginTop: -2,
+                            backgroundColor: "lightgreen",
+                            marginLeft: 2,
+                            marginBottom: 2,
+                          }}
                         ></Chip>
-                        <br />
-                      </StyledCardContent>
-                    </CardActionArea>
-                  </Card>
-                </div>
-              ))}
-            </div>
-          </div>
-          {isMobile ? <br /> : null}
-          <div className="blog-cont2">
-            <h2 className="blog-titles">Club Reviews</h2>
-            <div className="blog-items-cont">
-              {reviews.map((review) => (
-                <div className="blog-items" key={review.reviewId}>
-                  <Card
-                    sx={{ marginBottom: 2 }}
-                    key={review.reviewId}
-                    onClick={() => {
-                      setSelectedBlog({
-                        contId: review.reviewId,
-                        contTitle: review.reviewTitle,
-                        contAuthor: review.reviewAuthor,
-                        contContent: review.reviewContent,
-                      });
-                    }}
-                  >
-                    <CardActionArea>
-                      <CardMedia
-                        component="img"
-                        height="140"
-                        image={logo}
-                        alt="review image"
-                      />
-                      <StyledCardContent>
-                        <Typography gutterBottom variant="h5" component="div">
-                          {review.reviewTitle}
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                          Written By {review.reviewAuthor}
-                        </Typography>
-                      </StyledCardContent>
+                        <Chip
+                          label="Hip Hop"
+                          size="small"
+                          sx={{
+                            marginTop: -2,
+
+                            backgroundColor: "lightgreen",
+                          }}
+                        ></Chip>
+                      </div>
                     </CardActionArea>
                   </Card>
                 </div>
@@ -189,6 +167,32 @@ const Blog: React.FC = (props: Props) => {
               <h1 style={{ textAlign: "center", color: "gray" }}>
                 {selectedBlog?.contTitle}
               </h1>
+            </div>
+            <div
+              style={{
+                alignItems: "center",
+                display: "flex",
+                justifyContent: "center",
+                // margin: "10px 10px",
+              }}
+            >
+              <Chip
+                label="Short Review"
+                size="small"
+                sx={{
+                  marginTop: -1,
+                  backgroundColor: "lightgreen",
+                  marginRight: 1,
+                }}
+              ></Chip>
+              <Chip
+                label="Hip Hop"
+                size="small"
+                sx={{
+                  marginTop: -1,
+                  backgroundColor: "lightgreen",
+                }}
+              ></Chip>
             </div>
             <h5>{selectedBlog?.contContent}</h5>
           </div>

@@ -1,46 +1,44 @@
 [
   {
-    "Reviews": [
-      {
-        "reviewId": 0,
-        "reviewTitle": "FQ24_WEEK1",
-        "reviewAuthor": "Author1",
-        "reviewContent": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quae modi eveniet, vel aliquid, numquam beatae vero assumenda, odit sapiente saepe. Incidunt nemo est eligendi aperiam corporis iste quam asperiores!"
-      },
-      {
-        "reviewId": 1,
-        "reviewTitle": "FQ24_WEEK2",
-        "reviewAuthor": "Author2",
-        "reviewContent": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quae modi eveniet, vel aliquid, numquam beatae vero assumenda, odit sapiente saepe. Incidunt nemo est eligendi aperiam corporis iste quam asperiores!"
-      },
-      {
-        "reviewId": 2,
-        "reviewTitle": "FQ24_WEEK3",
-        "reviewAuthor": "Author3",
-        "reviewContent": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quae modi eveniet, vel aliquid, numquam beatae vero assumenda, odit sapiente saepe. Incidunt nemo est eligendi aperiam corporis iste quam asperiores!"
-      }
-    ]
+    "blogId": 0,
+    "blogTitle": "1999 by Joey Bada$$ Long Title Idk what it's going to do",
+    "blogAuthor": "BlogAuthor1",
+    "blogContent": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quae modi eveniet, vel aliquid, numquam beatae vero assumenda, odit sapiente saepe. Incidunt nemo est eligendi aperiam corporis iste quam asperiores!",
+    "blogImg": "https://i.scdn.co/image/ab67616d0000b273fcd3724fba954e6104e4530d"
   },
   {
-    "Articles": [
-      {
-        "articleId": 0,
-        "articleTitle": "aTitle0",
-        "articleAuthor": "Author4",
-        "articleContent": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quae modi eveniet, vel aliquid, numquam beatae vero assumenda, odit sapiente saepe. Incidunt nemo est eligendi aperiam corporis iste quam asperiores!"
-      },
-      {
-        "articleId": 1,
-        "articleTitle": "aTitle1",
-        "articleAuthor": "Author5",
-        "articleContent": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quae modi eveniet, vel aliquid, numquam beatae vero assumenda, odit sapiente saepe. Incidunt nemo est eligendi aperiam corporis iste quam asperiores!"
-      },
-      {
-        "articleId": 2,
-        "articleTitle": "aTitle2",
-        "articleAuthor": "Author6",
-        "articleContent": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quae modi eveniet, vel aliquid, numquam beatae vero assumenda, odit sapiente saepe. Incidunt nemo est eligendi aperiam corporis iste quam asperiores!"
-      }
-    ]
+    "blogId": 1,
+    "blogTitle": "BlogTitle2",
+    "blogAuthor": "BlogAuthor1",
+    "blogContent": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quae modi eveniet, vel aliquid, numquam beatae vero assumenda, odit sapiente saepe. Incidunt nemo est eligendi aperiam corporis iste quam asperiores!",
+    "blogImg": ""
+  },
+  {
+    "blogId": 2,
+    "blogTitle": "BlogTitle3",
+    "blogAuthor": "BlogAuthor1",
+    "blogContent": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quae modi eveniet, vel aliquid, numquam beatae vero assumenda, odit sapiente saepe. Incidunt nemo est eligendi aperiam corporis iste quam asperiores!",
+    "blogImg": ""
+  },
+  {
+    "blogId": 3,
+    "blogTitle": "BlogTitle4",
+    "blogAuthor": "BlogAuthor1",
+    "blogContent": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quae modi eveniet, vel aliquid, numquam beatae vero assumenda, odit sapiente saepe. Incidunt nemo est eligendi aperiam corporis iste quam asperiores!",
+    "blogImg": ""
+  },
+  {
+    "blogId": 4,
+    "blogTitle": "BlogTitle5",
+    "blogAuthor": "BlogAuthor1",
+    "blogContent": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quae modi eveniet, vel aliquid, numquam beatae vero assumenda, odit sapiente saepe. Incidunt nemo est eligendi aperiam corporis iste quam asperiores!",
+    "blogImg": ""
+  },
+  {
+    "blogId": 5,
+    "blogTitle": "BlogTitle6",
+    "blogAuthor": "BlogAuthor1",
+    "blogContent": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quae modi eveniet, vel aliquid, numquam beatae vero assumenda, odit sapiente saepe. Incidunt nemo est eligendi aperiam corporis iste quam asperiores!",
+    "blogImg": ""
   }
 ]
