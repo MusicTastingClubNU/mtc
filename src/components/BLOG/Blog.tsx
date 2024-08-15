@@ -12,6 +12,7 @@ import { useMediaQuery } from "@mui/material";
 import BlackButton from "../../BlackButton1";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import TitleAndDirectory from "../HOME/TitleAndDirectory";
+import Chip from "@mui/material/Chip";
 
 interface Props {}
 
@@ -24,25 +25,17 @@ const StyledCardContent = styled(CardContent)({
   maxHeight: "9em",
 });
 
-const shortenedText = (text: string, len: number): string => {
-  if (text.length < len) return text;
-  let trunc = text.slice(0, len);
-  const lastSpaceIndex = trunc.lastIndexOf(" ");
-  if (lastSpaceIndex > 0) {
-    trunc = trunc.slice(0, lastSpaceIndex);
-  }
-  return trunc + "...";
-};
-
 interface Review {
   reviewId: number;
   reviewTitle: string;
+  reviewAuthor: string;
   reviewContent: string;
 }
 
 interface Article {
   articleId: number;
   articleTitle: string;
+  articleAuthor: string;
   articleContent: string;
 }
 
@@ -61,6 +54,7 @@ const Blog: React.FC = (props: Props) => {
   const [selectedBlog, setSelectedBlog] = useState<{
     contId: number;
     contTitle: string;
+    contAuthor: string;
     contContent: string;
   } | null>(null);
 
@@ -68,18 +62,8 @@ const Blog: React.FC = (props: Props) => {
     const reviewsData = (data[0] as ReviewsData).Reviews;
     const articlesData = (data[1] as ArticlesData).Articles;
 
-    const truncatedReviews = reviewsData.map((review) => ({
-      ...review,
-      reviewContent: shortenedText(review.reviewContent, 200),
-    }));
-
-    const truncatedArticles = articlesData.map((article) => ({
-      ...article,
-      articleContent: shortenedText(article.articleContent, 200),
-    }));
-
-    setReviews(truncatedReviews);
-    setArticles(truncatedArticles);
+    setReviews(reviewsData);
+    setArticles(articlesData);
   }, []);
 
   useEffect(() => {
@@ -106,6 +90,7 @@ const Blog: React.FC = (props: Props) => {
                       setSelectedBlog({
                         contId: article.articleId,
                         contTitle: article.articleTitle,
+                        contAuthor: article.articleAuthor,
                         contContent: article.articleContent,
                       });
                     }}
@@ -121,9 +106,19 @@ const Blog: React.FC = (props: Props) => {
                         <Typography gutterBottom variant="h5" component="div">
                           {article.articleTitle}
                         </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                          {article.articleContent}
+                        <Typography
+                          variant="body2"
+                          color="text.secondary"
+                          sx={{ marginTop: -1 }}
+                        >
+                          Written By {article.articleAuthor}
                         </Typography>
+                        <Chip
+                          label="Short Review"
+                          size="small"
+                          sx={{ marginTop: -1, backgroundColor: "lightgreen" }}
+                        ></Chip>
+                        <br />
                       </StyledCardContent>
                     </CardActionArea>
                   </Card>
@@ -131,7 +126,7 @@ const Blog: React.FC = (props: Props) => {
               ))}
             </div>
           </div>
-          {isMobile ? <br></br> : null}
+          {isMobile ? <br /> : null}
           <div className="blog-cont2">
             <h2 className="blog-titles">Club Reviews</h2>
             <div className="blog-items-cont">
@@ -144,6 +139,7 @@ const Blog: React.FC = (props: Props) => {
                       setSelectedBlog({
                         contId: review.reviewId,
                         contTitle: review.reviewTitle,
+                        contAuthor: review.reviewAuthor,
                         contContent: review.reviewContent,
                       });
                     }}
@@ -160,7 +156,7 @@ const Blog: React.FC = (props: Props) => {
                           {review.reviewTitle}
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                          {review.reviewContent}
+                          Written By {review.reviewAuthor}
                         </Typography>
                       </StyledCardContent>
                     </CardActionArea>
