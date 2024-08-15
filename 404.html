@@ -10,22 +10,28 @@
       var pathname = window.location.pathname;
       switch (pathname) {
         case "/picks":
-          window.location.replace("/?/picks");
+          window.location.replace("/?" + pathname);
           break;
         case "/faq":
-          window.location.replace("/?/faq");
+          window.location.replace("/?" + pathname);
           break;
         case "/blog":
-          window.location.replace("/?/blog");
+          window.location.replace("/?" + pathname);
           break;
-        case "/about":
-          window.location.replace("/?/about");
+        case "/blog":
+          window.location.replace("/?" + pathname);
           break;
         case "/dev":
-          window.location.replace("/?/dev");
+          window.location.replace("/?" + pathname);
           break;
       }
-      if (pathname == "/") {
+      if (pathname == "/picks") {
+        window.location.replace("/?" + pathname);
+      }
+
+      if (pathname !== "/") {
+        window.location.replace("/?" + pathname);
+      } else {
         window.location.replace("/");
       }
     </script>
