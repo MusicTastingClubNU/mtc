@@ -108,13 +108,12 @@ const Blog: React.FC = (props: Props) => {
                           Written By {blog.blogAuthor}
                         </Typography>
                       </StyledCardContent>
-                      <div
+                      {/* <div
                         style={{
                           display: "flex",
                           justifyContent: "flex-start",
-                          flexWrap: "wrap", // Allows the chips to wrap if there are too many
-                          gap: "8px", // Add some spacing between the chips
-                          // marginTop: "8px", // Optional margin for spacing above the chips
+                          flexWrap: "wrap", 
+                          gap: "8px", 
                         }}
                       >
                         <Chip
@@ -136,7 +135,7 @@ const Blog: React.FC = (props: Props) => {
                             backgroundColor: "lightgreen",
                           }}
                         ></Chip>
-                      </div>
+                      </div> */}
                     </CardActionArea>
                   </Card>
                 </div>
@@ -164,11 +163,9 @@ const Blog: React.FC = (props: Props) => {
               >
                 <ArrowBackIosNewIcon />
               </IconButton>
-              <h1 style={{ textAlign: "center", color: "gray" }}>
-                {selectedBlog?.contTitle}
-              </h1>
+              <h1 style={{ textAlign: "center" }}>{selectedBlog?.contTitle}</h1>
             </div>
-            <div
+            {/* <div
               style={{
                 alignItems: "center",
                 display: "flex",
@@ -193,8 +190,9 @@ const Blog: React.FC = (props: Props) => {
                   backgroundColor: "lightgreen",
                 }}
               ></Chip>
-            </div>
-            <h5>{selectedBlog?.contContent}</h5>
+            </div> */}
+            <br />
+            <h2>{selectedBlog?.contContent}</h2>
           </div>
         </>
       )}
