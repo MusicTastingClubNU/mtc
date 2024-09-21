@@ -326,7 +326,7 @@ export default function DateCalendarServerRequest() {
       </Grid>
       <KeyComponent>
         <b>KEY: </b>
-        <>&nbsp;</>Trivia=🧠 | History=📻 | Music Tea=☕ | Music Edu=🎙️
+        <>&nbsp;</>Games=♟️ | Appreciation=🎵
       </KeyComponent>
       <Grid item xs={8}>
         <br />

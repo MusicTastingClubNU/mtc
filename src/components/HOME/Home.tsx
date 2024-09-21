@@ -28,7 +28,7 @@ const Home = (props: Props) => {
       <div className="all" style={{ position: "relative" }}>
         <header className="header">MUSIC TASTING CLUB</header>
         <h5 className="header2">
-          NORTHWESTERN'S PREMEIR MUSIC DISCOURSE GROUP
+          NORTHWESTERN'S PREMIER MUSIC DISCOURSE GROUP
         </h5>
 
         {isMobile ? null : (

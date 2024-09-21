@@ -783,12 +783,12 @@
       {
         "weekId": 17,
         "weekName": "WEEK 1",
-        "weekDate": "(09/23/24)",
+        "weekDate": "(10/03/24)",
         "weekActivity": {
-          "weekActivityEmoji": "🧠",
-          "weekActivityTitle": "TRIVIA",
-          "weekActivityDetails": "Get ready for some music related Jeopardy!",
-          "weekActivityHost": "Reed"
+          "weekActivityEmoji": "♟️",
+          "weekActivityTitle": "SONG OF THE SUMMER BRACKET🎵",
+          "weekActivityDetails": "Come with your favoring songs as we decide the best songs of Summer 2024!",
+          "weekActivityHost": "Simon"
         },
         "picks": [
           {
@@ -828,12 +828,12 @@
       {
         "weekId": 18,
         "weekName": "WEEK 2",
-        "weekDate": "(10/01/24)",
+        "weekDate": "(10/10/24)",
         "weekActivity": {
-          "weekActivityEmoji": "📻",
-          "weekActivityTitle": "HISTORY",
-          "weekActivityDetails": "Ever been curious about the origin of [GENRE] music? Come learn about it here!",
-          "weekActivityHost": "Andrew Barrett"
+          "weekActivityEmoji": "🎵",
+          "weekActivityTitle": "MTC Mixer",
+          "weekActivityDetails": "Get to know club members, old and new, as we get to know each other and talk to members about our favorite music!",
+          "weekActivityHost": "Simon"
         },
         "picks": [
           {
