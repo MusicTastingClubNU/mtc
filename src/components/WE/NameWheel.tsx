@@ -129,6 +129,8 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({
   };
 
   const handleCopyToClipboard = () => {
+    const RUAotW = AotW;
+    const RUSotW = SotW;
     const textToCopy = JSON.stringify({ AotW, RUAotW, SotW, RUSotW }, null, 2);
     navigator.clipboard
       .writeText(textToCopy)
@@ -152,16 +154,16 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({
         setInputValue(AotW.join(", "));
         break;
       case "Runner Up Album of the Week":
-        setPrizeList(RUAotW);
-        setInputValue(RUAotW.join(", "));
+        setPrizeList(AotW);
+        setInputValue(AotW.join(", "));
         break;
       case "Song of the Week":
         setPrizeList(SotW);
         setInputValue(SotW.join(", "));
         break;
       case "Runner Up Song of the Week":
-        setPrizeList(RUSotW);
-        setInputValue(RUSotW.join(", "));
+        setPrizeList(SotW);
+        setInputValue(SotW.join(", "));
         break;
       default:
         setInputValue("Album of the Week");
@@ -352,9 +354,9 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({
           fullWidth
           PaperProps={{
             sx: {
-              mx: 5, // 50px margin on the left and right
+              mx: 5,
               mt: 0,
-              backgroundColor: "rgba(255, 255, 255, 0.85)", // 90% opacity white background
+              backgroundColor: "rgba(255, 255, 255, 0.85)",
             },
           }}
         >

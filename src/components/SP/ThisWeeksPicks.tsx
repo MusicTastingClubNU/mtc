@@ -50,10 +50,20 @@ export default function ThisWeeksPicks() {
   return (
     <div className={isMobile ? "cont2" : "cont"}>
       <h3 style={{ fontSize: 35, textAlign: "center" }}>
-        NEXT MEETING'S PICKS (09/XX/24)
+        FIRST MEETING'S PICKS (09/26/24)
       </h3>
-      <h3 style={{ fontSize: 20, textAlign: "center", marginBottom: 15 }}>
-        WE MEET EVERY [DAY] AT [TIME] IN [LOCATION]
+      {/* NEXT MEETING'S PICKS (10//24) */}
+      <h3
+        style={{
+          fontSize: 20,
+          textAlign: "center",
+          marginBottom: 15,
+          color: "gray",
+        }}
+      >
+        WE MEET EVERY <span style={{ color: "black" }}>THURSDAY</span> FROM{" "}
+        <span style={{ color: "black" }}>5:00-6:15PM</span> IN{" "}
+        <span style={{ color: "black" }}>KRESGE 2420</span>
       </h3>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">

@@ -88,13 +88,13 @@ export default function WeeklyEntry() {
         options = NameWheelData["AotW"];
         break;
       case "Runner Up Album of the Week":
-        options = NameWheelData["RUAotW"];
+        options = NameWheelData["AotW"];
         break;
       case "Song of the Week":
         options = NameWheelData["SotW"];
         break;
       case "Runner Up Song of the Week":
-        options = NameWheelData["RUSotW"];
+        options = NameWheelData["SotW"];
         break;
       default:
         options = NameWheelData["AotW"];

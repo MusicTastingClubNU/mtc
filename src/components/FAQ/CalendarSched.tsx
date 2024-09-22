@@ -318,8 +318,6 @@ export default function DateCalendarServerRequest() {
                   </h4>
                 </>
               )}
-
-              {/* <div>{selectedDate && <h2>{selectedDate!.format('YYYY-MM-DD')}</h2>}</div> */}
             </div>
           </Item2>
         </Grid>
