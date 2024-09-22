@@ -9,7 +9,7 @@ interface Props {}
 
 const SalesPitch = (props: Props) => {
   const isMobile = useMediaQuery("(max-width: 768px)");
-  /* */
+
   return (
     <React.Fragment>
       {isMobile ? <br></br> : null}
