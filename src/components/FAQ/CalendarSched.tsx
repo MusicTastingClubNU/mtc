@@ -89,7 +89,7 @@ function fakeFetch(date: Dayjs, { signal }: { signal: AbortSignal }) {
   });
 }
 
-const initialValue = dayjs("2024-10-01");
+const initialValue = dayjs("2024-10-03");
 
 function ServerDay(
   props: PickersDayProps<Dayjs> & { FQ24Meetings?: Dayjs[]; emoji?: string }
@@ -207,16 +207,16 @@ export default function DateCalendarServerRequest() {
     return 0;
   }
 
-  const startOfFQ24W1: Dayjs = dayjs("2024-09-23");
+  const startOfFQ24W1: Dayjs = dayjs("2024-09-26");
   const FQ24Meetings: Dayjs[] = [
-    dayjs("2024-10-01"),
-    dayjs("2024-10-08"),
-    dayjs("2024-10-15"),
-    dayjs("2024-10-22"),
-    dayjs("2024-10-29"),
-    dayjs("2024-11-05"),
-    dayjs("2024-11-12"),
-    dayjs("2024-11-19"),
+    dayjs("2024-10-03"),
+    dayjs("2024-10-10"),
+    dayjs("2024-10-17"),
+    dayjs("2024-10-24"),
+    dayjs("2024-10-31"),
+    dayjs("2024-11-07"),
+    dayjs("2024-11-14"),
+    dayjs("2024-11-21"),
   ];
 
   const whichWeekIndex = (selectedDate: Dayjs): number => {
