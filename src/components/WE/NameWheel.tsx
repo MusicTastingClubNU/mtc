@@ -338,7 +338,6 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({
             DEV
           </p>
           <div style={{ marginTop: -30 }}>
-            {/* <ControlledCheckbox checked={checked} setChecked={setChecked}/> */}
             <IconButton
               onClick={handleCopyToClipboard}
               sx={{ color: "lightgray" }}

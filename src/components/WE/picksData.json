@@ -786,7 +786,7 @@
         "weekDate": "(10/03/24)",
         "weekActivity": {
           "weekActivityEmoji": "♟️",
-          "weekActivityTitle": "SONG OF THE SUMMER BRACKET🎵",
+          "weekActivityTitle": "SONG OF THE SUMMER BRACKET",
           "weekActivityDetails": "Come with your favoring songs as we decide the best songs of Summer 2024!",
           "weekActivityHost": "Simon"
         },
@@ -873,7 +873,7 @@
       {
         "weekId": 19,
         "weekName": "WEEK 3",
-        "weekDate": "(10/08/24)",
+        "weekDate": "(10/17/24)",
         "weekActivity": {
           "weekActivityEmoji": "☕",
           "weekActivityTitle": "TEA",
@@ -918,7 +918,7 @@
       {
         "weekId": 19,
         "weekName": "WEEK 4",
-        "weekDate": "(10/15/24)",
+        "weekDate": "(10/24/24)",
         "weekActivity": {
           "weekActivityEmoji": "🎙️",
           "weekActivityTitle": "Music Education",
