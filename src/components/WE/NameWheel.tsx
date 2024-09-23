@@ -363,7 +363,9 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({
             {title} Pick Goes To:
           </DialogTitle>
           <DialogContent sx={{ textAlign: "center", fontSize: "2rem" }}>
-            🎉{selectedPrize}🎉
+            🎉{""}
+            {selectedPrize}
+            {""}🎉
           </DialogContent>
           <DialogActions sx={{ justifyContent: "center" }}>
             <Button

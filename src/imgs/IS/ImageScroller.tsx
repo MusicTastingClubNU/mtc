@@ -64,7 +64,7 @@ function ImageScroller() {
   const images = getSongOrAlbumArtComponents();
 
   const imagesPerRow = 6;
-  const numLines = 7;
+  const numLines = 6;
   const totalImages = imagesPerRow * numLines;
   const extendedImages = [...images, ...images];
   const lines = [];
