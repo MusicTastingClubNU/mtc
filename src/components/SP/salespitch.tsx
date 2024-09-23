@@ -4,7 +4,7 @@ import ThisWeeksPicks from "./ThisWeeksPicks";
 import ConditionalPhoneSignUp from "./ConditionalPhoneSignUp";
 import { useMediaQuery } from "@mui/material";
 import "./mission.css";
-import img from "../../imgs/logo.png";
+import img from "../../imgs/MTC_logo.png";
 interface Props {}
 
 const SalesPitch = (props: Props) => {

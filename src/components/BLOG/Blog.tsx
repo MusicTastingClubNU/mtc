@@ -5,7 +5,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea, IconButton } from "@mui/material";
 import { styled } from "@mui/system";
-import logo from "./logo.png";
+import logo from "../../imgs/MTC_logo.png";
 import data from "./blogData.json";
 import "./blog.css";
 import { useMediaQuery } from "@mui/material";
