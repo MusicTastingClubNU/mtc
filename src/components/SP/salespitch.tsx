@@ -31,7 +31,7 @@ const SalesPitch = (props: Props) => {
         <img src={img} alt="logo img" className="mission-img"></img>
       </div>
       <ThisWeeksPicks></ThisWeeksPicks>
-      {isMobile ? <ConditionalPhoneSignUp /> : null}
+      {isMobile ? <ConditionalPhoneSignUp /> : <br />}
     </React.Fragment>
   );
 };

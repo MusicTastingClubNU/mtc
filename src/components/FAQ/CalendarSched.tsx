@@ -311,10 +311,9 @@ export default function DateCalendarServerRequest() {
                     ]?.weekActivity.weekActivityDetails ?? ""}
                   </h2>
                   <h4 style={{ paddingBottom: 40 }}>
-                    Hosted By{" "}
                     {data[whichQuarterIndex(selectedDate)].weeks[
                       whichWeekIndex(selectedDate)
-                    ]?.weekActivity.weekActivityHost ?? ""}
+                    ]?.weekActivity.weekActivityHost ?? "Hosted By"}
                   </h4>
                 </>
               )}

@@ -112,6 +112,7 @@ const FAQComponent = (props: Props) => {
         <br />
         <DateCalendarServerRequest />
       </div>
+      <br />
     </React.Fragment>
   );
 };
