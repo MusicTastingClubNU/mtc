@@ -14,7 +14,7 @@ function Socials() {
     <Grid container spacing={2} justifyContent="center" alignItems="center">
       <Grid item xs={12} sm={6} md={4} className="inner-logo-cont">
         <a
-          href="https://www.google.com/forms/about/"
+          href="https://forms.gle/hKSK1pqY2gKNomjD9"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -29,7 +29,7 @@ function Socials() {
 
       <Grid item xs={12} sm={6} md={4} className="inner-logo-cont">
         <a
-          href="https://discord.com/"
+          href="https://discord.gg/JzYa55p25m"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -44,7 +44,7 @@ function Socials() {
 
       <Grid item xs={12} sm={6} md={4} className="inner-logo-cont">
         <a
-          href="https://open.spotify.com/playlist/5UkcYrSvakVfYhHbvr3Bru?go=1&sp_cid=0354276646149ba242a28fa53ccacb67&utm_source=embed_player_p&utm_medium=desktop&nd=1&dlsi=4faf9245e69e45df"
+          href="https://open.spotify.com/user/31apxxxqaadrj24rjilx75insprq"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -80,18 +80,14 @@ function Socials() {
       </Grid>
 
       <Grid item xs={12} sm={6} md={4} className="inner-logo-cont">
-        <a
+        {/* <a
           href="https://music.apple.com/us/browse"
           target="_blank"
           rel="noopener noreferrer"
-        >
-          <img
-            src={appMusImg}
-            alt="Apple Music Logo"
-            className="company-logos"
-          />
-        </a>
-        <p>Follow Us!</p>
+        > */}
+        <img src={appMusImg} alt="Apple Music Logo" className="company-logos" />
+        {/* </a> */}
+        <p>Account Not Made</p>
       </Grid>
     </Grid>
   );
