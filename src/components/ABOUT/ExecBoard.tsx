@@ -3,6 +3,10 @@ import "../SP/mission.css";
 import myimg from "../../imgs/logo.png";
 import { useMediaQuery } from "@mui/material";
 import TitleAndDirectory from "../HOME/TitleAndDirectory";
+import AndrewWatsonImg from "../../imgs/execBoardImgs/AndrewWatson.png";
+import ArchieSilversteinImg from "../../imgs/execBoardImgs/ArchieSilverstein.png";
+import DannyRamirezImg from "../../imgs/execBoardImgs/DannyRamirez.png";
+import ReedMalcomImg from "../../imgs/execBoardImgs/ReedMalcom.png";
 
 interface Props {}
 
@@ -11,7 +15,7 @@ const execBoardList: Array<[string, string, string, any]> = [
     "Arch Silverstein",
     "President/Founder",
     "Leads weekly meetings, makes weekly slides",
-    myimg,
+    ArchieSilversteinImg,
   ],
   [
     "Daniel Rivero",
@@ -22,25 +26,25 @@ const execBoardList: Array<[string, string, string, any]> = [
   [
     "Andrew Watson",
     "Treasurer",
-    "In charge of the finances, Deals with SOFO",
-    myimg,
+    "In charge of the finances, deals with SOFO",
+    AndrewWatsonImg,
   ],
   [
     "Reed Malcolm",
     "DJ",
     "Controls music during meetings, makes weekly playlists",
-    myimg,
+    ReedMalcomImg,
   ],
   [
     "Danny Ramirez",
     "Social Media Chair",
     "Posts to our social media platforms",
-    myimg,
+    DannyRamirezImg,
   ],
   [
     "Corey Dubin",
     "Print Media Chair",
-    "Writes for the MTC Blog, Send out the listservs",
+    "Writes for the MTC Blog, sends out the listservs",
     myimg,
   ],
   [
@@ -52,7 +56,7 @@ const execBoardList: Array<[string, string, string, any]> = [
   [
     "Susanna Bobbs",
     "Event Planning Chair",
-    "Plans trips and album-listening parties",
+    "Plans club trips and events",
     myimg,
   ],
 ];
