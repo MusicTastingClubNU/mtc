@@ -8,6 +8,7 @@ import ArchieSilversteinImg from "../../imgs/execBoardImgs/ArchieSilverstein.png
 import DannyRamirezImg from "../../imgs/execBoardImgs/DannyRamirez.png";
 import ReedMalcomImg from "../../imgs/execBoardImgs/ReedMalcom.png";
 import SusannaBobsImg from "../../imgs/execBoardImgs/SusannaBobbs.png";
+import SimonOlshanCantinImg from "../../imgs/execBoardImgs/SimonOlshanCantin.png";
 
 interface Props {}
 
@@ -24,12 +25,7 @@ const execBoardList: Array<[string, string, string, any]> = [
     "Makes weekly slides, leads every 4th meeting",
     myimg,
   ],
-  [
-    "Andrew Watson",
-    "Treasurer",
-    "In charge of the finances, deals with SOFO",
-    AndrewWatsonImg,
-  ],
+  ["Andrew Watson", "Treasurer", "In charge of the finances", AndrewWatsonImg],
   [
     "Reed Malcolm",
     "DJ",
@@ -52,7 +48,7 @@ const execBoardList: Array<[string, string, string, any]> = [
     "Simon Olshan-Cantin",
     "In-Club Activity Chair",
     "Coordinates in-club activities (games/presentations)",
-    myimg,
+    SimonOlshanCantinImg,
   ],
   [
     "Susanna Bobbs",
