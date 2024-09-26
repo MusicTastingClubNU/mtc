@@ -55,7 +55,7 @@ function Socials() {
 
       <Grid item xs={12} sm={6} md={4} className="inner-logo-cont">
         <a
-          href="https://www.instagram.com/"
+          href="https://www.instagram.com/musictastingclub?igsh=M2hobjkxa29ja3Jq&utm_source=qr"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -65,7 +65,11 @@ function Socials() {
       </Grid>
 
       <Grid item xs={12} sm={6} md={4} className="inner-logo-cont">
-        <a href="https://x.com/home" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://x.com/MusicTastinClub"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             src={twitterImg}
             alt="Twitter Logo"
