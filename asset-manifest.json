@@ -1,24 +1,28 @@
 {
   "files": {
     "main.css": "/static/css/main.273238b7.css",
-    "main.js": "/static/js/main.69298a33.js",
+    "main.js": "/static/js/main.5d8ac1fb.js",
     "static/media/SQ24_W2_SotW.png": "/static/media/SQ24_W2_SotW.f4301b88a5749e3d6e6f.png",
+    "static/media/ArchieSilverstein.png": "/static/media/ArchieSilverstein.750c9d4626dc9f1dd236.png",
     "static/media/WQ24_W9_RUSotW.png": "/static/media/WQ24_W9_RUSotW.5508f1cae5a4329b6c87.png",
     "static/media/WQ24_W2_AotW.png": "/static/media/WQ24_W2_AotW.3f6b617402633e9d2554.png",
+    "static/media/ReedMalcom.png": "/static/media/ReedMalcom.2d6e1033ffca477624f9.png",
     "static/media/instalogo.png": "/static/media/instalogo.e905e80e3d57cc2b32c7.png",
     "static/media/WQ24_W3_RUSotW.png": "/static/media/WQ24_W3_RUSotW.98351e05eea3519de1a1.png",
     "static/media/Roboto-Regular.ttf": "/static/media/Roboto-Regular.27f62b53b93858475a7f.ttf",
     "static/media/Roboto-Bold.ttf": "/static/media/Roboto-Bold.d50a80138ec4f2fb5e9f.ttf",
     "static/media/MTC_logo.png": "/static/media/MTC_logo.a4c1cbb58df44a722a1a.png",
+    "static/media/DannyRamirez.png": "/static/media/DannyRamirez.17011642e24e7d628d6c.png",
+    "static/media/AndrewWatson.png": "/static/media/AndrewWatson.3c315a0f951d70be8cba.png",
     "static/media/CourierPrime-Regular.ttf": "/static/media/CourierPrime-Regular.7503a2e9660bb6f608fb.ttf",
     "static/media/applemusiclogo.png": "/static/media/applemusiclogo.44976b4b639e2470cd0f.png",
     "static/media/googleformlogo.png": "/static/media/googleformlogo.f5e00191489875080207.png",
     "index.html": "/index.html",
     "main.273238b7.css.map": "/static/css/main.273238b7.css.map",
-    "main.69298a33.js.map": "/static/js/main.69298a33.js.map"
+    "main.5d8ac1fb.js.map": "/static/js/main.5d8ac1fb.js.map"
   },
   "entrypoints": [
     "static/css/main.273238b7.css",
-    "static/js/main.69298a33.js"
+    "static/js/main.5d8ac1fb.js"
   ]
 }
