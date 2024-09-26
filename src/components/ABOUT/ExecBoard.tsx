@@ -7,6 +7,7 @@ import AndrewWatsonImg from "../../imgs/execBoardImgs/AndrewWatson.png";
 import ArchieSilversteinImg from "../../imgs/execBoardImgs/ArchieSilverstein.png";
 import DannyRamirezImg from "../../imgs/execBoardImgs/DannyRamirez.png";
 import ReedMalcomImg from "../../imgs/execBoardImgs/ReedMalcom.png";
+import SusannaBobsImg from "../../imgs/execBoardImgs/SusannaBobbs.png";
 
 interface Props {}
 
@@ -57,7 +58,7 @@ const execBoardList: Array<[string, string, string, any]> = [
     "Susanna Bobbs",
     "Event Planning Chair",
     "Plans club trips and events",
-    myimg,
+    SusannaBobsImg,
   ],
 ];
 
