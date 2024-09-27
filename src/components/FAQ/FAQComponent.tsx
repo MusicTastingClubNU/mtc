@@ -84,7 +84,7 @@ const FAQComponent = (props: Props) => {
 
         <h2>Q: How can I keep up to date with the club?</h2>
         <h3 className="answers2">
-          A: Fill out our interest Google Form! Join our Discord! Follow us on
+          A: Fill out our interest Google Form! Join our GroupMe! Follow us on
           Spotify, Apple Music, Twitter (X.com), and Instagram! We make and post
           about our weekly playlists on our socials! All sign-up/follow links
           are below. Happy listening!

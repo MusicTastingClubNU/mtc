@@ -4,7 +4,7 @@ This project is the culmination of two months of blood, sweat, tears, and an unh
 
 ## HOME (src >> components >> SP >> `salespitch.tsx`)
 
-The HOME page is the first page the user is brought to. This page is represented with the `<Salespitch />` tag and its contents can primarily be found in the `SP` folder. On Desktop, the salespitch page contains the first salespitch panel, the club's mission, and the music picks for next week (represented by `<ThisWeeksPick />`). There's a unique component just for mobile (`<ConditionalPhoneSignUp />`) which prompts the user to sign up for the club's Discord and fill out the club's interest form.
+The HOME page is the first page the user is brought to. This page is represented with the `<Salespitch />` tag and its contents can primarily be found in the `SP` folder. On Desktop, the salespitch page contains the first salespitch panel, the club's mission, and the music picks for next week (represented by `<ThisWeeksPick />`). There's a unique component just for mobile (`<ConditionalPhoneSignUp />`) which prompts the user to sign up for the club's GroupMe and fill out the club's interest form.
 
 ## PICKS (src >> components >> WE >> `WeeklyEntry.tsx`)
 

@@ -4,7 +4,7 @@ import "./socials.css";
 import spotifyImg from "../../imgs/companyLogos/spotlogo.png";
 import instaImg from "../../imgs/companyLogos/instalogo.png";
 import appMusImg from "../../imgs/companyLogos/applemusiclogo.png";
-import discordImg from "../../imgs/companyLogos/discordlogo.png";
+import groupMeImg from "../../imgs/companyLogos/groupmelogo.png";
 import googleFormImg from "../../imgs/companyLogos/googleformlogo.png";
 import twitterImg from "../../imgs/companyLogos/twitterlogo.png";
 // import listservImg from "../../imgs/listservimg.png"; // Commented out since it's not used
@@ -29,17 +29,17 @@ function Socials() {
 
       <Grid item xs={12} sm={6} md={4} className="inner-logo-cont">
         <a
-          href="https://discord.gg/JzYa55p25m"
+          href="https://groupme.com/join_group/98384670/EHkMPGSy"
           target="_blank"
           rel="noopener noreferrer"
         >
           <img
-            src={discordImg}
-            alt="Discord Join Logo"
+            src={groupMeImg}
+            alt="GroupMe Join Logo"
             className="company-logos"
           />
         </a>
-        <p>Join Our Discord!</p>
+        <p>Join Our GroupMe!</p>
       </Grid>
 
       <Grid item xs={12} sm={6} md={4} className="inner-logo-cont">
