@@ -92,7 +92,7 @@ const FAQComponent = (props: Props) => {
 
         <div className="outer-logo-cont">
           <br />
-          <Socials></Socials>
+          <Socials />
         </div>
       </div>
       <br />
