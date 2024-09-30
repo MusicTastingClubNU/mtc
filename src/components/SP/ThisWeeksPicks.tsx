@@ -26,21 +26,21 @@ function createData2(
 }
 
 const rows = [
-  createData2(-1, "Album of the Week", "albumName", "ArtistName", "MemberName"),
   createData2(
-    -2,
-    "Runner Up Album of the Week",
-    "albumName",
-    "ArtistName",
-    "MemberName"
+    68,
+    "Album of the Week",
+    "Mood Valiant",
+    "Hiatus Kaiyote",
+    "Susanna"
   ),
-  createData2(-3, "Song of the Week", "songName", "ArtistName", "MemberName"),
+  createData2(69, "Runner Up Album of the Week", "Lamp Genso", "Lamp", "Danny"),
+  createData2(70, "Song of the Week", "Bagbak", "Vince Staples", "AJ"),
   createData2(
-    -4,
+    71,
     "Runner Up Song of the Week",
-    "songName",
-    "ArtistName",
-    "MemberName"
+    "hydrocodone",
+    "black kray",
+    "Ryan"
   ),
 ];
 
