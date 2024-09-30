@@ -11,6 +11,8 @@ import SusannaBobsImg from "../../imgs/execBoardImgs/SusannaBobbs.png";
 import SimonOlshanCantinImg from "../../imgs/execBoardImgs/SimonOlshanCantin.png";
 import AndrewBarrettImg from "../../imgs/execBoardImgs/AndrewBarrett.png";
 import CoreyDubinImg from "../../imgs/execBoardImgs/CoreyDubin.png";
+import DanielRiveroImg from "../../imgs/execBoardImgs/DanielRivero.png";
+
 interface Props {}
 
 const execBoardList: Array<[string, string, string, any]> = [
@@ -24,7 +26,7 @@ const execBoardList: Array<[string, string, string, any]> = [
     "Daniel Rivero",
     "Vice President",
     "Makes weekly slides, leads every 4th meeting",
-    myimg,
+    DanielRiveroImg,
   ],
   ["Andrew Watson", "Treasurer", "In charge of the finances", AndrewWatsonImg],
   [

@@ -786,42 +786,42 @@
         "weekDate": "(10/03/24)",
         "weekActivity": {
           "weekActivityEmoji": "♟️",
-          "weekActivityTitle": "SONG OF THE SUMMER BRACKET",
-          "weekActivityDetails": "Come with your favoring songs as we decide the best songs of Summer 2024!",
+          "weekActivityTitle": "MTC MIXER",
+          "weekActivityDetails": "Make new friends and find out who shares your artist/genres/music preferences!",
           "weekActivityHost": "Simon"
         },
         "picks": [
           {
             "pickId": 68,
             "pickType": "Album of the Week",
-            "songOrAlbumName": "N/A",
-            "artistName": "N/A",
-            "memberName": "N/A",
-            "songOrAlbumArt": ""
+            "songOrAlbumName": "Mood Valiant",
+            "artistName": "Hiatus Kaiyote",
+            "memberName": "Susanna",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273da81bffabbcac771ccff4e99"
           },
           {
             "pickId": 69,
             "pickType": "Runner Up Album of the Week",
-            "songOrAlbumName": "N/A",
-            "artistName": "N/A",
-            "memberName": "N/A",
-            "songOrAlbumArt": ""
+            "songOrAlbumName": "Lamp Genso",
+            "artistName": "Lamp",
+            "memberName": "Danny",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273bbc2ac628f52cd6127e20bfa"
           },
           {
             "pickId": 70,
             "pickType": "Song of the Week",
-            "songOrAlbumName": "N/A",
-            "artistName": "N/A",
-            "memberName": "N/A",
-            "songOrAlbumArt": ""
+            "songOrAlbumName": "Bagbak",
+            "artistName": "Vince Staples",
+            "memberName": "AJ",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2737ba7b4d23c717f3211717946"
           },
           {
             "pickId": 71,
             "pickType": "Runner Up Song of the Week",
-            "songOrAlbumName": "N/A",
-            "artistName": "N/A",
-            "memberName": "N/A",
-            "songOrAlbumArt": ""
+            "songOrAlbumName": "hydrocodone",
+            "artistName": "black kray",
+            "memberName": "Ryan",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273228757a45a36d7115ee6feb1"
           }
         ]
       }
