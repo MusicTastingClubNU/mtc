@@ -1,13 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.273238b7.css",
-    "main.js": "/static/js/main.8e8dba8f.js",
+    "main.js": "/static/js/main.c39cda07.js",
     "static/media/SQ24_W2_SotW.png": "/static/media/SQ24_W2_SotW.f4301b88a5749e3d6e6f.png",
     "static/media/SimonOlshanCantin.png": "/static/media/SimonOlshanCantin.1812dfb93638ca3313ab.png",
     "static/media/SusannaBobbs.png": "/static/media/SusannaBobbs.3356bd2d4baba7bed8c9.png",
     "static/media/ArchieSilverstein.png": "/static/media/ArchieSilverstein.750c9d4626dc9f1dd236.png",
-    "static/media/CoreyDubin.png": "/static/media/CoreyDubin.cfd018d08df1bdff0883.png",
     "static/media/WQ24_W9_RUSotW.png": "/static/media/WQ24_W9_RUSotW.5508f1cae5a4329b6c87.png",
+    "static/media/DanielRivero.png": "/static/media/DanielRivero.54c106b35526cb9527eb.png",
+    "static/media/CoreyDubin.png": "/static/media/CoreyDubin.d07661d39df479d0c8c4.png",
     "static/media/WQ24_W2_AotW.png": "/static/media/WQ24_W2_AotW.3f6b617402633e9d2554.png",
     "static/media/ReedMalcom.png": "/static/media/ReedMalcom.2d6e1033ffca477624f9.png",
     "static/media/AndrewBarrett.png": "/static/media/AndrewBarrett.eb9837795179e306d73b.png",
@@ -24,10 +25,10 @@
     "static/media/groupmelogo.png": "/static/media/groupmelogo.9dfc156ee6a940c187a1.png",
     "index.html": "/index.html",
     "main.273238b7.css.map": "/static/css/main.273238b7.css.map",
-    "main.8e8dba8f.js.map": "/static/js/main.8e8dba8f.js.map"
+    "main.c39cda07.js.map": "/static/js/main.c39cda07.js.map"
   },
   "entrypoints": [
     "static/css/main.273238b7.css",
-    "static/js/main.8e8dba8f.js"
+    "static/js/main.c39cda07.js"
   ]
 }
