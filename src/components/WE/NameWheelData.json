@@ -1,54 +1,6 @@
 {
-  "AotW": [
-    "Archie",
-    "AJ",
-    "Aidan",
-    "Corey",
-    "Daniel",
-    "Grace",
-    "Noah",
-    "Reed",
-    "Ryan",
-    "Simon",
-    "Susanna"
-  ],
-  "RUAotW": [
-    "Archie",
-    "AJ",
-    "Aidan",
-    "Corey",
-    "Daniel",
-    "Grace",
-    "Noah",
-    "Reed",
-    "Ryan",
-    "Simon",
-    "Susanna"
-  ],
-  "SotW": [
-    "Archie",
-    "AJ",
-    "Aidan",
-    "Corey",
-    "Daniel",
-    "Grace",
-    "Noah",
-    "Reed",
-    "Ryan",
-    "Simon",
-    "Susanna"
-  ],
-  "RUSotW": [
-    "Archie",
-    "AJ",
-    "Aidan",
-    "Corey",
-    "Daniel",
-    "Grace",
-    "Noah",
-    "Reed",
-    "Ryan",
-    "Simon",
-    "Susanna"
-  ]
+  "AotW": ["Reed", "Grace", "Cai", "Zoey"],
+  "RUAotW": ["Reed", "Grace", "Cai", "Zoey", "Archie", "Daniel"],
+  "SotW": ["Reed", "Grace", "Cai", "Zoey", "Archie", "Daniel"],
+  "RUSotW": ["Reed", "Grace", "Cai", "Zoey", "Archie", "Daniel"]
 }
