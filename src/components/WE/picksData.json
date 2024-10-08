@@ -824,6 +824,51 @@
             "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273228757a45a36d7115ee6feb1"
           }
         ]
+      },
+      {
+        "weekId": 18,
+        "weekName": "WEEK 2",
+        "weekDate": "(10/10/24)",
+        "weekActivity": {
+          "weekActivityEmoji": "♟️",
+          "weekActivityTitle": "MTC MIXER",
+          "weekActivityDetails": "Make new friends and find out who shares your artist/genres/music preferences!",
+          "weekActivityHost": "Simon"
+        },
+        "picks": [
+          {
+            "pickId": 72,
+            "pickType": "Album of the Week",
+            "songOrAlbumName": "Paradigmes",
+            "artistName": "La Femme",
+            "memberName": "Corey",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273065bdd46636de3b8ec05e567"
+          },
+          {
+            "pickId": 73,
+            "pickType": "Runner Up Album of the Week",
+            "songOrAlbumName": "The Well I Fell Into",
+            "artistName": "WHY?",
+            "memberName": "Simon",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2739f9e81fc8aff6b5ce0b409b5"
+          },
+          {
+            "pickId": 74,
+            "pickType": "Song of the Week",
+            "songOrAlbumName": "De Selby (Pt 1/2)",
+            "artistName": "Hozier",
+            "memberName": "Aidan",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2735aa29751874ca4ba06da8877"
+          },
+          {
+            "pickId": 75,
+            "pickType": "Runner Up Song of the Week",
+            "songOrAlbumName": "Something Holy",
+            "artistName": "Alice Phoebe Lou",
+            "memberName": "Joseph",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273108f1b9a37f5c96cf66bea15"
+          }
+        ]
       }
     ]
   },
