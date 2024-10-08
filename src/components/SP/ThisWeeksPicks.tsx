@@ -24,23 +24,22 @@ function createData2(
     memberName,
   };
 }
-
 const rows = [
+  createData2(72, "Album of the Week", "Paradigmes", "La Femme", "Corey"),
   createData2(
-    68,
-    "Album of the Week",
-    "Mood Valiant",
-    "Hiatus Kaiyote",
-    "Susanna"
+    73,
+    "Runner Up Album of the Week",
+    "The Well I Fell Into",
+    "WHY?",
+    "Simon"
   ),
-  createData2(69, "Runner Up Album of the Week", "Lamp Genso", "Lamp", "Danny"),
-  createData2(70, "Song of the Week", "Bagbak", "Vince Staples", "AJ"),
+  createData2(74, "Song of the Week", "De Selby (Pt 1/2)", "Hozier", "Aidan"),
   createData2(
-    71,
+    75,
     "Runner Up Song of the Week",
-    "hydrocodone",
-    "black kray",
-    "Ryan"
+    "Something Holy",
+    "Alice Phoebe Lou",
+    "Joseph"
   ),
 ];
 
