@@ -869,6 +869,51 @@
             "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273108f1b9a37f5c96cf66bea15"
           }
         ]
+      },
+      {
+        "weekId": 19,
+        "weekName": "WEEK 3",
+        "weekDate": "(10/17/24)",
+        "weekActivity": {
+          "weekActivityEmoji": "♟️",
+          "weekActivityTitle": "???",
+          "weekActivityDetails": "???",
+          "weekActivityHost": "Simon"
+        },
+        "picks": [
+          {
+            "pickId": 76,
+            "pickType": "Album of the Week",
+            "songOrAlbumName": "And Then Nothing Turned Itself Inside-Out",
+            "artistName": "Yo La Tengo",
+            "memberName": "Reed",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b27383d6fe7694702b6bf5ac3ba3"
+          },
+          {
+            "pickId": 77,
+            "pickType": "Runner Up Album of the Week",
+            "songOrAlbumName": "Ill Communication",
+            "artistName": "Beastie Boys",
+            "memberName": "Grace",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273436a305db8bd85b820da3e5a"
+          },
+          {
+            "pickId": 78,
+            "pickType": "Song of the Week",
+            "songOrAlbumName": "",
+            "artistName": "",
+            "memberName": "Cai",
+            "songOrAlbumArt": ""
+          },
+          {
+            "pickId": 79,
+            "pickType": "Runner Up Song of the Week",
+            "songOrAlbumName": "Romantic",
+            "artistName": "Mannequin Pussy",
+            "memberName": "Zoey",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b27373a681dbce9553a6f55c6a14"
+          }
+        ]
       }
     ]
   },
