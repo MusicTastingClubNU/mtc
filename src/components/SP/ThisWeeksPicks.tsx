@@ -39,7 +39,13 @@ const rows = [
     "Beastie Boys",
     "Grace"
   ),
-  createData2(74, "Song of the Week", "N/A", "N/A", "Cai"),
+  createData2(
+    74,
+    "Song of the Week",
+    "Starburned and Unkissed",
+    "Caroline Polachek",
+    "Cai"
+  ),
   createData2(
     79,
     "Runner Up Song of the Week",
