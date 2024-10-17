@@ -914,6 +914,51 @@
             "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b27373a681dbce9553a6f55c6a14"
           }
         ]
+      },
+      {
+        "weekId": 20,
+        "weekName": "WEEK 4",
+        "weekDate": "(10/24/24)",
+        "weekActivity": {
+          "weekActivityEmoji": "?",
+          "weekActivityTitle": "???",
+          "weekActivityDetails": "???",
+          "weekActivityHost": "???"
+        },
+        "picks": [
+          {
+            "pickId": 80,
+            "pickType": "Album of the Week",
+            "songOrAlbumName": "N/A",
+            "artistName": "N/A",
+            "memberName": "N/A",
+            "songOrAlbumArt": ""
+          },
+          {
+            "pickId": 81,
+            "pickType": "Runner Up Album of the Week",
+            "songOrAlbumName": "N/A",
+            "artistName": "N/A",
+            "memberName": "N/A",
+            "songOrAlbumArt": ""
+          },
+          {
+            "pickId": 82,
+            "pickType": "Song of the Week",
+            "songOrAlbumName": "N/A",
+            "artistName": "N/A",
+            "memberName": "N/A",
+            "songOrAlbumArt": ""
+          },
+          {
+            "pickId": 83,
+            "pickType": "Runner Up Song of the Week",
+            "songOrAlbumName": "N/A",
+            "artistName": "N/A",
+            "memberName": "N/A",
+            "songOrAlbumArt": ""
+          }
+        ]
       }
     ]
   },
