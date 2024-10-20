@@ -920,43 +920,43 @@
         "weekName": "WEEK 4",
         "weekDate": "(10/24/24)",
         "weekActivity": {
-          "weekActivityEmoji": "?",
-          "weekActivityTitle": "???",
-          "weekActivityDetails": "???",
-          "weekActivityHost": "???"
+          "weekActivityEmoji": "🎵",
+          "weekActivityTitle": "Music Analysis 101",
+          "weekActivityDetails": "Come to our meeting to learn how to better talk about the music we review week to week!",
+          "weekActivityHost": "Arch"
         },
         "picks": [
           {
             "pickId": 80,
             "pickType": "Album of the Week",
-            "songOrAlbumName": "N/A",
-            "artistName": "N/A",
-            "memberName": "N/A",
-            "songOrAlbumArt": ""
+            "songOrAlbumName": "Here's Larks' Tongues In Aspic",
+            "artistName": "King Crimson",
+            "memberName": "Acton",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273aa9e5286056e17ff3d9b2881"
           },
           {
             "pickId": 81,
             "pickType": "Runner Up Album of the Week",
-            "songOrAlbumName": "N/A",
-            "artistName": "N/A",
-            "memberName": "N/A",
-            "songOrAlbumArt": ""
+            "songOrAlbumName": "Hadestown (Original Broadway Cast Recording) [2019]",
+            "artistName": "Original Broadway Cast of Hadestown",
+            "memberName": "Aidan",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273b62a5129d9efa26386143622"
           },
           {
             "pickId": 82,
             "pickType": "Song of the Week",
-            "songOrAlbumName": "N/A",
-            "artistName": "N/A",
-            "memberName": "N/A",
-            "songOrAlbumArt": ""
+            "songOrAlbumName": "Overthrown",
+            "artistName": "Thee Oh Sees",
+            "memberName": "Reed",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273688b55c8a7c8b4094360d785"
           },
           {
             "pickId": 83,
             "pickType": "Runner Up Song of the Week",
-            "songOrAlbumName": "N/A",
-            "artistName": "N/A",
-            "memberName": "N/A",
-            "songOrAlbumArt": ""
+            "songOrAlbumName": "Waltz #2",
+            "artistName": "Elliot Smith",
+            "memberName": "Nisha",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273cdf1be0ff556d169eade4368"
           }
         ]
       }

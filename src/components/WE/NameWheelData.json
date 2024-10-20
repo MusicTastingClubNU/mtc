@@ -1,31 +1,8 @@
 {
-  "AotW": [
-    "Aidan",
-    "Jack",
-    "AJ",
-    "Ryan",
-    "Nisha",
-    "Loaghan",
-    "Enrica",
-    "Acton",
-    "Cai",
-    "Andrew"
-  ],
-  "RUAotW": [
-    "Aidan",
-    "Jack",
-    "AJ",
-    "Ryan",
-    "Nisha",
-    "Loaghan",
-    "Enrica",
-    "Acton",
-    "Cai",
-    "Andrew"
-  ],
+  "AotW": ["Jack", "AJ", "Ryan", "Nisha", "Loaghan", "Enrica", "Cai", "Andrew"],
+  "RUAotW": ["N/A"],
   "SotW": [
     "Jack",
-    "Nisha",
     "Loaghan",
     "Enrica",
     "Acton",
@@ -33,19 +10,7 @@
     "Danny",
     "Susanna",
     "Corey",
-    "Grace",
-    "Reed"
+    "Grace"
   ],
-  "RUSotW": [
-    "Aidan",
-    "Jack",
-    "AJ",
-    "Ryan",
-    "Nisha",
-    "Loaghan",
-    "Enrica",
-    "Acton",
-    "Cai",
-    "Andrew"
-  ]
+  "RUSotW": ["N/A"]
 }

@@ -26,32 +26,26 @@ function createData2(
 }
 const rows = [
   createData2(
-    72,
+    80,
     "Album of the Week",
-    "And Then Nothing Turned Itself Inside-Out",
-    "Yo La Tengo",
-    "Reed"
+    "Larks' Tongues In Aspic",
+    "King Crimson",
+    "Acton"
   ),
   createData2(
-    77,
+    81,
     "Runner Up Album of the Week",
-    "Ill Communication",
-    "Beastie Boys",
-    "Grace"
+    "Hadestown (Original Broadway Cast Recording) [2019]",
+    "Original Broadway Cast of Hadestown",
+    "Aidan"
   ),
+  createData2(82, "Song of the Week", "Overthrown", "Thee Oh Sees", "Reed"),
   createData2(
-    74,
-    "Song of the Week",
-    "Starburned and Unkissed",
-    "Caroline Polachek",
-    "Cai"
-  ),
-  createData2(
-    79,
+    83,
     "Runner Up Song of the Week",
-    "Romantic",
-    "Mannequin Pussy",
-    "Zoey"
+    "Waltz #2",
+    "Elliot Smith",
+    "Nisha"
   ),
 ];
 
