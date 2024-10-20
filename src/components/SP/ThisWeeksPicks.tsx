@@ -43,7 +43,7 @@ const rows = [
   createData2(
     83,
     "Runner Up Song of the Week",
-    "Waltz #2",
+    "Waltz #2 (XO)",
     "Elliot Smith",
     "Nisha"
   ),
