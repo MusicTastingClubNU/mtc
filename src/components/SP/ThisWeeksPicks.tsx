@@ -55,9 +55,8 @@ export default function ThisWeeksPicks() {
   return (
     <div className={isMobile ? "cont2" : "cont"}>
       <h3 style={{ fontSize: 35, textAlign: "center" }}>
-        NEXT MEETING'S PICKS (10/17/24)
+        NEXT MEETING'S PICKS (10/24/24)
       </h3>
-      {/* NEXT MEETING'S PICKS (10//24) */}
       <h3
         style={{
           fontSize: 20,
