@@ -959,6 +959,51 @@
             "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273cdf1be0ff556d169eade4368"
           }
         ]
+      },
+      {
+        "weekId": 21,
+        "weekName": "WEEK 5",
+        "weekDate": "(10/31/24)",
+        "weekActivity": {
+          "weekActivityEmoji": "?",
+          "weekActivityTitle": "???",
+          "weekActivityDetails": "???",
+          "weekActivityHost": "Simon"
+        },
+        "picks": [
+          {
+            "pickId": 84,
+            "pickType": "Album of the Week",
+            "songOrAlbumName": "Since I Left You [Disc 1]",
+            "artistName": "The Avalanches",
+            "memberName": "Ryan",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2734cc65c5ce55234c548a79d9d"
+          },
+          {
+            "pickId": 85,
+            "pickType": "Runner Up Album of the Week",
+            "songOrAlbumName": "New Levels New Devils",
+            "artistName": "Polyphia",
+            "memberName": "Andrew",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2737a799cc62e624fd6432779e3"
+          },
+          {
+            "pickId": 86,
+            "pickType": "Song of the Week",
+            "songOrAlbumName": "Boys At School",
+            "artistName": "Spellling",
+            "memberName": "Daniel",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273d990653ea71f3ef4bf46d27b"
+          },
+          {
+            "pickId": 87,
+            "pickType": "Runner Up Song of the Week",
+            "songOrAlbumName": "More Than It Hurts You",
+            "artistName": "The Front Bottoms",
+            "memberName": "Simon",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273bd04df64648504da10794258"
+          }
+        ]
       }
     ]
   },

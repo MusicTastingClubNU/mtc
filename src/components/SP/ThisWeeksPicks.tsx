@@ -26,26 +26,26 @@ function createData2(
 }
 const rows = [
   createData2(
-    80,
+    84,
     "Album of the Week",
-    "Larks' Tongues In Aspic",
-    "King Crimson",
-    "Acton"
+    "Since I Left You [Disc 1]",
+    "The Avalanches",
+    "Ryan"
   ),
   createData2(
-    81,
+    85,
     "Runner Up Album of the Week",
-    "Hadestown (Original Broadway Cast Recording) [2019]",
-    "Original Broadway Cast of Hadestown",
-    "Aidan"
+    "New Levels New Devils",
+    "Polyphia",
+    "Andrew"
   ),
-  createData2(82, "Song of the Week", "Overthrown", "Thee Oh Sees", "Reed"),
+  createData2(86, "Song of the Week", "Boys At School", "Spellling", "Daniel"),
   createData2(
-    83,
+    87,
     "Runner Up Song of the Week",
-    "Waltz #2 (XO)",
-    "Elliot Smith",
-    "Nisha"
+    "More Than It Hurts You",
+    "The Front Bottoms",
+    "Simon"
   ),
 ];
 
@@ -55,7 +55,7 @@ export default function ThisWeeksPicks() {
   return (
     <div className={isMobile ? "cont2" : "cont"}>
       <h3 style={{ fontSize: 35, textAlign: "center" }}>
-        NEXT MEETING'S PICKS (10/24/24)
+        NEXT MEETING'S PICKS (10/31/24)
       </h3>
       <h3
         style={{

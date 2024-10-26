@@ -1,16 +1,6 @@
 {
-  "AotW": ["Jack", "AJ", "Ryan", "Nisha", "Loaghan", "Enrica", "Cai", "Andrew"],
+  "AotW": ["Jack", "AJ", "Cai", "Joseph"],
   "RUAotW": ["N/A"],
-  "SotW": [
-    "Jack",
-    "Loaghan",
-    "Enrica",
-    "Acton",
-    "Andrew",
-    "Danny",
-    "Susanna",
-    "Corey",
-    "Grace"
-  ],
+  "SotW": ["Acton", "Andrew", "Danny", "Susanna", "Corey", "Grace", "Archie"],
   "RUSotW": ["N/A"]
 }

@@ -62,7 +62,7 @@ const calendarStylesFull = {
 };
 
 const calendarStylesMobile2 = {
-  transform: "scale(1)", // Adjust the scale as needed
+  transform: "scale(1)",
   alignItems: "center",
   width: "100%",
 };
@@ -89,7 +89,7 @@ function fakeFetch(date: Dayjs, { signal }: { signal: AbortSignal }) {
   });
 }
 
-const initialValue = dayjs("2024-10-17");
+const initialValue = dayjs("2024-10-31");
 
 function ServerDay(
   props: PickersDayProps<Dayjs> & { FQ24Meetings?: Dayjs[]; emoji?: string }
