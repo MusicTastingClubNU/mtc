@@ -79,16 +79,16 @@ function Socials() {
         <p>Follow Us!</p>
       </Grid>
 
-      <Grid item xs={12} sm={6} md={4} className="inner-logo-cont">
+      {/* <Grid item xs={12} sm={6} md={4} className="inner-logo-cont">
         {/* <a
           href="https://music.apple.com/us/browse"
           target="_blank"
           rel="noopener noreferrer"
         > */}
-        <img src={appMusImg} alt="Apple Music Logo" className="company-logos" />
-        {/* </a> */}
+      {/* <img src={appMusImg} alt="Apple Music Logo" className="company-logos" /> */}
+      {/* </a> }
         <p>Account Not Made</p>
-      </Grid>
+      </Grid> */}
     </Grid>
   );
 }

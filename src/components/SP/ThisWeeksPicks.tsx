@@ -24,29 +24,24 @@ function createData2(
     memberName,
   };
 }
+
 const rows = [
   createData2(
-    84,
+    88,
     "Album of the Week",
-    "Since I Left You [Disc 1]",
-    "The Avalanches",
-    "Ryan"
+    "And in the Darkness, Hearts Aglow",
+    "Weyes Blood",
+    "Cai"
   ),
+  createData2(89, "Runner Up Album of the Week", "Stankonia", "OutKast", "AJ"),
   createData2(
-    85,
-    "Runner Up Album of the Week",
-    "New Levels New Devils",
-    "Polyphia",
-    "Andrew"
+    90,
+    "Song of the Week",
+    "How to Disappear Completely",
+    "Radiohead",
+    "Danny"
   ),
-  createData2(86, "Song of the Week", "Boys At School", "Spellling", "Daniel"),
-  createData2(
-    87,
-    "Runner Up Song of the Week",
-    "More Than It Hurts You",
-    "The Front Bottoms",
-    "Simon"
-  ),
+  createData2(91, "Runner Up Song of the Week", "N/A", "N/A", "Corey"),
 ];
 
 export default function ThisWeeksPicks() {
@@ -55,7 +50,7 @@ export default function ThisWeeksPicks() {
   return (
     <div className={isMobile ? "cont2" : "cont"}>
       <h3 style={{ fontSize: 35, textAlign: "center" }}>
-        NEXT MEETING'S PICKS (10/31/24)
+        NEXT MEETING'S PICKS (11/07/24)
       </h3>
       <h3
         style={{

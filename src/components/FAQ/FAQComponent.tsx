@@ -47,9 +47,8 @@ const FAQComponent = (props: Props) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Spotify
-            </a>{" "}
-            and Apple Music
+              We use Spotify for our club
+            </a>
           </b>
           . Spotify's free subscription tier grants all students (regardless of
           their financial situation) access to the music that we listen to week
@@ -85,9 +84,9 @@ const FAQComponent = (props: Props) => {
         <h2>Q: How can I keep up to date with the club?</h2>
         <h3 className="answers2">
           A: Fill out our interest Google Form! Join our GroupMe! Follow us on
-          Spotify, Apple Music, Twitter (X.com), and Instagram! We make and post
-          about our weekly playlists on our socials! All sign-up/follow links
-          are below. Happy listening!
+          Spotify, Twitter (X.com), and Instagram! We make and post about our
+          weekly playlists on our socials! All sign-up/follow links are below.
+          Happy listening!
         </h3>
 
         <div className="outer-logo-cont">

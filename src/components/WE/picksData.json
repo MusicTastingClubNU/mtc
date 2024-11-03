@@ -966,8 +966,8 @@
         "weekDate": "(10/31/24)",
         "weekActivity": {
           "weekActivityEmoji": "?",
-          "weekActivityTitle": "???",
-          "weekActivityDetails": "???",
+          "weekActivityTitle": "Heads Off",
+          "weekActivityDetails": "Come for a Halloween-themed game of Heads Up!",
           "weekActivityHost": "Simon"
         },
         "picks": [
@@ -1002,6 +1002,51 @@
             "artistName": "The Front Bottoms",
             "memberName": "Simon",
             "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273bd04df64648504da10794258"
+          }
+        ]
+      },
+      {
+        "weekId": 22,
+        "weekName": "WEEK 6",
+        "weekDate": "(11/07/24)",
+        "weekActivity": {
+          "weekActivityEmoji": "?",
+          "weekActivityTitle": "???",
+          "weekActivityDetails": "???",
+          "weekActivityHost": "Simon"
+        },
+        "picks": [
+          {
+            "pickId": 88,
+            "pickType": "Album of the Week",
+            "songOrAlbumName": "And in the Darkness, Hearts Aglow",
+            "artistName": "Weyes Blood",
+            "memberName": "Cai",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273db8ab490bcedb6e518c37e6e"
+          },
+          {
+            "pickId": 89,
+            "pickType": "Runner Up Album of the Week",
+            "songOrAlbumName": "Stankonia",
+            "artistName": "OutKast",
+            "memberName": "AJ",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2732350e31bc346a6c20e9de166"
+          },
+          {
+            "pickId": 90,
+            "pickType": "Song of the Week",
+            "songOrAlbumName": "How to Disappear Completely",
+            "artistName": "Radiohead",
+            "memberName": "Danny",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2736c7112082b63beefffe40151"
+          },
+          {
+            "pickId": 91,
+            "pickType": "Runner Up Song of the Week",
+            "songOrAlbumName": "N/A",
+            "artistName": "N/A",
+            "memberName": "Corey",
+            "songOrAlbumArt": ""
           }
         ]
       }
