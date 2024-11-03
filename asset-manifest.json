@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.273238b7.css",
-    "main.js": "/static/js/main.aa6eb4c0.js",
+    "main.js": "/static/js/main.a0370fb5.js",
     "static/media/SQ24_W2_SotW.png": "/static/media/SQ24_W2_SotW.f4301b88a5749e3d6e6f.png",
     "static/media/SimonOlshanCantin.png": "/static/media/SimonOlshanCantin.1812dfb93638ca3313ab.png",
     "static/media/SusannaBobbs.png": "/static/media/SusannaBobbs.3356bd2d4baba7bed8c9.png",
@@ -20,15 +20,14 @@
     "static/media/DannyRamirez.png": "/static/media/DannyRamirez.17011642e24e7d628d6c.png",
     "static/media/AndrewWatson.png": "/static/media/AndrewWatson.3c315a0f951d70be8cba.png",
     "static/media/CourierPrime-Regular.ttf": "/static/media/CourierPrime-Regular.7503a2e9660bb6f608fb.ttf",
-    "static/media/applemusiclogo.png": "/static/media/applemusiclogo.44976b4b639e2470cd0f.png",
     "static/media/googleformlogo.png": "/static/media/googleformlogo.f5e00191489875080207.png",
     "static/media/groupmelogo.png": "/static/media/groupmelogo.9dfc156ee6a940c187a1.png",
     "index.html": "/index.html",
     "main.273238b7.css.map": "/static/css/main.273238b7.css.map",
-    "main.aa6eb4c0.js.map": "/static/js/main.aa6eb4c0.js.map"
+    "main.a0370fb5.js.map": "/static/js/main.a0370fb5.js.map"
   },
   "entrypoints": [
     "static/css/main.273238b7.css",
-    "static/js/main.aa6eb4c0.js"
+    "static/js/main.a0370fb5.js"
   ]
 }
