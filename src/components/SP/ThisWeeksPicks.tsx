@@ -41,7 +41,13 @@ const rows = [
     "Radiohead",
     "Danny"
   ),
-  createData2(91, "Runner Up Song of the Week", "N/A", "N/A", "Corey"),
+  createData2(
+    91,
+    "Runner Up Song of the Week",
+    "I Sat by The Ocean",
+    "Queens of the Stone Age",
+    "Corey"
+  ),
 ];
 
 export default function ThisWeeksPicks() {
