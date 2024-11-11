@@ -965,7 +965,7 @@
         "weekName": "WEEK 5",
         "weekDate": "(10/31/24)",
         "weekActivity": {
-          "weekActivityEmoji": "?",
+          "weekActivityEmoji": "♟️",
           "weekActivityTitle": "Heads Off",
           "weekActivityDetails": "Come for a Halloween-themed game of Heads Up!",
           "weekActivityHost": "Simon"
@@ -1010,10 +1010,10 @@
         "weekName": "WEEK 6",
         "weekDate": "(11/07/24)",
         "weekActivity": {
-          "weekActivityEmoji": "?",
-          "weekActivityTitle": "???",
-          "weekActivityDetails": "???",
-          "weekActivityHost": "Simon"
+          "weekActivityEmoji": "🎵",
+          "weekActivityTitle": "Vinyl Presentation",
+          "weekActivityDetails": "Come learn all about Vinyl from our club leader Arch!",
+          "weekActivityHost": "Arch"
         },
         "picks": [
           {
@@ -1047,6 +1047,51 @@
             "artistName": "Queens of the Stone Age",
             "memberName": "Corey",
             "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273a705b56a83b703453d8ddd04"
+          }
+        ]
+      },
+      {
+        "weekId": 23,
+        "weekName": "WEEK 7",
+        "weekDate": "(11/14/24)",
+        "weekActivity": {
+          "weekActivityEmoji": "?",
+          "weekActivityTitle": "?",
+          "weekActivityDetails": "?",
+          "weekActivityHost": "Simon"
+        },
+        "picks": [
+          {
+            "pickId": 92,
+            "pickType": "Album of the Week",
+            "songOrAlbumName": "Hiding Places",
+            "artistName": "Billy Woods and Kenny Segal",
+            "memberName": "Joseph",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2735a3cfc4f00b557b5982cd48b"
+          },
+          {
+            "pickId": 93,
+            "pickType": "Runner Up Album of the Week",
+            "songOrAlbumName": "Spirit Phone",
+            "artistName": "Lemon Demon",
+            "memberName": "Daniel",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273ae390841cf7a97bf3a59bb5d"
+          },
+          {
+            "pickId": 94,
+            "pickType": "Song of the Week",
+            "songOrAlbumName": "Postcards from Italy",
+            "artistName": "Beirut",
+            "memberName": "Andrew",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2736ad0ccb944d30d7e47d26c9a"
+          },
+          {
+            "pickId": 95,
+            "pickType": "Runner Up Song of the Week",
+            "songOrAlbumName": "Nothing’s Free",
+            "artistName": "Angel Olsen",
+            "memberName": "Susanna",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2733825dd3cd9b15b4e355e88ed"
           }
         ]
       }

@@ -308,7 +308,7 @@ export default function WeeklyEntry() {
                   <TableBody>{renderRows(quarter.weeks)}</TableBody>
                 </Table>
               </TableContainer>
-              {isMobile ? null : index === 1 ? <PastGenres /> : null}
+              {/* {isMobile ? null : index === 1 ? <PastGenres /> : null} */}
             </CustomTabPanel>
           ))}
         </Box>

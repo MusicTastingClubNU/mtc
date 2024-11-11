@@ -24,29 +24,34 @@ function createData2(
     memberName,
   };
 }
-
 const rows = [
   createData2(
     88,
     "Album of the Week",
-    "And in the Darkness, Hearts Aglow",
-    "Weyes Blood",
-    "Cai"
+    "Hiding Places",
+    "Billy Woods and Kenny Segal",
+    "Joseph"
   ),
-  createData2(89, "Runner Up Album of the Week", "Stankonia", "OutKast", "AJ"),
+  createData2(
+    89,
+    "Runner Up Album of the Week",
+    "Spirit Phone",
+    "Lemon Demon",
+    "Daniel"
+  ),
   createData2(
     90,
     "Song of the Week",
-    "How to Disappear Completely",
-    "Radiohead",
-    "Danny"
+    "Postcards from Italy",
+    "Beirut",
+    "Andrew"
   ),
   createData2(
     91,
     "Runner Up Song of the Week",
-    "I Sat by The Ocean",
-    "Queens of the Stone Age",
-    "Corey"
+    "Nothing’s Free",
+    "Angel Olsen",
+    "Susanna"
   ),
 ];
 
