@@ -1094,6 +1094,51 @@
             "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2733825dd3cd9b15b4e355e88ed"
           }
         ]
+      },
+      {
+        "weekId": 24,
+        "weekName": "WEEK 8",
+        "weekDate": "(11/21/24)",
+        "weekActivity": {
+          "weekActivityEmoji": "♟️",
+          "weekActivityTitle": "PHARRELL BIOPIC LEGO MOVIE (Piece By Piece)",
+          "weekActivityDetails": "Come for our second event of the quarter in ROOM for a group watching of Piece By Piece",
+          "weekActivityHost": "Archie"
+        },
+        "picks": [
+          {
+            "pickId": 96,
+            "pickType": "Album of the Week",
+            "songOrAlbumName": "Alfredo",
+            "artistName": "Freddie Gibbs and The Alchemist",
+            "memberName": "Archie",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b27352c24049a16d59e98a638651"
+          },
+          {
+            "pickId": 97,
+            "pickType": "Runner Up Album of the Week",
+            "songOrAlbumName": "Piece By Piece - Music from the Motion Picture",
+            "artistName": "Pharrell Williams",
+            "memberName": "MTC",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2733e3f0aa1af52a44a3e7e4e72"
+          },
+          {
+            "pickId": 98,
+            "pickType": "Song of the Week",
+            "songOrAlbumName": "I Could Never Take The Place Of Your Man",
+            "artistName": "Prince",
+            "memberName": "Grace",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2730f15bc9fc5979caf46be6205"
+          },
+          {
+            "pickId": 99,
+            "pickType": "Runner Up Song of the Week",
+            "songOrAlbumName": "The Weight",
+            "artistName": "The Band",
+            "memberName": "Archie",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b27343514544b879aede26b32cf4"
+          }
+        ]
       }
     ]
   },

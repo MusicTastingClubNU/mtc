@@ -26,32 +26,32 @@ function createData2(
 }
 const rows = [
   createData2(
-    88,
+    96,
     "Album of the Week",
-    "Hiding Places",
-    "Billy Woods and Kenny Segal",
-    "Joseph"
+    "Alfredo",
+    "Freddie Gibbs and The Alchemist",
+    "Archie"
   ),
   createData2(
-    89,
-    "Runner Up Album of the Week",
-    "Spirit Phone",
-    "Lemon Demon",
-    "Daniel"
+    97,
+    "Runner Up Album of the Week [OPTIONAL/MOVIE SPOILERS]",
+    "Piece By Piece - Music from the Motion Picture",
+    "Pharrell Williams",
+    "MTC"
   ),
   createData2(
-    90,
+    98,
     "Song of the Week",
-    "Postcards from Italy",
-    "Beirut",
-    "Andrew"
+    "I Could Never Take The Place Of Your Man",
+    "Prince",
+    "Grace"
   ),
   createData2(
-    91,
+    99,
     "Runner Up Song of the Week",
-    "Nothing’s Free",
-    "Angel Olsen",
-    "Susanna"
+    "The Weight",
+    "The Band",
+    "Archie"
   ),
 ];
 
