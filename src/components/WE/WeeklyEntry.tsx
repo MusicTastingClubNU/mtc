@@ -24,7 +24,7 @@ import { useState, useEffect } from "react";
 import "../SP/mission.css";
 import PastGenres from "./PastGenres";
 import PrizeWheel from "./NameWheel";
-import ThisWeeksPicks from "../SP/ThisWeeksPicks";
+// import ThisWeeksPicks from "../SP/ThisWeeksPicks";
 import NameWheelData from "./NameWheelData.json";
 import { Search } from "@mui/icons-material";
 import TitleAndDirectory from "../HOME/TitleAndDirectory";
@@ -33,6 +33,7 @@ import YsAlbumArt from "../../imgs/manualAlbumArt/WQ24_W2_AotW.png";
 import NeuAlbumArt from "../../imgs/manualAlbumArt/WQ24_W3_RUSotW.png";
 import TempaTAlbumArt from "../../imgs/manualAlbumArt/WQ24_W9_RUSotW.png";
 import FreeAlbumArt from "../../imgs/manualAlbumArt/SQ24_W2_SotW.png";
+import SeeYouNextQuarter from "../SP/SeeYouNextQuarter";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -229,7 +230,8 @@ export default function WeeklyEntry() {
       <TitleAndDirectory />
       {isMobile ? <br /> : null}
       <div style={{ marginBottom: 40 }}>
-        <ThisWeeksPicks></ThisWeeksPicks>
+        {/* <ThisWeeksPicks></ThisWeeksPicks> */}
+        <SeeYouNextQuarter />
       </div>
 
       <div className={isMobile ? "cont2" : "cont"}>

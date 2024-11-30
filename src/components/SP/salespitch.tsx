@@ -1,6 +1,7 @@
 import React from "react";
 import "./salespitch.css";
-import ThisWeeksPicks from "./ThisWeeksPicks";
+// import ThisWeeksPicks from "./ThisWeeksPicks";
+import SeeYouNextQuarter from "./SeeYouNextQuarter";
 import ConditionalPhoneSignUp from "./ConditionalPhoneSignUp";
 import { useMediaQuery } from "@mui/material";
 import "./mission.css";
@@ -30,7 +31,8 @@ const SalesPitch = (props: Props) => {
         </div>
         <img src={img} alt="logo img" className="mission-img"></img>
       </div>
-      <ThisWeeksPicks></ThisWeeksPicks>
+      {/* <ThisWeeksPicks /> */}
+      <SeeYouNextQuarter />
       {isMobile ? <ConditionalPhoneSignUp /> : <br />}
     </React.Fragment>
   );

@@ -16,7 +16,7 @@ export default function MyClubSchedule() {
     <Timeline>
       <TimelineItem>
         <TimelineOppositeContent color="textSecondary">
-          5:00PM-5:10PM
+          X:00PM-X:10PM
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineDot />
@@ -27,7 +27,7 @@ export default function MyClubSchedule() {
 
       <TimelineItem>
         <TimelineOppositeContent color="textSecondary">
-          5:10PM-5:45PM
+          X:10PM-X:45PM
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineDot />
@@ -37,7 +37,7 @@ export default function MyClubSchedule() {
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent color="textSecondary">
-          5:45PM-5:50PM
+          X:45PM-X:50PM
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineDot />
@@ -48,7 +48,7 @@ export default function MyClubSchedule() {
 
       <TimelineItem>
         <TimelineOppositeContent color="textSecondary">
-          5:50PM-6:15PM
+          X:50PM-Y:15PM
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineDot />

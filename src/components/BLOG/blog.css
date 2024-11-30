@@ -7,6 +7,8 @@
   width: 85%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  /* font-family: "Roboto-Regular"; */
+  font-weight: normal !important;
 }
 
 .blog-items-cont {
@@ -14,6 +16,8 @@
   flex-wrap: wrap;
   justify-content: center; /* Optional: Center items horizontally */
   gap: 30px;
+  /* font-family: "Roboto-Regular"; */
+  font-weight: normal !important;
 }
 .blog-titles {
   text-align: center;

@@ -16,20 +16,12 @@ import Chip from "@mui/material/Chip";
 
 interface Props {}
 
-// const StyledCardContent = styled(CardContent)({
-//   display: "-webkit-box",
-//   WebkitBoxOrient: "vertical",
-//   WebkitLineClamp: 4,
-//   overflow: "hidden",
-//   textOverflow: "ellipsis",
-//   maxHeight: "9em",
-// });
-
 const StyledCardContent = styled(CardContent)({
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
   height: "auto",
+  fontFamily: "Roboto-Regular",
 });
 
 interface Blog {
@@ -126,6 +118,7 @@ const Blog: React.FC = (props: Props) => {
                           Written By {blog.blogAuthor}
                         </Typography>
                       </StyledCardContent>
+
                       {/* <div
                         style={{
                           display: "flex",
@@ -183,7 +176,7 @@ const Blog: React.FC = (props: Props) => {
               </IconButton>
               <h1 style={{ textAlign: "center" }}>{selectedBlog?.contTitle}</h1>
             </div>
-            {/* <div
+            {/* ||||||| <div
               style={{
                 alignItems: "center",
                 display: "flex",
@@ -208,9 +201,15 @@ const Blog: React.FC = (props: Props) => {
                   backgroundColor: "lightgreen",
                 }}
               ></Chip>
-            </div> */}
+            </div>  |||||||| */}
             <br />
             <h2>{selectedBlog?.contContent}</h2>
+            {/* "blogContent": "<p>If you’re a fan of <b>Wu-Tang</b>, <i>Nas</i>, or <u>MF DOOM</u>, Joey Bada$$’s <em>'1999'</em> is an album you should listen to.</p><p>It’s a great <span style='color:blue;'>90s New York Hip Hop</span> album with accessible beats and slick flows for an overall enjoyable listen. As a 21-year-old New Yorker, it somehow makes me nostalgic for a time I wasn’t even around for.</p><ul><li><b>World Domination</b></li><li><i>Pennyroyal</i></li><li><u>Righteous Minds</u></li></ul>" */}
+
+            {/* <div
+              className="blog-content"
+              dangerouslySetInnerHTML={{ __html: selectedBlog?.contContent }}
+            ></div> */}
           </div>
         </>
       )}
