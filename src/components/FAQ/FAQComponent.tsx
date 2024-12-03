@@ -21,8 +21,8 @@ const FAQComponent = (props: Props) => {
         </h2>
         <h2>Q: When/Where does the club meet?</h2>
         <h3 className="answers">
-          A: We meet every <b>Thursday</b> at <b>5:00PM</b> in{" "}
-          <b>Kresge 2420</b>.
+          A: We meet every <b>[DAY OF WEEK]</b> at <b>[TIME OF DAY]</b> in{" "}
+          <b>[ROOM IN BUILDING]</b>.
         </h3>
 
         <h2>Q: What are the requirements to join the club?</h2>

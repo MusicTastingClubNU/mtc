@@ -13,6 +13,7 @@ import BlackButton from "../../BlackButton1";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import TitleAndDirectory from "../HOME/TitleAndDirectory";
 import Chip from "@mui/material/Chip";
+// import EmailContent from "./EmailTest";
 
 interface Props {}
 
@@ -56,25 +57,6 @@ const Blog: React.FC = (props: Props) => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }, [selectedBlog]);
-
-  const week1 =
-    "What time is it? \n  \
-    It's time to move those chains!! It's time for the MTC week 2 update!!\n \
-    Hope everyone's getting back in the swing of the quarter, and here are some awesome music recommendations to be your soundtrack for week 3 of fall quarter! ( 😓 <-- how I feel about it already being week 3)\nAlbum of the week: 'Paradigmes' by La Femme (picked by me 😄!) \
-    Runner up album of the week: 'The Well I Fell Into' by WHY? (picked by Simon) \
-    Song of the week: 'De Selby (parts 1 and 2)' by Hozier (picked by Aidan) \
-    Runner up song of the week: 'Something Holy - Live at Funkhaus, 2019' by Alice Phoebe Lou (picked by Joseph) \
-    For your listening convenience, all the picks are collected in this spotify playlist (shout out DJ Reed). \
-    Last week on Music Tasting Club... \
-    we had a distinct schism between our album picks and our song picks-- \
-    album choosers Susanna and Danny opted for more ambient', 'vibes based' music, while song pickers AJ and Ryan went a higher energy route for songs that members said were 'hype' and 'go hard'. \
-    Susanna's album, Mood Valiant by Hiatus Kaiyote, is a neosoul/alt R&B album featuring rich vocals wrapped in both string instruments and electronic elements, aspects which members particularly enjoyed. \
-    Danny's album, Lamp Genso by Lamp, is a Japanese soft pop album with songs that blend into each other, creating an overall effect of calm and relaxation. Members specifically commented on the lack of distinction between songs. In part this was because none of us could understand the words. \
-    AJ's song, BagBak by Vince Staples, is a hip hop song with a strong electronic beat and witty lyrics. Members felt a strong desire to hit the gym when this song came on. \
-    Ryan's song, hydrocodone by black kray, is a rage song which 'demands subwoofers'. Overlapping elements and heavy bass make this song work best at full volume. \
-    Also, Espresso by Sabrina Carpenter was voted ~song of the summer~ in a close bracket final up against Not Like Us by Kendrick Lamar. Shout out Simon for organizing the bracket. \
-    Hope to see you in at 5pm in Kresge 2420 on Thursday 10/10 ready for discussion of this weeks picks!";
-
   return (
     <React.Fragment>
       <TitleAndDirectory />
@@ -210,6 +192,8 @@ const Blog: React.FC = (props: Props) => {
               className="blog-content"
               dangerouslySetInnerHTML={{ __html: selectedBlog?.contContent }}
             ></div> */}
+
+            {/* <EmailContent /> */}
           </div>
         </>
       )}
