@@ -39,7 +39,7 @@ const MobileMenu = () => {
 
       {/* Menu component anchored to the anchorEl */}
       <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleClose}>
-        {/* Menu items with onClick handlers to handle navigation */}
+        {/* Menu items with onClick handlers to handle navigation. */}
         <MenuItem>
           <Link to={"/"}>
             <BlackButton buttonText="Home" />
