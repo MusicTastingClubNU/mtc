@@ -1,6 +1,6 @@
 # MUSIC TASTING CLUB WEBSITE
 
-This project is the culmination of two months of blood, sweat, tears, and an unhealthy obsession with React/Typescript/MaterialUI. This website is not only meant as a resource for the Music Tasting Club (as a history of previous picks and to keep track of who has chosen albums/songs that quarter), but also as a way that prospective members first interact with and show interest in the club. There's five pages in this website, each of which will have its components explained below.
+This project is the culmination of six months of blood, sweat, tears, and an unhealthy obsession with React/Typescript/MaterialUI. This website is not only meant as a resource for the Music Tasting Club (as a history of previous picks and to keep track of who has chosen albums/songs that quarter), but also as a way that prospective members first interact with and show interest in the club. There's five pages in this website, each of which will have its components explained below.
 
 ## HOME (src >> components >> SP >> `salespitch.tsx`)
 
