@@ -167,9 +167,9 @@ export default function WeeklyEntry() {
 
           {/* ||| SPOTIFY LINK CODE ||| */}
           <TableCell align="right">
-            {openRow === index && week.spotifyPlaylistLink !== "" ? (
+            {openRow === index && week?.spotifyPlaylistLink !== "" ? (
               <a
-                href={week.spotifyPlaylistLink}
+                href={week?.spotifyPlaylistLink}
                 target="_blank"
                 rel="noopener noreferrer"
               >

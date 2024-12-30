@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState, useRef, useEffect } from "react";
 import dayjs, { Dayjs } from "dayjs";
 import Badge from "@mui/material/Badge";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
@@ -8,7 +9,7 @@ import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
 import { DayCalendarSkeleton } from "@mui/x-date-pickers/DayCalendarSkeleton";
 import { Grid, styled } from "@mui/material";
 import Paper from "@mui/material/Paper";
-import data from "../WE/picksData.json";
+import calendarData from "./calendarData.json";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 const ItemMobile = styled(Paper)(({ theme }) => ({
@@ -89,22 +90,16 @@ function fakeFetch(date: Dayjs, { signal }: { signal: AbortSignal }) {
   });
 }
 
-const initialValue = dayjs("2024-11-21");
+const initialValue = dayjs("2025-01-06");
 
 function ServerDay(
-  props: PickersDayProps<Dayjs> & { FQ24Meetings?: Dayjs[]; emoji?: string }
+  props: PickersDayProps<Dayjs> & { meetings?: Dayjs[]; emoji?: string }
 ) {
-  const {
-    FQ24Meetings = [],
-    day,
-    outsideCurrentMonth,
-    emoji,
-    ...other
-  } = props;
+  const { meetings = [], day, outsideCurrentMonth, emoji, ...other } = props;
 
   const isSelected =
     !props.outsideCurrentMonth &&
-    FQ24Meetings.some((meetingDay) => meetingDay.isSame(day, "day"));
+    meetings.some((meetingDay) => meetingDay.isSame(day, "day"));
   return (
     <Badge
       key={props.day.toString()}
@@ -121,12 +116,10 @@ function ServerDay(
 }
 
 export default function DateCalendarServerRequest() {
-  const requestAbortController = React.useRef<AbortController | null>(null);
-  const [isLoading, setIsLoading] = React.useState(false);
-  const [highlightedDays, setHighlightedDays] = React.useState([1, 2, 15]);
-  const [selectedDate, setSelectedDate] = React.useState<Dayjs | null>(
-    initialValue
-  );
+  const requestAbortController = useRef<AbortController | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [highlightedDays, setHighlightedDays] = useState([1, 2, 15]);
+  const [selectedDate, setSelectedDate] = useState<Dayjs | null>(initialValue);
   const isMobile = useMediaQuery("(max-width: 768px)");
 
   const fetchHighlightedDays = (date: Dayjs) => {
@@ -147,7 +140,7 @@ export default function DateCalendarServerRequest() {
     requestAbortController.current = controller;
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     fetchHighlightedDays(initialValue);
     return () => requestAbortController.current?.abort();
   }, []);
@@ -164,80 +157,13 @@ export default function DateCalendarServerRequest() {
   const handleDateChange = (date: Dayjs | null) => {
     setSelectedDate(date);
   };
-
-  // QUARTER SIGNIFIERS
-  const startOfFQ24: Dayjs = dayjs("2024-09-21");
-  const endOfFQ24: Dayjs = dayjs("2024-12-14");
-  const startOfWQ25: Dayjs = dayjs("2025-01-06");
-  const endOfWQ25: Dayjs = dayjs("2025-03-22");
-  const startOfSQ25: Dayjs = dayjs("2025-04-01");
-  const endOfSQ25: Dayjs = dayjs("2025-06-13");
-
-  function whichQuarterIndex(selectedDate: Dayjs | null) {
-    // TODO QuarterIndex for testing purposes
-    // if (selectedDate == null){ return 0; }
-    if (selectedDate!.isBefore(startOfFQ24)) {
-      return 2;
-    }
-
-    // Good for 2024-2025 school year
-    if (selectedDate == null) {
-      return 0;
-    }
-    if (
-      selectedDate!.isAfter(startOfFQ24) &&
-      selectedDate!.isBefore(endOfFQ24)
-    ) {
-      return 2;
-    }
-    if (
-      selectedDate!.isAfter(startOfWQ25) &&
-      selectedDate!.isBefore(endOfWQ25)
-    ) {
-      return 3;
-    }
-    if (
-      selectedDate!.isAfter(startOfSQ25) &&
-      selectedDate!.isBefore(endOfSQ25)
-    ) {
-      return 4;
-    }
-    return 0;
-  }
-
-  const startOfFQ24W1: Dayjs = dayjs("2024-09-26");
-  const FQ24Meetings: Dayjs[] = [
-    dayjs("2024-10-03"),
-    dayjs("2024-10-10"),
-    dayjs("2024-10-17"),
-    dayjs("2024-10-24"),
-    dayjs("2024-10-31"),
-    dayjs("2024-11-07"),
-    dayjs("2024-11-14"),
-    dayjs("2024-11-21"),
-  ];
-  const WQ25Meetings: Dayjs[] = [
-    dayjs("2025-01-07"),
-    dayjs("2025-01-14"),
-    dayjs("2025-01-21"),
-    dayjs("2025-01-28"),
-    dayjs("2025-02-04"),
-    dayjs("2025-02-11"),
-    dayjs("2025-02-18"),
-    dayjs("2025-02-21"),
-  ];
-
-  const whichWeekIndex = (selectedDate: Dayjs): number => {
-    if (!selectedDate.isValid()) return -1;
-
-    for (let i = 0; i < FQ24Meetings.length; i++) {
-      if (selectedDate.isSame(FQ24Meetings[i])) {
-        return i;
-      }
-    }
-    return -1;
+  const getEmojiForDay = (date: Dayjs) => {
+    const dateString = date.format("YYYY-MM-DD");
+    const activity = calendarData.find(
+      (day) => day.weekActivityWeek === dateString
+    );
+    return activity?.weekActivityEmoji ?? ""; // Default to empty string if no match found
   };
-
   return (
     <>
       <Grid container spacing={2}>
@@ -257,14 +183,10 @@ export default function DateCalendarServerRequest() {
                       day: (dayProps) => (
                         <ServerDay
                           {...dayProps}
-                          FQ24Meetings={FQ24Meetings}
-                          emoji={
-                            selectedDate
-                              ? data[whichQuarterIndex(selectedDate) - 1]
-                                  ?.weeks[whichWeekIndex(dayProps.day)]
-                                  ?.weekActivity.weekActivityEmoji ?? ""
-                              : ""
-                          }
+                          meetings={calendarData.map((activityWeek) =>
+                            dayjs(activityWeek.weekActivityWeek)
+                          )}
+                          emoji={getEmojiForDay(dayProps.day)}
                         />
                       ),
                     }}
@@ -285,14 +207,10 @@ export default function DateCalendarServerRequest() {
                       day: (dayProps) => (
                         <ServerDay
                           {...dayProps}
-                          FQ24Meetings={FQ24Meetings}
-                          emoji={
-                            selectedDate
-                              ? data[whichQuarterIndex(selectedDate) - 1]
-                                  ?.weeks[whichWeekIndex(dayProps.day)]
-                                  ?.weekActivity.weekActivityEmoji ?? ""
-                              : ""
-                          }
+                          meetings={calendarData.map((activityWeek) =>
+                            dayjs(activityWeek.weekActivityWeek)
+                          )}
+                          emoji={getEmojiForDay(dayProps.day)}
                         />
                       ),
                     }}
@@ -309,23 +227,31 @@ export default function DateCalendarServerRequest() {
               {selectedDate && (
                 <>
                   <h1 style={{ color: "black", paddingBottom: 10 }}>
-                    {data[whichQuarterIndex(selectedDate) - 1].weeks[
-                      whichWeekIndex(selectedDate)
-                    ]?.weekActivity.weekActivityTitle ?? "No Activity Found"}
+                    {calendarData.find(
+                      (day) =>
+                        day.weekActivityWeek ===
+                        selectedDate?.format("YYYY-MM-DD")
+                    )?.weekActivityTitle ?? "No Activity Found"}{" "}
                   </h1>
                   <h2 style={{ paddingBottom: 20 }}>
-                    {data[whichQuarterIndex(selectedDate) - 1].weeks[
-                      whichWeekIndex(selectedDate)
-                    ]?.weekActivity.weekActivityDetails ?? ""}
+                    {calendarData.find(
+                      (day) =>
+                        day.weekActivityWeek ===
+                        selectedDate?.format("YYYY-MM-DD")
+                    )?.weekActivityDetails ?? ""}
                   </h2>
                   <h4 style={{ paddingBottom: 40 }}>
-                    {data[whichQuarterIndex(selectedDate) - 1].weeks[
-                      whichWeekIndex(selectedDate)
-                    ]?.weekActivity.weekActivityHost
+                    {calendarData.find(
+                      (day) =>
+                        day.weekActivityWeek ===
+                        selectedDate?.format("YYYY-MM-DD")
+                    )?.weekActivityHost
                       ? "Hosted By " +
-                        data[whichQuarterIndex(selectedDate) - 1].weeks[
-                          whichWeekIndex(selectedDate)
-                        ]?.weekActivity.weekActivityHost
+                        calendarData.find(
+                          (day) =>
+                            day.weekActivityWeek ===
+                            selectedDate?.format("YYYY-MM-DD")
+                        )?.weekActivityHost
                       : ""}
                   </h4>
                 </>
