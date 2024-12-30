@@ -86,7 +86,7 @@ const ExecBoard = (props: Props) => {
               Daniel - Reed - Simon - Corey - Susanna - Maya - Cai
             </p>
             <p style={{ marginBottom: -30 }}>
-              Not Pictured: Grace - Ryan - AJ - Acton - Vicky - Zoey
+              Not Pictured: Grace - Ryan - AJ - Acton - Zoey
             </p>
             <p style={{ marginBottom: -10 }}>Photography by Jonah Elkowitz</p>
           </div>
