@@ -24,7 +24,7 @@ export default function ConditionalPhoneSignUp() {
           >
             <img
               src={googleFormImg}
-              alt="Google Form Img"
+              alt="Google Form Img "
               className="phone-su-logos"
             />
           </a>
