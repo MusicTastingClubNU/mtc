@@ -28,7 +28,13 @@ export default function ConditionalPhoneSignUp() {
               className="phone-su-logos"
             />
           </a>
-          <p>Interest Form</p>
+          <p
+            style={{
+              textAlign: "center",
+            }}
+          >
+            Interest Form
+          </p>
         </div>
 
         <div className="phone-su-inner-logo-cont">
@@ -43,7 +49,13 @@ export default function ConditionalPhoneSignUp() {
               className="phone-su-logos"
             />
           </a>
-          <p>Join Our GroupMe!</p>
+          <p
+            style={{
+              textAlign: "center",
+            }}
+          >
+            Join Our GroupMe!
+          </p>
         </div>
       </div>
     </div>

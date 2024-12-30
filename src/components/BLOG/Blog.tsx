@@ -171,7 +171,7 @@ const Blog: React.FC = (props: Props) => {
           </div>
           <div className="blog-cont2">
             <h2 className="blog-titles">
-              <a
+              {/* <a
                 href="https://open.spotify.com/user/31apxxxqaadrj24rjilx75insprq"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -186,7 +186,7 @@ const Blog: React.FC = (props: Props) => {
                     marginRight: 10,
                   }}
                 />
-              </a>
+              </a> */}
               Club Playlists{" "}
               <a
                 href="https://open.spotify.com/user/31apxxxqaadrj24rjilx75insprq"
