@@ -19,6 +19,9 @@
 
 .header2 {
   padding-bottom: 0px;
+  text-align: center;
+  padding-left: 10;
+  padding-right: 10;
 }
 
 @media (prefers-reduced-motion: no-preference) {
