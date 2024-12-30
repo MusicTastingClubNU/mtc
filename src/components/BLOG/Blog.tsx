@@ -3,9 +3,8 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { CardActionArea, IconButton } from "@mui/material";
+import { CardActionArea, Grid, IconButton } from "@mui/material";
 import { styled } from "@mui/system";
-import logo from "../../imgs/MTC_logo.png";
 import data from "./blogData.json";
 import "./blog.css";
 import { useMediaQuery } from "@mui/material";
@@ -13,7 +12,13 @@ import BlackButton from "../../BlackButton1";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import TitleAndDirectory from "../HOME/TitleAndDirectory";
 import Chip from "@mui/material/Chip";
+import specialSpotifyPlaylistData from "./specialSpotifyPlaylists.json";
+import spotifyImg from "../../imgs/companyLogos/spotlogo.png";
 // import EmailContent from "./EmailTest";
+import halloween24PlaylistImg from "../../imgs/spotifyPlaylistCovers/halloween24PlaylistImg.png";
+import holidays24PlaylistImg from "../../imgs/spotifyPlaylistCovers/holidays24PlaylistImg.png";
+import hipHopWorkoutPlaylistImg from "../../imgs/spotifyPlaylistCovers/hipHopWorkoutPlaylistImg.png";
+import logo from "../../imgs/MTC_logo.png";
 
 interface Props {}
 
@@ -32,6 +37,14 @@ interface Blog {
   blogContent: string;
   blogImg: string;
 }
+
+const playlistImgs = [
+  logo,
+  logo,
+  hipHopWorkoutPlaylistImg,
+  halloween24PlaylistImg,
+  holidays24PlaylistImg,
+];
 
 interface BlogData {
   Blogs: Blog[];
@@ -154,6 +167,79 @@ const Blog: React.FC = (props: Props) => {
                     </Card>
                   </div>
                 ))}
+            </div>
+          </div>
+          <div className="blog-cont2">
+            <h2 className="blog-titles">
+              <a
+                href="https://open.spotify.com/user/31apxxxqaadrj24rjilx75insprq"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={spotifyImg}
+                  alt="Spotify Img"
+                  style={{
+                    width: 50,
+                    height: 50,
+                    marginBottom: -12,
+                    marginRight: 10,
+                  }}
+                />
+              </a>
+              Club Playlists{" "}
+              <a
+                href="https://open.spotify.com/user/31apxxxqaadrj24rjilx75insprq"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={spotifyImg}
+                  alt="Spotify Img"
+                  style={{ width: 50, height: 50, marginBottom: -12 }}
+                />
+              </a>
+            </h2>
+            <div className="spotify-cont">
+              {Object.entries(specialSpotifyPlaylistData).map(
+                ([key, value], index) => (
+                  <div className="spotify-playlists">
+                    <a
+                      href={value.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src={playlistImgs[index]}
+                        alt="Playlist Photo"
+                        className="company-logos"
+                        style={{
+                          borderRadius: 10,
+                          width: 125,
+                          height: 125,
+                          marginBottom: -10,
+                        }}
+                      />
+                    </a>
+
+                    <div style={{ padding: 10 }}>{value.name}</div>
+                    <div>Made By {value.madeBy}</div>
+                    <a
+                      href={value.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src={spotifyImg}
+                        alt="Spotify Logo"
+                        className="company-logos"
+                        style={{ width: 50, height: 50 }}
+                      />
+                    </a>
+                    <br />
+                  </div>
+                )
+              )}
             </div>
           </div>
         </>

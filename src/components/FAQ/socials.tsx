@@ -14,7 +14,7 @@ function Socials() {
     <Grid container spacing={2} justifyContent="center" alignItems="center">
       <Grid item xs={12} sm={6} md={4} className="inner-logo-cont">
         <a
-          href="https://forms.gle/hKSK1pqY2gKNomjD9"
+          href="https://forms.gle/VL4r1N3DfV5GCQov9"
           target="_blank"
           rel="noopener noreferrer"
         >

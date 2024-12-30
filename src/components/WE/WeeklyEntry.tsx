@@ -26,7 +26,7 @@ import PastGenres from "./PastGenres";
 import PrizeWheel from "./NameWheel";
 // import ThisWeeksPicks from "../SP/ThisWeeksPicks";
 import NameWheelData from "./NameWheelData.json";
-import { Search } from "@mui/icons-material";
+import { Margin, Search } from "@mui/icons-material";
 import TitleAndDirectory from "../HOME/TitleAndDirectory";
 import Autocomplete from "@mui/material/Autocomplete";
 import YsAlbumArt from "../../imgs/manualAlbumArt/WQ24_W2_AotW.png";
@@ -34,6 +34,9 @@ import NeuAlbumArt from "../../imgs/manualAlbumArt/WQ24_W3_RUSotW.png";
 import TempaTAlbumArt from "../../imgs/manualAlbumArt/WQ24_W9_RUSotW.png";
 import FreeAlbumArt from "../../imgs/manualAlbumArt/SQ24_W2_SotW.png";
 import SeeYouNextQuarter from "../SP/SeeYouNextQuarter";
+import spotifyImg from "../../imgs/companyLogos/spotlogo.png";
+import logo from "../../imgs/MTC_logo.png";
+import HaveWeListenedToIt from "./HaveWeListenedToIt";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -135,11 +138,12 @@ export default function WeeklyEntry() {
         }))
     )
   );
-
   const renderRows = (weeks: any) => {
     return weeks.map((week: any, index: number) => (
       <React.Fragment key={week.weekId}>
         <TableRow sx={{ "& > *": { borderBottom: "unset" } }}>
+          {/* */}
+          {/* ||| DROP DOWN ARROW CODE ||| */}
           <TableCell>
             <IconButton
               aria-label="expand row"
@@ -153,10 +157,31 @@ export default function WeeklyEntry() {
               )}
             </IconButton>
           </TableCell>
-          <TableCell align="left">
+
+          {/* ||| "WEEK X PICKS" CODE ||| */}
+          <TableCell align="left" sx={{ position: "left" }}>
             <b>
               {week.weekName} PICKS {week.weekDate}
             </b>
+          </TableCell>
+
+          {/* ||| SPOTIFY LINK CODE ||| */}
+          <TableCell align="right">
+            {openRow === index && week.spotifyPlaylistLink !== "" ? (
+              <a
+                href={week.spotifyPlaylistLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={spotifyImg}
+                  alt="Spotify Logo"
+                  style={{ width: 30, marginRight: 25 }}
+                />
+              </a>
+            ) : (
+              <></>
+            )}
           </TableCell>
         </TableRow>
         <TableRow>
@@ -164,7 +189,99 @@ export default function WeeklyEntry() {
             <Collapse in={openRow === index} timeout="auto" unmountOnExit>
               <Box sx={{ margin: 2 }}>
                 <Table size="small" aria-label="purchases">
-                  <TableHead>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexWrap: "wrap",
+                      justifyContent: "center",
+                      marginRight: 0,
+                      marginLeft: 0,
+                      marginTop: 10,
+                      marginBottom: 10,
+                    }}
+                  >
+                    {week.picks.map((pick: any) => (
+                      <div className="picks-history">
+                        {pick.pickType === "Song of the Week" ? (
+                          <div
+                            style={{
+                              fontWeight: "bold",
+                              marginBottom: 30,
+                              marginTop: 10,
+                            }}
+                          >
+                            {pick.pickType}:
+                          </div>
+                        ) : (
+                          <div style={{ fontWeight: "bold", margin: 10 }}>
+                            {pick.pickType}:
+                          </div>
+                        )}
+
+                        <div>
+                          <img
+                            src={
+                              pick.songOrAlbumArt === "Q1W2AotW"
+                                ? YsAlbumArt
+                                : pick.songOrAlbumArt === "Q1W3RUSotW"
+                                ? NeuAlbumArt
+                                : pick.songOrAlbumArt === "Q1W9RUSotW"
+                                ? TempaTAlbumArt
+                                : pick.songOrAlbumArt === "Q2W2SotW"
+                                ? FreeAlbumArt
+                                : pick.songOrAlbumArt === ""
+                                ? logo
+                                : pick.songOrAlbumArt
+                            }
+                            alt="albumOrSongArt"
+                            style={{ width: "90%", borderRadius: 10 }}
+                          ></img>
+                          <div
+                            style={{
+                              fontWeight: "bold",
+                              margin: 5,
+                              fontSize: 18,
+                            }}
+                          >
+                            {pick.songOrAlbumName !== "N/A" ? (
+                              <>{pick.songOrAlbumName}</>
+                            ) : (
+                              "N/A"
+                            )}
+                          </div>
+                          <div
+                            style={{
+                              fontWeight: "bold",
+                              margin: 5,
+                              fontSize: 15,
+                            }}
+                          >
+                            {pick.songOrAlbumName !== "N/A" ? (
+                              <>by {pick.artistName}</>
+                            ) : (
+                              <></>
+                            )}
+                          </div>
+                          <div
+                            style={{
+                              fontWeight: "bold",
+                              margin: 5,
+                              fontSize: 12,
+                            }}
+                          >
+                            <br />
+                            {pick.songOrAlbumName !== "N/A" ? (
+                              <>Picked by {pick.memberName}</>
+                            ) : (
+                              <></>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* <TableHead>
                     <TableRow>
                       <TableCell>
                         <b>Pick Type</b>
@@ -191,7 +308,7 @@ export default function WeeklyEntry() {
                         <TableCell align="right">{pick.memberName}</TableCell>
                       </TableRow>
                     ))}
-                  </TableBody>
+                  </TableBody> */}
                 </Table>
               </Box>
             </Collapse>
@@ -200,92 +317,32 @@ export default function WeeklyEntry() {
       </React.Fragment>
     ));
   };
-  const [selectedOpt, setSelectedOpt] = useState<Pick | null>(null);
-  const [haveWeListenedToIt, setHaveWeListenedToIt] = useState("");
-  const [inputValue, setInputValue] = useState("");
-  const handleInputChange = (event: React.ChangeEvent<{}>, value: string) => {
-    setInputValue(value);
-  };
-  const handleChange2 = (event: React.ChangeEvent<{}>, value: Pick | null) => {
-    setSelectedOpt(value);
-    if (value) {
-      setHaveWeListenedToIt("YES");
-    } else if (inputValue === undefined) {
-      setHaveWeListenedToIt("");
-    } else {
-      setHaveWeListenedToIt("");
-    }
-  };
-  const [colorOfHWLToIt, setColorOfHWLToIt] = useState("");
-  useEffect(() => {
-    if (haveWeListenedToIt === "YES") {
-      setColorOfHWLToIt("green");
-    } else {
-      setColorOfHWLToIt("");
-    }
-  }, [haveWeListenedToIt]);
 
+  //As of Winter Quarter 2025, there will be 4 quarters of MTC
+  const numberOfQuarterTabsBelowPREVIOUSPICKS = 4;
+  const widthOfTabs = 100 / numberOfQuarterTabsBelowPREVIOUSPICKS;
+  const stringThatDictatesNumberOfTabsBelowPREVIOUSPICKS =
+    widthOfTabs.toString() + "%";
   return (
     <>
       <TitleAndDirectory />
       {isMobile ? <br /> : null}
-      <div style={{ marginBottom: 40 }}>
-        {/* <ThisWeeksPicks></ThisWeeksPicks> */}
-        <SeeYouNextQuarter />
-      </div>
+      {/* <ThisWeeksPicks /> */}
+      <SeeYouNextQuarter />
 
-      <div className={isMobile ? "cont2" : "cont"}>
-        <h3 style={{ fontSize: 35, textAlign: "center" }}>
-          Have We Listened To It Yet?{" "}
-          <span style={{ color: colorOfHWLToIt }}>{haveWeListenedToIt}</span>
-        </h3>
-        <Autocomplete
-          disablePortal
-          id="combo-box-demo"
-          options={options}
-          sx={{
-            width: "100%",
-            height: 50,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            marginTop: 2,
-            marginBottom: 1,
-          }}
-          onChange={handleChange2}
-          onInputChange={handleInputChange}
-          getOptionLabel={(option) =>
-            `${option.songOrAlbumName} - ${option.artistName} [${option.pickType}]`
-          }
-          renderInput={(params) => <TextField {...params} label="Search Bar" />}
-          renderOption={(props, option) => (
-            <li {...props}>
-              <img
-                src={option.songOrAlbumArt}
-                alt={option.songOrAlbumName}
-                style={{ width: 50, marginRight: 10 }}
-              />
-              {option.songOrAlbumName} - {option.artistName} [
-              {option.pickType.length === 17
-                ? "Album"
-                : option.pickType.length === 27
-                ? "Album"
-                : option.pickType.length === 16
-                ? "Song"
-                : option.pickType.length === 26
-                ? "Song"
-                : ""}
-              ]
-            </li>
-          )}
-          noOptionsText="Hmm...looks like we haven't listed to this yet..."
-        />
-      </div>
+      {/* ||| HAVE WE LISTENED TO IT SEARCH BAR*/}
+      <HaveWeListenedToIt />
 
       <div className={isMobile ? "cont2" : "cont"} style={{ marginTop: 40 }}>
+        {/* ||| TITLE CODE ||| */}
         <h3 style={{ fontSize: 35, textAlign: "center", marginBottom: 15 }}>
           PREVIOUS PICKS
         </h3>
+
+        {/* ||| QUARTER TABS ||| */}
+        {/* You can have as many tabs in the data (picksData.json atm) as you want, make 
+        sure you update numberOfQuarterTabsBelowPREVIOUSPICKS to the appropriate number 
+        of quarters that have passed.*/}
         <Box>
           <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
             <Tabs
@@ -298,11 +355,15 @@ export default function WeeklyEntry() {
                   key={quarter.quarterId}
                   label={`${quarter.quarterName} Picks`}
                   {...a11yProps(index)}
-                  sx={{ width: "33%" }}
+                  sx={{
+                    width: stringThatDictatesNumberOfTabsBelowPREVIOUSPICKS,
+                  }}
                 />
               ))}
             </Tabs>
           </Box>
+
+          {/* ||| IMPLEMENTS WEEK PICK DROPDOWN CODE ||| */}
           {picksData.map((quarter, index) => (
             <CustomTabPanel key={quarter.quarterId} value={value} index={index}>
               <TableContainer component={Paper}>
@@ -316,6 +377,7 @@ export default function WeeklyEntry() {
         </Box>
       </div>
 
+      {/* ||| PRIZE WHEEL CODE ||| */}
       <div style={{ marginTop: 40, marginBottom: 40, padding: 0 }}>
         {isMobile ? null : (
           <PrizeWheel

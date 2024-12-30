@@ -8,7 +8,7 @@ export default function SeeYouNextQuarter() {
   return (
     <div
       className={isMobile ? "cont2" : "cont"}
-      style={{ textAlign: "center" }}
+      style={{ textAlign: "center", marginBottom: 40 }}
     >
       <h2 style={{ fontSize: 35 }}>SEE YOU IN THE WINTER!</h2>
       <h3>KEEP AN EYE OUT FOR UPDATES VIA THIS WEBSITE / EMAIL / INSTAGRAM!</h3>

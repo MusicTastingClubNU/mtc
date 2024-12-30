@@ -12,7 +12,7 @@ const FAQComponent = (props: Props) => {
   const isMobile = useMediaQuery("(max-width: 768px)");
 
   return (
-    <React.Fragment>
+    <>
       <TitleAndDirectory />
       {isMobile ? <br /> : null}
       <div className={isMobile ? "faq2" : "faq"}>
@@ -112,7 +112,7 @@ const FAQComponent = (props: Props) => {
         <DateCalendarServerRequest />
       </div>
       <br />
-    </React.Fragment>
+    </>
   );
 };
 
