@@ -1,0 +1,1223 @@
+[
+    {
+      "quarterId": 0,
+      "quarterName": "WQ24",
+      "weeks": [
+        {
+          "weekId": 0,
+          "weekName": "WEEK 1",
+          "weekDate": "(01/11/24)",
+          "weekActivity": {
+            "weekActivityEmoji": "",
+            "weekActivityTitle": "",
+            "weekActivityDetails": "",
+            "weekActivityHost": ""
+          },
+          "picks": [
+            {
+              "pickId": 0,
+              "pickType": "Album of the Week",
+              "songOrAlbumName": "SAWAYAMA",
+              "artistName": "Rina Sawayama",
+              "memberName": "Daniel",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e025b131d745dafd8666254fe96"
+            },
+            {
+              "pickId": 1,
+              "pickType": "Runner Up Album of the Week",
+              "songOrAlbumName": "N/A",
+              "artistName": "N/A",
+              "memberName": "N/A",
+              "songOrAlbumArt": ""
+            },
+            {
+              "pickId": 2,
+              "pickType": "Song of the Week",
+              "songOrAlbumName": "N/A",
+              "artistName": "N/A",
+              "memberName": "N/A",
+              "songOrAlbumArt": ""
+            },
+            {
+              "pickId": 3,
+              "pickType": "Runner Up Song of the Week",
+              "songOrAlbumName": "N/A",
+              "artistName": "N/A",
+              "memberName": "N/A",
+              "songOrAlbumArt": ""
+            }
+          ],
+          "spotifyPlaylistLink": ""
+        },
+        {
+          "weekId": 1,
+          "weekName": "WEEK 2",
+          "weekDate": "(01/18/24)",
+          "weekActivity": {
+            "weekActivityEmoji": "",
+            "weekActivityTitle": "",
+            "weekActivityDetails": "",
+            "weekActivityHost": ""
+          },
+          "picks": [
+            {
+              "pickId": 4,
+              "pickType": "Album of the Week",
+              "songOrAlbumName": "Ys",
+              "artistName": "Joanna Newsom",
+              "memberName": "Lolo",
+              "songOrAlbumArt": "Q1W2AotW"
+            },
+            {
+              "pickId": 5,
+              "pickType": "Runner Up Album of the Week",
+              "songOrAlbumName": "KiCk i",
+              "artistName": "Arca",
+              "memberName": "Alex",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e023fb118a60e7a487d5586b2d7"
+            },
+            {
+              "pickId": 6,
+              "pickType": "Song of the Week",
+              "songOrAlbumName": "Voy Pa'lla",
+              "artistName": "Los Aventureros",
+              "memberName": "Natalia",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e021ff7b4b86e204ed66b6765c1"
+            },
+            {
+              "pickId": 7,
+              "pickType": "Runner Up Song of the Week",
+              "songOrAlbumName": "Night Cruising (Live Version)",
+              "artistName": "Fishmans",
+              "memberName": "Ryan",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e02b8b2f65e2dfa733439974801"
+            }
+          ],
+          "spotifyPlaylistLink": ""
+        },
+        {
+          "weekId": 2,
+          "weekName": "WEEK 3",
+          "weekDate": "(01/25/24)",
+          "weekActivity": {
+            "weekActivityEmoji": "",
+            "weekActivityTitle": "",
+            "weekActivityDetails": "",
+            "weekActivityHost": ""
+          },
+          "picks": [
+            {
+              "pickId": 8,
+              "pickType": "Album of the Week",
+              "songOrAlbumName": "Quebec",
+              "artistName": "Ween",
+              "memberName": "Ryan",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e024df4aa40b54416c3de8d5bf6"
+            },
+            {
+              "pickId": 9,
+              "pickType": "Runner Up Album of the Week",
+              "songOrAlbumName": "Figure 8",
+              "artistName": "Elliot Smith",
+              "memberName": "Nathan",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e02169a2393509223c26e4eedc5"
+            },
+            {
+              "pickId": 10,
+              "pickType": "Song of the Week",
+              "songOrAlbumName": "Garbage Pale Kids",
+              "artistName": "JPEGMAFIA/Danny Brown",
+              "memberName": "Archie",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e028cf4c85912fdeb106707fb4c"
+            },
+            {
+              "pickId": 11,
+              "pickType": "Runner Up Song of the Week",
+              "songOrAlbumName": "Hero",
+              "artistName": "Neu!",
+              "memberName": "Vincent",
+              "songOrAlbumArt": "Q1W3RUSotW"
+            }
+          ],
+          "spotifyPlaylistLink": ""
+        },
+        {
+          "weekId": 3,
+          "weekName": "WEEK 4",
+          "weekDate": "(02/01/24)",
+          "weekActivity": {
+            "weekActivityEmoji": "",
+            "weekActivityTitle": "",
+            "weekActivityDetails": "",
+            "weekActivityHost": ""
+          },
+          "picks": [
+            {
+              "pickId": 12,
+              "pickType": "Album of the Week",
+              "songOrAlbumName": "SCARING THE HOES",
+              "artistName": "JPEGMAFIA/Danny Brown",
+              "memberName": "Archie",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e028cf4c85912fdeb106707fb4c"
+            },
+            {
+              "pickId": 13,
+              "pickType": "Runner Up Album of the Week",
+              "songOrAlbumName": "Antisocialites",
+              "artistName": "Alvvays",
+              "memberName": "Reed",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e0291390d24abb65f6fae0323f0"
+            },
+            {
+              "pickId": 14,
+              "pickType": "Song of the Week",
+              "songOrAlbumName": "Rubber Ball (Space Kitchen)",
+              "artistName": "Underworld",
+              "memberName": "Daniel",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e023413ff4db3fd58604def0085"
+            },
+            {
+              "pickId": 15,
+              "pickType": "Runner Up Song of the Week",
+              "songOrAlbumName": "Bodys",
+              "artistName": "Car Seat Headrest",
+              "memberName": "Nathan",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e022764cdf400a1d859640539a9"
+            }
+          ],
+          "spotifyPlaylistLink": ""
+        },
+        {
+          "weekId": 4,
+          "weekName": "WEEK 5",
+          "weekDate": "(02/08/24)",
+          "weekActivity": {
+            "weekActivityEmoji": "",
+            "weekActivityTitle": "",
+            "weekActivityDetails": "",
+            "weekActivityHost": ""
+          },
+          "picks": [
+            {
+              "pickId": 16,
+              "pickType": "Album of the Week",
+              "songOrAlbumName": "Hurry Up We're Dreaming",
+              "artistName": "M83",
+              "memberName": "Andrew",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e02fff2cb485c36a6d8f639bdba"
+            },
+            {
+              "pickId": 17,
+              "pickType": "Runner Up Album of the Week",
+              "songOrAlbumName": "Moenie Kitchi",
+              "artistName": "Gregori and the Hawk",
+              "memberName": "Daniel",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e0228e2b529cb08bfe5a00035c3"
+            },
+            {
+              "pickId": 18,
+              "pickType": "Song of the Week",
+              "songOrAlbumName": "UMI Says",
+              "artistName": "Mos Def",
+              "memberName": "Reed",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e0289b56f56323925d57b38944d"
+            },
+            {
+              "pickId": 19,
+              "pickType": "Runner Up Song of the Week",
+              "songOrAlbumName": "Texas Flood",
+              "artistName": "Stevie Ray Vaughan",
+              "memberName": "Natalie",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e02f7143c00741b94bb62025340"
+            }
+          ],
+          "spotifyPlaylistLink": ""
+        },
+        {
+          "weekId": 5,
+          "weekName": "WEEK 6",
+          "weekDate": "(02/15/24)",
+          "weekActivity": {
+            "weekActivityEmoji": "",
+            "weekActivityTitle": "",
+            "weekActivityDetails": "",
+            "weekActivityHost": ""
+          },
+          "picks": [
+            {
+              "pickId": 20,
+              "pickType": "Album of the Week",
+              "songOrAlbumName": "Midnight Marauders",
+              "artistName": "A Tribe Called Quest",
+              "memberName": "Natalie",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e02f306af1dae08f81f9d6f1f9f"
+            },
+            {
+              "pickId": 21,
+              "pickType": "Runner Up Album of the Week",
+              "songOrAlbumName": "The Forever Story",
+              "artistName": "JID",
+              "memberName": "Danny",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e02cae6e44dcc84e2035c3ad092"
+            },
+            {
+              "pickId": 22,
+              "pickType": "Song of the Week",
+              "songOrAlbumName": "Demolisher",
+              "artistName": "Slaughter To Prevail",
+              "memberName": "Andrew",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e027351717000b6749d905841c0"
+            },
+            {
+              "pickId": 23,
+              "pickType": "Runner Up Song of the Week",
+              "songOrAlbumName": "Dance Now",
+              "artistName": "DJ Sabrina the Teenage DJ",
+              "memberName": "Reed",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e0204db129839fa1be902a87b5c"
+            }
+          ],
+          "spotifyPlaylistLink": ""
+        },
+        {
+          "weekId": 6,
+          "weekName": "WEEK 7",
+          "weekDate": "(02/22/24)",
+          "weekActivity": {
+            "weekActivityEmoji": "",
+            "weekActivityTitle": "",
+            "weekActivityDetails": "",
+            "weekActivityHost": ""
+          },
+          "picks": [
+            {
+              "pickId": 24,
+              "pickType": "Album of the Week",
+              "songOrAlbumName": "Purple Rain",
+              "artistName": "Prince",
+              "memberName": "Danny",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e028a2ce3f148f57584269c3782"
+            },
+            {
+              "pickId": 25,
+              "pickType": "Runner Up Album of the Week",
+              "songOrAlbumName": "Magnolia Electric Co",
+              "artistName": "Songs:Ohia",
+              "memberName": "Ryan",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e0289b54a2385458cbe68bc35c6"
+            },
+            {
+              "pickId": 26,
+              "pickType": "Song of the Week",
+              "songOrAlbumName": "Some Are Lakes",
+              "artistName": "Land of Talk",
+              "memberName": "Natalie",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e02b594a30ddd7eb3cb5f9ec1e0"
+            },
+            {
+              "pickId": 27,
+              "pickType": "Runner Up Song of the Week",
+              "songOrAlbumName": "N/A",
+              "artistName": "N/A",
+              "memberName": "N/A",
+              "songOrAlbumArt": ""
+            }
+          ],
+          "spotifyPlaylistLink": ""
+        },
+        {
+          "weekId": 7,
+          "weekName": "WEEK 8",
+          "weekDate": "(02/29/24)",
+          "weekActivity": {
+            "weekActivityEmoji": "",
+            "weekActivityTitle": "",
+            "weekActivityDetails": "",
+            "weekActivityHost": ""
+          },
+          "picks": [
+            {
+              "pickId": 28,
+              "pickType": "Album of the Week",
+              "songOrAlbumName": "Max&Match",
+              "artistName": "Loona Odd Eye Circle",
+              "memberName": "Reed",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e02fb3c690920c69107439c2866"
+            },
+            {
+              "pickId": 29,
+              "pickType": "Runner Up Album of the Week",
+              "songOrAlbumName": "IGOR",
+              "artistName": "Tyler, The Creator",
+              "memberName": "Archie",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e027005885df706891a3c182a57"
+            },
+            {
+              "pickId": 30,
+              "pickType": "Song of the Week",
+              "songOrAlbumName": "La Luna y El Torro",
+              "artistName": "El Matador",
+              "memberName": "Danny",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e022c9f82cccb75746c169205b9"
+            },
+            {
+              "pickId": 31,
+              "pickType": "Runner Up Song of the Week",
+              "songOrAlbumName": "N/A",
+              "artistName": "N/A",
+              "memberName": "N/A",
+              "songOrAlbumArt": ""
+            }
+          ],
+          "spotifyPlaylistLink": ""
+        },
+        {
+          "weekId": 8,
+          "weekName": "WEEK 9",
+          "weekDate": "(03/07/24)",
+          "weekActivity": {
+            "weekActivityEmoji": "",
+            "weekActivityTitle": "",
+            "weekActivityDetails": "",
+            "weekActivityHost": ""
+          },
+          "picks": [
+            {
+              "pickId": 32,
+              "pickType": "Album of the Week",
+              "songOrAlbumName": "Neo Wax Bloom",
+              "artistName": "Iglooghost",
+              "memberName": "Daniel",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e020c67ab993d8e939e97cf7a3f"
+            },
+            {
+              "pickId": 33,
+              "pickType": "Runner Up Album of the Week",
+              "songOrAlbumName": "Bachata Rosa",
+              "artistName": "Juan Luis Guerra 4.40",
+              "memberName": "Danny",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e02fabe96fd440a50e9288111c2"
+            },
+            {
+              "pickId": 34,
+              "pickType": "Song of the Week",
+              "songOrAlbumName": "Mac Arthur Park Suite",
+              "artistName": "Donna Summer",
+              "memberName": "Ryan",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e020c3a44d76807bef665eacfa3"
+            },
+            {
+              "pickId": 35,
+              "pickType": "Runner Up Song of the Week",
+              "songOrAlbumName": "Next Hype",
+              "artistName": "TempaT",
+              "memberName": "Reed",
+              "songOrAlbumArt": "Q1W9RUSotW"
+            }
+          ],
+          "spotifyPlaylistLink": ""
+        }
+      ]
+    },
+    {
+      "quarterId": 1,
+      "quarterName": "SQ24",
+      "weeks": [
+        {
+          "weekId": 9,
+          "weekName": "WEEK 1",
+          "weekDate": "(04/01/24)",
+          "weekActivity": {
+            "weekActivityEmoji": "",
+            "weekActivityTitle": "",
+            "weekActivityDetails": "",
+            "weekActivityHost": ""
+          },
+          "picks": [
+            {
+              "pickId": 36,
+              "pickType": "Album of the Week",
+              "songOrAlbumName": "SuperGood",
+              "artistName": "Duckwrth",
+              "memberName": "Danny",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e022e5a021780f5056724a5b6af"
+            },
+            {
+              "pickId": 37,
+              "pickType": "Runner Up Album of the Week",
+              "songOrAlbumName": "Violent Femmes",
+              "artistName": "Violent Femmes",
+              "memberName": "Ryan",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e0254096a7f898de0233d76f626"
+            },
+            {
+              "pickId": 38,
+              "pickType": "Song of the Week",
+              "songOrAlbumName": "When You Were Mine",
+              "artistName": "Joy Crookes",
+              "memberName": "Susanna",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e02d025dca572f4485288e12d2c"
+            },
+            {
+              "pickId": 39,
+              "pickType": "Runner Up Song of the Week",
+              "songOrAlbumName": "Hide And Seek",
+              "artistName": "Imogen Heap",
+              "memberName": "Andrew",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e02866872ba52cf201fc33995cc"
+            }
+          ],
+          "spotifyPlaylistLink": ""
+        },
+        {
+          "weekId": 10,
+          "weekName": "WEEK 2",
+          "weekDate": "(04/08/24)",
+          "weekActivity": {
+            "weekActivityEmoji": "",
+            "weekActivityTitle": "",
+            "weekActivityDetails": "",
+            "weekActivityHost": ""
+          },
+          "picks": [
+            {
+              "pickId": 40,
+              "pickType": "Album of the Week",
+              "songOrAlbumName": "Everybody Else Is Doing It, So Why Can't We?",
+              "artistName": "The Cranberries",
+              "memberName": "Corey",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e02f6325f361d7803ad0d908451"
+            },
+            {
+              "pickId": 41,
+              "pickType": "Runner Up Album of the Week",
+              "songOrAlbumName": "Nurture",
+              "artistName": "Porter Robinson",
+              "memberName": "Aidan",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e027d6ac8b4a84ad4b342050d87"
+            },
+            {
+              "pickId": 42,
+              "pickType": "Song of the Week",
+              "songOrAlbumName": "Woman",
+              "artistName": "Free",
+              "memberName": "Natalie",
+              "songOrAlbumArt": "Q2W2SotW"
+            },
+            {
+              "pickId": 43,
+              "pickType": "Runner Up Song of the Week",
+              "songOrAlbumName": "The End",
+              "artistName": "The Doors",
+              "memberName": "Grace",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e025b96a8c5d61be8878452f8f1"
+            }
+          ],
+          "spotifyPlaylistLink": ""
+        },
+        {
+          "weekId": 11,
+          "weekName": "WEEK 3",
+          "weekDate": "(04/15/24)",
+          "weekActivity": {
+            "weekActivityEmoji": "",
+            "weekActivityTitle": "",
+            "weekActivityDetails": "",
+            "weekActivityHost": ""
+          },
+          "picks": [
+            {
+              "pickId": 44,
+              "pickType": "Album of the Week",
+              "songOrAlbumName": "3 Feet High and Rising Studio Album",
+              "artistName": "De La Soul",
+              "memberName": "Ryan",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e02fa8d314f6f91e81889335dfc"
+            },
+            {
+              "pickId": 45,
+              "pickType": "Runner Up Album of the Week",
+              "songOrAlbumName": "In the Court of the Crimson King",
+              "artistName": "King Crimson",
+              "memberName": "Natalie",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e02da7b326bd7ffa7b6b95b0660"
+            },
+            {
+              "pickId": 46,
+              "pickType": "Song of the Week",
+              "songOrAlbumName": "Dead in the Water",
+              "artistName": "Ellie Goulding",
+              "memberName": "Andrew",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e02474301b91976f6310bbe90a1"
+            },
+            {
+              "pickId": 47,
+              "pickType": "Runner Up Song of the Week",
+              "songOrAlbumName": "Restless Song",
+              "artistName": "Shadow Community",
+              "memberName": "Reed",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e020d2abeb204efa70a0840e456"
+            }
+          ],
+          "spotifyPlaylistLink": ""
+        },
+        {
+          "weekId": 12,
+          "weekName": "WEEK 4",
+          "weekDate": "(04/22/24)",
+          "weekActivity": {
+            "weekActivityEmoji": "",
+            "weekActivityTitle": "",
+            "weekActivityDetails": "",
+            "weekActivityHost": ""
+          },
+          "picks": [
+            {
+              "pickId": 48,
+              "pickType": "Album of the Week",
+              "songOrAlbumName": "Feather River Canyon Blues",
+              "artistName": "Pigeon Pit",
+              "memberName": "Simon",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e02376908ef3571b2a0b13e446b"
+            },
+            {
+              "pickId": 49,
+              "pickType": "Runner Up Album of the Week",
+              "songOrAlbumName": "NOVA",
+              "artistName": "RL Grime",
+              "memberName": "Vicky + Marisabel",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e02798f315e011d4ada702ce9bb"
+            },
+            {
+              "pickId": 50,
+              "pickType": "Song of the Week",
+              "songOrAlbumName": "Northern Downpour",
+              "artistName": "Panic! At The Disco",
+              "memberName": "Rogelio",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e02586acdba3a0ddc93693a313e"
+            },
+            {
+              "pickId": 51,
+              "pickType": "Runner Up Song of the Week",
+              "songOrAlbumName": "The Hissing of Summer Lawn",
+              "artistName": "Joni Mitchell",
+              "memberName": "Ella",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e020153ab9024b8545d6acdc999"
+            }
+          ],
+          "spotifyPlaylistLink": ""
+        },
+        {
+          "weekId": 13,
+          "weekName": "WEEK 5",
+          "weekDate": "(04/29/24)",
+          "weekActivity": {
+            "weekActivityEmoji": "",
+            "weekActivityTitle": "",
+            "weekActivityDetails": "",
+            "weekActivityHost": ""
+          },
+          "picks": [
+            {
+              "pickId": 52,
+              "pickType": "Album of the Week",
+              "songOrAlbumName": "Kaputt",
+              "artistName": "Destroyer",
+              "memberName": "Reed",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e026fd7ec50eeda2f6820f1f873"
+            },
+            {
+              "pickId": 53,
+              "pickType": "Runner Up Album of the Week",
+              "songOrAlbumName": "Open Mouth, Open Heart",
+              "artistName": "Destroy Boys",
+              "memberName": "Corey",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e02d27eb8a754a19182e40c0757"
+            },
+            {
+              "pickId": 54,
+              "pickType": "Song of the Week",
+              "songOrAlbumName": "Fronteir Psychiatrist",
+              "artistName": "The Avalanches",
+              "memberName": "Ryan",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e024cc65c5ce55234c548a79d9d"
+            },
+            {
+              "pickId": 55,
+              "pickType": "Runner Up Song of the Week",
+              "songOrAlbumName": "A Quick One (While He's Away)",
+              "artistName": "The Who",
+              "memberName": "Grace",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e0263926de6170ecc079cbf3637"
+            }
+          ],
+          "spotifyPlaylistLink": ""
+        },
+        {
+          "weekId": 14,
+          "weekName": "WEEK 6",
+          "weekDate": "(05/06/24)",
+          "weekActivity": {
+            "weekActivityEmoji": "",
+            "weekActivityTitle": "",
+            "weekActivityDetails": "",
+            "weekActivityHost": ""
+          },
+          "picks": [
+            {
+              "pickId": 56,
+              "pickType": "Album of the Week",
+              "songOrAlbumName": "Let's Get Out of This Country",
+              "artistName": "Camera Obscura",
+              "memberName": "Grace",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e0263926de6170ecc079cbf3637"
+            },
+            {
+              "pickId": 57,
+              "pickType": "Runner Up Album of the Week",
+              "songOrAlbumName": "Translucence",
+              "artistName": "Poly Styrene",
+              "memberName": "Ella",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e023c5a0d07041ceec4295f8634"
+            },
+            {
+              "pickId": 58,
+              "pickType": "Song of the Week",
+              "songOrAlbumName": "Out Like a Light",
+              "artistName": "Ricky Montgomery & The Honeysticks",
+              "memberName": "Aidan",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e020dd0d4017b18354d2bf1b8a9"
+            },
+            {
+              "pickId": 59,
+              "pickType": "Runner Up Song of the Week",
+              "songOrAlbumName": "PROM/KING",
+              "artistName": "Saba",
+              "memberName": "Danny",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e024bb13f7847252cc829e05aa6"
+            }
+          ],
+          "spotifyPlaylistLink": ""
+        },
+        {
+          "weekId": 15,
+          "weekName": "WEEK 7",
+          "weekDate": "(05/13/24)",
+          "weekActivity": {
+            "weekActivityEmoji": "",
+            "weekActivityTitle": "",
+            "weekActivityDetails": "",
+            "weekActivityHost": ""
+          },
+          "picks": [
+            {
+              "pickId": 60,
+              "pickType": "Album of the Week",
+              "songOrAlbumName": "Friends That Break Your Heart",
+              "artistName": "James Blake",
+              "memberName": "Susanna",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e0238d030048ec770b15633dbc1"
+            },
+            {
+              "pickId": 61,
+              "pickType": "Runner Up Album of the Week",
+              "songOrAlbumName": "Lavender Days",
+              "artistName": "Caamp",
+              "memberName": "Andrew",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e02d67b81ebdeb6f84cc1f248bb"
+            },
+            {
+              "pickId": 62,
+              "pickType": "Song of the Week",
+              "songOrAlbumName": "American Lawn",
+              "artistName": "Blake Rouse",
+              "memberName": "Simon",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e02e8283d5c6af996713e17ae3e"
+            },
+            {
+              "pickId": 63,
+              "pickType": "Runner Up Song of the Week",
+              "songOrAlbumName": "Jackie",
+              "artistName": "Yves Tumor",
+              "memberName": "Daniel",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e02a76d0e5fa05469cff1622641"
+            }
+          ],
+          "spotifyPlaylistLink": ""
+        },
+        {
+          "weekId": 16,
+          "weekName": "WEEK 8",
+          "weekDate": "(05/20/24)",
+          "weekActivity": {
+            "weekActivityEmoji": "",
+            "weekActivityTitle": "",
+            "weekActivityDetails": "",
+            "weekActivityHost": ""
+          },
+          "picks": [
+            {
+              "pickId": 64,
+              "pickType": "Album of the Week",
+              "songOrAlbumName": "Zapper",
+              "artistName": "NANORAY",
+              "memberName": "Daniel",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e02dfc1bd112d040ea2d18e8a32"
+            },
+            {
+              "pickId": 65,
+              "pickType": "Runner Up Album of the Week",
+              "songOrAlbumName": "No Pressure",
+              "artistName": "Logic",
+              "memberName": "Archie",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e021c76e29153f29cc1e1b2b434"
+            },
+            {
+              "pickId": 66,
+              "pickType": "Song of the Week",
+              "songOrAlbumName": "Graphic Bleed Outs",
+              "artistName": "Quelle Chris and Chris Keys",
+              "memberName": "Reed",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e02b897ecace90f2f389a5de388"
+            },
+            {
+              "pickId": 67,
+              "pickType": "Runner Up Song of the Week",
+              "songOrAlbumName": "Ondulé",
+              "artistName": "Mathieu Boogaerts",
+              "memberName": "Natalie",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e02e868814ac90d529527645827"
+            }
+          ],
+          "spotifyPlaylistLink": ""
+        }
+      ]
+    },
+    {
+      "quarterId": 2,
+      "quarterName": "FQ24",
+      "weeks": [
+        {
+          "weekId": 17,
+          "weekName": "WEEK 1",
+          "weekDate": "(10/03/24)",
+          "weekActivity": {
+            "weekActivityEmoji": "♟️",
+            "weekActivityTitle": "SONG OF THE SUMMER BRACKET",
+            "weekActivityDetails": "Come with your favorite songs of the summer and find out which song ultimately comes out on top!",
+            "weekActivityHost": "Simon"
+          },
+          "picks": [
+            {
+              "pickId": 68,
+              "pickType": "Album of the Week",
+              "songOrAlbumName": "Mood Valiant",
+              "artistName": "Hiatus Kaiyote",
+              "memberName": "Susanna",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273da81bffabbcac771ccff4e99"
+            },
+            {
+              "pickId": 69,
+              "pickType": "Runner Up Album of the Week",
+              "songOrAlbumName": "Lamp Genso",
+              "artistName": "Lamp",
+              "memberName": "Danny",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273bbc2ac628f52cd6127e20bfa"
+            },
+            {
+              "pickId": 70,
+              "pickType": "Song of the Week",
+              "songOrAlbumName": "Bagbak",
+              "artistName": "Vince Staples",
+              "memberName": "AJ",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2737ba7b4d23c717f3211717946"
+            },
+            {
+              "pickId": 71,
+              "pickType": "Runner Up Song of the Week",
+              "songOrAlbumName": "hydrocodone",
+              "artistName": "black kray",
+              "memberName": "Ryan",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273228757a45a36d7115ee6feb1"
+            }
+          ],
+          "spotifyPlaylistLink": ""
+        },
+        {
+          "weekId": 18,
+          "weekName": "WEEK 2",
+          "weekDate": "(10/10/24)",
+          "weekActivity": {
+            "weekActivityEmoji": "♟️",
+            "weekActivityTitle": "MUSIC WORDLE",
+            "weekActivityDetails": "Music-related wordle games...enough said!",
+            "weekActivityHost": "Simon"
+          },
+          "picks": [
+            {
+              "pickId": 72,
+              "pickType": "Album of the Week",
+              "songOrAlbumName": "Paradigmes",
+              "artistName": "La Femme",
+              "memberName": "Corey",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273065bdd46636de3b8ec05e567"
+            },
+            {
+              "pickId": 73,
+              "pickType": "Runner Up Album of the Week",
+              "songOrAlbumName": "The Well I Fell Into",
+              "artistName": "WHY?",
+              "memberName": "Simon",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2739f9e81fc8aff6b5ce0b409b5"
+            },
+            {
+              "pickId": 74,
+              "pickType": "Song of the Week",
+              "songOrAlbumName": "De Selby (Pt 1/2)",
+              "artistName": "Hozier",
+              "memberName": "Aidan",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2735aa29751874ca4ba06da8877"
+            },
+            {
+              "pickId": 75,
+              "pickType": "Runner Up Song of the Week",
+              "songOrAlbumName": "Something Holy",
+              "artistName": "Alice Phoebe Lou",
+              "memberName": "Joseph",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273108f1b9a37f5c96cf66bea15"
+            }
+          ],
+          "spotifyPlaylistLink": "https://open.spotify.com/playlist/4xxtF1pe4kUYt5YIfmhNvD?si=xZ5tnWL7TeyszC_ud-g5AA&nd=1&dlsi=c1ed60e6d18c483e"
+        },
+        {
+          "weekId": 19,
+          "weekName": "WEEK 3",
+          "weekDate": "(10/17/24)",
+          "weekActivity": {
+            "weekActivityEmoji": "🎵",
+            "weekActivityTitle": "Music Video Analysis",
+            "weekActivityDetails": "Come with your fav music video for the group to analyze!",
+            "weekActivityHost": "Simon"
+          },
+          "picks": [
+            {
+              "pickId": 76,
+              "pickType": "Album of the Week",
+              "songOrAlbumName": "And Then Nothing Turned Itself Inside-Out",
+              "artistName": "Yo La Tengo",
+              "memberName": "Reed",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b27383d6fe7694702b6bf5ac3ba3"
+            },
+            {
+              "pickId": 77,
+              "pickType": "Runner Up Album of the Week",
+              "songOrAlbumName": "Ill Communication",
+              "artistName": "Beastie Boys",
+              "memberName": "Grace",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273436a305db8bd85b820da3e5a"
+            },
+            {
+              "pickId": 78,
+              "pickType": "Song of the Week",
+              "songOrAlbumName": "Starburned and Unkissed",
+              "artistName": "Caroline Polachek",
+              "memberName": "Cai",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2735fc36c05d229e598cd76b249"
+            },
+            {
+              "pickId": 79,
+              "pickType": "Runner Up Song of the Week",
+              "songOrAlbumName": "Romantic",
+              "artistName": "Mannequin Pussy",
+              "memberName": "Zoey",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b27373a681dbce9553a6f55c6a14"
+            }
+          ],
+          "spotifyPlaylistLink": "https://urldefense.com/v3/__https://open.spotify.com/playlist/080TN68vaY2TraGySsO5sB?si=q81qiIWVSveFNlt6vGEaiQ&pi=u-HMjcXa-1S6qS__;!!Dq0X2DkFhyF93HkjWTBQKhk!XW5vX7iWsEkOg9Tm2xxPTOpU92mPU_OGv6FqN9nmMuRKUGrspfYG9x1gZqcdFyZVgALNwIZj3L7IIhm95MFLRrsB2rIsNsmdSMOqHTjNMZIc0hMx8VJcgTs$"
+        },
+        {
+          "weekId": 20,
+          "weekName": "WEEK 4",
+          "weekDate": "(10/24/24)",
+          "weekActivity": {
+            "weekActivityEmoji": "🎵",
+            "weekActivityTitle": "Music Analysis 101",
+            "weekActivityDetails": "Come to our meeting to learn how to better talk about the music we review week to week!",
+            "weekActivityHost": "Arch"
+          },
+          "picks": [
+            {
+              "pickId": 80,
+              "pickType": "Album of the Week",
+              "songOrAlbumName": "Here's Larks' Tongues In Aspic",
+              "artistName": "King Crimson",
+              "memberName": "Acton",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273aa9e5286056e17ff3d9b2881"
+            },
+            {
+              "pickId": 81,
+              "pickType": "Runner Up Album of the Week",
+              "songOrAlbumName": "Hadestown (Original Broadway Cast Recording) [2019]",
+              "artistName": "Original Broadway Cast of Hadestown",
+              "memberName": "Aidan",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273b62a5129d9efa26386143622"
+            },
+            {
+              "pickId": 82,
+              "pickType": "Song of the Week",
+              "songOrAlbumName": "Overthrown",
+              "artistName": "Thee Oh Sees",
+              "memberName": "Reed",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273688b55c8a7c8b4094360d785"
+            },
+            {
+              "pickId": 83,
+              "pickType": "Runner Up Song of the Week",
+              "songOrAlbumName": "Waltz #2 (XO)",
+              "artistName": "Elliot Smith",
+              "memberName": "Nisha",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273cdf1be0ff556d169eade4368"
+            }
+          ],
+          "spotifyPlaylistLink": "https://urldefense.com/v3/__https://open.spotify.com/playlist/51XLjVbYvDmchvLuvh9aPv?si=pDwEdSwYRiifwPZAXP4djA__;!!Dq0X2DkFhyF93HkjWTBQKhk!TK66kpnW03KzLmDYeQmqyT7SNYH3mb-6sHAtWkfCYoFLT3wDyshWvFrZAF7yrw8rYKmpGN83ullqV8w3oyQPWcARCcszod7RD2oCh19X4jINaIYbPOXxiro$"
+        },
+        {
+          "weekId": 21,
+          "weekName": "WEEK 5",
+          "weekDate": "(10/31/24)",
+          "weekActivity": {
+            "weekActivityEmoji": "♟️",
+            "weekActivityTitle": "Heads Off",
+            "weekActivityDetails": "Come for a Halloween-themed game of Heads Up!",
+            "weekActivityHost": "Simon"
+          },
+          "picks": [
+            {
+              "pickId": 84,
+              "pickType": "Album of the Week",
+              "songOrAlbumName": "Since I Left You [Disc 1]",
+              "artistName": "The Avalanches",
+              "memberName": "Ryan",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2734cc65c5ce55234c548a79d9d"
+            },
+            {
+              "pickId": 85,
+              "pickType": "Runner Up Album of the Week",
+              "songOrAlbumName": "New Levels New Devils",
+              "artistName": "Polyphia",
+              "memberName": "Andrew",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2737a799cc62e624fd6432779e3"
+            },
+            {
+              "pickId": 86,
+              "pickType": "Song of the Week",
+              "songOrAlbumName": "Boys At School",
+              "artistName": "Spellling",
+              "memberName": "Daniel",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273d990653ea71f3ef4bf46d27b"
+            },
+            {
+              "pickId": 87,
+              "pickType": "Runner Up Song of the Week",
+              "songOrAlbumName": "More Than It Hurts You",
+              "artistName": "The Front Bottoms",
+              "memberName": "Simon",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273bd04df64648504da10794258"
+            }
+          ],
+          "spotifyPlaylistLink": "https://urldefense.com/v3/__https://open.spotify.com/playlist/714eycyHXrAmpu94l0YhWl__;!!Dq0X2DkFhyF93HkjWTBQKhk!RNwlzeR3GKVhjhihvNi77Gxd8Osz6btwmJR6Rt9a3ACyDwnO8dS08Wjpt-4H3eKmNl5PQeEPjd1MCPUR7Ac_3wrcVZcSAzca1QMUXUbjl1m_qiOiAjpeL1w$"
+        },
+        {
+          "weekId": 22,
+          "weekName": "WEEK 6",
+          "weekDate": "(11/07/24)",
+          "weekActivity": {
+            "weekActivityEmoji": "🎵",
+            "weekActivityTitle": "Vinyl Presentation",
+            "weekActivityDetails": "Come learn all about Vinyl from our club leader Arch!",
+            "weekActivityHost": "Arch"
+          },
+          "picks": [
+            {
+              "pickId": 88,
+              "pickType": "Album of the Week",
+              "songOrAlbumName": "And in the Darkness, Hearts Aglow",
+              "artistName": "Weyes Blood",
+              "memberName": "Cai",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273db8ab490bcedb6e518c37e6e"
+            },
+            {
+              "pickId": 89,
+              "pickType": "Runner Up Album of the Week",
+              "songOrAlbumName": "Stankonia",
+              "artistName": "OutKast",
+              "memberName": "AJ",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2732350e31bc346a6c20e9de166"
+            },
+            {
+              "pickId": 90,
+              "pickType": "Song of the Week",
+              "songOrAlbumName": "How to Disappear Completely",
+              "artistName": "Radiohead",
+              "memberName": "Danny",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2736c7112082b63beefffe40151"
+            },
+            {
+              "pickId": 91,
+              "pickType": "Runner Up Song of the Week",
+              "songOrAlbumName": "I Sat by The Ocean",
+              "artistName": "Queens of the Stone Age",
+              "memberName": "Corey",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273a705b56a83b703453d8ddd04"
+            }
+          ],
+          "spotifyPlaylistLink": "https://urldefense.com/v3/__https://open.spotify.com/playlist/1zmfD5hPkddMHUmNlPURJQ?si=e2189d0e20144348__;!!Dq0X2DkFhyF93HkjWTBQKhk!VwMY6ueHndg1Du2bUSfubPrJEH4S-O-yuWG4b1qNj2YZ9o_4fpO0lml56us04dsrU7ZBqSvZLcjIfarQOLmsY5-BXiwB8pes-nkD8CJDFlC6qUtNojbiQdI$"
+        },
+        {
+          "weekId": 23,
+          "weekName": "WEEK 7",
+          "weekDate": "(11/14/24)",
+          "weekActivity": {
+            "weekActivityEmoji": "♟️",
+            "weekActivityTitle": "Name A Song",
+            "weekActivityDetails": "Come for exciting song trivia!",
+            "weekActivityHost": "Simon"
+          },
+          "picks": [
+            {
+              "pickId": 92,
+              "pickType": "Album of the Week",
+              "songOrAlbumName": "Hiding Places",
+              "artistName": "Billy Woods and Kenny Segal",
+              "memberName": "Joseph",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2735a3cfc4f00b557b5982cd48b"
+            },
+            {
+              "pickId": 93,
+              "pickType": "Runner Up Album of the Week",
+              "songOrAlbumName": "Spirit Phone",
+              "artistName": "Lemon Demon",
+              "memberName": "Daniel",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273ae390841cf7a97bf3a59bb5d"
+            },
+            {
+              "pickId": 94,
+              "pickType": "Song of the Week",
+              "songOrAlbumName": "Postcards from Italy",
+              "artistName": "Beirut",
+              "memberName": "Andrew",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2736ad0ccb944d30d7e47d26c9a"
+            },
+            {
+              "pickId": 95,
+              "pickType": "Runner Up Song of the Week",
+              "songOrAlbumName": "Nothing’s Free",
+              "artistName": "Angel Olsen",
+              "memberName": "Susanna",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2733825dd3cd9b15b4e355e88ed"
+            }
+          ],
+          "spotifyPlaylistLink": "https://urldefense.com/v3/__https://open.spotify.com/playlist/3XsBVHnq71wAPM24W9zlgh?si=Q8DCof2vTnSnIOfF7ip88g__;!!Dq0X2DkFhyF93HkjWTBQKhk!X4iUg9YNsu60ii9Th4JxtJ7UdSx9p-2M48DfF-GAAzUF0vDM34ey7VjJGuHcuD9Nt4aTV0SIvDXJAuWwNpSQTajw_IVKSwh4GTcmCLudHlzRAXjkSTXqST0$"
+        },
+        {
+          "weekId": 24,
+          "weekName": "WEEK 8",
+          "weekDate": "(11/21/24)",
+          "weekActivity": {
+            "weekActivityEmoji": "🎬",
+            "weekActivityTitle": "PHARRELL BIOPIC LEGO MOVIE (Piece By Piece)",
+            "weekActivityDetails": "Come for our second event of the quarter in *KRESGE 1515* for a group watching of Piece By Piece",
+            "weekActivityHost": "Archie"
+          },
+          "picks": [
+            {
+              "pickId": 96,
+              "pickType": "Album of the Week",
+              "songOrAlbumName": "Alfredo",
+              "artistName": "Freddie Gibbs and The Alchemist",
+              "memberName": "Archie",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b27352c24049a16d59e98a638651"
+            },
+            {
+              "pickId": 97,
+              "pickType": "Runner Up Album of the Week",
+              "songOrAlbumName": "Piece By Piece - Music from the Motion Picture",
+              "artistName": "Pharrell Williams",
+              "memberName": "MTC",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2733e3f0aa1af52a44a3e7e4e72"
+            },
+            {
+              "pickId": 98,
+              "pickType": "Song of the Week",
+              "songOrAlbumName": "I Could Never Take The Place Of Your Man",
+              "artistName": "Prince",
+              "memberName": "Grace",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2730f15bc9fc5979caf46be6205"
+            },
+            {
+              "pickId": 99,
+              "pickType": "Runner Up Song of the Week",
+              "songOrAlbumName": "The Weight",
+              "artistName": "The Band",
+              "memberName": "Archie",
+              "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b27343514544b879aede26b32cf4"
+            }
+          ],
+          "spotifyPlaylistLink": "https://urldefense.com/v3/__https://open.spotify.com/playlist/6FqNsge4athUOs89kmrY08?si=Aq7Pc2wHSK6vwpjkao5GwQ&pi=u-zStzoyr2Q720__;!!Dq0X2DkFhyF93HkjWTBQKhk!UCT4s29EZ9FE3RLc751GljVciEqH7DHR2Mqrq-8ReczkBmBZ9uPDxLTioNP8U6djMn5sWjZ-poG_8WsbrhO9jXJ58qjxwddgSYxVcARvkSAyfTPmA48I2Qw$"
+        }
+      ]
+    },
+    {
+      "quarterId": 3,
+      "quarterName": "WQ25",
+      "weeks": [
+        {
+          "weekId": 25,
+          "weekName": "WEEK 1",
+          "weekDate": "(01/XX/25)",
+          "weekActivity": {
+            "weekActivityEmoji": "",
+            "weekActivityTitle": "FIRST WEEK BACK",
+            "weekActivityDetails": "LFG",
+            "weekActivityHost": "EVERYBODY!!!!!"
+          },
+          "picks": [
+            {
+              "pickId": 100,
+              "pickType": "Album of the Week",
+              "songOrAlbumName": "N/A",
+              "artistName": "N/A",
+              "memberName": "N/A",
+              "songOrAlbumArt": ""
+            },
+            {
+              "pickId": 101,
+              "pickType": "Runner Up Album of the Week",
+              "songOrAlbumName": "N/A",
+              "artistName": "N/A",
+              "memberName": "N/A",
+              "songOrAlbumArt": ""
+            },
+            {
+              "pickId": 102,
+              "pickType": "Song of the Week",
+              "songOrAlbumName": "N/A",
+              "artistName": "N/A",
+              "memberName": "N/A",
+              "songOrAlbumArt": ""
+            },
+            {
+              "pickId": 103,
+              "pickType": "Runner Up Song of the Week",
+              "songOrAlbumName": "N/A",
+              "artistName": "N/A",
+              "memberName": "N/A",
+              "songOrAlbumArt": ""
+            }
+          ],
+          "spotifyPlaylistLink": ""
+        }
+      ]
+    }
+  ]
+  

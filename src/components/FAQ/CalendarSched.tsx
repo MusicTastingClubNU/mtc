@@ -127,7 +127,6 @@ export default function DateCalendarServerRequest() {
   const [selectedDate, setSelectedDate] = React.useState<Dayjs | null>(
     initialValue
   );
-  const currQ = data[2];
   const isMobile = useMediaQuery("(max-width: 768px)");
 
   const fetchHighlightedDays = (date: Dayjs) => {
@@ -157,7 +156,6 @@ export default function DateCalendarServerRequest() {
     if (requestAbortController.current) {
       requestAbortController.current.abort();
     }
-
     setIsLoading(true);
     setHighlightedDays([]);
     fetchHighlightedDays(date);
@@ -218,6 +216,16 @@ export default function DateCalendarServerRequest() {
     dayjs("2024-11-14"),
     dayjs("2024-11-21"),
   ];
+  const WQ25Meetings: Dayjs[] = [
+    dayjs("2025-01-07"),
+    dayjs("2025-01-14"),
+    dayjs("2025-01-21"),
+    dayjs("2025-01-28"),
+    dayjs("2025-02-04"),
+    dayjs("2025-02-11"),
+    dayjs("2025-02-18"),
+    dayjs("2025-02-21"),
+  ];
 
   const whichWeekIndex = (selectedDate: Dayjs): number => {
     if (!selectedDate.isValid()) return -1;
@@ -252,9 +260,9 @@ export default function DateCalendarServerRequest() {
                           FQ24Meetings={FQ24Meetings}
                           emoji={
                             selectedDate
-                              ? data[whichQuarterIndex(selectedDate)]?.weeks[
-                                  whichWeekIndex(dayProps.day)
-                                ]?.weekActivity.weekActivityEmoji ?? ""
+                              ? data[whichQuarterIndex(selectedDate) - 1]
+                                  ?.weeks[whichWeekIndex(dayProps.day)]
+                                  ?.weekActivity.weekActivityEmoji ?? ""
                               : ""
                           }
                         />
@@ -280,9 +288,9 @@ export default function DateCalendarServerRequest() {
                           FQ24Meetings={FQ24Meetings}
                           emoji={
                             selectedDate
-                              ? data[whichQuarterIndex(selectedDate)]?.weeks[
-                                  whichWeekIndex(dayProps.day)
-                                ]?.weekActivity.weekActivityEmoji ?? ""
+                              ? data[whichQuarterIndex(selectedDate) - 1]
+                                  ?.weeks[whichWeekIndex(dayProps.day)]
+                                  ?.weekActivity.weekActivityEmoji ?? ""
                               : ""
                           }
                         />
@@ -301,21 +309,21 @@ export default function DateCalendarServerRequest() {
               {selectedDate && (
                 <>
                   <h1 style={{ color: "black", paddingBottom: 10 }}>
-                    {data[whichQuarterIndex(selectedDate)].weeks[
+                    {data[whichQuarterIndex(selectedDate) - 1].weeks[
                       whichWeekIndex(selectedDate)
                     ]?.weekActivity.weekActivityTitle ?? "No Activity Found"}
                   </h1>
                   <h2 style={{ paddingBottom: 20 }}>
-                    {data[whichQuarterIndex(selectedDate)].weeks[
+                    {data[whichQuarterIndex(selectedDate) - 1].weeks[
                       whichWeekIndex(selectedDate)
                     ]?.weekActivity.weekActivityDetails ?? ""}
                   </h2>
                   <h4 style={{ paddingBottom: 40 }}>
-                    {data[whichQuarterIndex(selectedDate)].weeks[
+                    {data[whichQuarterIndex(selectedDate) - 1].weeks[
                       whichWeekIndex(selectedDate)
                     ]?.weekActivity.weekActivityHost
                       ? "Hosted By " +
-                        data[whichQuarterIndex(selectedDate)].weeks[
+                        data[whichQuarterIndex(selectedDate) - 1].weeks[
                           whichWeekIndex(selectedDate)
                         ]?.weekActivity.weekActivityHost
                       : ""}

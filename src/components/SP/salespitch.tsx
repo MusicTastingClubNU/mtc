@@ -29,7 +29,19 @@ const SalesPitch = (props: Props) => {
             shared passion and discussion.
           </h3>
         </div>
-        <img src={img} alt="logo img" className="mission-img"></img>
+        <div style={{ textAlign: "center" }}>
+          <img src={img} alt="logo img" className="mission-img"></img>
+          <p className="thingghost-insta-link">
+            Logo by{" "}
+            <a
+              href="https://www.instagram.com/thingghost/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @thingghost
+            </a>
+          </p>
+        </div>
       </div>
       {/* <ThisWeeksPicks /> */}
       <SeeYouNextQuarter />

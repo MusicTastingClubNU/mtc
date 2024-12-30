@@ -1,0 +1,358 @@
+[
+  {
+    "quarterId": 3,
+    "quarterName": "WQ25",
+    "weeks": []
+  },
+  {
+    "quarterId": 2,
+    "quarterName": "FQ24",
+    "weeks": []
+  },
+  {
+    "quarterId": 1,
+    "quarterName": "SQ24",
+    "weeks": [
+      {
+        "weekId": 0,
+        "weekName": "WEEK 1",
+        "weekActivity": {
+          "weekActivityEmoji": "",
+          "weekActivityTitle": "",
+          "weekActivityDetails": "",
+          "weekActivityHost": ""
+        }
+      },
+      {
+        "weekId": 1,
+        "weekName": "WEEK 2",
+        "weekActivity": {
+          "weekActivityEmoji": "",
+          "weekActivityTitle": "",
+          "weekActivityDetails": "",
+          "weekActivityHost": ""
+        }
+      },
+      {
+        "weekId": 2,
+        "weekName": "WEEK 3",
+        "weekActivity": {
+          "weekActivityEmoji": "",
+          "weekActivityTitle": "",
+          "weekActivityDetails": "",
+          "weekActivityHost": ""
+        }
+      },
+      {
+        "weekId": 3,
+        "weekName": "WEEK 4",
+        "weekActivity": {
+          "weekActivityEmoji": "",
+          "weekActivityTitle": "",
+          "weekActivityDetails": "",
+          "weekActivityHost": ""
+        }
+      },
+      {
+        "weekId": 4,
+        "weekName": "WEEK 5",
+        "weekActivity": {
+          "weekActivityEmoji": "",
+          "weekActivityTitle": "",
+          "weekActivityDetails": "",
+          "weekActivityHost": ""
+        }
+      },
+      {
+        "weekId": 5,
+        "weekName": "WEEK 6",
+        "weekActivity": {
+          "weekActivityEmoji": "",
+          "weekActivityTitle": "",
+          "weekActivityDetails": "",
+          "weekActivityHost": ""
+        }
+      },
+      {
+        "weekId": 6,
+        "weekName": "WEEK 7",
+        "weekActivity": {
+          "weekActivityEmoji": "",
+          "weekActivityTitle": "",
+          "weekActivityDetails": "",
+          "weekActivityHost": ""
+        }
+      },
+      {
+        "weekId": 7,
+        "weekName": "WEEK 8",
+        "weekActivity": {
+          "weekActivityEmoji": "",
+          "weekActivityTitle": "",
+          "weekActivityDetails": "",
+          "weekActivityHost": ""
+        }
+      },
+      {
+        "weekId": 8,
+        "weekName": "WEEK 9",
+        "weekActivity": {
+          "weekActivityEmoji": "",
+          "weekActivityTitle": "",
+          "weekActivityDetails": "",
+          "weekActivityHost": ""
+        }
+      },
+      {
+        "weekId": 9,
+        "weekName": "WEEK 1",
+        "weekActivity": {
+          "weekActivityEmoji": "",
+          "weekActivityTitle": "",
+          "weekActivityDetails": "",
+          "weekActivityHost": ""
+        }
+      },
+      {
+        "weekId": 10,
+        "weekName": "WEEK 2",
+        "weekActivity": {
+          "weekActivityEmoji": "",
+          "weekActivityTitle": "",
+          "weekActivityDetails": "",
+          "weekActivityHost": ""
+        }
+      },
+      {
+        "weekId": 11,
+        "weekName": "WEEK 3",
+        "weekActivity": {
+          "weekActivityEmoji": "",
+          "weekActivityTitle": "",
+          "weekActivityDetails": "",
+          "weekActivityHost": ""
+        }
+      },
+      {
+        "weekId": 12,
+        "weekName": "WEEK 4",
+        "weekActivity": {
+          "weekActivityEmoji": "",
+          "weekActivityTitle": "",
+          "weekActivityDetails": "",
+          "weekActivityHost": ""
+        }
+      },
+      {
+        "weekId": 13,
+        "weekName": "WEEK 5",
+        "weekActivity": {
+          "weekActivityEmoji": "",
+          "weekActivityTitle": "",
+          "weekActivityDetails": "",
+          "weekActivityHost": ""
+        }
+      },
+      {
+        "weekId": 14,
+        "weekName": "WEEK 6",
+        "weekActivity": {
+          "weekActivityEmoji": "",
+          "weekActivityTitle": "",
+          "weekActivityDetails": "",
+          "weekActivityHost": ""
+        }
+      },
+      {
+        "weekId": 15,
+        "weekName": "WEEK 7",
+        "weekActivity": {
+          "weekActivityEmoji": "",
+          "weekActivityTitle": "",
+          "weekActivityDetails": "",
+          "weekActivityHost": ""
+        }
+      },
+      {
+        "weekId": 16,
+        "weekName": "WEEK 8",
+        "weekActivity": {
+          "weekActivityEmoji": "",
+          "weekActivityTitle": "",
+          "weekActivityDetails": "",
+          "weekActivityHost": ""
+        }
+      },
+      {
+        "weekId": 9,
+        "weekName": "WEEK 1",
+        "weekActivity": {
+          "weekActivityEmoji": "",
+          "weekActivityTitle": "",
+          "weekActivityDetails": "",
+          "weekActivityHost": ""
+        }
+      },
+      {
+        "weekId": 10,
+        "weekName": "WEEK 2",
+        "weekActivity": {
+          "weekActivityEmoji": "",
+          "weekActivityTitle": "",
+          "weekActivityDetails": "",
+          "weekActivityHost": ""
+        }
+      },
+      {
+        "weekId": 11,
+        "weekName": "WEEK 3",
+        "weekActivity": {
+          "weekActivityEmoji": "",
+          "weekActivityTitle": "",
+          "weekActivityDetails": "",
+          "weekActivityHost": ""
+        }
+      },
+      {
+        "weekId": 12,
+        "weekName": "WEEK 4",
+        "weekActivity": {
+          "weekActivityEmoji": "",
+          "weekActivityTitle": "",
+          "weekActivityDetails": "",
+          "weekActivityHost": ""
+        }
+      },
+      {
+        "weekId": 13,
+        "weekName": "WEEK 5",
+        "weekActivity": {
+          "weekActivityEmoji": "",
+          "weekActivityTitle": "",
+          "weekActivityDetails": "",
+          "weekActivityHost": ""
+        }
+      },
+      {
+        "weekId": 14,
+        "weekName": "WEEK 6",
+        "weekActivity": {
+          "weekActivityEmoji": "",
+          "weekActivityTitle": "",
+          "weekActivityDetails": "",
+          "weekActivityHost": ""
+        }
+      },
+      {
+        "weekId": 15,
+        "weekName": "WEEK 7",
+        "weekActivity": {
+          "weekActivityEmoji": "",
+          "weekActivityTitle": "",
+          "weekActivityDetails": "",
+          "weekActivityHost": ""
+        }
+      },
+      {
+        "weekId": 16,
+        "weekName": "WEEK 8",
+        "weekActivity": {
+          "weekActivityEmoji": "",
+          "weekActivityTitle": "",
+          "weekActivityDetails": "",
+          "weekActivityHost": ""
+        }
+      },
+      {
+        "weekId": 17,
+        "weekName": "WEEK 1",
+        "weekActivity": {
+          "weekActivityEmoji": "♟️",
+          "weekActivityTitle": "SONG OF THE SUMMER BRACKET",
+          "weekActivityDetails": "Come with your favorite songs of the summer and find out which song ultimately comes out on top!",
+          "weekActivityHost": "Simon"
+        }
+      },
+      {
+        "weekId": 18,
+        "weekName": "WEEK 2",
+        "weekActivity": {
+          "weekActivityEmoji": "♟️",
+          "weekActivityTitle": "MUSIC WORDLE",
+          "weekActivityDetails": "Music-related wordle games...enough said!",
+          "weekActivityHost": "Simon"
+        }
+      },
+      {
+        "weekId": 19,
+        "weekName": "WEEK 3",
+        "weekActivity": {
+          "weekActivityEmoji": "🎵",
+          "weekActivityTitle": "Music Video Analysis",
+          "weekActivityDetails": "Come with your fav music video for the group to analyze!",
+          "weekActivityHost": "Simon"
+        }
+      },
+      {
+        "weekId": 20,
+        "weekName": "WEEK 4",
+        "weekActivity": {
+          "weekActivityEmoji": "🎵",
+          "weekActivityTitle": "Music Analysis 101",
+          "weekActivityDetails": "Come to our meeting to learn how to better talk about the music we review week to week!",
+          "weekActivityHost": "Arch"
+        }
+      },
+      {
+        "weekId": 21,
+        "weekName": "WEEK 5",
+        "weekActivity": {
+          "weekActivityEmoji": "♟️",
+          "weekActivityTitle": "Heads Off",
+          "weekActivityDetails": "Come for a Halloween-themed game of Heads Up!",
+          "weekActivityHost": "Simon"
+        }
+      },
+      {
+        "weekId": 22,
+        "weekName": "WEEK 6",
+        "weekActivity": {
+          "weekActivityEmoji": "🎵",
+          "weekActivityTitle": "Vinyl Presentation",
+          "weekActivityDetails": "Come learn all about Vinyl from our club leader Arch!",
+          "weekActivityHost": "Arch"
+        }
+      },
+      {
+        "weekId": 23,
+        "weekName": "WEEK 7",
+        "weekActivity": {
+          "weekActivityEmoji": "♟️",
+          "weekActivityTitle": "Name A Song",
+          "weekActivityDetails": "Come for exciting song trivia!",
+          "weekActivityHost": "Simon"
+        }
+      },
+      {
+        "weekId": 24,
+        "weekName": "WEEK 8",
+        "weekActivity": {
+          "weekActivityEmoji": "🎬",
+          "weekActivityTitle": "PHARRELL BIOPIC LEGO MOVIE (Piece By Piece)",
+          "weekActivityDetails": "Come for our second event of the quarter in *KRESGE 1515* for a group watching of Piece By Piece",
+          "weekActivityHost": "Archie"
+        }
+      },
+      {
+        "weekId": 25,
+        "weekName": "WEEK 1",
+        "weekActivity": {
+          "weekActivityEmoji": "",
+          "weekActivityTitle": "FIRST WEEK BACK",
+          "weekActivityDetails": "LFG",
+          "weekActivityHost": "EVERYBODY!!!!!"
+        }
+      }
+    ]
+  }
+]

@@ -19,7 +19,7 @@ const FAQComponent = (props: Props) => {
         <h2 style={{ fontSize: 45, textAlign: "center", marginBottom: 15 }}>
           FAQ
         </h2>
-        <h2>Q: When/Where does the club meet?</h2>
+        <h2>Q: When/Where does the club meet? (TBD for Winter Quarter)</h2>
         <h3 className="answers">
           A: We meet every <b>[DAY OF WEEK]</b> at <b>[TIME OF DAY]</b> in{" "}
           <b>[ROOM IN BUILDING]</b>.

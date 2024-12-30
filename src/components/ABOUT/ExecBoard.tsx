@@ -88,7 +88,13 @@ const ExecBoard = (props: Props) => {
             <p style={{ marginBottom: -30 }}>
               Not Pictured: Grace - Ryan - AJ - Acton - Zoey
             </p>
-            <p style={{ marginBottom: -10 }}>Photography by Jonah Elkowitz</p>
+            <a
+              href={"https://www.jelkphoto.com/"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <p style={{ marginBottom: -10 }}>Photography by Jonah Elkowitz</p>
+            </a>
           </div>
         </div>
       </div>
