@@ -6,13 +6,12 @@ import instaImg from "../../imgs/companyLogos/instalogo.png";
 import appMusImg from "../../imgs/companyLogos/applemusiclogo.png";
 import groupMeImg from "../../imgs/companyLogos/groupmelogo.png";
 import googleFormImg from "../../imgs/companyLogos/googleformlogo.png";
-import twitterImg from "../../imgs/companyLogos/twitterlogo.png";
 // import listservImg from "../../imgs/listservimg.png"; // Commented out since it's not used
 
 function Socials() {
   return (
     <Grid container spacing={2} justifyContent="center" alignItems="center">
-      <Grid item xs={12} sm={6} md={4} className="inner-logo-cont">
+      <Grid item xs={10} sm={4} md={3} className="inner-logo-cont">
         <a
           href="https://forms.gle/VL4r1N3DfV5GCQov9"
           target="_blank"
@@ -27,7 +26,7 @@ function Socials() {
         <p>Interest Form</p>
       </Grid>
 
-      <Grid item xs={12} sm={6} md={4} className="inner-logo-cont">
+      <Grid item xs={10} sm={4} md={3} className="inner-logo-cont">
         <a
           href="https://groupme.com/join_group/98384670/EHkMPGSy"
           target="_blank"
@@ -42,7 +41,7 @@ function Socials() {
         <p>Join Our GroupMe!</p>
       </Grid>
 
-      <Grid item xs={12} sm={6} md={4} className="inner-logo-cont">
+      <Grid item xs={10} sm={4} md={3} className="inner-logo-cont">
         <a
           href="https://open.spotify.com/user/31apxxxqaadrj24rjilx75insprq"
           target="_blank"
@@ -53,7 +52,7 @@ function Socials() {
         <p>Follow Us!</p>
       </Grid>
 
-      <Grid item xs={12} sm={6} md={4} className="inner-logo-cont">
+      <Grid item xs={10} sm={4} md={3} className="inner-logo-cont">
         <a
           href="https://www.instagram.com/musictastingclub?igsh=M2hobjkxa29ja3Jq&utm_source=qr"
           target="_blank"
@@ -64,7 +63,7 @@ function Socials() {
         <p>Follow Us!</p>
       </Grid>
 
-      <Grid item xs={12} sm={6} md={4} className="inner-logo-cont">
+      {/* <Grid item xs={12} sm={6} md={4} className="inner-logo-cont">
         <a
           href="https://x.com/MusicTastinClub"
           target="_blank"
@@ -77,7 +76,7 @@ function Socials() {
           />
         </a>
         <p>Follow Us!</p>
-      </Grid>
+      </Grid> */}
 
       {/* <Grid item xs={12} sm={6} md={4} className="inner-logo-cont">
         {/* <a
