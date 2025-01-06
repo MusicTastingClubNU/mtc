@@ -61,7 +61,7 @@ body {
 }
 
 .ebc {
-  margin: auto auto 10px;
+  margin: 10px auto 50px auto;
   padding: 20px;
   max-width: 85%;
   background-color: #fff;
@@ -77,6 +77,12 @@ body {
 }
 
 .exec-board-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.genre-starter-packs {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -108,10 +114,19 @@ body {
 .picks-history {
   width: 150px;
   margin: 5px;
-  /* margin: 10px;
-  padding: 10px 10px 10px 20px; */
   background-color: #f0f0f0;
   border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.aoty {
+  width: 150px;
+  margin: 10px;
+  padding: 10px;
+  background-color: white;
+  border: 3px solid #b7b7b7;
   border-radius: 10px;
   box-sizing: border-box;
   text-align: center;

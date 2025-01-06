@@ -158,6 +158,8 @@ export default function WeeklyEntry() {
             </IconButton>
           </TableCell>
 
+          {/* TODO: It stays open when the tab changes */}
+
           {/* ||| "WEEK X PICKS" CODE ||| */}
           <TableCell align="left" sx={{ position: "left" }}>
             <b>
@@ -217,7 +219,6 @@ export default function WeeklyEntry() {
                             {pick.pickType}:
                           </div>
                         )}
-
                         <div>
                           <img
                             src={
@@ -344,6 +345,7 @@ export default function WeeklyEntry() {
         sure you update numberOfQuarterTabsBelowPREVIOUSPICKS to the appropriate number 
         of quarters that have passed.*/}
         <Box>
+          {/* CODE FOR A DIVIDER LINE vvv */}
           <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
             <Tabs
               value={value}

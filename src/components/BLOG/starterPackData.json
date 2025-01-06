@@ -1,0 +1,155 @@
+[
+  {
+    "genreId": 0,
+    "genreName": "Rock",
+    "genreEmoji": "🎸",
+    "recommendations": [
+      {
+        "recId": 0,
+        "albumName": "Are You Experienced?",
+        "artistName": "Jimi Hendrix",
+        "spotifyAlbumLink": ""
+      },
+      {
+        "recId": 1,
+        "albumName": "Nevermind",
+        "artistName": "Nirvana",
+        "spotifyAlbumLink": ""
+      },
+      {
+        "recId": 2,
+        "albumName": "OK Computer",
+        "artistName": "Radiohead",
+        "spotifyAlbumLink": ""
+      }
+    ],
+    "spotifyPlaylistLink": "spotifyPlaylist"
+  },
+  {
+    "genreId": 1,
+    "genreName": "Hyperpop",
+    "genreEmoji": "🤖",
+    "recommendations": [
+      {
+        "recId": 3,
+        "albumName": "brat",
+        "artistName": "Charli XCX",
+        "spotifyAlbumLink": ""
+      },
+      {
+        "recId": 4,
+        "albumName": "Wallsocket",
+        "artistName": "underscores",
+        "spotifyAlbumLink": ""
+      },
+      {
+        "recId": 5,
+        "albumName": "10000 Gecs",
+        "artistName": "100 Gecs",
+        "spotifyAlbumLink": ""
+      }
+    ],
+    "spotifyPlaylistLink": "spotifyPlaylist"
+  },
+  {
+    "genreId": 2,
+    "genreName": "Country",
+    "genreEmoji": "🤠",
+    "recommendations": [
+      {
+        "recId": 3,
+        "albumName": "Country_Album1",
+        "artistName": "Country_Artist1",
+        "spotifyAlbumLink": ""
+      },
+      {
+        "recId": 4,
+        "albumName": "Country_Album2",
+        "artistName": "Country_Artist2",
+        "spotifyAlbumLink": ""
+      },
+      {
+        "recId": 5,
+        "albumName": "Country_Album3",
+        "artistName": "Country_Artist3",
+        "spotifyAlbumLink": ""
+      }
+    ],
+    "spotifyPlaylistLink": "spotifyPlaylist"
+  },
+  {
+    "genreId": 3,
+    "genreName": "Rage",
+    "genreEmoji": "😡",
+    "recommendations": [
+      {
+        "recId": 6,
+        "albumName": "Rage_Album1",
+        "artistName": "Rage_Artist1",
+        "spotifyAlbumLink": ""
+      },
+      {
+        "recId": 7,
+        "albumName": "Rage_Album2",
+        "artistName": "Rage_Artist2",
+        "spotifyAlbumLink": ""
+      },
+      {
+        "recId": 8,
+        "albumName": "Rage_Album3",
+        "artistName": "Rage_Artist3",
+        "spotifyAlbumLink": ""
+      }
+    ]
+  },
+  {
+    "genreId": 4,
+    "genreName": "Soul",
+    "genreEmoji": "👻",
+    "recommendations": [
+      {
+        "recId": 9,
+        "albumName": "Soul_Album1",
+        "artistName": "Soul_Artist1",
+        "spotifyAlbumLink": ""
+      },
+      {
+        "recId": 10,
+        "albumName": "Soul_Album2",
+        "artistName": "Soul_Artist2",
+        "spotifyAlbumLink": ""
+      },
+      {
+        "recId": 11,
+        "albumName": "Soul_Album3",
+        "artistName": "Soul_Artist3",
+        "spotifyAlbumLink": ""
+      }
+    ]
+  },
+  {
+    "genreId": 5,
+    "genreName": "R&B",
+    "genreEmoji": "🥁",
+    "recommendations": [
+      {
+        "recId": 12,
+        "albumName": "R&B_Album1",
+        "artistName": "R&B_Artist1",
+        "spotifyAlbumLink": ""
+      },
+      {
+        "recId": 13,
+        "albumName": "R&B_Album2",
+        "artistName": "R&B_Artist2",
+        "spotifyAlbumLink": ""
+      },
+      {
+        "recId": 14,
+        "albumName": "R&B_Album3",
+        "artistName": "R&B_Artist3",
+        "spotifyAlbumLink": ""
+      }
+    ]
+  }
+]

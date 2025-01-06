@@ -1,7 +1,7 @@
 import React from "react";
 import "./salespitch.css";
-// import ThisWeeksPicks from "./ThisWeeksPicks";
-import SeeYouNextQuarter from "./SeeYouNextQuarter";
+import ThisWeeksPicks from "./ThisWeeksPicks";
+// import SeeYouNextQuarter from "./SeeYouNextQuarter";
 import ConditionalPhoneSignUp from "./ConditionalPhoneSignUp";
 import { useMediaQuery } from "@mui/material";
 import "./mission.css";
@@ -44,7 +44,7 @@ const SalesPitch = (props: Props) => {
         </div>
       </div>
       {/* <ThisWeeksPicks /> */}
-      <SeeYouNextQuarter />
+      {/* <SeeYouNextQuarter /> */}
       {/* {isMobile ? <ConditionalPhoneSignUp /> : <br />} */}
       <ConditionalPhoneSignUp />
     </>

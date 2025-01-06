@@ -19,7 +19,6 @@ export default function PastGenres() {
         flexWrap="wrap"
         sx={{ alignItems: "center", justifyContent: "center", width: "100%" }}
       >
-        {/* TODO Need to make the quarterIndex some Redux variable */}
         {pastGen[0]["Prev Album Genres"].map((item, ind) => (
           <Chip
             key={ind}

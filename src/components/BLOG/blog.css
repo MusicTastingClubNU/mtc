@@ -1,5 +1,5 @@
 .blog-cont2 {
-  margin: 80px auto;
+  margin: 50px auto;
   margin-top: 0px;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -31,12 +31,9 @@
 .spotify-playlists {
   width: 200px;
   margin: 5px;
-  /* margin: 10px;
-padding: 10px 10px 10px 20px; */
   background-color: white;
   border: 1px solid black;
   border-radius: 10px;
-  /* box-sizing: border-box; */
   text-align: center;
 }
 
@@ -45,4 +42,23 @@ padding: 10px 10px 10px 20px; */
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+}
+
+.genre-starter-packs {
+  display: flex;
+  justify-content: space-between; /* Push the Spotify icon to the far right */
+  align-items: center; /* Vertically align the icon with the text */
+  margin-bottom: 10px; /* Add spacing between items */
+  word-wrap: break-word; /* Ensure long text wraps naturally */
+  line-height: 1.5; /* Improve text readability */
+}
+
+.genre-starter-packs div {
+  flex: 1; /* Allow text to take up available space */
+  margin-right: 10px; /* Add space between text and the Spotify icon */
+}
+
+.genre-starter-packs a img {
+  display: block; /* Ensures proper rendering of the icon */
+  width: 30px; /* Icon size */
 }

@@ -12,6 +12,7 @@ import TimelineOppositeContent, {
 } from "@mui/lab/TimelineOppositeContent";
 
 export default function MyClubSchedule() {
+  // TODO: Need lines to be a straight line
   return (
     <Timeline>
       <TimelineItem>
@@ -24,7 +25,6 @@ export default function MyClubSchedule() {
         </TimelineSeparator>
         <TimelineContent>Intros/Recent Releases/Shout Outs</TimelineContent>
       </TimelineItem>
-
       <TimelineItem>
         <TimelineOppositeContent color="textSecondary">
           X:10PM-X:45PM

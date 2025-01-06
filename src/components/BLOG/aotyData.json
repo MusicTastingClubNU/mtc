@@ -1,0 +1,56 @@
+[
+  {
+    "aotyId": 0,
+    "year": 2024,
+    "albumPicks": [
+      {
+        "albumName": "This is how tomorrow moves",
+        "artistName": "beabadoobee",
+        "memberName": "Zoey",
+        "albumArt": "https://i.scdn.co/image/ab67616d00001e0263926de6170ecc079cbf3637"
+      },
+      {
+        "albumName": "SMILE :D",
+        "artistName": "Porter Robinson",
+        "memberName": "Aidan",
+        "albumArt": "https://i.scdn.co/image/ab67616d00001e0263926de6170ecc079cbf3637"
+      },
+      {
+        "albumName": "Cutouts",
+        "artistName": "The Smile",
+        "memberName": "Corey",
+        "albumArt": "https://i.scdn.co/image/ab67616d00001e0263926de6170ecc079cbf3637"
+      },
+      {
+        "albumName": "Imaginal Disk",
+        "artistName": "Magdalena Bay",
+        "memberName": "Ryan",
+        "albumArt": "https://i.scdn.co/image/ab67616d00001e0263926de6170ecc079cbf3637"
+      },
+      {
+        "albumName": "Box for Buddy, Box for Star",
+        "artistName": "This Is Lorelei",
+        "memberName": "Simon",
+        "albumArt": "https://i.scdn.co/image/ab67616d00001e0263926de6170ecc079cbf3637"
+      },
+      {
+        "albumName": "Ultra 85",
+        "artistName": "Logic",
+        "memberName": "Archie",
+        "albumArt": "https://i.scdn.co/image/ab67616d00001e0263926de6170ecc079cbf3637"
+      },
+      {
+        "albumName": "CHROMAK- OPIA",
+        "artistName": "Tyler, The Creator",
+        "memberName": "AJ",
+        "albumArt": "https://i.scdn.co/image/ab67616d00001e0263926de6170ecc079cbf3637"
+      },
+      {
+        "albumName": "Y2K",
+        "artistName": "Ice Spice",
+        "memberName": "Cai",
+        "albumArt": "https://i.scdn.co/image/ab67616d00001e0263926de6170ecc079cbf3637"
+      }
+    ]
+  }
+]
