@@ -13,10 +13,6 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import TitleAndDirectory from "../HOME/TitleAndDirectory";
 import Chip from "@mui/material/Chip";
 import logo from "../../imgs/MTC_logo.png";
-import ClubPlaylists from "./ClubPlaylists";
-import StarterPacks from "./StarterPacks";
-// import { Star } from "@mui/icons-material";
-import TabsList from "./MTCAotY";
 
 interface Props {}
 
@@ -170,13 +166,6 @@ const Blog: React.FC = (props: Props) => {
                 ))}
             </div>
           </div>
-          {/* ||| CLUB PLAYLISTS COMPONENT ||| */}
-          <ClubPlaylists />
-          {/* ||| STARTER PACKS COMPONENT ||| */}
-          <StarterPacks />
-          {/* ||| MTC Album Of The Year ||| */}
-          {/* <MTCAotY year={2024} /> */}
-          <TabsList />
         </>
       ) : (
         <>

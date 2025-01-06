@@ -37,6 +37,7 @@ import SeeYouNextQuarter from "../SP/SeeYouNextQuarter";
 import spotifyImg from "../../imgs/companyLogos/spotlogo.png";
 import logo from "../../imgs/MTC_logo.png";
 import HaveWeListenedToIt from "./HaveWeListenedToIt";
+import ThisWeeksPicks from "../SP/ThisWeeksPicks";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -328,12 +329,11 @@ export default function WeeklyEntry() {
     <>
       <TitleAndDirectory />
       {isMobile ? <br /> : null}
-      {/* <ThisWeeksPicks /> */}
-      <SeeYouNextQuarter />
-
+      <ThisWeeksPicks />
+      <br /> <br />
+      {/* <SeeYouNextQuarter /> */}
       {/* ||| HAVE WE LISTENED TO IT SEARCH BAR*/}
       <HaveWeListenedToIt />
-
       <div className={isMobile ? "cont2" : "cont"} style={{ marginTop: 40 }}>
         {/* ||| TITLE CODE ||| */}
         <h3 style={{ fontSize: 35, textAlign: "center", marginBottom: 15 }}>
@@ -378,7 +378,6 @@ export default function WeeklyEntry() {
           ))}
         </Box>
       </div>
-
       {/* ||| PRIZE WHEEL CODE ||| */}
       <div style={{ marginTop: 40, marginBottom: 40, padding: 0 }}>
         {isMobile ? null : (

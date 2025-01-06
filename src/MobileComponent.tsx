@@ -65,6 +65,11 @@ const MobileMenu = () => {
             <BlackButton buttonText="Blog" />
           </Link>
         </MenuItem>
+        <MenuItem>
+          <Link to={"/activities"}>
+            <BlackButton buttonText="Activities" />
+          </Link>
+        </MenuItem>
       </Menu>
     </div>
   );

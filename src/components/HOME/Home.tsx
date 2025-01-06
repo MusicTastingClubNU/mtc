@@ -62,6 +62,12 @@ const Home = (props: Props) => {
                 <BlackButton buttonText="Blog" />
               </p>
             </Link>
+
+            <Link to={`/activities`}>
+              <p className="nav-item">
+                <BlackButton buttonText="Activities" />
+              </p>
+            </Link>
           </div>
         )}
         <SalesPitch />

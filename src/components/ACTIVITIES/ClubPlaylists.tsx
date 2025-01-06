@@ -7,7 +7,7 @@ import halloween24PlaylistImg from "../../imgs/spotifyPlaylistCovers/halloween24
 import holidays24PlaylistImg from "../../imgs/spotifyPlaylistCovers/holidays24PlaylistImg.png";
 import hipHopWorkoutPlaylistImg from "../../imgs/spotifyPlaylistCovers/hipHopWorkoutPlaylistImg.png";
 import logo from "../../imgs/MTC_logo.png";
-
+import { useMediaQuery } from "@mui/material";
 const ClubPlaylists = () => {
   const playlistImgs = [
     logo,
@@ -16,10 +16,10 @@ const ClubPlaylists = () => {
     halloween24PlaylistImg,
     holidays24PlaylistImg,
   ];
-
+  const isMobile = useMediaQuery("(max-width: 768px)");
   return (
     <>
-      <div className="blog-cont2">
+      <div className={isMobile ? "faq2" : "faq"}>
         <h2 className="blog-titles">
           Club Playlists{" "}
           <a
@@ -70,6 +70,7 @@ const ClubPlaylists = () => {
           )}
         </div>
       </div>
+      <br /> <br />
     </>
   );
 };

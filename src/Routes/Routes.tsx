@@ -6,6 +6,7 @@ import FAQComponent from "../components/FAQ/FAQComponent";
 import ExecBoard from "../components/ABOUT/ExecBoard";
 import Blog from "../components/BLOG/Blog";
 import DevPage from "../components/DEV/Dev";
+import Activities from "../components/ACTIVITIES/Activities";
 
 export const router = createBrowserRouter([
   {
@@ -17,6 +18,7 @@ export const router = createBrowserRouter([
       { path: "faq", element: <FAQComponent /> },
       { path: "about", element: <ExecBoard /> },
       { path: "blog", element: <Blog /> },
+      { path: "activities", element: <Activities /> },
       { path: "dev", element: <DevPage /> },
     ],
   },

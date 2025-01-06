@@ -43,7 +43,8 @@ const SalesPitch = (props: Props) => {
           </p>
         </div>
       </div>
-      {/* <ThisWeeksPicks /> */}
+      <ThisWeeksPicks />
+      <br /> <br />
       {/* <SeeYouNextQuarter /> */}
       {/* {isMobile ? <ConditionalPhoneSignUp /> : <br />} */}
       <ConditionalPhoneSignUp />

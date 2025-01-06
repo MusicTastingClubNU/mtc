@@ -25,34 +25,10 @@ function createData2(
   };
 }
 const rows = [
-  createData2(
-    96,
-    "Album of the Week",
-    "Alfredo",
-    "Freddie Gibbs and The Alchemist",
-    "Archie"
-  ),
-  createData2(
-    97,
-    "Runner Up Album of the Week [OPTIONAL/MOVIE SPOILERS]",
-    "Piece By Piece - Music from the Motion Picture",
-    "Pharrell Williams",
-    "MTC"
-  ),
-  createData2(
-    98,
-    "Song of the Week",
-    "I Could Never Take The Place Of Your Man",
-    "Prince",
-    "Grace"
-  ),
-  createData2(
-    99,
-    "Runner Up Song of the Week",
-    "The Weight",
-    "The Band",
-    "Archie"
-  ),
+  createData2(96, "Album of the Week", "N/A", "N/A", "N/A"),
+  createData2(97, "Runner Up Album of the Week", "N/A", "N/A", "N/A"),
+  createData2(98, "Song of the Week", "N/A", "N/A", "N/A"),
+  createData2(99, "Runner Up Song of the Week", "N/A", "N/A", "N/A"),
 ];
 
 export default function ThisWeeksPicks() {
@@ -61,7 +37,7 @@ export default function ThisWeeksPicks() {
   return (
     <div className={isMobile ? "cont2" : "cont"}>
       <h3 style={{ fontSize: 35, textAlign: "center" }}>
-        NEXT MEETING'S PICKS (11/21/24)
+        NEXT MEETING'S PICKS (01/14/25)
       </h3>
       <h3
         style={{
@@ -71,9 +47,9 @@ export default function ThisWeeksPicks() {
           color: "gray",
         }}
       >
-        WE MEET EVERY <span style={{ color: "black" }}>THURSDAY</span> FROM{" "}
-        <span style={{ color: "black" }}>5:00-6:15PM</span> IN{" "}
-        <span style={{ color: "black" }}>KRESGE 2420</span>
+        WE MEET EVERY <span style={{ color: "black" }}>TUESDAY</span> FROM{" "}
+        <span style={{ color: "black" }}>6:00-7:15PM</span> IN{" "}
+        <span style={{ color: "black" }}>LUNT 101</span>
       </h3>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">

@@ -95,22 +95,6 @@ const FAQComponent = (props: Props) => {
       </div>
       <br />
       <br />
-      <div className={isMobile ? "faq2" : "faq"}>
-        <h2 style={{ fontSize: 35, textAlign: "center", marginBottom: 15 }}>
-          Club Schedule
-        </h2>
-        <br />
-        <MyClubSchedule />
-      </div>
-      <br /> <br />
-      <div className={isMobile ? "faq2" : "faq"}>
-        <h2 style={{ fontSize: 35, textAlign: "center", marginBottom: 15 }}>
-          Calendar
-        </h2>
-        <br />
-        <DateCalendarServerRequest />
-      </div>
-      <br />
     </>
   );
 };

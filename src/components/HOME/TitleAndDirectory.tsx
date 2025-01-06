@@ -62,6 +62,12 @@ const TitleAndDirectory = () => {
                 <BlackButton buttonText="Blog" />
               </p>
             </Link>
+
+            <Link to={`/activities`}>
+              <p className="nav-item" onClick={() => handleChange2(5)}>
+                <BlackButton buttonText="Activites" />
+              </p>
+            </Link>
           </div>
         )}
       </div>
