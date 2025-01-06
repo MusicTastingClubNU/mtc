@@ -56,8 +56,8 @@ const MobileMenu = () => {
           </Link>
         </MenuItem>
         <MenuItem>
-          <Link to={"/about"}>
-            <BlackButton buttonText="About" />
+          <Link to={"/club"}>
+            <BlackButton buttonText="Club" />
           </Link>
         </MenuItem>
         <MenuItem>
@@ -66,8 +66,8 @@ const MobileMenu = () => {
           </Link>
         </MenuItem>
         <MenuItem>
-          <Link to={"/activities"}>
-            <BlackButton buttonText="Activities" />
+          <Link to={"/exec"}>
+            <BlackButton buttonText="Exec" />
           </Link>
         </MenuItem>
       </Menu>

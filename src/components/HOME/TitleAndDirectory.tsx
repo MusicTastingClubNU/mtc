@@ -51,9 +51,9 @@ const TitleAndDirectory = () => {
               </p>
             </Link>
 
-            <Link to={`/about`}>
-              <p className="nav-item" onClick={() => handleChange2(3)}>
-                <BlackButton buttonText="About" />
+            <Link to={`/club`}>
+              <p className="nav-item" onClick={() => handleChange2(5)}>
+                <BlackButton buttonText="Club" />
               </p>
             </Link>
 
@@ -63,9 +63,9 @@ const TitleAndDirectory = () => {
               </p>
             </Link>
 
-            <Link to={`/activities`}>
-              <p className="nav-item" onClick={() => handleChange2(5)}>
-                <BlackButton buttonText="Activites" />
+            <Link to={`/exec`}>
+              <p className="nav-item" onClick={() => handleChange2(3)}>
+                <BlackButton buttonText="Exec" />
               </p>
             </Link>
           </div>

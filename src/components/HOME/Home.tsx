@@ -51,9 +51,9 @@ const Home = (props: Props) => {
               </p>
             </Link>
 
-            <Link to={`/about`}>
+            <Link to={`/club`}>
               <p className="nav-item">
-                <BlackButton buttonText="About" />
+                <BlackButton buttonText="Club" />
               </p>
             </Link>
 
@@ -63,9 +63,9 @@ const Home = (props: Props) => {
               </p>
             </Link>
 
-            <Link to={`/activities`}>
+            <Link to={`/exec`}>
               <p className="nav-item">
-                <BlackButton buttonText="Activities" />
+                <BlackButton buttonText="Exec" />
               </p>
             </Link>
           </div>

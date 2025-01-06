@@ -23,9 +23,6 @@ import picksData from "./picksData.json";
 import { useState, useEffect } from "react";
 import "../SP/mission.css";
 import PastGenres from "./PastGenres";
-import PrizeWheel from "./NameWheel";
-// import ThisWeeksPicks from "../SP/ThisWeeksPicks";
-import NameWheelData from "./NameWheelData.json";
 import { Margin, Search } from "@mui/icons-material";
 import TitleAndDirectory from "../HOME/TitleAndDirectory";
 import Autocomplete from "@mui/material/Autocomplete";
@@ -85,27 +82,6 @@ export default function WeeklyEntry() {
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
-
-  useEffect(() => {
-    let options: string[] = [];
-    switch (pick) {
-      case "Album of the Week":
-        options = NameWheelData["AotW"];
-        break;
-      case "Runner Up Album of the Week":
-        options = NameWheelData["AotW"];
-        break;
-      case "Song of the Week":
-        options = NameWheelData["SotW"];
-        break;
-      case "Runner Up Song of the Week":
-        options = NameWheelData["SotW"];
-        break;
-      default:
-        options = NameWheelData["AotW"];
-    }
-    setWheelOptions(options);
-  }, [pick]);
 
   const handlePickChange = (event: SelectChangeEvent) => {
     const selectedPick = event.target.value as string;
@@ -378,17 +354,7 @@ export default function WeeklyEntry() {
           ))}
         </Box>
       </div>
-      {/* ||| PRIZE WHEEL CODE ||| */}
-      <div style={{ marginTop: 40, marginBottom: 40, padding: 0 }}>
-        {isMobile ? null : (
-          <PrizeWheel
-            options={wheelOptions}
-            title={pick}
-            handlePickChange={handlePickChange}
-            nameWheelDataToBeCopied={NameWheelData}
-          />
-        )}
-      </div>
+      <br /> <br />
     </>
   );
 }
