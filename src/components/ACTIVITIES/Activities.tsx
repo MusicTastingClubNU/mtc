@@ -131,17 +131,17 @@ const Activities = (props: Props) => {
       <br /> <br />
       <div className={isMobile ? "faq2" : "faq"}>
         <h2 style={{ fontSize: 35, textAlign: "center", marginBottom: 15 }}>
-          Calendar
+          Club Schedule
         </h2>
-        <br />
-        <DateCalendarServerRequest />
+        <MyClubSchedule />
       </div>
       <br /> <br />
       <div className={isMobile ? "faq2" : "faq"}>
         <h2 style={{ fontSize: 35, textAlign: "center", marginBottom: 15 }}>
-          Club Schedule
+          Calendar
         </h2>
-        <MyClubSchedule />
+        <br />
+        <DateCalendarServerRequest />
       </div>
       <br />
       <br />
