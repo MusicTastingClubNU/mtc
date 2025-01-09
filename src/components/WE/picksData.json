@@ -11,34 +11,34 @@
           {
             "pickId": 100,
             "pickType": "Album of the Week",
-            "songOrAlbumName": "N/A",
-            "artistName": "N/A",
-            "memberName": "N/A",
-            "songOrAlbumArt": ""
+            "songOrAlbumName": "Bucket List Project",
+            "artistName": "Saba",
+            "memberName": "Danny",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273819c0f21cca81b0088bed05d"
           },
           {
             "pickId": 101,
             "pickType": "Runner Up Album of the Week",
-            "songOrAlbumName": "N/A",
-            "artistName": "N/A",
-            "memberName": "N/A",
-            "songOrAlbumArt": ""
+            "songOrAlbumName": "\"In case I make it,\"",
+            "artistName": "Will Wood",
+            "memberName": "Isabel",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b27378a1762c3df46ddd8f994ffd"
           },
           {
             "pickId": 102,
             "pickType": "Song of the Week",
-            "songOrAlbumName": "N/A",
-            "artistName": "N/A",
-            "memberName": "N/A",
-            "songOrAlbumArt": ""
+            "songOrAlbumName": "Do It",
+            "artistName": "Nelly Furtado",
+            "memberName": "Daniel",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273a6f439c8957170652f9410e2"
           },
           {
             "pickId": 103,
             "pickType": "Runner Up Song of the Week",
-            "songOrAlbumName": "N/A",
-            "artistName": "N/A",
-            "memberName": "N/A",
-            "songOrAlbumArt": ""
+            "songOrAlbumName": "Cheer",
+            "artistName": "Whitelands",
+            "memberName": "Jameson",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273133ad6d801f904b1459e0af5"
           }
         ],
         "spotifyPlaylistLink": ""
