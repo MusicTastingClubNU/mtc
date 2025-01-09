@@ -15,6 +15,8 @@ const ClubPlaylists = () => {
     hipHopWorkoutPlaylistImg,
     halloween24PlaylistImg,
     holidays24PlaylistImg,
+    logo,
+    logo,
   ];
   const isMobile = useMediaQuery("(max-width: 768px)");
   return (
