@@ -72,7 +72,6 @@ const ClubPlaylists = () => {
           )}
         </div>
       </div>
-      <br /> <br />
     </>
   );
 };

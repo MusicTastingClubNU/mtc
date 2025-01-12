@@ -94,8 +94,6 @@ export default function AccordionList() {
           ))}
         </Grid>
       </div>
-      <br />
-      <br />
     </>
   );
 }

@@ -102,8 +102,6 @@ export default function MTCAotY() {
           </Box>
         </Box>
       </div>
-      <br />
-      <br />
     </>
   );
 }

@@ -92,8 +92,6 @@ const FAQComponent = (props: Props) => {
           <Socials />
         </div>
       </div>
-      <br />
-      <br />
     </>
   );
 };

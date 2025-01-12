@@ -13,7 +13,7 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import TitleAndDirectory from "../HOME/TitleAndDirectory";
 import Chip from "@mui/material/Chip";
 import logo from "../../imgs/MTC_logo.png";
-import googleFormImg from "../../imgs/companyLogos/googleformlogo.png";
+import BlogSubmissionForm from "./BlogSubmissionForm";
 
 interface Props {}
 
@@ -167,34 +167,11 @@ const Blog: React.FC = (props: Props) => {
                 ))}
             </div>
           </div>
-          <div className={isMobile ? "faq2" : "faq"}>
-            <h2 className="blog-titles">Submit Blog Posts!</h2>
-            <div className="phone-su-inner-logo-cont">
-              <a
-                href="https://forms.gle/YAYmmXSm4X31hFmW7"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src={googleFormImg}
-                  alt="Blog Form Submission"
-                  className="phone-su-logos"
-                />
-              </a>
-              <p
-                style={{
-                  textAlign: "center",
-                }}
-              >
-                Blog Submission Form
-              </p>
-            </div>
-          </div>
+          <BlogSubmissionForm />
         </>
       ) : (
         <>
           {isMobile ? <br /> : null}
-
           {/* ||| INNER CLUB ALBUM REVIEWS / CLUB EMAILS COMPONENT ||| */}
           {/* When you click into a review or email, it gets the content from the database */}
           <div className="blog-cont2">

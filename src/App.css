@@ -94,6 +94,7 @@
 /* TODO: Instead of .faq and .faq2, I could use variables for the max-width */
 .faq {
   margin: auto;
+  margin-bottom: 60px;
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 20px;
@@ -104,6 +105,7 @@
 
 .faq2 {
   margin: auto;
+  margin-bottom: 60px;
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 20px;

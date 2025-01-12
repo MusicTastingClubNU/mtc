@@ -128,14 +128,12 @@ const Activities = (props: Props) => {
           </div>
         </div>
       </div>
-      <br /> <br />
       <div className={isMobile ? "faq2" : "faq"}>
         <h2 style={{ fontSize: 35, textAlign: "center", marginBottom: 15 }}>
           Club Schedule
         </h2>
         <MyClubSchedule />
       </div>
-      <br /> <br />
       <div className={isMobile ? "faq2" : "faq"}>
         <h2 style={{ fontSize: 35, textAlign: "center", marginBottom: 15 }}>
           Calendar
@@ -143,8 +141,6 @@ const Activities = (props: Props) => {
         <br />
         <DateCalendarServerRequest />
       </div>
-      <br />
-      <br />
       {/* ||| CLUB PLAYLISTS COMPONENT ||| */}
       <ClubPlaylists />
       {/* ||| STARTER PACKS COMPONENT ||| */}
