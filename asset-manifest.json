@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.2504a6c1.css",
-    "main.js": "/static/js/main.7b3d85c2.js",
+    "main.js": "/static/js/main.3222c2a8.js",
     "static/media/MTC_club_photo_FQ24.png": "/static/media/MTC_club_photo_FQ24.5d6dcd289e52275f5efe.png",
     "static/media/SQ24_W2_SotW.png": "/static/media/SQ24_W2_SotW.f4301b88a5749e3d6e6f.png",
     "static/media/SimonOlshanCantin.png": "/static/media/SimonOlshanCantin.1812dfb93638ca3313ab.png",
@@ -28,10 +28,10 @@
     "static/media/groupmelogo.png": "/static/media/groupmelogo.9dfc156ee6a940c187a1.png",
     "index.html": "/index.html",
     "main.2504a6c1.css.map": "/static/css/main.2504a6c1.css.map",
-    "main.7b3d85c2.js.map": "/static/js/main.7b3d85c2.js.map"
+    "main.3222c2a8.js.map": "/static/js/main.3222c2a8.js.map"
   },
   "entrypoints": [
     "static/css/main.2504a6c1.css",
-    "static/js/main.7b3d85c2.js"
+    "static/js/main.3222c2a8.js"
   ]
 }
