@@ -42,6 +42,46 @@
           }
         ],
         "spotifyPlaylistLink": "https://open.spotify.com/playlist/3MjKMmOcEVzOKtPFraRhv5?go=1&sp_cid=caa1929b821c7a1a03c8028cea1f1e0d"
+      },
+      {
+        "weekId": 25,
+        "weekName": "WEEK 2",
+        "weekDate": "(01/21/25)",
+        "picks": [
+          {
+            "pickId": 104,
+            "pickType": "Album of the Week",
+            "songOrAlbumName": "Javelin",
+            "artistName": "Sufjan Stevens",
+            "memberName": "Aidan",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b27332a8498ea892ccd4fcf3f6cf"
+          },
+          {
+            "pickId": 105,
+            "pickType": "Runner Up Album of the Week",
+            "songOrAlbumName": "",
+            "artistName": "",
+            "memberName": "AJ",
+            "songOrAlbumArt": ""
+          },
+          {
+            "pickId": 106,
+            "pickType": "Song of the Week",
+            "songOrAlbumName": "",
+            "artistName": "",
+            "memberName": "Grace",
+            "songOrAlbumArt": ""
+          },
+          {
+            "pickId": 107,
+            "pickType": "Runner Up Song of the Week",
+            "songOrAlbumName": "",
+            "artistName": "",
+            "memberName": "Sid",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273133ad6d801f904b1459e0af5"
+          }
+        ],
+        "spotifyPlaylistLink": ""
       }
     ]
   },

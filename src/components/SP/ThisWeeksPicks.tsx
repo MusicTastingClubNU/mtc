@@ -25,22 +25,10 @@ function createData2(
   };
 }
 const rows = [
-  createData2(96, "Album of the Week", "Bucket List Project", "Saba", "Danny"),
-  createData2(
-    97,
-    "Runner Up Album of the Week",
-    '"In case I make it,"',
-    "Will Wood",
-    "Isabel"
-  ),
-  createData2(98, "Song of the Week", "Do It", "Nelly Furtado", "Daniel"),
-  createData2(
-    99,
-    "Runner Up Song of the Week",
-    "Cheer",
-    "Whitelands",
-    "Jameson"
-  ),
+  createData2(104, "Album of the Week", "Javelin", "Sufjan Stevens", "Aidan"),
+  createData2(105, "Runner Up Album of the Week", "N/A", "N/A", "AJ"),
+  createData2(106, "Song of the Week", "N/A", "N/A", "Grace"),
+  createData2(107, "Runner Up Song of the Week", "N/A", "N/A", "Sid"),
 ];
 
 export default function ThisWeeksPicks() {

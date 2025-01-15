@@ -34,11 +34,11 @@ const SalesPitch = (props: Props) => {
           <p className="thingghost-insta-link">
             Logo by{" "}
             <a
-              href="https://www.instagram.com/thingghost/"
+              href="https://www.instagram.com/itsuhkat/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              @thingghost
+              @itsuhkat
             </a>
           </p>
         </div>
