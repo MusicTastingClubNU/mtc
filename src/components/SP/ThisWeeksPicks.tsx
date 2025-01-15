@@ -37,7 +37,7 @@ export default function ThisWeeksPicks() {
   return (
     <div className={isMobile ? "cont2" : "cont"}>
       <h3 style={{ fontSize: 35, textAlign: "center" }}>
-        NEXT MEETING'S PICKS (01/14/25)
+        NEXT MEETING'S PICKS (01/21/25)
       </h3>
       <h3
         style={{
@@ -49,7 +49,7 @@ export default function ThisWeeksPicks() {
       >
         WE MEET EVERY <span style={{ color: "black" }}>TUESDAY</span> FROM{" "}
         <span style={{ color: "black" }}>6:00-7:15PM</span> IN{" "}
-        <span style={{ color: "black" }}>LUNT 101</span>
+        <span style={{ color: "black" }}>TECH LG52</span>
       </h3>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
