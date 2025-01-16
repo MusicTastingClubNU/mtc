@@ -2,9 +2,6 @@ import { Autocomplete, TextField, useMediaQuery } from "@mui/material";
 import React from "react";
 import { useState, useEffect } from "react";
 import YsAlbumArt from "../../imgs/manualAlbumArt/WQ24_W2_AotW.png";
-import NeuAlbumArt from "../../imgs/manualAlbumArt/WQ24_W3_RUSotW.png";
-import TempaTAlbumArt from "../../imgs/manualAlbumArt/WQ24_W9_RUSotW.png";
-import FreeAlbumArt from "../../imgs/manualAlbumArt/SQ24_W2_SotW.png";
 import picksData from "./picksData.json";
 
 export default function HaveWeListenedToIt() {
@@ -54,12 +51,6 @@ export default function HaveWeListenedToIt() {
           songOrAlbumArt:
             pick.songOrAlbumArt === "Q1W2AotW"
               ? YsAlbumArt
-              : pick.songOrAlbumArt === "Q1W3RUSotW"
-              ? NeuAlbumArt
-              : pick.songOrAlbumArt === "Q1W9RUSotW"
-              ? TempaTAlbumArt
-              : pick.songOrAlbumArt === "Q2W2SotW"
-              ? FreeAlbumArt
               : pick.songOrAlbumArt,
           memberName: pick.memberName,
           pickType: pick.pickType,

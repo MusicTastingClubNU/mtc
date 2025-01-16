@@ -59,18 +59,18 @@
           {
             "pickId": 105,
             "pickType": "Runner Up Album of the Week",
-            "songOrAlbumName": "",
-            "artistName": "",
+            "songOrAlbumName": "Sometimes I Might Be Introvert",
+            "artistName": "Little Simz",
             "memberName": "AJ",
-            "songOrAlbumArt": ""
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273aede85ed28c2237a33b63dba"
           },
           {
             "pickId": 106,
             "pickType": "Song of the Week",
-            "songOrAlbumName": "",
-            "artistName": "",
+            "songOrAlbumName": "Helden - German Single Version",
+            "artistName": "David Bowie",
             "memberName": "Grace",
-            "songOrAlbumArt": ""
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273a865ae815831c0c6a2493ab7"
           },
           {
             "pickId": 107,
@@ -81,7 +81,7 @@
             "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273467fd6c9ae12de0010c74442"
           }
         ],
-        "spotifyPlaylistLink": ""
+        "spotifyPlaylistLink": "https://open.spotify.com/playlist/30by7qNwyxqt5qOmPl83ZM?si=6hvfyMW2T8qjkbl7W_jpPA"
       }
     ]
   },
@@ -481,7 +481,7 @@
             "songOrAlbumName": "Woman",
             "artistName": "Free",
             "memberName": "Natalie",
-            "songOrAlbumArt": "Q2W2SotW"
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273640df56fe46cd51896a00810"
           },
           {
             "pickId": 43,
@@ -847,7 +847,7 @@
             "songOrAlbumName": "Hero",
             "artistName": "Neu!",
             "memberName": "Vincent",
-            "songOrAlbumArt": "Q1W3RUSotW"
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b27305153a9bce8ebd800070529b"
           }
         ]
       },
@@ -1081,7 +1081,7 @@
             "songOrAlbumName": "Next Hype",
             "artistName": "TempaT",
             "memberName": "Reed",
-            "songOrAlbumArt": "Q1W9RUSotW"
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2734269b9d17ea8be2db0c4e8a3"
           }
         ]
       }

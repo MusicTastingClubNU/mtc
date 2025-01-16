@@ -11,9 +11,6 @@ import { useState } from "react";
 import NameWheelData from "../WE/NameWheelData.json";
 import picksData from "../WE/picksData.json";
 import YsAlbumArt from "../../imgs/manualAlbumArt/WQ24_W2_AotW.png";
-import NeuAlbumArt from "../../imgs/manualAlbumArt/WQ24_W3_RUSotW.png";
-import TempaTAlbumArt from "../../imgs/manualAlbumArt/WQ24_W9_RUSotW.png";
-import FreeAlbumArt from "../../imgs/manualAlbumArt/SQ24_W2_SotW.png";
 import MTCClubPhotoFQ24 from "../../imgs/execBoardImgs/MTC_club_photo_FQ24.png";
 
 interface Props {}
@@ -80,12 +77,6 @@ const Activities = (props: Props) => {
           songOrAlbumArt:
             pick.songOrAlbumArt === "Q1W2AotW"
               ? YsAlbumArt
-              : pick.songOrAlbumArt === "Q1W3RUSotW"
-              ? NeuAlbumArt
-              : pick.songOrAlbumArt === "Q1W9RUSotW"
-              ? TempaTAlbumArt
-              : pick.songOrAlbumArt === "Q2W2SotW"
-              ? FreeAlbumArt
               : pick.songOrAlbumArt,
           memberName: pick.memberName,
           pickType: pick.pickType,

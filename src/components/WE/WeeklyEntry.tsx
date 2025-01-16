@@ -27,9 +27,6 @@ import { Margin, Search } from "@mui/icons-material";
 import TitleAndDirectory from "../HOME/TitleAndDirectory";
 import Autocomplete from "@mui/material/Autocomplete";
 import YsAlbumArt from "../../imgs/manualAlbumArt/WQ24_W2_AotW.png";
-import NeuAlbumArt from "../../imgs/manualAlbumArt/WQ24_W3_RUSotW.png";
-import TempaTAlbumArt from "../../imgs/manualAlbumArt/WQ24_W9_RUSotW.png";
-import FreeAlbumArt from "../../imgs/manualAlbumArt/SQ24_W2_SotW.png";
 import SeeYouNextQuarter from "../SP/SeeYouNextQuarter";
 import spotifyImg from "../../imgs/companyLogos/spotlogo.png";
 import logo from "../../imgs/MTC_logo.png";
@@ -103,12 +100,6 @@ export default function WeeklyEntry() {
           songOrAlbumArt:
             pick.songOrAlbumArt === "Q1W2AotW"
               ? YsAlbumArt
-              : pick.songOrAlbumArt === "Q1W3RUSotW"
-              ? NeuAlbumArt
-              : pick.songOrAlbumArt === "Q1W9RUSotW"
-              ? TempaTAlbumArt
-              : pick.songOrAlbumArt === "Q2W2SotW"
-              ? FreeAlbumArt
               : pick.songOrAlbumArt,
           memberName: pick.memberName,
           pickType: pick.pickType,
@@ -201,12 +192,6 @@ export default function WeeklyEntry() {
                             src={
                               pick.songOrAlbumArt === "Q1W2AotW"
                                 ? YsAlbumArt
-                                : pick.songOrAlbumArt === "Q1W3RUSotW"
-                                ? NeuAlbumArt
-                                : pick.songOrAlbumArt === "Q1W9RUSotW"
-                                ? TempaTAlbumArt
-                                : pick.songOrAlbumArt === "Q2W2SotW"
-                                ? FreeAlbumArt
                                 : pick.songOrAlbumArt === ""
                                 ? logo
                                 : pick.songOrAlbumArt
