@@ -1,12 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.2504a6c1.css",
-    "main.js": "/static/js/main.145e0bba.js",
+    "main.js": "/static/js/main.dfd615ec.js",
     "static/media/MTC_club_photo_FQ24.png": "/static/media/MTC_club_photo_FQ24.5d6dcd289e52275f5efe.png",
-    "static/media/SQ24_W2_SotW.png": "/static/media/SQ24_W2_SotW.f4301b88a5749e3d6e6f.png",
     "static/media/SimonOlshanCantin.png": "/static/media/SimonOlshanCantin.1812dfb93638ca3313ab.png",
     "static/media/ArchieSilverstein.png": "/static/media/ArchieSilverstein.750c9d4626dc9f1dd236.png",
-    "static/media/WQ24_W9_RUSotW.png": "/static/media/WQ24_W9_RUSotW.5508f1cae5a4329b6c87.png",
     "static/media/DanielRivero.png": "/static/media/DanielRivero.54c106b35526cb9527eb.png",
     "static/media/hipHopWorkoutPlaylistImg.png": "/static/media/hipHopWorkoutPlaylistImg.628f14b032aaa3263c43.png",
     "static/media/CoreyDubin.png": "/static/media/CoreyDubin.d07661d39df479d0c8c4.png",
@@ -16,7 +14,6 @@
     "static/media/halloween24PlaylistImg.png": "/static/media/halloween24PlaylistImg.ffdebaf1aa27f6d6eee8.png",
     "static/media/instalogo.png": "/static/media/instalogo.e905e80e3d57cc2b32c7.png",
     "static/media/holidays24PlaylistImg.png": "/static/media/holidays24PlaylistImg.a726d82144af0bbf5c35.png",
-    "static/media/WQ24_W3_RUSotW.png": "/static/media/WQ24_W3_RUSotW.98351e05eea3519de1a1.png",
     "static/media/AidanMott.png": "/static/media/AidanMott.973e8a333442824e06e5.png",
     "static/media/Roboto-Regular.ttf": "/static/media/Roboto-Regular.27f62b53b93858475a7f.ttf",
     "static/media/Roboto-Bold.ttf": "/static/media/Roboto-Bold.d50a80138ec4f2fb5e9f.ttf",
@@ -28,10 +25,10 @@
     "static/media/groupmelogo.png": "/static/media/groupmelogo.9dfc156ee6a940c187a1.png",
     "index.html": "/index.html",
     "main.2504a6c1.css.map": "/static/css/main.2504a6c1.css.map",
-    "main.145e0bba.js.map": "/static/js/main.145e0bba.js.map"
+    "main.dfd615ec.js.map": "/static/js/main.dfd615ec.js.map"
   },
   "entrypoints": [
     "static/css/main.2504a6c1.css",
-    "static/js/main.145e0bba.js"
+    "static/js/main.dfd615ec.js"
   ]
 }
