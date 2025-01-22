@@ -122,46 +122,6 @@
           }
         ],
         "spotifyPlaylistLink": ""
-      },
-      {
-        "weekId": 28,
-        "weekName": "WEEK 4",
-        "weekDate": "(02/04/25)",
-        "picks": [
-          {
-            "pickId": 112,
-            "pickType": "Album of the Week",
-            "songOrAlbumName": "",
-            "artistName": "",
-            "memberName": "",
-            "songOrAlbumArt": ""
-          },
-          {
-            "pickId": 113,
-            "pickType": "Runner Up Album of the Week",
-            "songOrAlbumName": "",
-            "artistName": "",
-            "memberName": "",
-            "songOrAlbumArt": ""
-          },
-          {
-            "pickId": 114,
-            "pickType": "Song of the Week",
-            "songOrAlbumName": "",
-            "artistName": "",
-            "memberName": "",
-            "songOrAlbumArt": ""
-          },
-          {
-            "pickId": 115,
-            "pickType": "Runner Up Song of the Week",
-            "songOrAlbumName": "",
-            "artistName": "",
-            "memberName": "",
-            "songOrAlbumArt": ""
-          }
-        ],
-        "spotifyPlaylistLink": ""
       }
     ]
   },

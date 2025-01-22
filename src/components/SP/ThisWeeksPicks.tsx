@@ -15,7 +15,7 @@ import YsAlbumArt from "../../imgs/manualAlbumArt/WQ24_W2_AotW.png";
 export default function ThisWeeksPicks() {
   const isMobile = useMediaQuery("(max-width: 768px)");
   const currQuarter = "WQ25";
-  const currWeek = "WEEK 2";
+  const currWeek = "WEEK 3";
 
   return (
     <div className={isMobile ? "faq2" : "faq"}>
