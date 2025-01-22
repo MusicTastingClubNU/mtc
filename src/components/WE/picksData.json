@@ -44,7 +44,7 @@
         "spotifyPlaylistLink": "https://open.spotify.com/playlist/3MjKMmOcEVzOKtPFraRhv5?go=1&sp_cid=caa1929b821c7a1a03c8028cea1f1e0d"
       },
       {
-        "weekId": 25,
+        "weekId": 26,
         "weekName": "WEEK 2",
         "weekDate": "(01/21/25)",
         "picks": [
@@ -82,6 +82,86 @@
           }
         ],
         "spotifyPlaylistLink": "https://open.spotify.com/playlist/30by7qNwyxqt5qOmPl83ZM?si=6hvfyMW2T8qjkbl7W_jpPA"
+      },
+      {
+        "weekId": 27,
+        "weekName": "WEEK 3",
+        "weekDate": "(01/28/25)",
+        "picks": [
+          {
+            "pickId": 108,
+            "pickType": "Album of the Week",
+            "songOrAlbumName": "",
+            "artistName": "",
+            "memberName": "Joseph",
+            "songOrAlbumArt": ""
+          },
+          {
+            "pickId": 109,
+            "pickType": "Runner Up Album of the Week",
+            "songOrAlbumName": "FIX YOUR HEARTS OR DIE",
+            "artistName": "A Very Special Episode",
+            "memberName": "Simon",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273a424859e259c498e573fee00"
+          },
+          {
+            "pickId": 110,
+            "pickType": "Song of the Week",
+            "songOrAlbumName": "",
+            "artistName": "",
+            "memberName": "Cai",
+            "songOrAlbumArt": ""
+          },
+          {
+            "pickId": 111,
+            "pickType": "Runner Up Song of the Week",
+            "songOrAlbumName": "",
+            "artistName": "",
+            "memberName": "Corey?",
+            "songOrAlbumArt": ""
+          }
+        ],
+        "spotifyPlaylistLink": ""
+      },
+      {
+        "weekId": 28,
+        "weekName": "WEEK 4",
+        "weekDate": "(02/04/25)",
+        "picks": [
+          {
+            "pickId": 112,
+            "pickType": "Album of the Week",
+            "songOrAlbumName": "",
+            "artistName": "",
+            "memberName": "",
+            "songOrAlbumArt": ""
+          },
+          {
+            "pickId": 113,
+            "pickType": "Runner Up Album of the Week",
+            "songOrAlbumName": "",
+            "artistName": "",
+            "memberName": "",
+            "songOrAlbumArt": ""
+          },
+          {
+            "pickId": 114,
+            "pickType": "Song of the Week",
+            "songOrAlbumName": "",
+            "artistName": "",
+            "memberName": "",
+            "songOrAlbumArt": ""
+          },
+          {
+            "pickId": 115,
+            "pickType": "Runner Up Song of the Week",
+            "songOrAlbumName": "",
+            "artistName": "",
+            "memberName": "",
+            "songOrAlbumArt": ""
+          }
+        ],
+        "spotifyPlaylistLink": ""
       }
     ]
   },

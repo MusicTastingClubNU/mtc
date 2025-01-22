@@ -2,14 +2,6 @@ import * as React from "react";
 import { Chip, Stack, Box, Divider } from "@mui/material";
 import pastGen from "./PastGenres.json";
 
-// type PickOrNotList = [string, string[]][];
-// type Colors = string[];
-
-// interface MemberPicksOrNotPicksProps {
-//   pickOrNotList: PickOrNotList;
-//   colors: Colors;
-// }
-
 export default function PastGenres() {
   return (
     <>
