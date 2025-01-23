@@ -1,12 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
-import Home from "../components/HOME/Home";
-import WeeklyEntry from "../components/WE/WeeklyEntry";
-import FAQComponent from "../components/FAQ/FAQComponent";
-import ExecBoard from "../components/ABOUT/ExecBoard";
-import Blog from "../components/BLOG/Blog";
-import DevPage from "../components/DEV/Dev";
-import Activities from "../components/ACTIVITIES/Activities";
+import Home from "../components/HOME/HomePAGE";
+import WeeklyEntry from "../components/WE/WeeklyEntryPAGE";
+import FAQComponent from "../components/FAQ/FAQComponentPAGE";
+import ExecBoard from "../components/ABOUT/AboutPAGE";
+import Blog from "../components/BLOG/BlogPAGE";
+import DevPage from "../components/DEV/DevPAGE";
+import Activities from "../components/ACTIVITIES/ActivitiesPAGE";
 
 export const router = createBrowserRouter([
   {

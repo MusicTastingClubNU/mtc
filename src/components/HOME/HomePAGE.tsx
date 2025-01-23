@@ -1,13 +1,13 @@
 import React from "react";
 import "../../App.css";
 import SalesPitch from "../SP/salespitch";
-import FAQComponent from "../FAQ/FAQComponent";
-import ExecBoard from "../ABOUT/ExecBoard";
-import WeeklyEntry from "../WE/WeeklyEntry";
+import FAQComponent from "../FAQ/FAQComponentPAGE";
+import ExecBoard from "../ABOUT/AboutPAGE";
+import WeeklyEntry from "../WE/WeeklyEntryPAGE";
 import BlackButton from "../../BlackButton1";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import MobileComponent from "../../MobileComponent";
-import Blog from "../BLOG/Blog";
+import Blog from "../BLOG/BlogPAGE";
 import "../SP/mission.css";
 import { Link } from "react-router-dom";
 

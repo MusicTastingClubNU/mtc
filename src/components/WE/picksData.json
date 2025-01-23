@@ -91,10 +91,10 @@
           {
             "pickId": 108,
             "pickType": "Album of the Week",
-            "songOrAlbumName": "",
-            "artistName": "",
+            "songOrAlbumName": "Graceland",
+            "artistName": "Paul Simon",
             "memberName": "Joseph",
-            "songOrAlbumArt": ""
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b27309880a7b8636c5a0615dc0c8"
           },
           {
             "pickId": 109,
@@ -107,21 +107,21 @@
           {
             "pickId": 110,
             "pickType": "Song of the Week",
-            "songOrAlbumName": "",
-            "artistName": "",
+            "songOrAlbumName": "Flash in the Pan",
+            "artistName": "Jane Remover",
             "memberName": "Cai",
-            "songOrAlbumArt": ""
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273efd24131fb79641d9ae84c88"
           },
           {
             "pickId": 111,
             "pickType": "Runner Up Song of the Week",
-            "songOrAlbumName": "",
-            "artistName": "",
-            "memberName": "Corey?",
-            "songOrAlbumArt": ""
+            "songOrAlbumName": "So Young",
+            "artistName": "Suede",
+            "memberName": "Corey",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273b26ab5eb7d76d3aef52cd206"
           }
         ],
-        "spotifyPlaylistLink": ""
+        "spotifyPlaylistLink": "https://open.spotify.com/playlist/6YRsozkiqVYRR5fB21Mf6R?si=xBDeTTyRQLyBdf3lQ5uh_g"
       }
     ]
   },
