@@ -15,6 +15,7 @@ const SalesPitch = (props: Props) => {
     <>
       {isMobile ? <br></br> : null}
       <div className={isMobile ? "cont2" : "cont"}>
+        {/*FIRST BLOCK OF TEXT*/}
         <div className="my-centered-text">
           <h2>DO YOU LIKE LISTENING TO/TALKING ABOUT/TRYING OUT NEW MUSIC?</h2>
           <h1>THE MUSIC TASTING CLUB IS THE PLACE FOR YOU!</h1>
@@ -44,7 +45,6 @@ const SalesPitch = (props: Props) => {
         </div>
       </div>
       <ThisWeeksPicks />
-      <br /> <br />
       {/* <SeeYouNextQuarter /> */}
       {/* {isMobile ? <ConditionalPhoneSignUp /> : <br />} */}
       <ConditionalPhoneSignUp />

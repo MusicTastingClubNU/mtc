@@ -291,7 +291,6 @@ export default function WeeklyEntry() {
       <TitleAndDirectory />
       {isMobile ? <br /> : null}
       <ThisWeeksPicks />
-      <br /> <br />
       {/* <SeeYouNextQuarter /> */}
       {/* ||| HAVE WE LISTENED TO IT SEARCH BAR*/}
       <HaveWeListenedToIt />

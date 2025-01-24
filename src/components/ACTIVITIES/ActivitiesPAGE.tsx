@@ -141,12 +141,14 @@ const Activities = (props: Props) => {
       <MTCAotY />
       <div style={{ marginTop: 40, marginBottom: 40, padding: 0 }}>
         {isMobile ? null : (
-          <PrizeWheel
-            options={wheelOptions}
-            title={pick}
-            handlePickChange={handlePickChange}
-            nameWheelDataToBeCopied={NameWheelData}
-          />
+          <>
+            <PrizeWheel
+              options={wheelOptions}
+              title={pick}
+              handlePickChange={handlePickChange}
+              nameWheelDataToBeCopied={NameWheelData}
+            />
+          </>
         )}
       </div>
     </>
