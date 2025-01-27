@@ -32,7 +32,7 @@ import spotifyImg from "../../imgs/companyLogos/spotlogo.png";
 import logo from "../../imgs/MTC_logo.png";
 import HaveWeListenedToIt from "./HaveWeListenedToIt";
 import ThisWeeksPicks from "../SP/ThisWeeksPicks";
-
+//TODO: Organize previous picks by year
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
@@ -137,7 +137,7 @@ export default function WeeklyEntry() {
 
           {/* ||| SPOTIFY LINK CODE ||| */}
           <TableCell align="right">
-            {openRow === index && week?.spotifyPlaylistLink !== "" ? (
+            {openRow === index && week?.spotifyPlaylistLink !== "" && (
               <a
                 href={week?.spotifyPlaylistLink}
                 target="_blank"
@@ -149,8 +149,6 @@ export default function WeeklyEntry() {
                   style={{ width: 30, marginRight: 25 }}
                 />
               </a>
-            ) : (
-              <></>
             )}
           </TableCell>
         </TableRow>

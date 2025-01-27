@@ -1,11 +1,4 @@
 import * as React from "react";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
 import "./mission.css";
 import { Box, useMediaQuery } from "@mui/material";
 import picksData from "../WE/picksData.json";
@@ -22,33 +15,19 @@ export default function ThisWeeksPicks() {
       <h3 style={{ fontSize: 35, textAlign: "center" }}>
         NEXT MEETING'S PICKS (01/28/25)
       </h3>
-      <h3
-        style={{
-          fontSize: 20,
-          textAlign: "center",
-          marginBottom: 15,
-          color: "gray",
-        }}
-      >
-        WE MEET EVERY <span style={{ color: "black" }}>TUESDAY</span> FROM{" "}
-        <span style={{ color: "black" }}>6:00-7:15PM</span> IN{" "}
-        <span style={{ color: "black" }}>TECH LG52</span>
-      </h3>
-
+      <div className="this-weeks-picks">
+        <h3>
+          WE MEET EVERY <span style={{ color: "black" }}>TUESDAY</span> FROM{" "}
+          <span style={{ color: "black" }}>6:00-7:15PM</span> IN{" "}
+          <span style={{ color: "black" }}>TECH LG52</span>
+        </h3>
+      </div>
       {picksData.map((quarter: any, quarterIndex: number) =>
         quarter.weeks
           .filter((week: any) => quarter.quarterName === currQuarter) // Filter quarters
           .filter((week: any) => week.weekName === currWeek) // Filter weeks
           .map((week: any, weekIndex: number) => (
-            <Box
-              sx={{
-                display: "flex",
-                flexWrap: "wrap",
-                justifyContent: "center",
-                marginTop: 0,
-                marginBottom: 2,
-              }}
-            >
+            <Box className="box-container">
               {week.picks.map((pick: any, pickIndex: number) => (
                 <div
                   key={`pick-${quarterIndex}-${weekIndex}-${pickIndex}`}
@@ -108,10 +87,8 @@ export default function ThisWeeksPicks() {
                         fontSize: 15,
                       }}
                     >
-                      {pick.songOrAlbumName !== "N/A" ? (
+                      {pick.songOrAlbumName !== "N/A" && (
                         <>by {pick.artistName}</>
-                      ) : (
-                        <></>
                       )}
                     </div>
                     <div
@@ -122,10 +99,8 @@ export default function ThisWeeksPicks() {
                       }}
                     >
                       <br />
-                      {pick.songOrAlbumName !== "N/A" ? (
+                      {pick.songOrAlbumName !== "N/A" && (
                         <>Picked by {pick.memberName}</>
-                      ) : (
-                        <></>
                       )}
                     </div>
                   </div>
