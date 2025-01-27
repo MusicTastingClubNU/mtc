@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2504a6c1.css",
-    "main.js": "/static/js/main.316f5968.js",
+    "main.css": "/static/css/main.55861977.css",
+    "main.js": "/static/js/main.8daa1c7f.js",
     "static/media/MTC_club_photo_FQ24.png": "/static/media/MTC_club_photo_FQ24.5d6dcd289e52275f5efe.png",
     "static/media/SimonOlshanCantin.png": "/static/media/SimonOlshanCantin.1812dfb93638ca3313ab.png",
     "static/media/ArchieSilverstein.png": "/static/media/ArchieSilverstein.750c9d4626dc9f1dd236.png",
@@ -24,11 +24,11 @@
     "static/media/googleformlogo.png": "/static/media/googleformlogo.f5e00191489875080207.png",
     "static/media/groupmelogo.png": "/static/media/groupmelogo.9dfc156ee6a940c187a1.png",
     "index.html": "/index.html",
-    "main.2504a6c1.css.map": "/static/css/main.2504a6c1.css.map",
-    "main.316f5968.js.map": "/static/js/main.316f5968.js.map"
+    "main.55861977.css.map": "/static/css/main.55861977.css.map",
+    "main.8daa1c7f.js.map": "/static/js/main.8daa1c7f.js.map"
   },
   "entrypoints": [
-    "static/css/main.2504a6c1.css",
-    "static/js/main.316f5968.js"
+    "static/css/main.55861977.css",
+    "static/js/main.8daa1c7f.js"
   ]
 }
