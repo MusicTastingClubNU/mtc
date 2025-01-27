@@ -130,7 +130,7 @@ const Blog: React.FC = (props: Props) => {
                     key={blog.blogId < 0 ? blog.blogId : NaN}
                   >
                     <Card
-                      sx={{ marginBottom: 2 }}
+                      sx={{ marginBottom: 2, width: 150 }}
                       key={blog.blogId}
                       onClick={() => {
                         setSelectedBlog({
@@ -145,7 +145,7 @@ const Blog: React.FC = (props: Props) => {
                       <CardActionArea>
                         <CardMedia
                           component="img"
-                          height="140"
+                          height="100"
                           image={blog.blogImg ? blog.blogImg : logo}
                           alt="article image"
                         />

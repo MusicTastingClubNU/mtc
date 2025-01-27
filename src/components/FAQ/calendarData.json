@@ -75,6 +75,14 @@
     "weekActivityId": 9,
     "weekActivityWeek": "2025-01-21",
     "weekActivityEmoji": "♟️",
+    "weekActivityTitle": "ASONGUS",
+    "weekActivityDetails": "Come to the meeting and guess what songs are in whose Spotify Playlists!",
+    "weekActivityHost": "Simon"
+  },
+  {
+    "weekActivityId": 9,
+    "weekActivityWeek": "2025-01-28",
+    "weekActivityEmoji": "♟️",
     "weekActivityTitle": "Genre Starter Pack",
     "weekActivityDetails": "Come to the meetig ready to help craft the perfect genre starter packs!",
     "weekActivityHost": "Simon"
