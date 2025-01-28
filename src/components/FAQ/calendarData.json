@@ -80,11 +80,35 @@
     "weekActivityHost": "Simon"
   },
   {
-    "weekActivityId": 9,
+    "weekActivityId": 10,
     "weekActivityWeek": "2025-01-28",
     "weekActivityEmoji": "♟️",
     "weekActivityTitle": "Genre Starter Pack",
     "weekActivityDetails": "Come to the meetig ready to help craft the perfect genre starter packs!",
     "weekActivityHost": "Simon"
+  },
+  {
+    "weekActivityId": 11,
+    "weekActivityWeek": "2025-02-02",
+    "weekActivityEmoji": "🎥",
+    "weekActivityTitle": "GRAMMYS WATCH PARTY",
+    "weekActivityDetails": "TECH LR2 | 7-10:30PM | DINNER PROVIDED!",
+    "weekActivityHost": "Aidan"
+  },
+  {
+    "weekActivityId": 12,
+    "weekActivityWeek": "2025-02-21",
+    "weekActivityEmoji": "🎥",
+    "weekActivityTitle": "MTC MOVIE NIGHT: \"MOVIE TITLE\"",
+    "weekActivityDetails": "TBD ROOM | 7-5PM | DINNER PROVIDED!",
+    "weekActivityHost": "Aidan"
+  },
+  {
+    "weekActivityId": 13,
+    "weekActivityWeek": "2025-03-14",
+    "weekActivityEmoji": "🎧",
+    "weekActivityTitle": "MTC LISTENING PARTY: \"To Pimp A Butterfly\" by Kendrick Lamar",
+    "weekActivityDetails": "TheLink (811 Emerson St) | 5-6:30PM | DINNER PROVIDED!",
+    "weekActivityHost": "Aidan"
   }
 ]
