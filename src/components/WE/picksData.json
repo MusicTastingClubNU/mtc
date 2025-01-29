@@ -5,7 +5,7 @@
     "weeks": [
       {
         "weekId": 25,
-        "weekName": "WEEK 1",
+        "weekName": "WEEK 1 Andrew, Katie, Reed, Archie",
         "weekDate": "(01/14/25)",
         "picks": [
           {
@@ -122,6 +122,46 @@
           }
         ],
         "spotifyPlaylistLink": "https://open.spotify.com/playlist/6YRsozkiqVYRR5fB21Mf6R?si=xBDeTTyRQLyBdf3lQ5uh_g"
+      },
+      {
+        "weekId": 28,
+        "weekName": "WEEK 4",
+        "weekDate": "(02/04/25)",
+        "picks": [
+          {
+            "pickId": 112,
+            "pickType": "Album of the Week",
+            "songOrAlbumName": "",
+            "artistName": "",
+            "memberName": "Andrew",
+            "songOrAlbumArt": ""
+          },
+          {
+            "pickId": 113,
+            "pickType": "Runner Up Album of the Week",
+            "songOrAlbumName": "Feel Something",
+            "artistName": "Movements",
+            "memberName": "Katie",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273222a7f5b3077122bca25eef0"
+          },
+          {
+            "pickId": 114,
+            "pickType": "Song of the Week",
+            "songOrAlbumName": "",
+            "artistName": "",
+            "memberName": "Reed",
+            "songOrAlbumArt": ""
+          },
+          {
+            "pickId": 115,
+            "pickType": "Runner Up Song of the Week",
+            "songOrAlbumName": "Bubbles Buried In This Jungle",
+            "artistName": "Death Grips",
+            "memberName": "Archie",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273a154492c2d4d630f1eae8a3a"
+          }
+        ],
+        "spotifyPlaylistLink": ""
       }
     ]
   },

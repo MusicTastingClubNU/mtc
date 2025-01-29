@@ -30,8 +30,8 @@ export default function MTCAotY() {
                 key={index}
                 label={tab.year}
                 sx={{
-                  fontSize: "1.1rem", // Adjust font size
-                  padding: "5px 10px", // Adjust padding
+                  fontSize: "1.1rem",
+                  padding: "5px 10px",
                 }}
               />
             ))}
@@ -80,10 +80,8 @@ export default function MTCAotY() {
                               fontSize: 15,
                             }}
                           >
-                            {pick.albumName !== "N/A" ? (
+                            {pick.albumName !== "N/A" && (
                               <>by {pick.artistName}</>
-                            ) : (
-                              <></>
                             )}
                           </div>
                           <div

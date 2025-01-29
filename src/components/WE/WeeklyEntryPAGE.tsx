@@ -9,12 +9,9 @@ import {
   TableBody,
   TableCell,
   TableContainer,
-  TableHead,
   TableRow,
   Paper,
   useMediaQuery,
-  TextField,
-  InputAdornment,
 } from "@mui/material";
 import { SelectChangeEvent } from "@mui/material/Select";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
@@ -73,7 +70,6 @@ export default function WeeklyEntry() {
   const isMobile = useMediaQuery("(max-width: 768px)");
   const [value, setValue] = React.useState(0);
   const [pick, setPick] = useState("Album of the Week");
-  const [wheelOptions, setWheelOptions] = useState<string[]>([]);
   const [openRow, setOpenRow] = useState<number | null>(null);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -110,7 +106,6 @@ export default function WeeklyEntry() {
     return weeks.map((week: any, index: number) => (
       <React.Fragment key={week.weekId}>
         <TableRow sx={{ "& > *": { borderBottom: "unset" } }}>
-          {/* */}
           {/* ||| DROP DOWN ARROW CODE ||| */}
           <TableCell>
             <IconButton
@@ -162,10 +157,7 @@ export default function WeeklyEntry() {
                       display: "flex",
                       flexWrap: "wrap",
                       justifyContent: "center",
-                      marginRight: 0,
-                      marginLeft: 0,
-                      marginTop: 10,
-                      marginBottom: 10,
+                      margin: "10px 0",
                     }}
                   >
                     {week.picks.map((pick: any) => (
@@ -217,10 +209,8 @@ export default function WeeklyEntry() {
                               fontSize: 15,
                             }}
                           >
-                            {pick.songOrAlbumName !== "N/A" ? (
+                            {pick.songOrAlbumName !== "N/A" && (
                               <>by {pick.artistName}</>
-                            ) : (
-                              <></>
                             )}
                           </div>
                           <div
@@ -231,45 +221,14 @@ export default function WeeklyEntry() {
                             }}
                           >
                             <br />
-                            {pick.songOrAlbumName !== "N/A" ? (
+                            {pick.songOrAlbumName !== "N/A" && (
                               <>Picked by {pick.memberName}</>
-                            ) : (
-                              <></>
                             )}
                           </div>
                         </div>
                       </div>
                     ))}
                   </div>
-
-                  {/* <TableHead>
-                    <TableRow>
-                      <TableCell>
-                        <b>Pick Type</b>
-                      </TableCell>
-                      <TableCell>
-                        <b>Pick Name</b>
-                      </TableCell>
-                      <TableCell align="right">
-                        <b>Artist</b>
-                      </TableCell>
-                      <TableCell align="right">
-                        <b>Member</b>
-                      </TableCell>
-                    </TableRow>
-                  </TableHead>
-                  <TableBody>
-                    {week.picks.map((pick: any) => (
-                      <TableRow key={pick.pickId}>
-                        <TableCell component="th" scope="row">
-                          {pick.pickType}
-                        </TableCell>
-                        <TableCell>{pick.songOrAlbumName}</TableCell>
-                        <TableCell align="right">{pick.artistName}</TableCell>
-                        <TableCell align="right">{pick.memberName}</TableCell>
-                      </TableRow>
-                    ))}
-                  </TableBody> */}
                 </Table>
               </Box>
             </Collapse>

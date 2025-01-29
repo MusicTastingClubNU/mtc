@@ -1,81 +1,35 @@
 [
   {
-    "genreId": 0,
-    "genreName": "Rock",
-    "genreEmoji": "🎸",
+    "genreId": 1,
+    "genreName": "Post-Punk",
+    "genreEmoji": "🖤",
     "recommendations": [
       {
         "recId": 0,
-        "albumName": "Are You Experienced?",
-        "artistName": "Jimi Hendrix",
-        "spotifyAlbumLink": ""
+        "albumName": "The Scream",
+        "artistName": "Banshees",
+        "spotifyAlbumLink": "https://i.scdn.co/image/ab67616d0000b273cb4e1c73374d57fb79cba06f"
       },
       {
         "recId": 1,
-        "albumName": "Nevermind",
-        "artistName": "Nirvana",
-        "spotifyAlbumLink": ""
+        "albumName": "In The Flat Field",
+        "artistName": "Bauhaus",
+        "spotifyAlbumLink": "https://i.scdn.co/image/ab67616d0000b273752a1573f8cb8f700a98f405"
       },
       {
         "recId": 2,
-        "albumName": "OK Computer",
-        "artistName": "Radiohead",
-        "spotifyAlbumLink": ""
-      }
-    ],
-    "spotifyPlaylistLink": "spotifyPlaylist"
-  },
-  {
-    "genreId": 1,
-    "genreName": "Hyperpop",
-    "genreEmoji": "🤖",
-    "recommendations": [
+        "albumName": "Secondhand Daylight",
+        "artistName": "Magazine",
+        "spotifyAlbumLink": "https://i.scdn.co/image/ab67616d0000b2735daf81c9aafc380e076ea690"
+      },
       {
         "recId": 3,
-        "albumName": "brat",
-        "artistName": "Charli XCX",
-        "spotifyAlbumLink": ""
-      },
-      {
-        "recId": 4,
-        "albumName": "Wallsocket",
-        "artistName": "underscores",
-        "spotifyAlbumLink": ""
-      },
-      {
-        "recId": 5,
-        "albumName": "10000 Gecs",
-        "artistName": "100 Gecs",
-        "spotifyAlbumLink": ""
+        "albumName": "Seventeen Seconds",
+        "artistName": "The Cure",
+        "spotifyAlbumLink": "https://i.scdn.co/image/ab67616d0000b27399027d2948260fdb37436d5d"
       }
     ],
-    "spotifyPlaylistLink": "spotifyPlaylist"
-  },
-  {
-    "genreId": 2,
-    "genreName": "Country",
-    "genreEmoji": "🤠",
-    "recommendations": [
-      {
-        "recId": 3,
-        "albumName": "Country_Album1",
-        "artistName": "Country_Artist1",
-        "spotifyAlbumLink": ""
-      },
-      {
-        "recId": 4,
-        "albumName": "Country_Album2",
-        "artistName": "Country_Artist2",
-        "spotifyAlbumLink": ""
-      },
-      {
-        "recId": 5,
-        "albumName": "Country_Album3",
-        "artistName": "Country_Artist3",
-        "spotifyAlbumLink": ""
-      }
-    ],
-    "spotifyPlaylistLink": "spotifyPlaylist"
+    "spotifyPlaylistLink": ""
   },
   {
     "genreId": 3,
