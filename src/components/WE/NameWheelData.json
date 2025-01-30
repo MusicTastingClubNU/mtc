@@ -1,50 +1,15 @@
 {
-  "AotW": ["Andrew", "Katie", "Reed"],
-  "RUAotW": [
-    "Christian Epure",
-    "Harry Smith",
-    "Andrew",
-    "Matthew",
-    "Acton Healy",
-    "Reed Malcolm",
-    "William Liu",
-    "Yosief",
-    "Katie",
-    "Zoey",
-    "Abby"
-  ],
+  "AotW": ["Reed", "Corey", "Cai", "Jameson", "Grace", "Sid"],
+  "RUAotW": ["NAME"],
   "SotW": [
-    "Archie",
-    "Daniel",
     "Danny",
-    "Susanna",
-    "Simon",
+    "Isabel",
     "Aidan",
-    "Grace",
-    "Joseph",
-    "Corey",
-    "Ryan",
-    "Reed",
-    "Andrew",
     "AJ",
-    "Cai",
-    "Zoey",
-    "Maya"
+    "Joseph",
+    "Simon",
+    "Andrew",
+    "Katie"
   ],
-  "RUSotW": [
-    "Danny",
-    "Susanna",
-    "Simon",
-    "Aidan",
-    "Grace",
-    "Joseph",
-    "Corey",
-    "Ryan",
-    "Reed",
-    "Andrew",
-    "AJ",
-    "Cai",
-    "Zoey",
-    "Maya"
-  ]
+  "RUSotW": ["NAME"]
 }

@@ -5,7 +5,7 @@
     "weeks": [
       {
         "weekId": 25,
-        "weekName": "WEEK 1 Andrew, Katie, Reed, Archie",
+        "weekName": "WEEK 1",
         "weekDate": "(01/14/25)",
         "picks": [
           {
@@ -150,7 +150,7 @@
             "songOrAlbumName": "Concrete Angel",
             "artistName": "Hannah Diamond",
             "memberName": "Reed",
-            "songOrAlbumArt": ""
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2732256ffae4e713df6c4ea4185"
           },
           {
             "pickId": 115,
