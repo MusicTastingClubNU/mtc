@@ -33,23 +33,23 @@ interface Quarter {
 }
 
 // 🔹 Use ReactNode instead of JSX.Element[]
-const getSongOrAlbumArtComponents = (): ReactNode[] => {
+const getSongOrAlbumArtComponents = (): ReactNode => {
   return albumArtLinks.flatMap((quarter) =>
     quarter.weeks.flatMap((week) =>
       week.picks.flatMap((pick) => {
         if (!pick.songOrAlbumArt) return [];
         if (pick.songOrAlbumArt.startsWith("h")) {
-          return (
+          return [
             <img
               key={`quarter-${quarter.quarterId}-week-${week.weekId}-pick-${pick.pickId}`}
               src={pick.songOrAlbumArt}
               alt={pick.songOrAlbumName}
               style={{ width: "100px", height: "100px", margin: "10px" }}
-            />
-          );
+            />,
+          ];
         }
         if (pick.songOrAlbumArt.startsWith("Q")) {
-          return manualArtLoader(pick.songOrAlbumArt);
+          return [manualArtLoader(pick.songOrAlbumArt)];
         }
         return [];
       })
