@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import "./ImageScroller.css";
 import albumArtLinks from "../../components/WE/picksData.json";
 import { manualArtLoader } from "./ManualImageLoader";
@@ -32,32 +32,29 @@ interface Quarter {
   weeks: Week[];
 }
 
-const getSongOrAlbumArtComponents = () => {
-  const imageComponents: JSX.Element[] = [];
-
-  albumArtLinks.forEach((quarter) => {
-    quarter.weeks.forEach((week) => {
-      week.picks.forEach((pick) => {
-        if (pick.songOrAlbumArt) {
-          if (pick.songOrAlbumArt[0] === "h") {
-            imageComponents.push(
-              <img
-                key={`quarter-${quarter.quarterId}-week-${week.weekId}-pick-${pick.pickId}`}
-                src={pick.songOrAlbumArt}
-                alt={pick.songOrAlbumName}
-                style={{ width: "100px", height: "100px", margin: "10px" }}
-              />
-            );
-          }
-          if (pick.songOrAlbumArt[0] === "Q") {
-            imageComponents.push(manualArtLoader(pick.songOrAlbumArt));
-          }
+// 🔹 Use ReactNode instead of JSX.Element[]
+const getSongOrAlbumArtComponents = (): ReactNode[] => {
+  return albumArtLinks.flatMap((quarter) =>
+    quarter.weeks.flatMap((week) =>
+      week.picks.flatMap((pick) => {
+        if (!pick.songOrAlbumArt) return [];
+        if (pick.songOrAlbumArt.startsWith("h")) {
+          return (
+            <img
+              key={`quarter-${quarter.quarterId}-week-${week.weekId}-pick-${pick.pickId}`}
+              src={pick.songOrAlbumArt}
+              alt={pick.songOrAlbumName}
+              style={{ width: "100px", height: "100px", margin: "10px" }}
+            />
+          );
         }
-      });
-    });
-  });
-
-  return imageComponents;
+        if (pick.songOrAlbumArt.startsWith("Q")) {
+          return manualArtLoader(pick.songOrAlbumArt);
+        }
+        return [];
+      })
+    )
+  );
 };
 
 function ImageScroller() {
@@ -66,14 +63,10 @@ function ImageScroller() {
   const imagesPerRow = 6;
   const numLines = 6;
   const totalImages = imagesPerRow * numLines;
-  const extendedImages = [...images, ...images];
-  const lines = [];
-
-  for (let i = 0; i < numLines; i++) {
-    const offset = i * imagesPerRow;
-    const offsetImages = extendedImages.slice(offset, offset + totalImages);
-    lines.push(offsetImages);
-  }
+  const extendedImages = Array.from({ length: 2 }, () => images).flat(); // Optimized duplication
+  const lines = Array.from({ length: numLines }, (_, i) =>
+    extendedImages.slice(i * imagesPerRow, i * imagesPerRow + totalImages)
+  );
 
   return (
     <div className="logos">
