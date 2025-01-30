@@ -131,10 +131,10 @@
           {
             "pickId": 112,
             "pickType": "Album of the Week",
-            "songOrAlbumName": "",
-            "artistName": "",
+            "songOrAlbumName": "Oh Wonder",
+            "artistName": "Oh Wonder",
             "memberName": "Andrew",
-            "songOrAlbumArt": ""
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2737cc94e776ebb63dd08c8422c"
           },
           {
             "pickId": 113,
@@ -147,8 +147,8 @@
           {
             "pickId": 114,
             "pickType": "Song of the Week",
-            "songOrAlbumName": "",
-            "artistName": "",
+            "songOrAlbumName": "Concrete Angel",
+            "artistName": "Hannah Diamond",
             "memberName": "Reed",
             "songOrAlbumArt": ""
           },
@@ -161,7 +161,7 @@
             "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273a154492c2d4d630f1eae8a3a"
           }
         ],
-        "spotifyPlaylistLink": ""
+        "spotifyPlaylistLink": "https://open.spotify.com/playlist/4Pd7qBAILAbHsNNcWgZRG4?si=l56DQuBOSuOQNFmEWGrABQ"
       }
     ]
   },
