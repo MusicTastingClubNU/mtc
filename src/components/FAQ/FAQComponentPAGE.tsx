@@ -1,9 +1,9 @@
 import React from "react";
 import "../../App.css";
-import MyClubSchedule from "./ClubSchedule";
+import MyClubSchedule from "../CLUB/ClubSchedule";
 import Socials from "./socials";
 import { useMediaQuery } from "@mui/material";
-import DateCalendarServerRequest from "./CalendarSched";
+import DateCalendarServerRequest from "../CLUB/CalendarSched";
 import TitleAndDirectory from "../HOME/TitleAndDirectory";
 
 interface Props {}

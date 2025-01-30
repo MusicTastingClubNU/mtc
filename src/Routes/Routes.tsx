@@ -6,7 +6,7 @@ import FAQComponent from "../components/FAQ/FAQComponentPAGE";
 import ExecBoard from "../components/ABOUT/AboutPAGE";
 import Blog from "../components/BLOG/BlogPAGE";
 import DevPage from "../components/DEV/DevPAGE";
-import Activities from "../components/CLUB/ActivitiesPAGE";
+import Activities from "../components/CLUB/ClubPAGE";
 
 export const router = createBrowserRouter([
   {

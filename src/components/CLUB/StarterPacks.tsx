@@ -54,13 +54,27 @@ export default function AccordionList() {
                         style={{
                           fontSize: "2rem",
                           marginLeft: "0.3rem",
+                          position: "relative",
+                          top: "4px",
                         }}
                       >
-                        {/* TODO: Use Genmoji to make genre-specific emojis */}
                         {genre?.genreEmoji}
+                        {/* TODO: Use Genmoji to make genre-specific emojis */}
                       </span>
                     </Typography>
+                    <a
+                      href={genre?.spotifyPlaylistLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src={spotifyImg}
+                        alt="Spotify Logo"
+                        className="genre-starter-pack-spotify-logo"
+                      />
+                    </a>
                   </AccordionSummary>
+
                   {genre.recommendations.map((recs) => (
                     <AccordionDetails key={recs.albumName}>
                       <div className="genre-starter-packs">
@@ -74,17 +88,6 @@ export default function AccordionList() {
                             "{recs.albumName}" by {recs.artistName}
                           </Typography>
                         </div>
-                        <a
-                          href={recs.spotifyAlbumLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <img
-                            src={spotifyImg}
-                            alt="Spotify Logo"
-                            className="spotify-logo"
-                          />
-                        </a>
                       </div>
                     </AccordionDetails>
                   ))}

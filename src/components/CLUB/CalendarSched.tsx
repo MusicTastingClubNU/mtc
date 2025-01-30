@@ -9,7 +9,7 @@ import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
 import { DayCalendarSkeleton } from "@mui/x-date-pickers/DayCalendarSkeleton";
 import { Grid, styled } from "@mui/material";
 import Paper from "@mui/material/Paper";
-import calendarData from "./calendarData.json";
+import calendarData from "../CLUB/calendarData.json";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 const ItemMobile = styled(Paper)(({ theme }) => ({
@@ -165,11 +165,14 @@ export default function DateCalendarServerRequest() {
     return activity?.weekActivityEmoji ?? ""; // Default to empty string if no match found
   };
   return (
-    <>
+    <div className={isMobile ? "faq2" : "faq"}>
+      <h2 style={{ fontSize: 35, textAlign: "center", marginBottom: 15 }}>
+        Calendar
+      </h2>
+
       <Grid container spacing={2}>
         <Grid item xs={12} md={8}>
           <div>
-            {" "}
             {isMobile ? (
               <ItemMobile>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -267,6 +270,6 @@ export default function DateCalendarServerRequest() {
       <Grid item xs={8}>
         <br />
       </Grid>
-    </>
+    </div>
   );
 }

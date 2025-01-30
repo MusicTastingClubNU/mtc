@@ -62,3 +62,10 @@
   flex-shrink: 0; /* Prevent the logo from shrinking */
   margin-top: -15px;
 }
+
+.genre-starter-pack-spotify-logo {
+  width: 30px; /* Fixed size for the Spotify logo */
+  flex-shrink: 0; /* Prevent the logo from shrinking */
+  margin-left: 125px;
+  display: block;
+}

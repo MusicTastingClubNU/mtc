@@ -5,7 +5,7 @@ import "./phone-only-salespitch.css";
 import "./mission.css";
 import { useMediaQuery } from "@mui/material";
 
-export default function ConditionalPhoneSignUp() {
+export default function SignUpPanel() {
   const isMobile = useMediaQuery("(max-width: 768px)");
 
   return (
