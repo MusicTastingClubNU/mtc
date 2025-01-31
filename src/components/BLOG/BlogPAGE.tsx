@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -36,6 +36,7 @@ interface Blog {
 interface BlogData {
   Blogs: Blog[];
 }
+
 const Blog: React.FC = (props: Props) => {
   //Checks the mobile component
   const isMobile = useMediaQuery("(max-width: 768px)");
@@ -61,10 +62,10 @@ const Blog: React.FC = (props: Props) => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }, [selectedBlog]);
+
   return (
     <>
       <TitleAndDirectory />
-
       {selectedBlog == null ? (
         <>
           {isMobile ? <br></br> : null}
