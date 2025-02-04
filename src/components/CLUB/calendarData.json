@@ -100,7 +100,7 @@
     "weekActivityWeek": "2025-02-21",
     "weekActivityEmoji": "🎥",
     "weekActivityTitle": "MTC MOVIE NIGHT: \"MOVIE TITLE\"",
-    "weekActivityDetails": "TBD ROOM | 7-5PM | DINNER PROVIDED!",
+    "weekActivityDetails": "TECH LR3 | 5-7:20PM | DINNER PROVIDED!",
     "weekActivityHost": "Aidan"
   },
   {
@@ -108,7 +108,15 @@
     "weekActivityWeek": "2025-03-14",
     "weekActivityEmoji": "🎧",
     "weekActivityTitle": "MTC LISTENING PARTY: \"To Pimp A Butterfly\" by Kendrick Lamar",
-    "weekActivityDetails": "TheLink (811 Emerson St) | 5-6:30PM | DINNER PROVIDED!",
+    "weekActivityDetails": "TheLink (811 Emerson St.) | 5-6:30PM | DINNER PROVIDED!",
     "weekActivityHost": "Aidan"
+  },
+  {
+    "weekActivityId": 14,
+    "weekActivityWeek": "2025-02-18",
+    "weekActivityEmoji": "📸",
+    "weekActivityTitle": "WQ25 CLUB PHOTO (6:15)",
+    "weekActivityDetails": "Black tie optional :)",
+    "weekActivityHost": "Arch"
   }
 ]
