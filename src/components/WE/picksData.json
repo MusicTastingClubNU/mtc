@@ -162,6 +162,46 @@
           }
         ],
         "spotifyPlaylistLink": "https://open.spotify.com/playlist/4Pd7qBAILAbHsNNcWgZRG4?si=l56DQuBOSuOQNFmEWGrABQ"
+      },
+      {
+        "weekId": 29,
+        "weekName": "WEEK 5",
+        "weekDate": "(02/11/25)",
+        "picks": [
+          {
+            "pickId": 116,
+            "pickType": "Album of the Week",
+            "songOrAlbumName": "",
+            "artistName": "",
+            "memberName": "Corey",
+            "songOrAlbumArt": ""
+          },
+          {
+            "pickId": 117,
+            "pickType": "Runner Up Album of the Week",
+            "songOrAlbumName": "",
+            "artistName": "",
+            "memberName": "Reed",
+            "songOrAlbumArt": ""
+          },
+          {
+            "pickId": 118,
+            "pickType": "Song of the Week",
+            "songOrAlbumName": "",
+            "artistName": "",
+            "memberName": "Andrew",
+            "songOrAlbumArt": ""
+          },
+          {
+            "pickId": 119,
+            "pickType": "Runner Up Song of the Week",
+            "songOrAlbumName": "",
+            "artistName": "",
+            "memberName": "Simon",
+            "songOrAlbumArt": ""
+          }
+        ],
+        "spotifyPlaylistLink": ""
       }
     ]
   },

@@ -97,26 +97,34 @@
   },
   {
     "weekActivityId": 12,
-    "weekActivityWeek": "2025-02-21",
-    "weekActivityEmoji": "🎥",
-    "weekActivityTitle": "MTC MOVIE NIGHT: \"MOVIE TITLE\"",
-    "weekActivityDetails": "TECH LR3 | 5-7:20PM | DINNER PROVIDED!",
-    "weekActivityHost": "Aidan"
+    "weekActivityWeek": "2025-02-04",
+    "weekActivityEmoji": "♟️",
+    "weekActivityTitle": "Grammy's Outfit Review",
+    "weekActivityDetails": "Come ready to judge the fashion choices made at the Grammy's last Sunday!",
+    "weekActivityHost": "Simon"
   },
   {
     "weekActivityId": 13,
-    "weekActivityWeek": "2025-03-14",
-    "weekActivityEmoji": "🎧",
-    "weekActivityTitle": "MTC LISTENING PARTY: \"To Pimp A Butterfly\" by Kendrick Lamar",
-    "weekActivityDetails": "TheLink (811 Emerson St.) | 5-6:30PM | DINNER PROVIDED!",
-    "weekActivityHost": "Aidan"
+    "weekActivityWeek": "2025-02-18",
+    "weekActivityEmoji": "📸",
+    "weekActivityTitle": "WQ25 CLUB PHOTO (6:15PM)",
+    "weekActivityDetails": "Black Tie Optional",
+    "weekActivityHost": "Arch"
   },
   {
     "weekActivityId": 14,
-    "weekActivityWeek": "2025-02-18",
-    "weekActivityEmoji": "📸",
-    "weekActivityTitle": "WQ25 CLUB PHOTO (6:15)",
-    "weekActivityDetails": "Black tie optional :)",
-    "weekActivityHost": "Arch"
+    "weekActivityWeek": "2025-02-21",
+    "weekActivityEmoji": "🎥",
+    "weekActivityTitle": "MTC MOVIE NIGHT: \"MOVIE TITLE\"",
+    "weekActivityDetails": "TECH LR3 | 5-7PM | DINNER PROVIDED!",
+    "weekActivityHost": "Aidan"
+  },
+  {
+    "weekActivityId": 15,
+    "weekActivityWeek": "2025-03-14",
+    "weekActivityEmoji": "🎧",
+    "weekActivityTitle": "MTC LISTENING PARTY: \"To Pimp A Butterfly\" by Kendrick Lamar",
+    "weekActivityDetails": "TheLink (811 Emerson St) | 5-6:30PM | DINNER PROVIDED!",
+    "weekActivityHost": "Aidan"
   }
 ]

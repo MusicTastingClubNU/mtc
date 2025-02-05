@@ -69,3 +69,10 @@
   margin-left: 125px;
   display: block;
 }
+
+.parent {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  text-align: center;
+}
