@@ -171,34 +171,34 @@
           {
             "pickId": 116,
             "pickType": "Album of the Week",
-            "songOrAlbumName": "",
-            "artistName": "",
+            "songOrAlbumName": "Dire Straits",
+            "artistName": "Dire Straits",
             "memberName": "Corey",
-            "songOrAlbumArt": ""
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b27305b07080bdc2dd0e2cf6f008"
           },
           {
             "pickId": 117,
             "pickType": "Runner Up Album of the Week",
-            "songOrAlbumName": "",
-            "artistName": "",
+            "songOrAlbumName": "Wild Is The Wind",
+            "artistName": "Nina Simone",
             "memberName": "Reed",
-            "songOrAlbumArt": ""
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273f94461acebee60775ea22e77"
           },
           {
             "pickId": 118,
             "pickType": "Song of the Week",
-            "songOrAlbumName": "",
-            "artistName": "",
+            "songOrAlbumName": "Chicken",
+            "artistName": "Your Neighbors",
             "memberName": "Andrew",
-            "songOrAlbumArt": ""
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2730fad0b0d3a84c57541a4de10"
           },
           {
             "pickId": 119,
             "pickType": "Runner Up Song of the Week",
-            "songOrAlbumName": "",
-            "artistName": "",
+            "songOrAlbumName": "Here in California",
+            "artistName": "Kate Wolf",
             "memberName": "Simon",
-            "songOrAlbumArt": ""
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2738131f0e40194e03748abc3f7"
           }
         ],
         "spotifyPlaylistLink": ""
