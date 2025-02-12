@@ -126,5 +126,13 @@
     "weekActivityTitle": "MTC LISTENING PARTY: \"To Pimp A Butterfly\" by Kendrick Lamar",
     "weekActivityDetails": "TheLink (811 Emerson St) | 5-6:30PM | DINNER PROVIDED!",
     "weekActivityHost": "Aidan"
+  },
+  {
+    "weekActivityId": 16,
+    "weekActivityWeek": "2025-02-11",
+    "weekActivityEmoji": "🎵",
+    "weekActivityTitle": "Breakcore Presentation",
+    "weekActivityDetails": "Come to learn about the amazing world of the music subgenre of breakcore!",
+    "weekActivityHost": "Daniel"
   }
 ]

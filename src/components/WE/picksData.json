@@ -201,6 +201,46 @@
             "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2738131f0e40194e03748abc3f7"
           }
         ],
+        "spotifyPlaylistLink": "https://open.spotify.com/playlist/3o5ZJgFky7RbsYVzmGOWeO?si=o7nrrLIaR86OC7KxzgAbrA"
+      },
+      {
+        "weekId": 30,
+        "weekName": "WEEK 6",
+        "weekDate": "(02/18/25)",
+        "picks": [
+          {
+            "pickId": 120,
+            "pickType": "Album of the Week",
+            "songOrAlbumName": "Amoroso",
+            "artistName": "João Gilberto",
+            "memberName": "Sid",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2730ca6c4876c97a9d4fea4c482"
+          },
+          {
+            "pickId": 121,
+            "pickType": "Runner Up Album of the Week",
+            "songOrAlbumName": "",
+            "artistName": "",
+            "memberName": "Jameson",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2731de01f1a3c45a0d1d97434db"
+          },
+          {
+            "pickId": 122,
+            "pickType": "Song of the Week",
+            "songOrAlbumName": "",
+            "artistName": "",
+            "memberName": "Joseph",
+            "songOrAlbumArt": ""
+          },
+          {
+            "pickId": 123,
+            "pickType": "Runner Up Song of the Week",
+            "songOrAlbumName": "Sinner",
+            "artistName": "Samara Cyn",
+            "memberName": "AJ",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2732a05081a7e1d10481bf9bdac"
+          }
+        ],
         "spotifyPlaylistLink": ""
       }
     ]
