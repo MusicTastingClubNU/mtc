@@ -227,10 +227,10 @@
           {
             "pickId": 122,
             "pickType": "Song of the Week",
-            "songOrAlbumName": "",
-            "artistName": "",
+            "songOrAlbumName": "Better Hate",
+            "artistName": "Jessica Pratt",
             "memberName": "Joseph",
-            "songOrAlbumArt": ""
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273a1a84846a9c52d4c965e7211"
           },
           {
             "pickId": 123,
@@ -241,7 +241,7 @@
             "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2732a05081a7e1d10481bf9bdac"
           }
         ],
-        "spotifyPlaylistLink": ""
+        "spotifyPlaylistLink": "https://open.spotify.com/playlist/48AYqWxQiP9KAHTl3R0VJC?si=bHItICddRD61qk0osNFI8Q"
       }
     ]
   },

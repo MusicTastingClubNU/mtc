@@ -134,5 +134,13 @@
     "weekActivityTitle": "Breakcore Presentation",
     "weekActivityDetails": "Come to learn about the amazing world of the music subgenre of breakcore!",
     "weekActivityHost": "Daniel"
+  },
+  {
+    "weekActivityId": 17,
+    "weekActivityWeek": "2025-02-15",
+    "weekActivityEmoji": "🚗",
+    "weekActivityTitle": "Rattleback Records Field Trip!",
+    "weekActivityDetails": "We're driving to a vinyl store (Rattleback Records) in Andersonville!",
+    "weekActivityHost": "Daniel"
   }
 ]
