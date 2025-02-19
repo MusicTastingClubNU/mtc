@@ -106,16 +106,16 @@
   {
     "weekActivityId": 13,
     "weekActivityWeek": "2025-02-18",
-    "weekActivityEmoji": "📸",
-    "weekActivityTitle": "WQ25 CLUB PHOTO (6:15PM)",
-    "weekActivityDetails": "Black Tie Optional",
-    "weekActivityHost": "Arch"
+    "weekActivityEmoji": "📸🎵",
+    "weekActivityTitle": "WQ25 CLUB PHOTO (6:15PM) | \"Is Elvis Alive?\" Kahoot",
+    "weekActivityDetails": "Black Tie Optional | Come to the club to find out if Elvis is still alive!",
+    "weekActivityHost": "Arch/Simon"
   },
   {
     "weekActivityId": 14,
     "weekActivityWeek": "2025-02-21",
     "weekActivityEmoji": "🎥",
-    "weekActivityTitle": "MTC MOVIE NIGHT: \"MOVIE TITLE\"",
+    "weekActivityTitle": "MTC MOVIE NIGHT: \"Better Man\"",
     "weekActivityDetails": "TECH LR3 | 5-7PM | DINNER PROVIDED!",
     "weekActivityHost": "Aidan"
   },
@@ -131,7 +131,7 @@
     "weekActivityId": 16,
     "weekActivityWeek": "2025-02-11",
     "weekActivityEmoji": "🎵",
-    "weekActivityTitle": "Breakcore Presentation",
+    "weekActivityTitle": "Breakcore Starter Pack Presentation",
     "weekActivityDetails": "Come to learn about the amazing world of the music subgenre of breakcore!",
     "weekActivityHost": "Daniel"
   },
@@ -142,5 +142,13 @@
     "weekActivityTitle": "Rattleback Records Field Trip!",
     "weekActivityDetails": "We're driving to a vinyl store (Rattleback Records) in Andersonville!",
     "weekActivityHost": "Daniel"
+  },
+  {
+    "weekActivityId": 18,
+    "weekActivityWeek": "2025-02-25",
+    "weekActivityEmoji": "🎵",
+    "weekActivityTitle": "4th Wave [GENRE] Genre Starter Pack Presentation",
+    "weekActivityDetails": "Come to the meeting for a deep dive into [GENRE]",
+    "weekActivityHost": "Katie"
   }
 ]

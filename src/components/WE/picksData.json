@@ -242,6 +242,46 @@
           }
         ],
         "spotifyPlaylistLink": "https://open.spotify.com/playlist/48AYqWxQiP9KAHTl3R0VJC?si=bHItICddRD61qk0osNFI8Q"
+      },
+      {
+        "weekId": 31,
+        "weekName": "WEEK 7",
+        "weekDate": "(02/25/25)",
+        "picks": [
+          {
+            "pickId": 124,
+            "pickType": "Album of the Week",
+            "songOrAlbumName": "",
+            "artistName": "",
+            "memberName": "Daniel",
+            "songOrAlbumArt": ""
+          },
+          {
+            "pickId": 125,
+            "pickType": "Runner Up Album of the Week",
+            "songOrAlbumName": "Only God Was Above Us",
+            "artistName": "Vampire Weekend",
+            "memberName": "Grace",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2731f4e2d002b9d1920339a5109"
+          },
+          {
+            "pickId": 126,
+            "pickType": "Song of the Week",
+            "songOrAlbumName": "",
+            "artistName": "",
+            "memberName": "Katie",
+            "songOrAlbumArt": ""
+          },
+          {
+            "pickId": 127,
+            "pickType": "Runner Up Song of the Week",
+            "songOrAlbumName": "",
+            "artistName": "Danny",
+            "memberName": "",
+            "songOrAlbumArt": ""
+          }
+        ],
+        "spotifyPlaylistLink": ""
       }
     ]
   },
