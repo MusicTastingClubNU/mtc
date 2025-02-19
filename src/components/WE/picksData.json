@@ -267,17 +267,17 @@
           {
             "pickId": 126,
             "pickType": "Song of the Week",
-            "songOrAlbumName": "",
-            "artistName": "",
+            "songOrAlbumName": "Crying Over It All",
+            "artistName": "Waterparks",
             "memberName": "Katie",
-            "songOrAlbumArt": ""
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2733873e8bd55f78aef44c26243"
           },
           {
             "pickId": 127,
             "pickType": "Runner Up Song of the Week",
             "songOrAlbumName": "",
-            "artistName": "Danny",
-            "memberName": "",
+            "artistName": "",
+            "memberName": "Danny",
             "songOrAlbumArt": ""
           }
         ],
