@@ -117,7 +117,7 @@ export default function MeetTheClubPanel() {
           backRow=""
           frontRow=""
           notPictured="Not Pictured: Cai - Isabel - Susanna - Ryan"
-          photographerLink="https://www.instagram.com/luis_castaneda220?igsh=MXEzOWttNmw0NjAyYw=="
+          photographerLink="https://luiscastaneda220.wixsite.com/lcmedia"
           photographerName="Luis Castañeda"
         />
       </CustomTabPanel>
