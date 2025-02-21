@@ -67,7 +67,7 @@ const MTCoders = () => {
         <h3>{message}</h3>
       </div>
       <div>
-        <h1>HELLO?</h1>
+        <h1>PLEASE?</h1>
       </div>
     </>
   );
