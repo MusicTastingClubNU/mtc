@@ -5,6 +5,7 @@ import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import * as React from "react";
 import Image, { StaticImageData } from "next/image";
+import MTCClubPhotoWQ25 from "../../imgs/execBoardImgs/MTC_club_photo_WQ25.jpg";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -111,11 +112,11 @@ export default function MeetTheClubPanel() {
       </Box>
       <CustomTabPanel value={value} index={0}>
         <ClubPhotoComponent
-          src=""
+          src={MTCClubPhotoWQ25}
           alt="MTCClubPhotoWQ25"
           quarter="WQ25"
-          backRow=""
-          frontRow=""
+          backRow="Arch - Katie - Grace - Aidan - Danny - Joseph - Andrew"
+          frontRow="Daniel - Jameson - Simon - Corey - AJ - Reed"
           notPictured="Not Pictured: Cai - Isabel - Susanna - Ryan"
           photographerLink="https://luiscastaneda220.wixsite.com/lcmedia"
           photographerName="Luis Castañeda"
