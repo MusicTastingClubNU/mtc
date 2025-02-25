@@ -73,8 +73,8 @@ const ClubPhotoComponent: React.FC<ClubPhotoComponentProps> = ({
     )}
     <div style={{ textAlign: "center" }}>
       <h4 style={{ marginTop: 10, marginBottom: -20 }}>{quarter} MEMBERS:</h4>
-      {NameWrapper(frontRow)}
       {NameWrapper(backRow)}
+      {NameWrapper(frontRow)}
       {frontFrontRow && <>{NameWrapper(frontFrontRow)}</>}
       {NameWrapper(notPictured)}
       <p style={{ marginBottom: -10 }}>
