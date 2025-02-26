@@ -106,7 +106,7 @@
   {
     "weekActivityId": 13,
     "weekActivityWeek": "2025-02-18",
-    "weekActivityEmoji": "📸🎵",
+    "weekActivityEmoji": "📸",
     "weekActivityTitle": "WQ25 CLUB PHOTO (6:15PM) | \"Is Elvis Alive?\" Kahoot",
     "weekActivityDetails": "Black Tie Optional | Come to the club to find out if Elvis is still alive!",
     "weekActivityHost": "Arch/Simon"
@@ -150,5 +150,13 @@
     "weekActivityTitle": "4th Wave Emo Genre Starter Pack Presentation",
     "weekActivityDetails": "Come to the meeting for a deep dive into 4th Wave Emo!",
     "weekActivityHost": "Katie"
+  },
+  {
+    "weekActivityId": 19,
+    "weekActivityWeek": "2025-03-04",
+    "weekActivityEmoji": "♟️",
+    "weekActivityTitle": "MUSICAL CHAIRS",
+    "weekActivityDetails": "Yes, we are adults, but 'Musical Chairs' has the word 'music' in it...so it counts.",
+    "weekActivityHost": "Simon"
   }
 ]
