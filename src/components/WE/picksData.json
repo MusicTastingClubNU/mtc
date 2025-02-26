@@ -282,6 +282,46 @@
           }
         ],
         "spotifyPlaylistLink": "https://open.spotify.com/playlist/7aCJKx16Bwlehoti7yV2Ox?si=ukIvTdd6QAuUZg6hsF4V2g"
+      },
+      {
+        "weekId": 32,
+        "weekName": "WEEK 8",
+        "weekDate": "(03/04/25)",
+        "picks": [
+          {
+            "pickId": 128,
+            "pickType": "Album of the Week",
+            "songOrAlbumName": "",
+            "artistName": "",
+            "memberName": "Cai",
+            "songOrAlbumArt": ""
+          },
+          {
+            "pickId": 129,
+            "pickType": "Runner Up Album of the Week",
+            "songOrAlbumName": "Smiling With No Teeth",
+            "artistName": "Genesis Owusu",
+            "memberName": "Arch",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2739f9db0feb918757a7bd8fcd0"
+          },
+          {
+            "pickId": 130,
+            "pickType": "Song of the Week",
+            "songOrAlbumName": "",
+            "artistName": "",
+            "memberName": "Isabel",
+            "songOrAlbumArt": ""
+          },
+          {
+            "pickId": 131,
+            "pickType": "Runner Up Song of the Week",
+            "songOrAlbumName": "",
+            "artistName": "",
+            "memberName": "Aidan",
+            "songOrAlbumArt": ""
+          }
+        ],
+        "spotifyPlaylistLink": ""
       }
     ]
   },

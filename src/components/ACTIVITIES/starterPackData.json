@@ -1,8 +1,8 @@
 [
   {
-    "genreId": 1,
+    "genreId": 0,
     "genreName": "Post-Punk",
-    "genreEmoji": "🖤",
+    "genreEmoji": "🤘",
     "recommendations": [
       {
         "recId": 0,
@@ -29,79 +29,54 @@
         "spotifyAlbumLink": "https://i.scdn.co/image/ab67616d0000b27399027d2948260fdb37436d5d"
       }
     ],
-    "spotifyPlaylistLink": ""
+    "spotifyPlaylistLink": "https://open.spotify.com/playlist/3HqlMQeUVw170GfL1aaZNQ?si=PN3JJ7bPSpqFQbpkkR5ghQ"
   },
   {
-    "genreId": 3,
-    "genreName": "Rage",
-    "genreEmoji": "😡",
+    "genreId": 1,
+    "genreName": "Breakcore",
+    "genreEmoji": "⛓️‍💥",
     "recommendations": [
       {
-        "recId": 6,
-        "albumName": "Rage_Album1",
-        "artistName": "Rage_Artist1",
+        "recId": 4,
+        "albumName": "",
+        "artistName": "",
         "spotifyAlbumLink": ""
       },
       {
+        "recId": 5,
+        "albumName": "",
+        "artistName": "",
+        "spotifyAlbumLink": ""
+      },
+      {
+        "recId": 6,
+        "albumName": "",
+        "artistName": "",
+        "spotifyAlbumLink": ""
+      }
+    ]
+  },
+  {
+    "genreId": 2,
+    "genreName": "4th Wave Emo",
+    "genreEmoji": "🖤",
+    "recommendations": [
+      {
         "recId": 7,
-        "albumName": "Rage_Album2",
-        "artistName": "Rage_Artist2",
+        "albumName": "",
+        "artistName": "",
         "spotifyAlbumLink": ""
       },
       {
         "recId": 8,
-        "albumName": "Rage_Album3",
-        "artistName": "Rage_Artist3",
+        "albumName": "",
+        "artistName": "",
         "spotifyAlbumLink": ""
-      }
-    ]
-  },
-  {
-    "genreId": 4,
-    "genreName": "Soul",
-    "genreEmoji": "👻",
-    "recommendations": [
+      },
       {
         "recId": 9,
-        "albumName": "Soul_Album1",
-        "artistName": "Soul_Artist1",
-        "spotifyAlbumLink": ""
-      },
-      {
-        "recId": 10,
-        "albumName": "Soul_Album2",
-        "artistName": "Soul_Artist2",
-        "spotifyAlbumLink": ""
-      },
-      {
-        "recId": 11,
-        "albumName": "Soul_Album3",
-        "artistName": "Soul_Artist3",
-        "spotifyAlbumLink": ""
-      }
-    ]
-  },
-  {
-    "genreId": 5,
-    "genreName": "R&B",
-    "genreEmoji": "🥁",
-    "recommendations": [
-      {
-        "recId": 12,
-        "albumName": "R&B_Album1",
-        "artistName": "R&B_Artist1",
-        "spotifyAlbumLink": ""
-      },
-      {
-        "recId": 13,
-        "albumName": "R&B_Album2",
-        "artistName": "R&B_Artist2",
-        "spotifyAlbumLink": ""
-      },
-      {
-        "recId": 14,
-        "albumName": "R&B_Album3",
-        "artistName": "R&B_Artist3",
+        "albumName": "",
+        "artistName": "",
         "spotifyAlbumLink": ""
       }
     ]
