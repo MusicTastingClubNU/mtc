@@ -14,6 +14,7 @@ import TitleAndDirectory from "../HOME/TitleAndDirectory";
 import Chip from "@mui/material/Chip";
 import logo from "../../imgs/MTC_logo.png";
 import BlogSubmissionForm from "./BlogSubmissionForm";
+import WNUR from "./WNUR";
 
 interface Props {}
 
@@ -168,6 +169,7 @@ const Blog: React.FC = (props: Props) => {
                 ))}
             </div>
           </div>
+          <WNUR />
           <BlogSubmissionForm />
         </>
       ) : (

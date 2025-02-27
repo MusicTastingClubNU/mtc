@@ -12,6 +12,7 @@ import NameWheelData from "../WE/NameWheelData.json";
 import picksData from "../WE/picksData.json";
 import YsAlbumArt from "../../imgs/manualAlbumArt/WQ24_W2_AotW.png";
 import MeetTheClubPanel from "./MeetTheClubPanel";
+
 interface Props {}
 
 const Activities = (props: Props) => {
