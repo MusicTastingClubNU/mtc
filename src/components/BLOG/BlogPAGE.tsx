@@ -81,7 +81,10 @@ const Blog: React.FC = (props: Props) => {
                 .map((blog) => (
                   <div className="blog-items" key={blog.blogId}>
                     <Card
-                      sx={{ marginBottom: 2 }}
+                      sx={{
+                        marginBottom: 1,
+                        width: 100,
+                      }}
                       key={blog.blogId}
                       onClick={() => {
                         setSelectedBlog({
@@ -96,21 +99,23 @@ const Blog: React.FC = (props: Props) => {
                       <CardActionArea>
                         <CardMedia
                           component="img"
-                          height="140"
+                          height="auto"
                           image={blog.blogImg ? blog.blogImg : logo}
                           alt="article image"
                         />
                         <StyledCardContent>
-                          <Typography gutterBottom variant="h5" component="div">
-                            {blog.blogTitle}
-                          </Typography>
-                          <Typography
+                          {/* <Typography gutterBottom variant="h6" component="div"> */}
+                          <h3>{blog.blogTitle}</h3>
+                          {/* </Typography> */}
+                          {/* <Typography
                             variant="body2"
                             color="text.secondary"
                             sx={{ marginTop: -1 }}
-                          >
+                          > */}
+                          <h5 style={{ marginTop: 10 }}>
                             Written By {blog.blogAuthor}
-                          </Typography>
+                          </h5>
+                          {/* </Typography> */}
                         </StyledCardContent>
                       </CardActionArea>
                     </Card>
@@ -121,18 +126,20 @@ const Blog: React.FC = (props: Props) => {
           {/*||| CLUB EMAILS COMPONENT ||| */}
           <div className="blog-cont2">
             <h2 className="blog-titles">Club Emails</h2>
-            <div className="blog-items-cont">
+            <div className="blog-items-cont2">
               {/* The club emails have IDs that are smaller than 0 (the reason for
                  .filter((blog) => blog.blogId < 0)*/}
               {blogs
                 .filter((blog) => blog.blogId < 0)
                 .map((blog) => (
                   <div
-                    className="blog-items"
+                    className="blog-items2"
                     key={blog.blogId < 0 ? blog.blogId : NaN}
                   >
                     <Card
-                      sx={{ marginBottom: 2, width: 150 }}
+                      sx={{
+                        marginBottom: 1,
+                      }}
                       key={blog.blogId}
                       onClick={() => {
                         setSelectedBlog({
@@ -145,24 +152,16 @@ const Blog: React.FC = (props: Props) => {
                       }}
                     >
                       <CardActionArea>
-                        <CardMedia
-                          component="img"
-                          height="100"
-                          image={blog.blogImg ? blog.blogImg : logo}
-                          alt="article image"
-                        />
-                        <StyledCardContent>
-                          <Typography gutterBottom variant="h5" component="div">
-                            {blog.blogTitle}
-                          </Typography>
-                          <Typography
-                            variant="body2"
-                            color="text.secondary"
-                            sx={{ marginTop: -1 }}
-                          >
-                            Written By {blog.blogAuthor}
-                          </Typography>
-                        </StyledCardContent>
+                        <div className="blog-items2">
+                          <img
+                            src={blog.blogImg ? blog.blogImg : logo}
+                            alt="Blog"
+                          />
+                          <div className="text-content">
+                            <h3>{blog.blogTitle}</h3>
+                            <h5>Written By {blog.blogAuthor}</h5>
+                          </div>
+                        </div>
                       </CardActionArea>
                     </Card>
                   </div>
