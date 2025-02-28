@@ -77,7 +77,7 @@ const Blog: React.FC = (props: Props) => {
               {/* The club emails have IDs that are smaller than 0 (the reason for
                  .filter((blog) => blog.blogId < 0)*/}
               {blogs
-                .filter((blog) => blog.blogId > 0)
+                .filter((blog) => blog.blogId >= 0)
                 .map((blog) => (
                   <div
                     className="blog-items3"
@@ -189,7 +189,12 @@ const Blog: React.FC = (props: Props) => {
               >
                 <ArrowBackIosNewIcon />
               </IconButton>
-              <h1 style={{ textAlign: "center" }}>{selectedBlog?.contTitle}</h1>
+              <div style={{ textAlign: "center" }}>
+                <h1>{selectedBlog?.contTitle}</h1>
+                <h3 style={{ marginBottom: -10 }}>
+                  Written By {selectedBlog?.contAuthor}
+                </h3>
+              </div>
             </div>
 
             <br />
