@@ -73,17 +73,19 @@ const Blog: React.FC = (props: Props) => {
           {/*||| CLUB ALBUM REVIEWS COMPONENT ||| */}
           <div className="blog-cont2">
             <h2 className="blog-titles">Club Album Reviews</h2>
-            <div className="blog-items-cont">
-              {/* The album reviews have IDs that are more than or equal to 0 (the reason for
-                 .filter((blog) => blog.blogId >= 0)*/}
+            <div className="blog-items-cont3">
+              {/* The club emails have IDs that are smaller than 0 (the reason for
+                 .filter((blog) => blog.blogId < 0)*/}
               {blogs
-                .filter((blog) => blog.blogId >= 0)
+                .filter((blog) => blog.blogId > 0)
                 .map((blog) => (
-                  <div className="blog-items" key={blog.blogId}>
+                  <div
+                    className="blog-items3"
+                    key={blog.blogId < 0 ? blog.blogId : NaN}
+                  >
                     <Card
                       sx={{
                         marginBottom: 1,
-                        width: 100,
                       }}
                       key={blog.blogId}
                       onClick={() => {
@@ -97,26 +99,18 @@ const Blog: React.FC = (props: Props) => {
                       }}
                     >
                       <CardActionArea>
-                        <CardMedia
-                          component="img"
-                          height="auto"
-                          image={blog.blogImg ? blog.blogImg : logo}
-                          alt="article image"
-                        />
-                        <StyledCardContent>
-                          {/* <Typography gutterBottom variant="h6" component="div"> */}
-                          <h3>{blog.blogTitle}</h3>
-                          {/* </Typography> */}
-                          {/* <Typography
-                            variant="body2"
-                            color="text.secondary"
-                            sx={{ marginTop: -1 }}
-                          > */}
-                          <h5 style={{ marginTop: 10 }}>
-                            Written By {blog.blogAuthor}
-                          </h5>
-                          {/* </Typography> */}
-                        </StyledCardContent>
+                        <div className="blog-items3">
+                          <img
+                            src={blog.blogImg ? blog.blogImg : logo}
+                            alt="Blog"
+                          />
+                          <div className="text-content">
+                            <h4 style={{ marginBottom: 3 }}>
+                              {blog.blogTitle}
+                            </h4>
+                            <h6>Written By {blog.blogAuthor}</h6>
+                          </div>
+                        </div>
                       </CardActionArea>
                     </Card>
                   </div>
