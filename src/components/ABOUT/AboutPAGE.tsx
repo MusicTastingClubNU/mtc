@@ -20,7 +20,7 @@ const execBoardList: Array<[string, string, string, any]> = [
   [
     "Arch Silverstein",
     "President/Founder",
-    "Leads weekly meetings, makes weekly slides",
+    "Leads weekly meetings, makes weekly slides, updates the website",
     ArchieSilversteinImg,
   ],
   [
