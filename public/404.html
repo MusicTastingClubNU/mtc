@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var pathname = window.location.pathname;
+      switch (pathname) {
+        case "/picks":
+          window.location.replace("/?" + pathname);
+          break;
+        case "/faq":
+          window.location.replace("/?" + pathname);
+          break;
+        case "/activties":
+          window.location.replace("/?" + pathname);
+          break;
+        case "/blog":
+          window.location.replace("/?" + pathname);
+          break;
+        case "/exec":
+          window.location.replace("/?" + pathname);
+          break;
+        case "/dev":
+          window.location.replace("/?" + pathname);
+          break;
+      }
+      if (pathname == "/picks") {
+        window.location.replace("/?" + pathname);
+      }
+
+      if (pathname !== "/") {
+        window.location.replace("/?" + pathname);
+      } else {
+        window.location.replace("/");
+      }
+    </script>
+  </body>
+</html>

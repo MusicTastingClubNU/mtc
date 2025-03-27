@@ -1,0 +1,186 @@
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  /* background-color: linear-gradient(to left, #fff, rgba(255, 255, 255, 0)); */
+  margin: 0;
+  padding: 0;
+}
+
+.mission-cont {
+  display: flex;
+  align-items: center;
+  margin: 80px auto 50px;
+  margin-top: 50px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fff;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mission-cont2 {
+  display: flex;
+  align-items: center;
+  margin: 80px auto 50px;
+  margin-top: 50px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fff;
+  max-width: 85%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mission {
+  flex: 1;
+}
+
+.mission h1 {
+  margin: 0;
+}
+
+.mission p {
+  margin: 0;
+  padding-top: 10px;
+  margin-right: 10px;
+}
+
+.mission-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-top: -20px;
+}
+
+.thingghost-insta-link {
+  margin-top: -10px;
+  margin-bottom: -20px;
+  text-align: "center";
+  font-size: 15px;
+}
+
+.ebc {
+  margin: 10px auto 50px auto;
+  padding: 20px;
+  max-width: 85%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.club-photo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.exec-board-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.genre-starter-packs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.exec-board-title {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: -5px;
+}
+
+.exec-board-item {
+  width: 300px;
+  margin: 25px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.exec-board-item h2,
+.exec-board-item h3,
+.exec-board-item p {
+  margin: 0;
+}
+
+.picks-history {
+  width: 150px;
+  margin: 5px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.aoty {
+  width: 150px;
+  margin: 10px;
+  padding: 10px;
+  background-color: white;
+  border: 3px solid #b7b7b7;
+  border-radius: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.exec-board-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.club-photo-img {
+  width: 100;
+  height: 100;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.chosen-cont {
+  align-items: center;
+}
+
+.song-of-the-week-picks-cont {
+  font-weight: "bold";
+  margin-bottom: 30;
+  margin-top: 10;
+}
+
+.this-weeks-picks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  color: gray;
+}
+
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.pick-type-bold.margin-bottom-34 {
+  margin-bottom: 34px;
+  margin-top: 10px;
+}
+
+.pick-image {
+  width: 90%;
+  border-radius: 10px;
+}

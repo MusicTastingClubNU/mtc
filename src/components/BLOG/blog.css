@@ -1,0 +1,117 @@
+.blog-cont2 {
+  margin: 50px auto;
+  margin-top: 0px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  width: 85%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  /* font-family: "Roboto-Regular"; */
+  font-weight: normal !important;
+}
+
+.blog-titles {
+  text-align: center;
+  font-size: 35px;
+  padding-bottom: 10px;
+}
+
+.blog-items-cont2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.blog-items2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: auto;
+  margin-right: 12px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.blog-items2 img {
+  width: 50px;
+  height: auto;
+  margin-right: -10px;
+}
+
+.blog-items2 .text-content {
+  flex: 1;
+}
+
+.blog-items-cont3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+}
+.blog-items3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; /* Align items vertically */
+  gap: 15px; /* Space between image and text */
+  width: 250px;
+  margin-right: 12px;
+}
+
+.blog-items3 img {
+  width: 60px; /* Adjust image size */
+  height: auto;
+  margin-right: -10px;
+}
+
+.blog-items3 .text-content {
+  flex: 1; /* Allow text to take remaining space */
+}
+
+.spotify-playlists {
+  width: 200px;
+  margin: 5px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.spotify-cont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.genre-starter-packs {
+  display: flex;
+  justify-content: space-between; /* Push the Spotify icon to the right */
+  align-items: center; /* Vertically align text and logo */
+  gap: 10px; /* Add spacing between text and logo */
+  line-height: 1.5; /* Improve text readability */
+  word-wrap: break-word; /* Ensure long text wraps naturally */
+}
+
+.genre-starter-packs div {
+  flex: 1; /* Allow the text container to take up available space */
+  overflow-wrap: break-word; /* Ensure the text doesn't overflow */
+}
+
+.spotify-logo {
+  width: 30px; /* Fixed size for the Spotify logo */
+  flex-shrink: 0; /* Prevent the logo from shrinking */
+  margin-top: -15px;
+}
+
+.parent {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  text-align: center;
+}

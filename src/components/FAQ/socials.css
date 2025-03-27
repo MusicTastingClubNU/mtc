@@ -1,0 +1,22 @@
+.company-logos {
+  width: 90px;
+  height: 90px;
+  margin: 10px;
+}
+
+.inner-logo-cont {
+  text-align: center;
+}
+
+.inner-logo-cont p {
+  margin-top: 5px; /* Adjust margin for better text spacing */
+  font-size: 15px;
+}
+
+.rounded-logo {
+  border-radius: 20px;
+}
+
+.outer-logo-cont {
+  margin-top: 40px;
+}
