@@ -97,7 +97,7 @@ body {
 .exec-board-item {
   width: 300px;
   margin: 25px;
-  padding: 20px;
+  padding: 25px;
   background-color: #f0f0f0;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -109,6 +109,7 @@ body {
 .exec-board-item h3,
 .exec-board-item p {
   margin: 0;
+  padding: 5;
 }
 
 .picks-history {

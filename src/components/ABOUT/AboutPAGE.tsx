@@ -13,47 +13,60 @@ import AndrewBarrettImg from "../../imgs/execBoardImgs/AndrewBarrett.png";
 import CoreyDubinImg from "../../imgs/execBoardImgs/CoreyDubin.png";
 import DanielRiveroImg from "../../imgs/execBoardImgs/DanielRivero.png";
 import AidanMottImg from "../../imgs/execBoardImgs/AidanMott.png";
+import RyanMurphyImg from "../../imgs/execBoardImgs/RyanMurphy.png";
 import logo from "../../imgs/MTCLogo/MTC_logo.png";
 
 interface Props {}
 
-const execBoardList: Array<[string, string, string, any]> = [
+const execBoardList: Array<[string, string, string, any, string]> = [
   [
     "Arch Silverstein",
     "President/Founder",
-    "Leads weekly meetings, makes weekly slides, updates the website",
+    "Leads meetings, makes weekly admin slides, updates website",
     ArchieSilversteinImg,
+    '"Paul Rodriguez" by LOGIC',
   ],
   [
     "Daniel Rivero",
     "Vice President",
-    "Makes weekly slides, leads every 4th meeting",
+    "Makes weekly pick slides, leads every 4th meeting",
     DanielRiveroImg,
+    "",
   ],
-  ["Andrew Watson", "Treasurer", "In charge of the finances", AndrewWatsonImg],
+  [
+    "Andrew Watson",
+    "Treasurer",
+    "In charge of the finances",
+    AndrewWatsonImg,
+    "",
+  ],
   [
     "Reed Malcolm",
     "DJ",
     "Controls music during meetings, makes weekly playlists",
     ReedMalcomImg,
+    "",
   ],
   [
     "Danny Ramirez",
     "Social Media Chair",
     "Posts to our social media platforms",
     DannyRamirezImg,
+    '"How to Disappear Completely" by Radiohead',
   ],
   [
     "Corey Dubin",
     "Print Media Chair",
     "Writes for the MTC Blog, sends out the listservs",
     CoreyDubinImg,
+    "",
   ],
   [
     "Simon Olshan-Cantin",
     "In-Club Activity Chair",
     "Coordinates in-club activities (games/presentations)",
     SimonOlshanCantinImg,
+    "",
   ],
 
   [
@@ -61,9 +74,16 @@ const execBoardList: Array<[string, string, string, any]> = [
     "Event Planning Chair",
     "Plans club trips and events",
     AidanMottImg,
+    '"Orange Juice" by Noah Kahan',
   ],
-  ["Ryan Murphy", "Vibe Chair", "He makes sure the vibes are right", logo],
-  ["Andrew Barrett", "Faculty Advisor", "", AndrewBarrettImg],
+  [
+    "Ryan Murphy",
+    "Vibe Chair",
+    "He makes sure the vibes are right",
+    RyanMurphyImg,
+    "",
+  ],
+  ["Andrew Barrett", "Faculty Advisor", "", AndrewBarrettImg, ""],
 ];
 const ExecBoard = (props: Props) => {
   const isMobile = useMediaQuery("(max-width: 768px)");
@@ -84,7 +104,10 @@ const ExecBoard = (props: Props) => {
               ></img>
               <h2>{item[0]}</h2>
               <h3>{item[1]}</h3>
-              <h5>{item[2]}</h5>
+              <h4>{item[2]}</h4>
+              {item[4] && (
+                <h5 style={{ marginTop: 7 }}>Favorite Song: {item[4]}</h5>
+              )}
             </div>
           ))}
         </div>
