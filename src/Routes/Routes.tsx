@@ -7,6 +7,8 @@ import ExecBoard from "../components/ABOUT/AboutPAGE";
 import Blog from "../components/BLOG/BlogPAGE";
 import DevPage from "../components/DEV/DevPAGE";
 import Activities from "../components/CLUB/ClubPAGE";
+import ProtectedRoute from "../components/DEV/ProtectedAuth";
+import { mtcgmailuid } from "../firebase/FirebaseConfig";
 
 export const router = createBrowserRouter([
   {
@@ -19,7 +21,14 @@ export const router = createBrowserRouter([
       { path: "club", element: <Activities /> },
       { path: "blog", element: <Blog /> },
       { path: "exec", element: <ExecBoard /> },
-      { path: "dev", element: <DevPage /> },
+      {
+        path: "dev",
+        element: (
+          <ProtectedRoute allowedUid={mtcgmailuid}>
+            <DevPage />
+          </ProtectedRoute>
+        ),
+      },
     ],
   },
 ]);

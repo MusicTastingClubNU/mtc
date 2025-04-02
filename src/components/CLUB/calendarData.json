@@ -126,5 +126,13 @@
     "weekActivityTitle": "MTC LISTENING PARTY: \"To Pimp A Butterfly\" by Kendrick Lamar",
     "weekActivityDetails": "TheLink (811 Emerson St) | 5-6:30PM | DINNER PROVIDED!",
     "weekActivityHost": "Aidan"
+  },
+  {
+    "weekActivityId": 16,
+    "weekActivityWeek": "2025-04-03",
+    "weekActivityEmoji": "♟️",
+    "weekActivityTitle": "is it a real emo song title?",
+    "weekActivityDetails": "Come ready to play kahoot and test your knowledge of punk songs!",
+    "weekActivityHost": "Katie"
   }
 ]

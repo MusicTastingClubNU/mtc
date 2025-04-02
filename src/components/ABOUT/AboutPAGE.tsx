@@ -15,6 +15,7 @@ import DanielRiveroImg from "../../imgs/execBoardImgs/DanielRivero.png";
 import AidanMottImg from "../../imgs/execBoardImgs/AidanMott.png";
 import RyanMurphyImg from "../../imgs/execBoardImgs/RyanMurphy.png";
 import logo from "../../imgs/MTCLogo/MTC_logo.png";
+import Login from "../../firebase/Login";
 
 interface Props {}
 
@@ -107,6 +108,9 @@ const ExecBoard = (props: Props) => {
               <h4>{item[2]}</h4>
               {item[4] && (
                 <h5 style={{ marginTop: 7 }}>Favorite Song: {item[4]}</h5>
+              )}
+              {item[1].includes("President") && !item[1].includes("Vice") && (
+                <Login />
               )}
             </div>
           ))}

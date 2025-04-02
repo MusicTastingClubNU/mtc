@@ -1,32 +1,26 @@
 import React from "react";
 import "../../App.css";
 import SalesPitch from "../SP/salespitch";
-import FAQComponent from "../FAQ/FAQComponentPAGE";
-import ExecBoard from "../ABOUT/AboutPAGE";
-import WeeklyEntry from "../WE/WeeklyEntryPAGE";
 import BlackButton from "../../BlackButton1";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import MobileComponent from "../../MobileComponent";
-import Blog from "../BLOG/BlogPAGE";
 import "../SP/mission.css";
 import { Link } from "react-router-dom";
+import { auth, mtcgmailuid } from "../../firebase/FirebaseConfig";
 
 interface Props {}
 
 const Home = (props: Props) => {
   const isMobile = useMediaQuery("(max-width: 768px)");
 
-  const [value2, setValue2] = React.useState(0);
-
-  const handleChange2 = (newValue: number) => {
-    setValue2(newValue);
-  };
-
   return (
     <>
       <div>{isMobile ? <MobileComponent /> : null}</div>
       <div className="all" style={{ position: "relative" }}>
-        <header className="header">MUSIC TASTING CLUB</header>
+        <header className="header">
+          MUSIC TASTING CLUB{" "}
+          {auth.currentUser?.uid === mtcgmailuid && "{PREZ 😎}"}
+        </header>
         <h5 className="header2">
           NORTHWESTERN'S PREMIER MUSIC DISCOURSE GROUP
         </h5>
@@ -68,6 +62,14 @@ const Home = (props: Props) => {
                 <BlackButton buttonText="Exec" />
               </p>
             </Link>
+
+            {auth.currentUser?.uid === mtcgmailuid && (
+              <Link to={"/dev"}>
+                <p className="nav-item">
+                  <BlackButton buttonText="Dev" />
+                </p>
+              </Link>
+            )}
           </div>
         )}
         <SalesPitch />

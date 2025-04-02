@@ -5,10 +5,7 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import BlackButton from "./BlackButton1";
 import { Link } from "react-router-dom";
-
-interface MobileMenuProps {
-  handleChange: (newValue: number) => void;
-}
+import { auth, mtcgmailuid } from "./firebase/FirebaseConfig";
 
 const MobileMenu = () => {
   // Declare state variable for the anchor element
@@ -70,6 +67,13 @@ const MobileMenu = () => {
             <BlackButton buttonText="Exec" />
           </Link>
         </MenuItem>
+        {auth.currentUser?.uid === mtcgmailuid && (
+          <MenuItem>
+            <Link to={"/dev"}>
+              <BlackButton buttonText="Dev" />
+            </Link>
+          </MenuItem>
+        )}
       </Menu>
     </div>
   );

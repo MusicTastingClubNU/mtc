@@ -165,7 +165,7 @@ export default function DateCalendarServerRequest() {
     return activity?.weekActivityEmoji ?? ""; // Default to empty string if no match found
   };
   return (
-    <div className="faq">
+    <div className={isMobile ? "faq2" : "faq"}>
       <Grid container spacing={2}>
         <Grid item xs={12} md={8}>
           <div>

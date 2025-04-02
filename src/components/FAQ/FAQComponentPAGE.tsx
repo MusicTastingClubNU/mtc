@@ -36,12 +36,17 @@ const FAQComponent = (props: Props) => {
         </h3>
 
         <h2>Q: Do I need to be in Bienen?</h2>
-        <h3 className="answers">
+        <h3 className="answers2">
           A: <b>NO!</b> Our club aims to be accessible to all students. You
           don't need to be in Bienen, be a music major, or have in-depth
           knowledge of music theory to participate!
         </h3>
 
+        <h4 className="answers">
+          Official MTC Inclusion Statement: The Music Tasting Club is open to
+          all Northwestern undergraduate students. There are no auditions, no
+          dues, and no educational requirements.
+        </h4>
         <h2>Q: What streaming service(s) do you primarily use for the club?</h2>
         <h3 className="answers">
           A:{" "}

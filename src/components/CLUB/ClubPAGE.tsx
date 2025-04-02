@@ -1,17 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
 import TitleAndDirectory from "../HOME/TitleAndDirectory";
 import { SelectChangeEvent, useMediaQuery } from "@mui/material";
 import MyClubSchedule from "./ClubSchedule";
 import DateCalendarServerRequest from "./CalendarSched";
 import ClubPlaylists from "./ClubPlaylists";
-import StarterPacks from "./StarterPacks";
+// import StarterPacks from "./StarterPacks";
 import MTCAotY from "./MTCAotY";
 import PrizeWheel from "../WE/NameWheel";
 import { useState } from "react";
 import NameWheelData from "../WE/NameWheelData.json";
-import picksData from "../WE/picksData.json";
-import YsAlbumArt from "../../imgs/manualAlbumArt/WQ24_W2_AotW.png";
 import MeetTheClubPanel from "./MeetTheClubPanel";
+import { auth, mtcgmailuid } from "../../firebase/FirebaseConfig";
 
 interface Props {}
 
@@ -32,10 +31,10 @@ const Activities = (props: Props) => {
       <MyClubSchedule />
       <DateCalendarServerRequest />
       <ClubPlaylists />
-      <StarterPacks />
+      {/* <StarterPacks /> */}
       <MTCAotY />
       <div style={{ marginTop: 40, marginBottom: 40, padding: 0 }}>
-        {isMobile ? null : (
+        {auth.currentUser?.uid === mtcgmailuid && (
           <PrizeWheel
             options={wheelOptions}
             title={pick}
