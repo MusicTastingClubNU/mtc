@@ -42,6 +42,46 @@
           }
         ],
         "spotifyPlaylistLink": "https://open.spotify.com/playlist/3ijRWOQSppaCFro2tGV8bS?si=ca2dxFL7RlirvcU8p_f_IA"
+      },
+      {
+        "weekId": 34,
+        "weekName": "WEEK 2",
+        "weekDate": "(04/10/25)",
+        "picks": [
+          {
+            "pickId": 136,
+            "pickType": "Album of the Week",
+            "songOrAlbumName": "You Forgot it in People",
+            "artistName": "Broken Social Scene",
+            "memberName": "Ryan",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b27303da841c188eb597c6cf3611"
+          },
+          {
+            "pickId": 137,
+            "pickType": "Runner Up Album of the Week",
+            "songOrAlbumName": "Ooh Rap I Yah",
+            "artistName": "George Clanton",
+            "memberName": "Reed",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273f63203e1ddd367b69808f5bb"
+          },
+          {
+            "pickId": 138,
+            "pickType": "Song of the Week",
+            "songOrAlbumName": "Demain",
+            "artistName": "Berry",
+            "memberName": "Sean",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e025f388eb9743f3a121f929661"
+          },
+          {
+            "pickId": 139,
+            "pickType": "Runner Up Song of the Week",
+            "songOrAlbumName": "Can't Run But",
+            "artistName": "Paul Simon",
+            "memberName": "Katarina",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2737117dac35f5fa0621d853480"
+          }
+        ],
+        "spotifyPlaylistLink": "https://open.spotify.com/playlist/58Gckx12ATuqiTRwJkXwEj?si=AwSucEJmTsKifF7xcXgpRw"
       }
     ]
   },

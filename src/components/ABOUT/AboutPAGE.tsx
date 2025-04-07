@@ -82,7 +82,7 @@ const execBoardList: Array<[string, string, string, any, string]> = [
     "Vibe Chair",
     "He makes sure the vibes are right",
     RyanMurphyImg,
-    "",
+    "'Just Like Heaven' by The Cure",
   ],
   ["Andrew Barrett", "Faculty Advisor", "", AndrewBarrettImg, ""],
 ];
