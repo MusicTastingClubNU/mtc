@@ -32,7 +32,7 @@ const execBoardList: Array<[string, string, string, any, string]> = [
     "Vice President",
     "Makes weekly pick slides, leads every 4th meeting",
     DanielRiveroImg,
-    "",
+    "'Dove' by Pillar Point",
   ],
   [
     "Andrew Watson",
@@ -46,7 +46,7 @@ const execBoardList: Array<[string, string, string, any, string]> = [
     "DJ",
     "Controls music during meetings, makes weekly playlists",
     ReedMalcomImg,
-    "",
+    "'Just Like Heaven' by The Cure",
   ],
   [
     "Danny Ramirez",

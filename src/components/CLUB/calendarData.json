@@ -129,10 +129,26 @@
   },
   {
     "weekActivityId": 16,
-    "weekActivityWeek": "2025-04-03",
+    "weekActivityWeek": "2025-04-10",
     "weekActivityEmoji": "♟️",
     "weekActivityTitle": "is it a real emo song title?",
     "weekActivityDetails": "Come ready to play kahoot and test your knowledge of punk songs!",
     "weekActivityHost": "Katie"
+  },
+  {
+    "weekActivityId": 17,
+    "weekActivityWeek": "2025-04-24",
+    "weekActivityEmoji": "🗳️",
+    "weekActivityTitle": "MTC ELECTION",
+    "weekActivityDetails": "",
+    "weekActivityHost": ""
+  },
+  {
+    "weekActivityId": 18,
+    "weekActivityWeek": "2025-04-12",
+    "weekActivityEmoji": "🚗",
+    "weekActivityTitle": "VINYL TRIP",
+    "weekActivityDetails": "Show up at the **Foster Train Station** at **12:00PM** for a trip to the vinyl store in Andersonville!",
+    "weekActivityHost": "Arch"
   }
 ]
