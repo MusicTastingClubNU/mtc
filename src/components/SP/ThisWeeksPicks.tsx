@@ -91,6 +91,7 @@ export default function ThisWeeksPicks() {
                           fontWeight: "bold",
                           margin: 5,
                           fontSize: 18,
+                          wordBreak: "break-word",
                         }}
                       >
                         {pick.songOrAlbumName !== "N/A" ? (
@@ -104,6 +105,7 @@ export default function ThisWeeksPicks() {
                           fontWeight: "bold",
                           margin: 5,
                           fontSize: 15,
+                          wordBreak: "break-word",
                         }}
                       >
                         {pick.songOrAlbumName !== "N/A" && (
