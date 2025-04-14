@@ -60,7 +60,7 @@ const execBoardList: Array<[string, string, string, any, string]> = [
     "Print Media Chair",
     "Writes for the MTC Blog, sends out the listservs",
     CoreyDubinImg,
-    "",
+    "'Rio' by Duran Duran",
   ],
   [
     "Simon Olshan-Cantin",
