@@ -82,6 +82,46 @@
           }
         ],
         "spotifyPlaylistLink": "https://open.spotify.com/playlist/58Gckx12ATuqiTRwJkXwEj?si=AwSucEJmTsKifF7xcXgpRw"
+      },
+      {
+        "weekId": 35,
+        "weekName": "WEEK 3",
+        "weekDate": "(04/17/25)",
+        "picks": [
+          {
+            "pickId": 140,
+            "pickType": "Album of the Week",
+            "songOrAlbumName": "choke enough",
+            "artistName": "Oklou",
+            "memberName": "Cai",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273620da415625eabce19e95625"
+          },
+          {
+            "pickId": 141,
+            "pickType": "Runner Up Album of the Week",
+            "songOrAlbumName": "World Clique",
+            "artistName": "Deee-Lite",
+            "memberName": "Grace",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273cbcb5083c56df2a557625bca"
+          },
+          {
+            "pickId": 142,
+            "pickType": "Song of the Week",
+            "songOrAlbumName": "Burfict!",
+            "artistName": "JPEGMAFIA/Danny Brown",
+            "memberName": "AJ",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2738cf4c85912fdeb106707fb4c"
+          },
+          {
+            "pickId": 143,
+            "pickType": "Runner Up Song of the Week",
+            "songOrAlbumName": "Future History",
+            "artistName": "Lucas Sital-Singh",
+            "memberName": "Aidan",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273b7684d7b59779e01be419092"
+          }
+        ],
+        "spotifyPlaylistLink": "https://open.spotify.com/playlist/6klFun9rIBt9hRQOoVHnSR?si=5a69_weXSYq31t-2jfRjTQ"
       }
     ]
   },
@@ -728,7 +768,7 @@
             "pickType": "Runner Up Song of the Week",
             "songOrAlbumName": "The Weight",
             "artistName": "The Band",
-            "memberName": "ie",
+            "memberName": "Archie",
             "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b27343514544b879aede26b32cf4"
           }
         ],

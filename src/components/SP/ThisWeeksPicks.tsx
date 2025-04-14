@@ -8,7 +8,7 @@ import YsAlbumArt from "../../imgs/manualAlbumArt/WQ24_W2_AotW.png";
 export default function ThisWeeksPicks() {
   const isMobile = useMediaQuery("(max-width: 768px)");
   const currQuarter = "SQ25";
-  const currWeek = "WEEK 2";
+  const currWeek = "WEEK 3";
 
   const meetingDay = "THURSDAY";
   const meetingTime = "6:00-7:15";
@@ -37,9 +37,22 @@ export default function ThisWeeksPicks() {
                 {week.picks.map((pick: any, pickIndex: number) => (
                   <div
                     key={`pick-${quarterIndex}-${weekIndex}-${pickIndex}`}
-                    className="picks-history"
+                    className={
+                      isMobile ? "picks-history-mobile" : "picks-history"
+                    }
                   >
                     {pick.pickType === "Song of the Week" ? (
+                      <div
+                        style={{
+                          fontWeight: "bold",
+                          marginBottom: 34,
+                          marginTop: 10,
+                          fontSize: "15px",
+                        }}
+                      >
+                        {pick.pickType}:
+                      </div>
+                    ) : pick.pickType === "Album of the Week" && isMobile ? (
                       <div
                         style={{
                           fontWeight: "bold",
@@ -102,6 +115,7 @@ export default function ThisWeeksPicks() {
                           fontWeight: "bold",
                           margin: 5,
                           fontSize: 12,
+                          height: "100%",
                         }}
                       >
                         <br />

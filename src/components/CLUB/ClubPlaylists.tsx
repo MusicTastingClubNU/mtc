@@ -8,6 +8,13 @@ import holidays24PlaylistImg from "../../imgs/spotifyPlaylistCovers/holidays24Pl
 import hipHopWorkoutPlaylistImg from "../../imgs/spotifyPlaylistCovers/hipHopWorkoutPlaylistImg.png";
 import logo from "../../imgs/MTCLogo/MTC_logo.png";
 import { useMediaQuery } from "@mui/material";
+import { fetchSpecialSpotifyPlaylists } from "../../firebase/FirebaseFunctions";
+import { useEffect, useState } from "react";
+type specialSpotifyPlaylistType = {
+  name: string;
+  link: string;
+  madeBy: string;
+};
 const ClubPlaylists = () => {
   const playlistImgs = [
     logo,
@@ -17,8 +24,21 @@ const ClubPlaylists = () => {
     holidays24PlaylistImg,
     logo,
     logo,
+    logo,
+    logo,
+    logo,
   ];
   const isMobile = useMediaQuery("(max-width: 768px)");
+  const [playlists, setPlaylists] = useState<specialSpotifyPlaylistType[]>([]);
+
+  useEffect(() => {
+    const loadData = async () => {
+      const data = await fetchSpecialSpotifyPlaylists();
+      setPlaylists(data);
+    };
+
+    loadData();
+  }, []);
   return (
     <>
       <div className={isMobile ? "faq2" : "faq"}>
@@ -39,12 +59,17 @@ const ClubPlaylists = () => {
         <div className="spotify-cont">
           {/* I did the line below bc Typescript is finicky when you're looping through data 
             and you want to show images. I loop through the existing data, and the index of the entry corresponds with the */}
-          {Object.entries(specialSpotifyPlaylistData).map(
-            ([key, value], index) => (
+          {playlists.map((playlist, index) => (
+            <>
+              {/* {value.name.includes("ShoutOuts!") && ( */}
               <div className="spotify-playlists">
-                <a href={value.link} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={playlist.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
-                    src={playlistImgs[index]}
+                    src={logo}
                     alt="Playlist Photo"
                     className="company-logos"
                     style={{
@@ -56,9 +81,13 @@ const ClubPlaylists = () => {
                   />
                 </a>
 
-                <div style={{ padding: 10 }}>{value.name}</div>
-                <div>Made By {value.madeBy}</div>
-                <a href={value.link} target="_blank" rel="noopener noreferrer">
+                <div style={{ padding: 10 }}>{playlist.name}</div>
+                <div>Made By {playlist.madeBy}</div>
+                <a
+                  href={playlist.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
                     src={spotifyImg}
                     alt="Spotify Logo"
@@ -68,8 +97,9 @@ const ClubPlaylists = () => {
                 </a>
                 <br />
               </div>
-            )
-          )}
+              {/* )} */}
+            </>
+          ))}
         </div>
       </div>
     </>
