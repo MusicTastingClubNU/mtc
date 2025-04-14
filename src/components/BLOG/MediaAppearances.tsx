@@ -73,10 +73,18 @@ const MediaAppearances = () => {
           }}
         >
           <div style={{ padding: 25 }}>
-            <h3 style={{ fontSize: "20px" }}>
-              New student organizations receive $11,000 in funding from ASG
-              Senate
-            </h3>
+            {isMobile ? (
+              <h3 style={{ fontSize: "20px", textAlign: "center" }}>
+                New student organizations receive $11,000 in funding from ASG
+                Senate
+              </h3>
+            ) : (
+              <h3 style={{ fontSize: "20px" }}>
+                New student organizations receive $11,000 in funding from ASG
+                Senate
+              </h3>
+            )}
+
             <div
               style={{
                 alignContent: "center",
@@ -85,21 +93,69 @@ const MediaAppearances = () => {
                 marginTop: 15,
               }}
             >
-              <img
-                src={theDailyASGSenateMeetingImg}
-                style={{
-                  minWidth: "175px",
-                  maxWidth: "175px",
-                  maxHeight: "125px",
-                  minHeight: "125px",
-                  position: "relative",
-                }}
-              ></img>
+              {isMobile ? (
+                <>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexWrap: "wrap",
+                      alignItems: "center",
+                    }}
+                  >
+                    <img
+                      src={theDailyASGSenateMeetingImg}
+                      style={{
+                        minWidth: "160px",
+                        maxHeight: "120px",
+                        minHeight: "120px",
+                        marginBottom: "20px",
+                      }}
+                      alt="ASG Senate"
+                    />
+                    <div style={{ flex: "1 1 0px", minWidth: "200px" }}>
+                      <h5 style={{ color: "gray" }}>{asgSenate}</h5>
+                      <h5 style={{ color: "lightgray" }}>
+                        Continue Reading...
+                      </h5>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <img
+                    src={theDailyASGSenateMeetingImg}
+                    style={{
+                      minWidth: "175px",
+                      maxWidth: "175px",
+                      maxHeight: "125px",
+                      minHeight: "125px",
+                      position: "relative",
+                    }}
+                  ></img>
+                  <div>
+                    <h5
+                      style={{
+                        color: "gray",
+                        marginLeft: 20,
+                      }}
+                    >
+                      {asgSenate}
+                    </h5>
+                    <h5 style={{ color: "lightgray", marginLeft: 20 }}>
+                      Continue Reading...
+                    </h5>
+                  </div>
+                </>
+              )}
               <div>
-                <h5 style={{ color: "gray", marginLeft: 20 }}>{asgSenate}</h5>
-                <h5 style={{ color: "lightgray", marginLeft: 20 }}>
-                  Continue Reading...
-                </h5>
+                {/* <h5
+                  style={{
+                    color: "gray",
+                    marginLeft: 20,
+                  }}
+                >
+                  {asgSenate}
+                </h5> */}
               </div>
             </div>
             <div
