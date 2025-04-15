@@ -6,14 +6,36 @@ import instaImg from "../../imgs/companyLogos/instalogo.png";
 import appMusImg from "../../imgs/companyLogos/applemusiclogo.png";
 import groupMeImg from "../../imgs/companyLogos/groupmelogo.png";
 import googleFormImg from "../../imgs/companyLogos/googleformlogo.png";
-// import listservImg from "../../imgs/listservimg.png"; // Commented out since it's not used
+import { useEffect, useState } from "react";
+import {
+  fetchGroupMeLink,
+  fetchInterestForm,
+} from "../../firebase/FirebaseFunctions";
+import { interestFormType, groupMeLinkType } from "../../firebase/models";
 
 function Socials() {
+  const [interestForm, setInterestForm] = useState<interestFormType[]>([]);
+  const [groupMeLink, setGroupMeLink] = useState<groupMeLinkType[]>([]);
+
+  useEffect(() => {
+    const loadData = async () => {
+      const data = await fetchInterestForm();
+      setInterestForm(data);
+    };
+    loadData();
+  }, []);
+  useEffect(() => {
+    const loadData = async () => {
+      const data = await fetchGroupMeLink();
+      setGroupMeLink(data);
+    };
+    loadData();
+  }, []);
   return (
     <Grid container spacing={2} justifyContent="center" alignItems="center">
       <Grid item xs={10} sm={4} md={3} className="inner-logo-cont">
         <a
-          href="https://forms.gle/VL4r1N3DfV5GCQov9"
+          href={interestForm[0]?.link ?? "#"}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -28,7 +50,7 @@ function Socials() {
 
       <Grid item xs={10} sm={4} md={3} className="inner-logo-cont">
         <a
-          href="https://groupme.com/join_group/98384670/EHkMPGSy"
+          href={groupMeLink[0]?.link ?? "#"}
           target="_blank"
           rel="noopener noreferrer"
         >

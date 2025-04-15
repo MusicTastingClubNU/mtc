@@ -90,7 +90,7 @@ function fakeFetch(date: Dayjs, { signal }: { signal: AbortSignal }) {
   });
 }
 
-const initialValue = dayjs("2025-04-10");
+const initialValue = dayjs("2025-04-17");
 
 function ServerDay(
   props: PickersDayProps<Dayjs> & { meetings?: Dayjs[]; emoji?: string }
