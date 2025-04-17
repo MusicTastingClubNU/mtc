@@ -150,5 +150,13 @@
     "weekActivityTitle": "VINYL TRIP",
     "weekActivityDetails": "Show up at the Plex Parking Garage for a trip to the Vinyl Shop in Andersonville!",
     "weekActivityHost": "Arch"
+  },
+  {
+    "weekActivityId": 19,
+    "weekActivityWeek": "2025-04-17",
+    "weekActivityEmoji": "♟️",
+    "weekActivityTitle": "Graduation Song Bracket",
+    "weekActivityDetails": "Come to the meeting to help us decide what the best graduation song is!",
+    "weekActivityHost": "Simon"
   }
 ]
