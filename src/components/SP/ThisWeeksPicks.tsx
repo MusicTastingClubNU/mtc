@@ -8,7 +8,7 @@ import YsAlbumArt from "../../imgs/manualAlbumArt/WQ24_W2_AotW.png";
 export default function ThisWeeksPicks() {
   const isMobile = useMediaQuery("(max-width: 768px)");
   const currQuarter = "SQ25";
-  const currWeek = "WEEK 3";
+  const currWeek = "WEEK 4";
 
   const meetingDay = "THURSDAY";
   const meetingTime = "6:00-7:15";

@@ -1,6 +1,27 @@
 {
-  "AotW": ["Simon", "Sid", "Abbie"],
+  "AotW": [
+    "SID HAS AOTW",
+    "Corey",
+    "Jameson",
+    "Katarina",
+    "Sean",
+    "AJ",
+    "Aidan",
+    "Simon",
+    "Derrick"
+  ],
   "RUAotW": ["NAME"],
-  "SotW": ["NAME"],
+  "SotW": [
+    "DANIEL HAS SOTW",
+    "ARCHIE HAS RUSOTW",
+    "Andrew",
+    "Katie",
+    "Ryan",
+    "Reed",
+    "Cai",
+    "Grace",
+    "Joseph",
+    "Abbie"
+  ],
   "RUSotW": ["NAME"]
 }

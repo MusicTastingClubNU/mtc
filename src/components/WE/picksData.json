@@ -122,6 +122,46 @@
           }
         ],
         "spotifyPlaylistLink": "https://open.spotify.com/playlist/6klFun9rIBt9hRQOoVHnSR?si=5a69_weXSYq31t-2jfRjTQ"
+      },
+      {
+        "weekId": 36,
+        "weekName": "WEEK 4",
+        "weekDate": "(04/24/25)",
+        "picks": [
+          {
+            "pickId": 144,
+            "pickType": "Album of the Week",
+            "songOrAlbumName": "",
+            "artistName": "",
+            "memberName": "Joseph",
+            "songOrAlbumArt": ""
+          },
+          {
+            "pickId": 145,
+            "pickType": "Runner Up Album of the Week",
+            "songOrAlbumName": "",
+            "artistName": "",
+            "memberName": "Abbie",
+            "songOrAlbumArt": ""
+          },
+          {
+            "pickId": 146,
+            "pickType": "Song of the Week",
+            "songOrAlbumName": "",
+            "artistName": "",
+            "memberName": "Derrick",
+            "songOrAlbumArt": ""
+          },
+          {
+            "pickId": 147,
+            "pickType": "Runner Up Song of the Week",
+            "songOrAlbumName": "Strange Weather",
+            "artistName": "Slaughter Beach, Dog",
+            "memberName": "Simon",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2737681b2b09229464b8d18b4c8"
+          }
+        ],
+        "spotifyPlaylistLink": ""
       }
     ]
   },

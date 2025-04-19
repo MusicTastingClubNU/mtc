@@ -10,26 +10,42 @@ import { useEffect, useState } from "react";
 import {
   fetchGroupMeLink,
   fetchInterestForm,
+  fetchInstagram,
+  fetchSpotify,
 } from "../../firebase/FirebaseFunctions";
-import { interestFormType, groupMeLinkType } from "../../firebase/models";
+import {
+  interestFormType,
+  groupMeLinkType,
+  instagramLinkType,
+  spotifyLinkType,
+} from "../../firebase/models";
 
 function Socials() {
   const [interestForm, setInterestForm] = useState<interestFormType[]>([]);
   const [groupMeLink, setGroupMeLink] = useState<groupMeLinkType[]>([]);
-
+  const [instagramLink, setInstagramLink] = useState<instagramLinkType[]>([]);
+  const [spotifyLink, setSpotifyLink] = useState<instagramLinkType[]>([]);
   useEffect(() => {
-    const loadData = async () => {
+    const loadInterestForm = async () => {
       const data = await fetchInterestForm();
       setInterestForm(data);
     };
-    loadData();
-  }, []);
-  useEffect(() => {
-    const loadData = async () => {
+    const loadGroupMe = async () => {
       const data = await fetchGroupMeLink();
       setGroupMeLink(data);
     };
-    loadData();
+    const loadInstagram = async () => {
+      const data = await fetchInstagram();
+      setInstagramLink(data);
+    };
+    const loadSpotify = async () => {
+      const data = await fetchSpotify();
+      setSpotifyLink(data);
+    };
+    loadInterestForm();
+    loadGroupMe();
+    loadInstagram();
+    loadSpotify();
   }, []);
   return (
     <Grid container spacing={2} justifyContent="center" alignItems="center">
@@ -65,7 +81,7 @@ function Socials() {
 
       <Grid item xs={10} sm={4} md={3} className="inner-logo-cont">
         <a
-          href="https://open.spotify.com/user/31apxxxqaadrj24rjilx75insprq"
+          href={spotifyLink[0]?.link ?? "#"}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -76,7 +92,7 @@ function Socials() {
 
       <Grid item xs={10} sm={4} md={3} className="inner-logo-cont">
         <a
-          href="https://www.instagram.com/musictastingclub?igsh=M2hobjkxa29ja3Jq&utm_source=qr"
+          href={instagramLink[0]?.link ?? "#"}
           target="_blank"
           rel="noopener noreferrer"
         >
