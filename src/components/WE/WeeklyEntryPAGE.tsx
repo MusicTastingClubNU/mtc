@@ -239,7 +239,7 @@ export default function WeeklyEntry() {
   };
 
   //As of Winter Quarter 2025, there will be 4 quarters of MTC
-  const numberOfQuarterTabsBelowPREVIOUSPICKS = 4;
+  const numberOfQuarterTabsBelowPREVIOUSPICKS = 5;
   const widthOfTabs = 100 / numberOfQuarterTabsBelowPREVIOUSPICKS;
   const stringThatDictatesNumberOfTabsBelowPREVIOUSPICKS =
     widthOfTabs.toString() + "%";

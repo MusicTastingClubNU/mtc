@@ -1,36 +1,36 @@
 import { Autocomplete, TextField, useMediaQuery } from "@mui/material";
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../firebase/FirebaseConfig";
 import YsAlbumArt from "../../imgs/manualAlbumArt/WQ24_W2_AotW.png";
-import picksData from "./picksData.json";
+
+interface Pick {
+  pickId: number;
+  pickType: string;
+  songOrAlbumName: string;
+  artistName: string;
+  memberName: string;
+  songOrAlbumArt: string;
+}
 
 export default function HaveWeListenedToIt() {
-  interface Pick {
-    pickId: number;
-    pickType: string;
-    songOrAlbumName: string;
-    artistName: string;
-    memberName: string;
-    songOrAlbumArt: string;
-  }
-
   const [selectedOpt, setSelectedOpt] = useState<Pick | null>(null);
   const [haveWeListenedToIt, setHaveWeListenedToIt] = useState("");
   const [inputValue, setInputValue] = useState("");
+  const [options, setOptions] = useState<Pick[]>([]);
+  const isMobile = useMediaQuery("(max-width: 768px)");
+
   const handleInputChange = (event: React.ChangeEvent<{}>, value: string) => {
     setInputValue(value);
   };
+
   const handleChange2 = (event: React.ChangeEvent<{}>, value: Pick | null) => {
     setSelectedOpt(value);
-    if (value) {
-      setHaveWeListenedToIt("YES");
-    } else if (inputValue === undefined) {
-      setHaveWeListenedToIt("");
-    } else {
-      setHaveWeListenedToIt("");
-    }
+    setHaveWeListenedToIt(value ? "YES" : "");
   };
+
   const [colorOfHWLToIt, setColorOfHWLToIt] = useState("");
+
   useEffect(() => {
     if (haveWeListenedToIt === "YES") {
       setColorOfHWLToIt("green");
@@ -38,25 +38,45 @@ export default function HaveWeListenedToIt() {
       setColorOfHWLToIt("");
     }
   }, [haveWeListenedToIt]);
-  const isMobile = useMediaQuery("(max-width: 768px)");
 
-  const options = picksData.flatMap((quarter) =>
-    quarter.weeks.flatMap((week) =>
-      week.picks
-        .filter((pick) => pick.songOrAlbumName !== "N/A")
-        .map((pick) => ({
-          songOrAlbumName: pick.songOrAlbumName, // The text displayed in the dropdown
-          pickId: pick.pickId,
-          artistName: pick.artistName,
-          songOrAlbumArt:
-            pick.songOrAlbumArt === "Q1W2AotW"
-              ? YsAlbumArt
-              : pick.songOrAlbumArt,
-          memberName: pick.memberName,
-          pickType: pick.pickType,
-        }))
-    )
-  );
+  useEffect(() => {
+    const fetchAllPicks = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, "pickData"));
+        const allPicks: Pick[] = [];
+
+        querySnapshot.forEach((docSnap) => {
+          const data = docSnap.data();
+          if (data?.weeks) {
+            data.weeks.forEach((week: any) => {
+              week.picks.forEach((pick: any) => {
+                if (pick.songOrAlbumName !== "N/A") {
+                  allPicks.push({
+                    songOrAlbumName: pick.songOrAlbumName,
+                    pickId: pick.pickId,
+                    artistName: pick.artistName,
+                    songOrAlbumArt:
+                      pick.songOrAlbumArt === "Q1W2AotW"
+                        ? YsAlbumArt
+                        : pick.songOrAlbumArt,
+                    memberName: pick.memberName,
+                    pickType: pick.pickType,
+                  });
+                }
+              });
+            });
+          }
+        });
+
+        setOptions(allPicks);
+      } catch (err) {
+        console.error("Error fetching picks from Firebase:", err);
+      }
+    };
+
+    fetchAllPicks();
+  }, []);
+
   return (
     <div className={isMobile ? "cont2" : "cont"}>
       <h3 style={{ fontSize: 35, textAlign: "center" }}>
@@ -90,19 +110,10 @@ export default function HaveWeListenedToIt() {
               style={{ width: 50, marginRight: 10 }}
             />
             {option.songOrAlbumName} - {option.artistName} [
-            {option.pickType.length === 17
-              ? "Album"
-              : option.pickType.length === 27
-              ? "Album"
-              : option.pickType.length === 16
-              ? "Song"
-              : option.pickType.length === 26
-              ? "Song"
-              : ""}
-            ]
+            {option.pickType.includes("Album") ? "Album" : "Song"}]
           </li>
         )}
-        noOptionsText="Hmm...looks like we haven't listed to this yet..."
+        noOptionsText="Hmm...looks like we haven't listened to this yet..."
       />
     </div>
   );
