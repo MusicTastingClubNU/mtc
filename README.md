@@ -8,4 +8,4 @@ The HOME page is the first page the user is brought to. This page is represented
 
 ## PICKS (src >> components >> WE >> `WeeklyEntry.tsx`)
 
-The PICKS page is the most robust page on the website. This page is represented by the `<WeeklyEntry />` tag. It includes the data from the club's previous picks (from each of its previous quarters of operation). This data can be found in the WE >> `picksData.json` file. Next, the page includes the `<ThisWeeksPick />` component as the **HOME** page does. On Desktop, the site includes a name wheel to keep track of the people who have/haven't picked an album or song in the current quarter (represented by `<PrizeWheel />`).
+The PICKS page is the most robust page on the website. This page is represented by the `<WeeklyEntry />` tag. It includes the data from the club's previous picks (from each of its previous quarters of operation). This data is stored using Google Cloud. Next, the page includes the `<ThisWeeksPick />` component as the **HOME** page does. On Desktop, the site includes a name wheel to keep track of the people who have/haven't picked an album or song in the current quarter (represented by `<PrizeWheel />`).

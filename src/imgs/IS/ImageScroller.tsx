@@ -1,8 +1,9 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useState, useEffect } from "react";
 import "./ImageScroller.css";
 import albumArtLinks from "../../components/WE/picksData.json";
 import { manualArtLoader } from "./ManualImageLoader";
-
+import { db } from "../../firebase/FirebaseConfig";
+import { collection, getDocs } from "firebase/firestore";
 interface Pick {
   pickId: number;
   pickType: string;
@@ -31,39 +32,72 @@ interface Quarter {
   quarterName: string;
   weeks: Week[];
 }
-
-// 🔹 Use ReactNode instead of JSX.Element[]
-const getSongOrAlbumArtComponents = (): ReactNode => {
-  return albumArtLinks.flatMap((quarter) =>
-    quarter.weeks.flatMap((week) =>
-      week.picks.flatMap((pick) => {
-        if (!pick.songOrAlbumArt) return [];
-        if (pick.songOrAlbumArt.startsWith("h")) {
-          return [
-            <img
-              key={`quarter-${quarter.quarterId}-week-${week.weekId}-pick-${pick.pickId}`}
-              src={pick.songOrAlbumArt}
-              alt={pick.songOrAlbumName}
-              style={{ width: "100px", height: "100px", margin: "10px" }}
-            />,
-          ];
-        }
-        if (pick.songOrAlbumArt.startsWith("Q")) {
-          return [manualArtLoader(pick.songOrAlbumArt)];
-        }
-        return [];
-      })
-    )
-  );
-};
-
 function ImageScroller() {
-  const images = getSongOrAlbumArtComponents();
+  const [images, setImages] = useState<ReactNode[]>([]);
+
+  useEffect(() => {
+    const fetchArtImages = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, "pickData"));
+        const allQuarters: Quarter[] = [];
+
+        querySnapshot.forEach((doc) => {
+          const data = doc.data();
+          if (data?.weeks?.length) {
+            allQuarters.push(data as Quarter);
+          }
+        });
+
+        // Sort quarters by descending quarterId
+        allQuarters.sort((a, b) => b.quarterId - a.quarterId);
+
+        // Process from most recent to oldest
+        const imageComponents: ReactNode[] = allQuarters.flatMap((quarter) =>
+          [...quarter.weeks]
+            .sort((a, b) => b.weekId - a.weekId) // Reverse weeks within each quarter
+            .flatMap((week) =>
+              [...week.picks]
+                .reverse() // Reverse picks within each week
+                .flatMap((pick) => {
+                  if (!pick.songOrAlbumArt) return [];
+
+                  if (pick.songOrAlbumArt.startsWith("h")) {
+                    return (
+                      <img
+                        key={`q-${quarter.quarterId}-w-${week.weekId}-p-${pick.pickId}`}
+                        src={pick.songOrAlbumArt}
+                        alt={pick.songOrAlbumName}
+                        style={{
+                          width: "100px",
+                          height: "100px",
+                          margin: "10px",
+                        }}
+                      />
+                    );
+                  }
+
+                  if (pick.songOrAlbumArt.startsWith("Q")) {
+                    return manualArtLoader(pick.songOrAlbumArt);
+                  }
+
+                  return [];
+                })
+            )
+        );
+
+        setImages(imageComponents);
+      } catch (err) {
+        console.error("Error loading image art from Firestore:", err);
+      }
+    };
+
+    fetchArtImages();
+  }, []);
 
   const imagesPerRow = 6;
   const numLines = 6;
   const totalImages = imagesPerRow * numLines;
-  const extendedImages = Array.from({ length: 2 }, () => images).flat(); // Optimized duplication
+  const extendedImages = Array.from({ length: 2 }, () => images).flat();
   const lines = Array.from({ length: numLines }, (_, i) =>
     extendedImages.slice(i * imagesPerRow, i * imagesPerRow + totalImages)
   );
