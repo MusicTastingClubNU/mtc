@@ -81,9 +81,16 @@ export default function WeeklyEntry() {
 
         querySnapshot.forEach((doc) => {
           const data = doc.data();
+
+          // Convert weeks object to array if needed
+          const weeks = Array.isArray(data.weeks)
+            ? data.weeks
+            : Object.values(data.weeks || {});
+
           allQuarters.push({
             ...data,
-            quarterName: doc.id, // doc.id is your quarterName if you're using it as the document ID
+            quarterName: data.quarterName,
+            weeks, // ✅ ensures this is always an array
           });
         });
 
@@ -113,7 +120,7 @@ export default function WeeklyEntry() {
 
   const renderRows = (weeks: any) => {
     return weeks.map((week: any, index: number) => (
-      <React.Fragment key={week.weekId}>
+      <React.Fragment key={index}>
         <TableRow sx={{ "& > *": { borderBottom: "unset" } }}>
           {/* ||| DROP DOWN ARROW CODE ||| */}
           <TableCell>
@@ -280,7 +287,7 @@ export default function WeeklyEntry() {
             >
               {picksData.map((quarter, index) => (
                 <Tab
-                  key={quarter.quarterName}
+                  key={index}
                   label={`${quarter.quarterName} Picks`}
                   {...a11yProps(index)}
                   sx={{
@@ -293,11 +300,7 @@ export default function WeeklyEntry() {
 
           {/* ||| IMPLEMENTS WEEK PICK DROPDOWN CODE ||| */}
           {picksData.map((quarter, index) => (
-            <CustomTabPanel
-              key={quarter.quarterName}
-              value={value}
-              index={index}
-            >
+            <CustomTabPanel key={index} value={value} index={index}>
               <TableContainer component={Paper}>
                 <Table aria-label="collapsible table">
                   <TableBody>{renderRows(quarter.weeks)}</TableBody>

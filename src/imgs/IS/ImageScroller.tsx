@@ -34,7 +34,7 @@ interface Quarter {
 }
 function ImageScroller() {
   const [images, setImages] = useState<ReactNode[]>([]);
-
+  const [animationReady, setAnimationReady] = useState(false);
   useEffect(() => {
     const fetchArtImages = async () => {
       try {
@@ -48,44 +48,39 @@ function ImageScroller() {
           }
         });
 
-        // Sort quarters by descending quarterId
         allQuarters.sort((a, b) => b.quarterId - a.quarterId);
 
-        // Process from most recent to oldest
         const imageComponents: ReactNode[] = allQuarters.flatMap((quarter) =>
           [...quarter.weeks]
-            .sort((a, b) => b.weekId - a.weekId) // Reverse weeks within each quarter
+            .sort((a, b) => b.weekId - a.weekId)
             .flatMap((week) =>
-              [...week.picks]
-                .reverse() // Reverse picks within each week
-                .flatMap((pick) => {
-                  if (!pick.songOrAlbumArt) return [];
+              [...week.picks].reverse().flatMap((pick) => {
+                if (!pick.songOrAlbumArt) return [];
 
-                  if (pick.songOrAlbumArt.startsWith("h")) {
-                    return (
-                      <img
-                        key={`q-${quarter.quarterId}-w-${week.weekId}-p-${pick.pickId}`}
-                        src={pick.songOrAlbumArt}
-                        alt={pick.songOrAlbumName}
-                        style={{
-                          width: "100px",
-                          height: "100px",
-                          margin: "10px",
-                        }}
-                      />
-                    );
-                  }
-
-                  if (pick.songOrAlbumArt.startsWith("Q")) {
-                    return manualArtLoader(pick.songOrAlbumArt);
-                  }
-
-                  return [];
-                })
+                if (pick.songOrAlbumArt.startsWith("h")) {
+                  return (
+                    <img
+                      key={`q-${quarter.quarterId}-w-${week.weekId}-p-${pick.pickId}`}
+                      src={pick.songOrAlbumArt}
+                      alt={pick.songOrAlbumName}
+                      style={{
+                        width: "100px",
+                        height: "100px",
+                        margin: "10px",
+                      }}
+                    />
+                  );
+                }
+                if (pick.songOrAlbumArt.startsWith("Q")) {
+                  return manualArtLoader(pick.songOrAlbumArt);
+                }
+                return [];
+              })
             )
         );
 
         setImages(imageComponents);
+        setAnimationReady(true); // ✅ Trigger animation class
       } catch (err) {
         console.error("Error loading image art from Firestore:", err);
       }
@@ -105,7 +100,10 @@ function ImageScroller() {
   return (
     <div className="logos">
       {lines.map((lineImages, lineIndex) => (
-        <div className="logos-slide" key={lineIndex}>
+        <div
+          className={`logos-slide ${animationReady ? "animate" : ""}`}
+          key={lineIndex}
+        >
           {lineImages.map((image, imgIndex) => (
             <div key={`line-${lineIndex}-${imgIndex}`} className="logo2">
               {image}
