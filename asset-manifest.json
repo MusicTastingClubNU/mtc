@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.87327b0c.css",
-    "main.js": "/static/js/main.3b06a074.js",
+    "main.js": "/static/js/main.106c1eaf.js",
     "static/media/MTC_club_photo_FQ24.png": "/static/media/MTC_club_photo_FQ24.5d6dcd289e52275f5efe.png",
     "static/media/MTC_club_photo_WQ25.jpg": "/static/media/MTC_club_photo_WQ25.4b4d81f060f7ebdd6e75.jpg",
     "static/media/SimonOlshanCantin.png": "/static/media/SimonOlshanCantin.1812dfb93638ca3313ab.png",
@@ -11,27 +11,24 @@
     "static/media/hipHopWorkoutPlaylistImg.png": "/static/media/hipHopWorkoutPlaylistImg.628f14b032aaa3263c43.png",
     "static/media/CoreyDubin.png": "/static/media/CoreyDubin.d07661d39df479d0c8c4.png",
     "static/media/WQ24_W2_AotW.png": "/static/media/WQ24_W2_AotW.3f6b617402633e9d2554.png",
-    "static/media/ReedMalcom.png": "/static/media/ReedMalcom.2d6e1033ffca477624f9.png",
     "static/media/AndrewBarrett.png": "/static/media/AndrewBarrett.eb9837795179e306d73b.png",
     "static/media/halloween24PlaylistImg.png": "/static/media/halloween24PlaylistImg.ffdebaf1aa27f6d6eee8.png",
     "static/media/instalogo.png": "/static/media/instalogo.e905e80e3d57cc2b32c7.png",
     "static/media/holidays24PlaylistImg.png": "/static/media/holidays24PlaylistImg.a726d82144af0bbf5c35.png",
-    "static/media/AidanMott.png": "/static/media/AidanMott.973e8a333442824e06e5.png",
     "static/media/Roboto-Regular.ttf": "/static/media/Roboto-Regular.27f62b53b93858475a7f.ttf",
     "static/media/Roboto-Bold.ttf": "/static/media/Roboto-Bold.d50a80138ec4f2fb5e9f.ttf",
     "static/media/MTC_logo.png": "/static/media/MTC_logo.a4c1cbb58df44a722a1a.png",
     "static/media/DannyRamirez.png": "/static/media/DannyRamirez.17011642e24e7d628d6c.png",
-    "static/media/AndrewWatson.png": "/static/media/AndrewWatson.3c315a0f951d70be8cba.png",
     "static/media/TheDailyASG.png": "/static/media/TheDailyASG.628b53cfedd3b6a29cfe.png",
     "static/media/CourierPrime-Regular.ttf": "/static/media/CourierPrime-Regular.7503a2e9660bb6f608fb.ttf",
     "static/media/googleformlogo.png": "/static/media/googleformlogo.f5e00191489875080207.png",
     "static/media/groupmelogo.png": "/static/media/groupmelogo.9dfc156ee6a940c187a1.png",
     "index.html": "/index.html",
     "main.87327b0c.css.map": "/static/css/main.87327b0c.css.map",
-    "main.3b06a074.js.map": "/static/js/main.3b06a074.js.map"
+    "main.106c1eaf.js.map": "/static/js/main.106c1eaf.js.map"
   },
   "entrypoints": [
     "static/css/main.87327b0c.css",
-    "static/js/main.3b06a074.js"
+    "static/js/main.106c1eaf.js"
   ]
 }
