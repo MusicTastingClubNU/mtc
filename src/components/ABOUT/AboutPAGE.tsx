@@ -21,70 +21,55 @@ interface Props {}
 
 const execBoardList: Array<[string, string, string, any, string]> = [
   [
-    "Arch Silverstein",
-    "President/Founder",
-    "Leads meetings, makes weekly admin slides, updates website",
-    ArchieSilversteinImg,
-    '"Paul Rodriguez" by LOGIC',
-  ],
-  [
     "Daniel Rivero",
-    "Vice President",
-    "Makes weekly pick slides, leads every 4th meeting",
+    "President",
+    "Leads meetings, makes weekly admin slides, updates website",
     DanielRiveroImg,
     "'Dove' by Pillar Point",
   ],
   [
-    "Andrew Watson",
-    "Treasurer",
-    "In charge of the finances",
-    AndrewWatsonImg,
+    "Simon Olshan-Cantin",
+    "Vice President & Event Planning Co-Chair",
+    "Makes weekly pick slides, leads every 4th meeting, helps with events",
+    SimonOlshanCantinImg,
     "",
   ],
   [
-    "Reed Malcolm",
-    "DJ",
-    "Controls music during meetings, makes weekly playlists",
-    ReedMalcomImg,
-    "'Just Like Heaven' by The Cure",
-  ],
-  [
     "Danny Ramirez",
-    "Social Media Chair",
-    "Posts to our social media platforms",
+    "Treasurer",
+    "In charge of the finances",
     DannyRamirezImg,
     '"How to Disappear Completely" by Radiohead',
   ],
   [
     "Corey Dubin",
-    "Print Media Chair",
-    "Writes for the MTC Blog, sends out the listservs",
+    "Media Chair",
+    "Posts to our social media platforms, sends out weekly emails",
     CoreyDubinImg,
     "'Rio' by Duran Duran",
   ],
   [
-    "Simon Olshan-Cantin",
-    "In-Club Activity Chair",
-    "Coordinates in-club activities (games/presentations)",
-    SimonOlshanCantinImg,
+    "Katie Partee",
+    "In-Club Activity Chair & Event Planning Co-Chair",
+    "Coordinates in-club activities (games/presentations), helps with events",
+    logo,
     "",
-  ],
-
-  [
-    "Aidan Mott",
-    "Event Planning Chair",
-    "Plans club trips and events",
-    AidanMottImg,
-    '"Orange Juice" by Noah Kahan',
   ],
   [
     "Ryan Murphy",
     "Vibe Chair",
-    "He makes sure the vibes are right",
+    "He makes sure the vibes are right 😎",
     RyanMurphyImg,
     "'Just Like Heaven' by The Cure",
   ],
   ["Andrew Barrett", "Faculty Advisor", "", AndrewBarrettImg, ""],
+  [
+    "Arch Silverstein",
+    "Founder",
+    "Founded MTC, built the website, gone but not forgotten ❤️",
+    ArchieSilversteinImg,
+    "",
+  ],
 ];
 const ExecBoard = (props: Props) => {
   const isMobile = useMediaQuery("(max-width: 768px)");
@@ -104,8 +89,8 @@ const ExecBoard = (props: Props) => {
                 className="exec-board-img"
               ></img>
               <h2>{item[0]}</h2>
-              <h3>{item[1]}</h3>
-              <h4>{item[2]}</h4>
+              <h3 style={{ paddingBottom: 10 }}>{item[1]}</h3>
+              <h4 style={{ paddingBottom: 10 }}>{item[2]}</h4>
               {item[4] && (
                 <h5 style={{ marginTop: 7 }}>Favorite Song: {item[4]}</h5>
               )}
