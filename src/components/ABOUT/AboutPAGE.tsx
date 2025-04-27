@@ -44,7 +44,7 @@ const execBoardList: Array<[string, string, string, any, string]> = [
   [
     "Corey Dubin",
     "Media Chair",
-    "Posts to our social media platforms, sends out weekly emails",
+    "Posts to MTC's social media platforms, sends out weekly emails",
     CoreyDubinImg,
     "'Rio' by Duran Duran",
   ],
