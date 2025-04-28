@@ -162,6 +162,46 @@
           }
         ],
         "spotifyPlaylistLink": "https://open.spotify.com/playlist/59fUoiGH0V5oCnoAVGPkoA?si=BwK9Klz_RAWGSUPeGQ3LXw"
+      },
+      {
+        "weekId": 37,
+        "weekName": "WEEK 5",
+        "weekDate": "(05/01/25)",
+        "picks": [
+          {
+            "pickId": 148,
+            "pickType": "Album of the Week",
+            "songOrAlbumName": "Introspection",
+            "artistName": "Luiz Bonfa",
+            "memberName": "Sid",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2733e675545232f670a2798b7ad"
+          },
+          {
+            "pickId": 149,
+            "pickType": "Runner Up Album of the Week",
+            "songOrAlbumName": "Dark Times",
+            "artistName": "Vince Staples",
+            "memberName": "Susanna",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2732129eda0ae3c8426c3d4dc7d"
+          },
+          {
+            "pickId": 150,
+            "pickType": "Song of the Week",
+            "songOrAlbumName": "5 Dollar Pony Rides",
+            "artistName": "Mac Miller",
+            "memberName": "Archie",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2739a9c4cd69a6f514dfbb7305a"
+          },
+          {
+            "pickId": 151,
+            "pickType": "Runner Up Song of the Week",
+            "songOrAlbumName": "Native New Yorker",
+            "artistName": "Odyssey",
+            "memberName": "Daniel",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2733c8cb1c41b25d18e728d01dc"
+          }
+        ],
+        "spotifyPlaylistLink": "https://open.spotify.com/playlist/3CxNm2U7Ck1xSsGCvl2V5H?si=Ds6GM53LSMOSH6UC4fzrpg"
       }
     ]
   },

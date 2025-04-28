@@ -6,7 +6,7 @@ import logo from "../../imgs/MTCLogo/MTC_logo.png";
 import YsAlbumArt from "../../imgs/manualAlbumArt/WQ24_W2_AotW.png";
 import { db } from "../../firebase/FirebaseConfig";
 import { collection, getDocs, doc, getDoc } from "firebase/firestore";
-
+import spotifyImg from "../../imgs/companyLogos/spotlogo.png";
 export default function ThisWeeksPicks() {
   const isMobile = useMediaQuery("(max-width: 768px)");
 
@@ -62,7 +62,23 @@ export default function ThisWeeksPicks() {
   return (
     <div className={isMobile ? "faq2" : "faq"}>
       <h3 style={{ fontSize: 35, textAlign: "center" }}>
-        NEXT MEETING'S PICKS {latestWeek.weekDate}
+        NEXT MEETING'S PICKS {latestWeek.weekDate}{" "}
+        <a
+          href={latestWeek.spotifyPlaylistLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={spotifyImg}
+            alt="Spotify Img"
+            style={{
+              width: 50,
+              height: 50,
+              marginBottom: -12,
+              marginLeft: isMobile ? 0 : 10,
+            }}
+          />
+        </a>
       </h3>
       <div className="this-weeks-picks">
         <h3>
@@ -80,9 +96,10 @@ export default function ThisWeeksPicks() {
             <div
               style={{
                 fontWeight: "bold",
-                marginBottom: 34,
+                marginBottom: pick.pickType === "Song of the Week" ? 58 : 34,
                 marginTop: 10,
                 fontSize: "15px",
+                padding: 5,
               }}
             >
               {pick.pickType}:
