@@ -19,7 +19,7 @@ import {
   updateNextWeeksPick,
 } from "../../firebase/FirebaseFunctions";
 import { addWheelEntry } from "../../firebase/FirebaseFunctions";
-import { doc, onSnapshot } from "firebase/firestore";
+import { doc, onSnapshot, updateDoc } from "firebase/firestore";
 import { db } from "../../firebase/FirebaseConfig";
 import { getDoc } from "firebase/firestore";
 
@@ -75,6 +75,7 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({
   const [angle, setAngle] = useState(0);
   const [selectedPrize, setSelectedPrize] = useState<string | null>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [onceThruInput, setOnceThruInput] = useState("");
 
   useEffect(() => {
     setPick(title);
@@ -85,6 +86,21 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({
     SotW?: string;
     RUSotW?: string;
   }>({});
+  useEffect(() => {
+    const fetchOnceThruList = async () => {
+      try {
+        const snap = await getDoc(doc(db, "WheelEntries", "OnceThrough"));
+        if (snap.exists()) {
+          const list = snap.data().names || [];
+          setOnceThruInput(list.join(", ")); // ✅ sets input with DB data
+        }
+      } catch (err) {
+        console.error("Error fetching Once Through DB:", err);
+      }
+    };
+
+    fetchOnceThruList();
+  }, []);
 
   useEffect(() => {
     const unsubscribe = onSnapshot(
@@ -253,17 +269,6 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({
     setSelectedPrize(null);
   };
 
-  const handleCopyToClipboard = () => {
-    const data = {
-      AotW: albums,
-      RUAotW: albums,
-      SotW: songs,
-      RUSotW: songs,
-      OnceThrough: onceThru,
-    };
-    navigator.clipboard.writeText(JSON.stringify(data, null, 2));
-  };
-
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -359,14 +364,14 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({
             gap: "1rem",
           }}
         >
-          <FormControl>
+          <FormControl size="small">
             <InputLabel id="pick-label">Pick</InputLabel>
             <Select
               labelId="pick-label"
               value={pick}
               label="Pick"
               onChange={handleChange}
-              sx={{ width: 300 }}
+              sx={{ width: 270 }}
             >
               <MenuItem value="Album of the Week">Album of the Week</MenuItem>
               <MenuItem value="Runner Up Album of the Week">
@@ -378,14 +383,14 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({
               </MenuItem>
             </Select>
           </FormControl>
-          <FormControl>
+          <FormControl size="small">
             <InputLabel id="wheel-type-label">Wheel Type</InputLabel>
             <Select
               labelId="wheel-type-label"
               value={wheelType}
               label="Wheel Type"
               onChange={handleWheelTypeChange}
-              sx={{ width: 300 }}
+              sx={{ width: 225 }}
             >
               <MenuItem value="Once Through">Once Through</MenuItem>
               <MenuItem value="Everybody Picked">
@@ -434,17 +439,50 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({
           onChange={handlePrizeChange}
           value={inputValue}
           sx={{ width: 500 }}
+          size="small"
         />
+        {/* <div
+          style={{
+            flex: "wrap",
+            justifyContent: "center",
+            flexDirection: "row",
+            padding: 3,
+          }}
+        >
+          <TextField
+            label="Current Once-Thru List"
+            variant="outlined"
+            fullWidth
+            margin="normal"
+            onChange={(e) => setOnceThruInput(e.target.value)}
+            value={onceThruInput} // ✅ MUST be bound to state
+            sx={{ width: 400 }}
+            size="small"
+          />
 
-        <Box display="flex" alignItems="center" sx={{ color: "lightgray" }}>
-          <span style={{ fontSize: 20, marginRight: 10 }}>DEV</span>
-          <IconButton
-            onClick={handleCopyToClipboard}
-            sx={{ color: "lightgray" }}
+          <Button
+            variant="contained"
+            size="small"
+            sx={{ marginLeft: 5, marginTop: 2.5 }}
+            onClick={async () => {
+              const updatedList = onceThruInput
+                .split(",")
+                .map((item) => item.trim())
+                .filter(Boolean);
+
+              try {
+                await updateDoc(doc(db, "WheelEntries", "OnceThrough"), {
+                  entries: updatedList,
+                });
+                console.log("✅ Updated OnceThrough DB.");
+              } catch (err) {
+                console.error("❌ Failed to update OnceThrough DB", err);
+              }
+            }}
           >
-            <ContentCopyIcon />
-          </IconButton>
-        </Box>
+            Push List To 1ce Thru DB
+          </Button>
+        </div> */}
 
         <Dialog open={!!selectedPrize} onClose={handleDialogClose}>
           <DialogTitle sx={{ textAlign: "center", fontSize: "2rem" }}>

@@ -111,6 +111,7 @@ const Blog: React.FC = (props: Props) => {
                   value={quarter}
                   label="Quarter"
                   onChange={handleQuarterChange}
+                  size="small"
                 >
                   <MenuItem value={"FQ24"}>FQ24</MenuItem>
                   <MenuItem value={"WQ25"}>WQ25</MenuItem>
@@ -124,6 +125,7 @@ const Blog: React.FC = (props: Props) => {
                   value={reviewType}
                   label="Review"
                   onChange={handleReviewTypeChange}
+                  size="small"
                 >
                   <MenuItem value={"Album"}>Album</MenuItem>
                   {quarter !== "FQ24" && (
