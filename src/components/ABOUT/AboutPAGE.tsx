@@ -1,20 +1,17 @@
 import React from "react";
 import "../SP/mission.css";
-// import myimg from "../../imgs/logo.png";
 import { useMediaQuery } from "@mui/material";
 import TitleAndDirectory from "../HOME/TitleAndDirectory";
 import AndrewWatsonImg from "../../imgs/execBoardImgs/AndrewWatson.png";
 import ArchieSilversteinImg from "../../imgs/execBoardImgs/ArchieSilverstein.png";
 import DannyRamirezImg from "../../imgs/execBoardImgs/DannyRamirez.png";
-import ReedMalcomImg from "../../imgs/execBoardImgs/ReedMalcom.png";
-// import SusannaBobsImg from "../../imgs/execBoardImgs/SusannaBobbs.png";
 import SimonOlshanCantinImg from "../../imgs/execBoardImgs/SimonOlshanCantin.png";
 import AndrewBarrettImg from "../../imgs/execBoardImgs/AndrewBarrett.png";
 import CoreyDubinImg from "../../imgs/execBoardImgs/CoreyDubin.png";
 import DanielRiveroImg from "../../imgs/execBoardImgs/DanielRivero.png";
-import AidanMottImg from "../../imgs/execBoardImgs/AidanMott.png";
 import RyanMurphyImg from "../../imgs/execBoardImgs/RyanMurphy.png";
 import logo from "../../imgs/MTCLogo/MTC_logo.png";
+import KatiePartee from "../../imgs/execBoardImgs/KatiePartee.png";
 import Login from "../../firebase/Login";
 
 interface Props {}
@@ -52,7 +49,7 @@ const execBoardList: Array<[string, string, string, any, string]> = [
     "Katie Partee",
     "In-Club Activity Chair & Event Planning Co-Chair",
     "Coordinates in-club activities (games/presentations), helps with events",
-    logo,
+    KatiePartee,
     "",
   ],
   [

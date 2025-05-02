@@ -14,77 +14,134 @@ import {
 } from "@mui/material";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
-import ControlledCheckbox from "../../devSwitch";
+import {
+  deleteWheelEntry,
+  updateNextWeeksPick,
+} from "../../firebase/FirebaseFunctions";
+import { addWheelEntry } from "../../firebase/FirebaseFunctions";
+import { doc, onSnapshot } from "firebase/firestore";
+import { db } from "../../firebase/FirebaseConfig";
+import { getDoc } from "firebase/firestore";
 
+const fetchLatestData = async () => {
+  const albumsSnap = await getDoc(doc(db, "WheelEntries", "Albums"));
+  const songsSnap = await getDoc(doc(db, "WheelEntries", "Songs"));
+  const onceSnap = await getDoc(doc(db, "WheelEntries", "OnceThrough"));
+
+  return {
+    albums: albumsSnap.exists() ? albumsSnap.data().entries || [] : [],
+    songs: songsSnap.exists() ? songsSnap.data().entries || [] : [],
+    onceThru: onceSnap.exists() ? onceSnap.data().entries || [] : [],
+  };
+};
 interface PrizeWheelProps {
-  options: string[];
   title: string;
   handlePickChange: (event: SelectChangeEvent) => void;
-  nameWheelDataToBeCopied: {
-    AotW: string[];
-    RUAotW: string[];
-    SotW: string[];
-    RUSotW: string[];
-  };
 }
 
+const getFirestoreFieldFromPick = (pick: string): string | null => {
+  switch (pick) {
+    case "Album of the Week":
+      return "AotW";
+    case "Runner Up Album of the Week":
+      return "RUAotW";
+    case "Song of the Week":
+      return "SotW";
+    case "Runner Up Song of the Week":
+      return "RUSotW";
+    default:
+      return null;
+  }
+};
+interface PrizeWheelProps {
+  title: string;
+  albums: string[];
+  songs: string[];
+  onceThru: string[];
+  handlePickChange: (event: SelectChangeEvent) => void;
+}
 const PrizeWheel: React.FC<PrizeWheelProps> = ({
-  options,
   title,
+  albums,
+  songs,
+  onceThru,
   handlePickChange,
-  nameWheelDataToBeCopied,
 }) => {
-  const [pick, setPick] = React.useState("Album of the Week");
-
-  const handleChange = (event: SelectChangeEvent) => {
-    setPick(event.target.value as string);
-    handlePickChange(event);
-  };
-  useEffect(() => {
-    switch (pick) {
-      case "Album of the Week":
-        console.log("Album of the Week");
-        break;
-      case "Runner Up Album of the Week":
-        console.log("Runner Up Album of the Week");
-        break;
-      case "Song of the Week":
-        console.log("Song of the Week");
-        break;
-      case "Runner Up Song of the Week":
-        console.log("Runner Up Song of the Week");
-        break;
-    }
-  }, [pick]);
-
+  const [pick, setPick] = useState("Album of the Week");
+  const [wheelType, setWheelType] = useState("Once Through");
+  const [prizeList, setPrizeList] = useState<string[]>([]);
+  const [inputValue, setInputValue] = useState("");
   const [spinning, setSpinning] = useState(false);
   const [angle, setAngle] = useState(0);
   const [selectedPrize, setSelectedPrize] = useState<string | null>(null);
-  const [prizeList, setPrizeList] = useState(options);
-  const [inputValue, setInputValue] = useState(options.join(", "));
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [AotW, setAotW] = useState<string[]>(nameWheelDataToBeCopied["AotW"]);
-  const [RUAotW, setRUAotW] = useState<string[]>(
-    nameWheelDataToBeCopied["RUAotW"]
-  );
-  const [SotW, setSotW] = useState<string[]>(nameWheelDataToBeCopied["SotW"]);
-  const [RUSotW, setRUSotW] = useState<string[]>(
-    nameWheelDataToBeCopied["RUSotW"]
-  );
+
+  useEffect(() => {
+    setPick(title);
+  }, [title]);
+  const [nextWeekData, setNextWeekData] = useState<{
+    AotW?: string;
+    RUAotW?: string;
+    SotW?: string;
+    RUSotW?: string;
+  }>({});
+
+  useEffect(() => {
+    const unsubscribe = onSnapshot(
+      doc(db, "picksToAdd", "nextWeeksPicks"),
+      (docSnap) => {
+        if (docSnap.exists()) {
+          const data = docSnap.data();
+          setNextWeekData(data.nextWeek); // example state setter
+        }
+      }
+    );
+
+    return () => unsubscribe(); // clean up listener
+  }, []);
+
+  useEffect(() => {
+    let list: string[] = [];
+    switch (pick) {
+      case "Album of the Week":
+      case "Runner Up Album of the Week":
+        list = albums;
+        break;
+      case "Song of the Week":
+      case "Runner Up Song of the Week":
+        list = songs;
+        break;
+      default:
+        list = onceThru;
+    }
+    setPrizeList(list);
+    setInputValue(list.join(", "));
+  }, [pick, albums, songs, onceThru]);
+
+  const handleChange = (event: SelectChangeEvent) => {
+    const value = event.target.value;
+    setPick(value);
+    handlePickChange(event);
+  };
+
+  const handleWheelTypeChange = (event: SelectChangeEvent) => {
+    const value = event.target.value;
+    setWheelType(value);
+  };
 
   const spin = () => {
     if (spinning) return;
 
     setSpinning(true);
-    const targetAngle = angle + 360 * (3 + Math.random() * 2); // Spin 3-5 times
-    const duration = 4000; // Duration of spin in milliseconds
+    const targetAngle = angle + 360 * (3 + Math.random() * 2);
+    const duration = 4000;
     const startTime = performance.now();
 
     const animate = (currentTime: number) => {
       const elapsedTime = currentTime - startTime;
       const progress = Math.min(elapsedTime / duration, 1);
       const easedProgress =
-        progress < 0.5 ? 4 * progress ** 3 : 1 - (-2 * progress + 2) ** 3 / 2; // Ease out cubic
+        progress < 0.5 ? 4 * progress ** 3 : 1 - (-2 * progress + 2) ** 3 / 2;
 
       const newAngle = angle + easedProgress * (targetAngle - angle);
       setAngle(newAngle);
@@ -106,213 +163,269 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({
   const handlePrizeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
     setInputValue(value);
-    const newPrizes = value
+    const updated = value
       .split(",")
-      .map((prize) => prize.trim())
-      .filter((prize) => prize !== "");
-    setPrizeList(newPrizes);
+      .map((item) => item.trim())
+      .filter(Boolean);
+    setPrizeList(updated);
   };
 
-  const handleDialogClose = () => {
-    setPrizeList((prevPrizeList) => {
-      const updatedPrizeList = prevPrizeList.filter(
-        (prize) => prize !== selectedPrize
-      );
-      if (title == "Album of the Week") setAotW(updatedPrizeList);
-      if (title == "Runner Up Album of the Week") setRUAotW(updatedPrizeList);
-      if (title == "Song of the Week") setSotW(updatedPrizeList);
-      if (title == "Runner Up Song of the Week") setRUSotW(updatedPrizeList);
-      setInputValue(updatedPrizeList.join(", "));
-      return updatedPrizeList;
+  useEffect(() => {
+    let list: string[] = [];
+
+    if (wheelType === "Once Through") {
+      list = onceThru;
+    } else {
+      switch (pick) {
+        case "Album of the Week":
+        case "Runner Up Album of the Week":
+          list = albums;
+          break;
+        case "Song of the Week":
+        case "Runner Up Song of the Week":
+          list = songs;
+          break;
+        default:
+          list = [];
+      }
+    }
+
+    setPrizeList(list);
+    setInputValue(list.join(", "));
+  }, [pick, wheelType, albums, songs, onceThru]);
+
+  const handleDialogClose = async () => {
+    if (!selectedPrize) return;
+
+    let category: "Albums" | "Songs" | "OnceThrough" | null = null;
+    const isOnceThrough = wheelType === "Once Through";
+
+    if (
+      pick === "Album of the Week" ||
+      pick === "Runner Up Album of the Week"
+    ) {
+      category = isOnceThrough ? "OnceThrough" : "Albums";
+    } else if (
+      pick === "Song of the Week" ||
+      pick === "Runner Up Song of the Week"
+    ) {
+      category = isOnceThrough ? "OnceThrough" : "Songs";
+    }
+
+    if (category) {
+      try {
+        console.log(`Deleting "${selectedPrize}" from category: ${category}`);
+        await deleteWheelEntry(category, selectedPrize);
+
+        // Add to Albums or Songs if from OnceThrough
+        if (isOnceThrough) {
+          if (pick.includes("Album")) {
+            await addWheelEntry("Songs", selectedPrize);
+          } else if (pick.includes("Song")) {
+            await addWheelEntry("Albums", selectedPrize);
+          }
+        }
+      } catch (err) {
+        console.error("Error handling pick transition:", err);
+      }
+    }
+
+    setPrizeList((prev) => {
+      const updated = prev.filter((p) => p !== selectedPrize);
+      setInputValue(updated.join(", "));
+      return updated;
     });
+
+    const firestoreField = getFirestoreFieldFromPick(pick);
+    if (firestoreField) {
+      try {
+        await updateNextWeeksPick(firestoreField, selectedPrize);
+        console.log(`Successfully set ${firestoreField} to ${selectedPrize}`);
+      } catch (err) {
+        console.error("Error updating next week's picks:", err);
+      }
+    }
+
+    setSelectedPrize(null);
+  };
+
+  const handleDialogCloseCancel = () => {
     setSelectedPrize(null);
   };
 
   const handleCopyToClipboard = () => {
-    const RUAotW = AotW;
-    const RUSotW = SotW;
-    const textToCopy = JSON.stringify({ AotW, RUAotW, SotW, RUSotW }, null, 2);
-    navigator.clipboard
-      .writeText(textToCopy)
-      .then(() => {
-        console.log("Copied to clipboard!");
-        console.log(AotW);
-        console.log(RUAotW);
-        console.log(SotW);
-        console.log(RUSotW);
-        console.log(JSON.stringify({ AotW, RUAotW, SotW, RUSotW }, null, 2));
-      })
-      .catch((err) => {
-        console.error("Failed to copy text: ", err);
-      });
+    const data = {
+      AotW: albums,
+      RUAotW: albums,
+      SotW: songs,
+      RUSotW: songs,
+      OnceThrough: onceThru,
+    };
+    navigator.clipboard.writeText(JSON.stringify(data, null, 2));
   };
-
-  useEffect(() => {
-    switch (title) {
-      case "Album of the Week":
-        setPrizeList(AotW);
-        setInputValue(AotW.join(", "));
-        break;
-      case "Runner Up Album of the Week":
-        setPrizeList(AotW);
-        setInputValue(AotW.join(", "));
-        break;
-      case "Song of the Week":
-        setPrizeList(SotW);
-        setInputValue(SotW.join(", "));
-        break;
-      case "Runner Up Song of the Week":
-        setPrizeList(SotW);
-        setInputValue(SotW.join(", "));
-        break;
-      default:
-        setInputValue("Album of the Week");
-    }
-  }, [title, AotW, RUAotW, SotW, RUSotW]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
     const context = canvas.getContext("2d");
     if (!context) return;
 
-    const drawWheel = () => {
-      const radius = canvas.width / 2;
-      context.clearRect(0, 0, canvas.width, canvas.height);
+    const radius = canvas.width / 2;
+    const arc = (2 * Math.PI) / prizeList.length;
+
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.save();
+    context.translate(radius, radius);
+    context.rotate((angle * Math.PI) / 180);
+
+    prizeList.forEach((prize, i) => {
+      context.beginPath();
+      context.fillStyle = `hsl(${(i * 360) / prizeList.length}, 100%, 75%)`;
+      context.strokeStyle = "black";
+      context.lineWidth = 2;
+      context.moveTo(0, 0);
+      context.arc(0, 0, radius, i * arc, (i + 1) * arc);
+      context.lineTo(0, 0);
+      context.fill();
+      context.stroke();
 
       context.save();
-      context.translate(radius, radius);
-      context.rotate((angle * Math.PI) / 180);
+      context.rotate((i + 0.5) * arc);
+      context.translate(radius * 0.6, 10);
+      context.fillStyle = "black";
 
-      const arc = (2 * Math.PI) / prizeList.length;
-      prizeList.forEach((prize, i) => {
-        context.beginPath();
-        context.fillStyle = `hsl(${(i * 360) / prizeList.length}, 100%, 75%)`;
-        context.strokeStyle = "black";
-        context.lineWidth = 2;
-        context.moveTo(0, 0);
-        context.arc(0, 0, radius, i * arc, (i + 1) * arc);
-        context.lineTo(0, 0);
-        context.fill();
-        context.stroke();
-
-        context.save();
-        context.rotate((i + 0.5) * arc);
-        context.translate(radius * 0.6, 10); // Move text closer to the center
-        context.rotate(2 * Math.PI); // Rotate text by 90 degrees to make it vertical
-        context.fillStyle = "black";
-
-        // Adjust font size based on the length of the text and the number of prizes
-        const maxFontSize = Math.min(
-          24,
-          (radius * 0.3) / Math.sqrt(prizeList.length)
-        );
-        let fontSize = maxFontSize;
+      let fontSize = Math.min(24, (radius * 0.3) / Math.sqrt(prizeList.length));
+      context.font = `bold ${fontSize}px Arial`;
+      while (context.measureText(prize).width > radius * 0.6 && fontSize > 10) {
+        fontSize -= 2;
         context.font = `bold ${fontSize}px Arial`;
-        while (
-          context.measureText(prize).width > radius * 0.6 &&
-          fontSize > 10
-        ) {
-          fontSize -= 2;
-          context.font = `bold ${fontSize}px Arial`;
-        }
+      }
 
-        context.textAlign = "center";
-        context.fillText(prize, 0, 0);
-        context.restore();
-      });
-
-      context.restore();
-
-      // Draw the ticker on the right side without the left border
-      context.beginPath();
-      context.moveTo(radius + 55, radius);
-      context.lineTo(radius + 35, radius - 15);
-      context.lineTo(radius + 35, radius + 15);
-      context.closePath();
-      context.fillStyle = "black";
-      context.fill();
-      context.lineWidth = 4;
-      context.strokeStyle = "white";
-      context.stroke();
-
-      // Draw the spin button
-      context.beginPath();
-      context.arc(radius, radius, 40, 0, 2 * Math.PI);
-      context.fillStyle = "black";
-      context.fill();
-      context.lineWidth = 4;
-      context.strokeStyle = "white";
-      context.stroke();
-
-      // Draw the spin text
-      context.fillStyle = "white";
-      context.font = "bold 20px Arial";
       context.textAlign = "center";
-      context.fillText("SPIN", radius, radius + 7);
-    };
+      context.fillText(prize, 0, 0);
+      context.restore();
+    });
 
-    drawWheel();
+    context.restore();
+
+    // Draw ticker
+    context.beginPath();
+    context.moveTo(radius + 55, radius);
+    context.lineTo(radius + 35, radius - 15);
+    context.lineTo(radius + 35, radius + 15);
+    context.closePath();
+    context.fillStyle = "black";
+    context.fill();
+    context.lineWidth = 4;
+    context.strokeStyle = "white";
+    context.stroke();
+
+    // Spin button
+    context.beginPath();
+    context.arc(radius, radius, 40, 0, 2 * Math.PI);
+    context.fillStyle = "black";
+    context.fill();
+    context.stroke();
+
+    // Spin text
+    context.fillStyle = "white";
+    context.font = "bold 20px Arial";
+    context.textAlign = "center";
+    context.fillText("SPIN", radius, radius + 7);
   }, [angle, prizeList]);
 
   return (
-    <div className="cont">
+    // <Box
+    //   display="flex"
+    //   flexDirection="column"
+    //   alignItems="center"
+    //   justifyContent="center"
+    //   sx={{ backgroundColor: "white", height: "70vh", marginTop: 10 }}
+    // >
+
+    <div className="faq">
       <Box
         display="flex"
         flexDirection="column"
         alignItems="center"
         justifyContent="center"
-        sx={{ backgroundColor: "white", height: "70vh", marginTop: 10 }}
       >
-        <div style={{ marginTop: "-4rem" }}>
-          <Box
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            justifyContent="center"
-            sx={{
-              backgroundColor: "white",
-              minWidth: 300,
-              textAlign: "center",
-              fontSize: 10,
-            }}
-          >
-            <div style={{ marginBottom: "-3.5rem", minWidth: 500 }}>
-              <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">Pick</InputLabel>
-                <Select
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  value={pick}
-                  label="Pick"
-                  onChange={handleChange}
-                >
-                  <MenuItem value={"Album of the Week"}>
-                    Album of the Week
-                  </MenuItem>
-                  <MenuItem value={"Runner Up Album of the Week"}>
-                    Runner Up Album of the Week
-                  </MenuItem>
-                  <MenuItem value={"Song of the Week"}>
-                    Song of the Week
-                  </MenuItem>
-                  <MenuItem value={"Runner Up Song of the Week"}>
-                    Runner Up Song of the Week
-                  </MenuItem>
-                </Select>
-              </FormControl>
-            </div>
-          </Box>
+        <div
+          style={{
+            display: "flex", // Required for flexbox
+            flexDirection: "row", // Horizontal layout
+            alignItems: "center", // Vertical centering (optional)
+            justifyContent: "center", // Horizontal centering
+            gap: "1rem",
+          }}
+        >
+          <FormControl>
+            <InputLabel id="pick-label">Pick</InputLabel>
+            <Select
+              labelId="pick-label"
+              value={pick}
+              label="Pick"
+              onChange={handleChange}
+              sx={{ width: 300 }}
+            >
+              <MenuItem value="Album of the Week">Album of the Week</MenuItem>
+              <MenuItem value="Runner Up Album of the Week">
+                Runner Up Album of the Week
+              </MenuItem>
+              <MenuItem value="Song of the Week">Song of the Week</MenuItem>
+              <MenuItem value="Runner Up Song of the Week">
+                Runner Up Song of the Week
+              </MenuItem>
+            </Select>
+          </FormControl>
+          <FormControl>
+            <InputLabel id="wheel-type-label">Wheel Type</InputLabel>
+            <Select
+              labelId="wheel-type-label"
+              value={wheelType}
+              label="Wheel Type"
+              onChange={handleWheelTypeChange}
+              sx={{ width: 300 }}
+            >
+              <MenuItem value="Once Through">Once Through</MenuItem>
+              <MenuItem value="Everybody Picked">
+                Everybody Picked Once
+              </MenuItem>
+            </Select>
+          </FormControl>
+
+          {/* <FormControl>
+            <InputLabel>Everybody Picked?</InputLabel>
+            <Select
+              labelId="pick-label"
+              value={wheelType}
+              label="Pick"
+              onChange={handleChange}
+              sx={{ width: 300 }}
+            >
+              <MenuItem value="Album of the Week">Album of the Week</MenuItem>
+              <MenuItem value="Runner Up Album of the Week">
+                Runner Up Album of the Week
+              </MenuItem>
+              <MenuItem value="Song of the Week">Song of the Week</MenuItem>
+              <MenuItem value="Runner Up Song of the Week">
+                Runner Up Song of the Week
+              </MenuItem>
+            </Select>
+          </FormControl> */}
         </div>
-        <br></br> <br></br> <br></br>
         <canvas
           ref={canvasRef}
           width={400}
           height={400}
           onClick={spin}
-          style={{ backgroundColor: "black", borderRadius: "50%" }}
-        ></canvas>
+          style={{
+            backgroundColor: "black",
+            borderRadius: "50%",
+            marginTop: 30,
+          }}
+        />
+
         <TextField
           label="Have NOT Picked"
           variant="outlined"
@@ -320,60 +433,40 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({
           margin="normal"
           onChange={handlePrizeChange}
           value={inputValue}
-          sx={{ width: 500, marginTop: 3 }}
+          sx={{ width: 500 }}
         />
-        <br />
-        <br />
-        <div
-          style={{ display: "flex", alignItems: "left", color: "lightgray" }}
-        >
-          <p
-            style={{
-              fontSize: 20,
-              marginBottom: 7,
-              marginRight: 0,
-              marginTop: -25,
-            }}
+
+        <Box display="flex" alignItems="center" sx={{ color: "lightgray" }}>
+          <span style={{ fontSize: 20, marginRight: 10 }}>DEV</span>
+          <IconButton
+            onClick={handleCopyToClipboard}
+            sx={{ color: "lightgray" }}
           >
-            DEV
-          </p>
-          <div style={{ marginTop: -30 }}>
-            <IconButton
-              onClick={handleCopyToClipboard}
-              sx={{ color: "lightgray" }}
-            >
-              <ContentCopyIcon />
-            </IconButton>
-          </div>
-        </div>
-        <Dialog
-          open={!!selectedPrize}
-          onClose={handleDialogClose}
-          maxWidth="md"
-          fullWidth
-          PaperProps={{
-            sx: {
-              mx: 5,
-              mt: 0,
-              backgroundColor: "rgba(255, 255, 255, 0.85)",
-            },
-          }}
-        >
+            <ContentCopyIcon />
+          </IconButton>
+        </Box>
+
+        <Dialog open={!!selectedPrize} onClose={handleDialogClose}>
           <DialogTitle sx={{ textAlign: "center", fontSize: "2rem" }}>
             {title} Pick Goes To:
           </DialogTitle>
           <DialogContent sx={{ textAlign: "center", fontSize: "2rem" }}>
-            🎉{""}
-            {selectedPrize}
-            {""}🎉
+            🎉 {selectedPrize} 🎉
           </DialogContent>
           <DialogActions sx={{ justifyContent: "center" }}>
             <Button
               onClick={handleDialogClose}
               variant="contained"
-              sx={{ backgroundColor: "black", color: "white" }}
+              color="primary"
             >
               Return to Wheel
+            </Button>
+            <Button
+              onClick={handleDialogCloseCancel}
+              variant="contained"
+              color="primary"
+            >
+              Cancel
             </Button>
           </DialogActions>
         </Dialog>
