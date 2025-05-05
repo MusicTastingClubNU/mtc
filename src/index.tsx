@@ -15,6 +15,7 @@ import "./index.css";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./Routes/Routes";
 import App from "./App";
+import { ThemeContextProvider } from "./theme/ThemeContextProvider";
 
 // let client = new ApolloClient({
 //   uri: "http://localhost:4000/",
@@ -27,8 +28,10 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    {/* <ApolloProvider client={client}> */}
-    <RouterProvider router={router} />
+    <ThemeContextProvider>
+      {/* <ApolloProvider client={client}> */}
+      <RouterProvider router={router} />
+    </ThemeContextProvider>
     {/* </ApolloProvider> */}
   </React.StrictMode>
 );

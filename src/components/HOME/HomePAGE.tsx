@@ -7,7 +7,7 @@ import MobileComponent from "../../MobileComponent";
 import "../SP/mission.css";
 import { Link } from "react-router-dom";
 import { auth, mtcgmailuid } from "../../firebase/FirebaseConfig";
-
+import NightModeToggle from "../DEV/NightModeToggle";
 interface Props {}
 
 const Home = (props: Props) => {
@@ -20,6 +20,7 @@ const Home = (props: Props) => {
         <header className="header">
           MUSIC TASTING CLUB{" "}
           {auth.currentUser?.uid === mtcgmailuid && "{PREZ 😎}"}
+          <NightModeToggle />
         </header>
         <h5 className="header2">
           NORTHWESTERN'S PREMIER MUSIC DISCOURSE GROUP

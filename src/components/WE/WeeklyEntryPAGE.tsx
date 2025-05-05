@@ -18,7 +18,6 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { useState, useEffect } from "react";
 import "../SP/mission.css";
-import PastGenres from "./PastGenres";
 import { Margin, Search } from "@mui/icons-material";
 import TitleAndDirectory from "../HOME/TitleAndDirectory";
 import Autocomplete from "@mui/material/Autocomplete";
