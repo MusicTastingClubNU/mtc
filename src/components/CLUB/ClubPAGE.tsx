@@ -11,15 +11,15 @@ import { useState } from "react";
 import NameWheelData from "../WE/NameWheelData.json";
 import MeetTheClubPanel from "./MeetTheClubPanel";
 import { auth, mtcgmailuid } from "../../firebase/FirebaseConfig";
-import albums from "../DEV/NameWheelDataFetching";
-import NameWheelDataFetching from "../DEV/NameWheelDataFetching";
+// import albums from "../DEV/NameWheelDataFetching";
+// import NameWheelDataFetching from "../DEV/NameWheelDataFetching";
 interface Props {}
 
 const Activities = (props: Props) => {
   const isMobile = useMediaQuery("(max-width: 768px)");
   const [pick, setPick] = useState("Album of the Week");
   const [wheelOptions, setWheelOptions] = useState<string[]>([]);
-  const { albums, songs, onceThru } = NameWheelDataFetching();
+  // const { albums, songs, onceThru } = NameWheelDataFetching();
 
   const [currentPick, setCurrentPick] = React.useState("Album of the Week");
   const handlePickChange = (e: SelectChangeEvent) => {
@@ -43,9 +43,9 @@ const Activities = (props: Props) => {
         {auth.currentUser?.uid === mtcgmailuid && (
           <PrizeWheel
             title={currentPick}
-            albums={albums}
-            songs={songs}
-            onceThru={onceThru}
+            // albums={albums}
+            // songs={songs}
+            // onceThru={onceThru}
             handlePickChange={handlePickChange}
           />
         )}

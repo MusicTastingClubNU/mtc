@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, JSX } from "react";
 import {
   Box,
   TextField,
@@ -22,11 +22,12 @@ import { addWheelEntry } from "../../firebase/FirebaseFunctions";
 import { doc, onSnapshot, updateDoc } from "firebase/firestore";
 import { db } from "../../firebase/FirebaseConfig";
 import { getDoc } from "firebase/firestore";
+import { useNameWheelData } from "../DEV/NameWheelDataFetching";
 
 const fetchLatestData = async () => {
-  const albumsSnap = await getDoc(doc(db, "WheelEntries", "Albums"));
-  const songsSnap = await getDoc(doc(db, "WheelEntries", "Songs"));
-  const onceSnap = await getDoc(doc(db, "WheelEntries", "OnceThrough"));
+  const albumsSnap = await getDoc(doc(db, "nameWheel", "Albums"));
+  const songsSnap = await getDoc(doc(db, "nameWheel", "Songs"));
+  const onceSnap = await getDoc(doc(db, "nameWheel", "OnceThrough"));
 
   return {
     albums: albumsSnap.exists() ? albumsSnap.data().entries || [] : [],
@@ -53,20 +54,71 @@ const getFirestoreFieldFromPick = (pick: string): string | null => {
       return null;
   }
 };
+type PushingNewListToDBProps = {
+  label: string;
+  setInputFunc: React.Dispatch<React.SetStateAction<string>>;
+  input: string;
+  dbInputName: string;
+  buttonTitle: string;
+};
+const PushingNewListToDB: React.FC<PushingNewListToDBProps> = ({
+  label,
+  setInputFunc,
+  input,
+  dbInputName,
+  buttonTitle,
+}) => {
+  return (
+    <div style={{ padding: 10, marginLeft: 10 }}>
+      <TextField
+        label={label}
+        variant="outlined"
+        fullWidth
+        margin="normal"
+        onChange={(e) => setInputFunc(e.target.value)}
+        value={input} // ✅ MUST be bound to state
+        sx={{ width: 400 }}
+        size="small"
+      />
+      <Button
+        variant="contained"
+        size="small"
+        sx={{ marginLeft: 3, marginTop: 2.5 }}
+        onClick={async () => {
+          const updatedList = input
+            .split(",")
+            .map((item) => item.trim())
+            .filter(Boolean);
+          try {
+            await updateDoc(doc(db, "nameWheel", dbInputName), {
+              names: updatedList,
+            });
+            console.log("✅ Updated " + dbInputName + " DB");
+          } catch (err) {
+            console.error("❌ Failed to update " + dbInputName + " DB", err);
+          }
+        }}
+      >
+        {buttonTitle}
+      </Button>
+    </div>
+  );
+};
 interface PrizeWheelProps {
   title: string;
-  albums: string[];
-  songs: string[];
-  onceThru: string[];
+  // albums: string[];
+  // songs: string[];
+  // onceThru: string[];
   handlePickChange: (event: SelectChangeEvent) => void;
 }
 const PrizeWheel: React.FC<PrizeWheelProps> = ({
   title,
-  albums,
-  songs,
-  onceThru,
+  // albums,
+  // songs,
+  // onceThru,
   handlePickChange,
 }) => {
+  const { albums, songs, onceThru } = useNameWheelData();
   const [pick, setPick] = useState("Album of the Week");
   const [wheelType, setWheelType] = useState("Once Through");
   const [prizeList, setPrizeList] = useState<string[]>([]);
@@ -76,6 +128,8 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({
   const [selectedPrize, setSelectedPrize] = useState<string | null>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [onceThruInput, setOnceThruInput] = useState("");
+  const [albumInput, setAlbumInput] = useState("");
+  const [songInput, setSongInput] = useState("");
 
   useEffect(() => {
     setPick(title);
@@ -89,7 +143,7 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({
   useEffect(() => {
     const fetchOnceThruList = async () => {
       try {
-        const snap = await getDoc(doc(db, "WheelEntries", "OnceThrough"));
+        const snap = await getDoc(doc(db, "nameWheel", "OnceThrough"));
         if (snap.exists()) {
           const list = snap.data().names || [];
           setOnceThruInput(list.join(", ")); // ✅ sets input with DB data
@@ -98,7 +152,30 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({
         console.error("Error fetching Once Through DB:", err);
       }
     };
-
+    const fetchAlbumsList = async () => {
+      try {
+        const snap = await getDoc(doc(db, "nameWheel", "Albums"));
+        if (snap.exists()) {
+          const list = snap.data().names || [];
+          setAlbumInput(list.join(", ")); // ✅ sets input with DB data
+        }
+      } catch (err) {
+        console.error("Error fetching Once Through DB:", err);
+      }
+    };
+    const fetchSongsList = async () => {
+      try {
+        const snap = await getDoc(doc(db, "nameWheel", "Songs"));
+        if (snap.exists()) {
+          const list = snap.data().names || [];
+          setSongInput(list.join(", ")); // ✅ sets input with DB data
+        }
+      } catch (err) {
+        console.error("Error fetching Once Through DB:", err);
+      }
+    };
+    fetchAlbumsList();
+    fetchSongsList();
     fetchOnceThruList();
   }, []);
 
@@ -249,6 +326,15 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({
     setPrizeList((prev) => {
       const updated = prev.filter((p) => p !== selectedPrize);
       setInputValue(updated.join(", "));
+      if (category == "OnceThrough") {
+        setOnceThruInput(updated.join(", "));
+      }
+      if (category == "Albums") {
+        setAlbumInput(updated.join(", "));
+      }
+      if (category == "Songs") {
+        setSongInput(updated.join(", "));
+      }
       return updated;
     });
 
@@ -340,176 +426,152 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({
   }, [angle, prizeList]);
 
   return (
-    // <Box
-    //   display="flex"
-    //   flexDirection="column"
-    //   alignItems="center"
-    //   justifyContent="center"
-    //   sx={{ backgroundColor: "white", height: "70vh", marginTop: 10 }}
-    // >
-
-    <div className="faq">
-      <Box
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-        justifyContent="center"
-      >
-        <div
-          style={{
-            display: "flex", // Required for flexbox
-            flexDirection: "row", // Horizontal layout
-            alignItems: "center", // Vertical centering (optional)
-            justifyContent: "center", // Horizontal centering
-            gap: "1rem",
-          }}
+    <>
+      <div className="faq">
+        <Box
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="center"
         >
-          <FormControl size="small">
-            <InputLabel id="pick-label">Pick</InputLabel>
-            <Select
-              labelId="pick-label"
-              value={pick}
-              label="Pick"
-              onChange={handleChange}
-              sx={{ width: 270 }}
-            >
-              <MenuItem value="Album of the Week">Album of the Week</MenuItem>
-              <MenuItem value="Runner Up Album of the Week">
-                Runner Up Album of the Week
-              </MenuItem>
-              <MenuItem value="Song of the Week">Song of the Week</MenuItem>
-              <MenuItem value="Runner Up Song of the Week">
-                Runner Up Song of the Week
-              </MenuItem>
-            </Select>
-          </FormControl>
-          <FormControl size="small">
-            <InputLabel id="wheel-type-label">Wheel Type</InputLabel>
-            <Select
-              labelId="wheel-type-label"
-              value={wheelType}
-              label="Wheel Type"
-              onChange={handleWheelTypeChange}
-              sx={{ width: 225 }}
-            >
-              <MenuItem value="Once Through">Once Through</MenuItem>
-              <MenuItem value="Everybody Picked">
-                Everybody Picked Once
-              </MenuItem>
-            </Select>
-          </FormControl>
+          <div
+            style={{
+              display: "flex", // Required for flexbox
+              flexDirection: "row", // Horizontal layout
+              alignItems: "center", // Vertical centering (optional)
+              justifyContent: "center", // Horizontal centering
+              gap: "1rem",
+            }}
+          >
+            <FormControl size="small">
+              <InputLabel id="pick-label">Pick</InputLabel>
+              <Select
+                labelId="pick-label"
+                value={pick}
+                label="Pick"
+                onChange={handleChange}
+                sx={{ width: 270 }}
+              >
+                <MenuItem value="Album of the Week">Album of the Week</MenuItem>
+                <MenuItem value="Runner Up Album of the Week">
+                  Runner Up Album of the Week
+                </MenuItem>
+                <MenuItem value="Song of the Week">Song of the Week</MenuItem>
+                <MenuItem value="Runner Up Song of the Week">
+                  Runner Up Song of the Week
+                </MenuItem>
+              </Select>
+            </FormControl>
+            <FormControl size="small">
+              <InputLabel id="wheel-type-label">Wheel Type</InputLabel>
+              <Select
+                labelId="wheel-type-label"
+                value={wheelType}
+                label="Wheel Type"
+                onChange={handleWheelTypeChange}
+                sx={{ width: 225 }}
+              >
+                <MenuItem value="Once Through">Once Through</MenuItem>
+                <MenuItem value="Everybody Picked">
+                  Everybody Picked Once
+                </MenuItem>
+              </Select>
+            </FormControl>
+          </div>
+          <canvas
+            ref={canvasRef}
+            width={400}
+            height={400}
+            onClick={spin}
+            style={{
+              backgroundColor: "black",
+              borderRadius: "50%",
+              marginTop: 30,
+            }}
+          />
 
-          {/* <FormControl>
-            <InputLabel>Everybody Picked?</InputLabel>
-            <Select
-              labelId="pick-label"
-              value={wheelType}
-              label="Pick"
-              onChange={handleChange}
-              sx={{ width: 300 }}
-            >
-              <MenuItem value="Album of the Week">Album of the Week</MenuItem>
-              <MenuItem value="Runner Up Album of the Week">
-                Runner Up Album of the Week
-              </MenuItem>
-              <MenuItem value="Song of the Week">Song of the Week</MenuItem>
-              <MenuItem value="Runner Up Song of the Week">
-                Runner Up Song of the Week
-              </MenuItem>
-            </Select>
-          </FormControl> */}
-        </div>
-        <canvas
-          ref={canvasRef}
-          width={400}
-          height={400}
-          onClick={spin}
-          style={{
-            backgroundColor: "black",
-            borderRadius: "50%",
-            marginTop: 30,
-          }}
-        />
-
-        <TextField
-          label="Have NOT Picked"
-          variant="outlined"
-          fullWidth
-          margin="normal"
-          onChange={handlePrizeChange}
-          value={inputValue}
-          sx={{ width: 500 }}
-          size="small"
-        />
-        {/* <div
-          style={{
-            flex: "wrap",
-            justifyContent: "center",
-            flexDirection: "row",
-            padding: 3,
-          }}
-        >
           <TextField
-            label="Current Once-Thru List"
+            label="Have NOT Picked"
             variant="outlined"
             fullWidth
             margin="normal"
-            onChange={(e) => setOnceThruInput(e.target.value)}
-            value={onceThruInput} // ✅ MUST be bound to state
-            sx={{ width: 400 }}
+            onChange={handlePrizeChange}
+            value={inputValue}
+            sx={{ width: 500 }}
             size="small"
           />
 
-          <Button
-            variant="contained"
-            size="small"
-            sx={{ marginLeft: 5, marginTop: 2.5 }}
-            onClick={async () => {
-              const updatedList = onceThruInput
-                .split(",")
-                .map((item) => item.trim())
-                .filter(Boolean);
-
-              try {
-                await updateDoc(doc(db, "WheelEntries", "OnceThrough"), {
-                  entries: updatedList,
-                });
-                console.log("✅ Updated OnceThrough DB.");
-              } catch (err) {
-                console.error("❌ Failed to update OnceThrough DB", err);
-              }
-            }}
-          >
-            Push List To 1ce Thru DB
-          </Button>
-        </div> */}
-
-        <Dialog open={!!selectedPrize} onClose={handleDialogClose}>
-          <DialogTitle sx={{ textAlign: "center", fontSize: "2rem" }}>
-            {title} Pick Goes To:
-          </DialogTitle>
-          <DialogContent sx={{ textAlign: "center", fontSize: "2rem" }}>
-            🎉 {selectedPrize} 🎉
-          </DialogContent>
-          <DialogActions sx={{ justifyContent: "center" }}>
-            <Button
-              onClick={handleDialogClose}
-              variant="contained"
-              color="primary"
-            >
-              Return to Wheel
-            </Button>
-            <Button
-              onClick={handleDialogCloseCancel}
-              variant="contained"
-              color="primary"
-            >
-              Cancel
-            </Button>
-          </DialogActions>
-        </Dialog>
-      </Box>
-    </div>
+          <Dialog open={!!selectedPrize} onClose={handleDialogClose}>
+            <DialogTitle sx={{ textAlign: "center", fontSize: "2rem" }}>
+              {title} Pick Goes To:
+            </DialogTitle>
+            <DialogContent sx={{ textAlign: "center", fontSize: "2rem" }}>
+              🎉 {selectedPrize} 🎉
+            </DialogContent>
+            <DialogActions sx={{ justifyContent: "center" }}>
+              <Button
+                onClick={handleDialogClose}
+                variant="contained"
+                color="primary"
+              >
+                Return to Wheel
+              </Button>
+              <Button
+                onClick={handleDialogCloseCancel}
+                variant="contained"
+                color="primary"
+              >
+                Cancel
+              </Button>
+            </DialogActions>
+          </Dialog>
+        </Box>
+      </div>
+      <div
+        className="faq"
+        style={{
+          flex: "wrap",
+          justifyContent: "center",
+          flexDirection: "row",
+          padding: 3,
+        }}
+      >
+        <h1 style={{ textAlign: "center", marginBottom: 5, marginTop: 5 }}>
+          UPDATE DATA IN CLOUD DB
+        </h1>
+        {wheelType == "Once Through" ? (
+          <PushingNewListToDB
+            label={"Current Once-Thru List"}
+            setInputFunc={setOnceThruInput}
+            input={onceThruInput}
+            dbInputName={"OnceThru"}
+            buttonTitle={"Push List To 1ce Thru DB"}
+          />
+        ) : wheelType == "Everybody Picked" &&
+          (pick == "Album of the Week" ||
+            pick == "Runner Up Album of the Week") ? (
+          <PushingNewListToDB
+            label={"Current 'They Picked Song, Need Album' List"}
+            setInputFunc={setAlbumInput}
+            input={albumInput}
+            dbInputName={"Albums"}
+            buttonTitle={"Push List 2 'Picked Song, Need Album' DB"}
+          />
+        ) : (
+          wheelType == "Everybody Picked" &&
+          (pick == "Song of the Week" ||
+            pick == "Runner Up Song of the Week") && (
+            <PushingNewListToDB
+              label={"Current 'They Picked Album, Need Song' List"}
+              setInputFunc={setSongInput}
+              input={songInput}
+              dbInputName={"Songs"}
+              buttonTitle={"Push List 2 'Picked Album, Need Song' DB"}
+            />
+          )
+        )}
+      </div>
+    </>
   );
 };
 
