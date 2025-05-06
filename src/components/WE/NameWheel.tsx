@@ -537,14 +537,14 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({
         }}
       >
         <h1 style={{ textAlign: "center", marginBottom: 5, marginTop: 5 }}>
-          UPDATE DATA IN CLOUD DB
+          UPDATE DATA IN CLOUD Database
         </h1>
         {wheelType == "Once Through" ? (
           <PushingNewListToDB
             label={"Current Once-Thru List"}
             setInputFunc={setOnceThruInput}
             input={onceThruInput}
-            dbInputName={"OnceThru"}
+            dbInputName={"OnceThrough"}
             buttonTitle={"Push List To 1ce Thru DB"}
           />
         ) : wheelType == "Everybody Picked" &&
