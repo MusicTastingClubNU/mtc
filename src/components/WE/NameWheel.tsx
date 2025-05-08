@@ -24,17 +24,6 @@ import { db } from "../../firebase/FirebaseConfig";
 import { getDoc } from "firebase/firestore";
 import { useNameWheelData } from "../DEV/NameWheelDataFetching";
 
-const fetchLatestData = async () => {
-  const albumsSnap = await getDoc(doc(db, "nameWheel", "Albums"));
-  const songsSnap = await getDoc(doc(db, "nameWheel", "Songs"));
-  const onceSnap = await getDoc(doc(db, "nameWheel", "OnceThrough"));
-
-  return {
-    albums: albumsSnap.exists() ? albumsSnap.data().entries || [] : [],
-    songs: songsSnap.exists() ? songsSnap.data().entries || [] : [],
-    onceThru: onceSnap.exists() ? onceSnap.data().entries || [] : [],
-  };
-};
 interface PrizeWheelProps {
   title: string;
   handlePickChange: (event: SelectChangeEvent) => void;

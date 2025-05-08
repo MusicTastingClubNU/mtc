@@ -165,7 +165,7 @@
     "weekActivityEmoji": "🎧",
     "weekActivityTitle": "MTC LISTENING PARTY: \"The Scholars\" by Carseat Headrest",
     "weekActivityDetails": "TheLink (811 Emerson St) | 5-6:30PM | DINNER PROVIDED!",
-    "weekActivityHost": "Simon/Katiee"
+    "weekActivityHost": "Simon/Katie"
   },
   {
     "weekActivityId": 21,
@@ -173,7 +173,7 @@
     "weekActivityEmoji": "🎥",
     "weekActivityTitle": "MTC MOVIE NIGHT: \"A Complete Unknown\"",
     "weekActivityDetails": "Tech LR3 | 6-8PM | DINNER PROVIDED!",
-    "weekActivityHost": "Simon/Katiee"
+    "weekActivityHost": "Simon/Katie"
   },
   {
     "weekActivityId": 22,
@@ -181,7 +181,7 @@
     "weekActivityEmoji": "🎉",
     "weekActivityTitle": "MTCxSWAN MIXER",
     "weekActivityDetails": "2147 Maple | TIME TBD | Live Music! Mocktails! PARTY!!! 2147",
-    "weekActivityHost": "Simon/Katiee"
+    "weekActivityHost": "Simon/Katie"
   },
   {
     "weekActivityId": 23,
@@ -189,6 +189,14 @@
     "weekActivityEmoji": "♟️",
     "weekActivityTitle": "MTC Trivia",
     "weekActivityDetails": "Hope you studied the pick page, bc today we're quizzing you on MTC's previous album picks!",
-    "weekActivityHost": "Simon/Katiee"
+    "weekActivityHost": "Simon/Katie"
+  },
+  {
+    "weekActivityId": 24,
+    "weekActivityWeek": "2025-05-08",
+    "weekActivityEmoji": "♟️",
+    "weekActivityTitle": "Musical Chairs",
+    "weekActivityDetails": "...It has the word 'MUSIC' in it...doesn't it?",
+    "weekActivityHost": "Katie"
   }
 ]
