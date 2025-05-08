@@ -198,5 +198,13 @@
     "weekActivityTitle": "Musical Chairs",
     "weekActivityDetails": "...It has the word 'MUSIC' in it...doesn't it?",
     "weekActivityHost": "Katie"
+  },
+  {
+    "weekActivityId": 24,
+    "weekActivityWeek": "2025-05-15",
+    "weekActivityEmoji": "📸",
+    "weekActivityTitle": "SQ25 CLUB PHOTO (6:30PM)",
+    "weekActivityDetails": "IT'S ARCHIE'S LAST PHOTO! YOU SIMPLY _MUST_ BE THERE!!!!",
+    "weekActivityHost": "Jonah Elkowitz"
   }
 ]
