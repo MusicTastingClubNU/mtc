@@ -526,7 +526,7 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({
         }}
       >
         <h1 style={{ textAlign: "center", marginBottom: 5, marginTop: 5 }}>
-          UPDATE DATA IN CLOUD Database
+          UPDATE DATA IN CLOUD DATABASE
         </h1>
         {wheelType == "Once Through" ? (
           <PushingNewListToDB

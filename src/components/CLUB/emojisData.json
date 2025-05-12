@@ -1,0 +1,10 @@
+[
+  { "emoji": "♟️", "label": "Game" },
+  { "emoji": "🎵", "label": "Music Presentation" },
+  { "emoji": "🎥", "label": "Watch Party" },
+  { "emoji": "📸", "label": "Club Photo" },
+  { "emoji": "🚗", "label": "IRL Outing" },
+  { "emoji": "🎧", "label": "Listening Party" },
+  { "emoji": "🎉", "label": "Party" },
+  { "emoji": "🗳️", "label": "Election" }
+]

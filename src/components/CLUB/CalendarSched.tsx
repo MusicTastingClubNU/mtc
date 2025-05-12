@@ -9,9 +9,11 @@ import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
 import { DayCalendarSkeleton } from "@mui/x-date-pickers/DayCalendarSkeleton";
 import { Grid, styled } from "@mui/material";
 import Paper from "@mui/material/Paper";
-import calendarData from "./calendarData.json";
+// import calendarData from "./calendarData.json";
 import useMediaQuery from "@mui/material/useMediaQuery";
-
+import { db } from "../../firebase/FirebaseConfig";
+import { collection, getDocs } from "firebase/firestore";
+import emojis from "./emojisData.json";
 const ItemMobile = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
@@ -90,7 +92,7 @@ function fakeFetch(date: Dayjs, { signal }: { signal: AbortSignal }) {
   });
 }
 
-const initialValue = dayjs("2025-05-08");
+const initialValue = dayjs("2025-05-15");
 
 function ServerDay(
   props: PickersDayProps<Dayjs> & { meetings?: Dayjs[]; emoji?: string }
@@ -121,6 +123,22 @@ export default function DateCalendarServerRequest() {
   const [highlightedDays, setHighlightedDays] = useState([1, 2, 15]);
   const [selectedDate, setSelectedDate] = useState<Dayjs | null>(initialValue);
   const isMobile = useMediaQuery("(max-width: 768px)");
+  const [calendarData, setCalendarData] = useState<any[]>([]);
+
+  useEffect(() => {
+    const fetchCalendarData = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, "inClubActivities"));
+        const data = querySnapshot.docs.map((doc) => doc.data());
+        console.log("Fetched calendar data:", data); // <-- ADD THIS
+        setCalendarData(data);
+      } catch (error) {
+        console.error("Error fetching calendar data:", error);
+      }
+    };
+
+    fetchCalendarData();
+  }, []);
 
   const fetchHighlightedDays = (date: Dayjs) => {
     const controller = new AbortController();
@@ -160,10 +178,13 @@ export default function DateCalendarServerRequest() {
   const getEmojiForDay = (date: Dayjs) => {
     const dateString = date.format("YYYY-MM-DD");
     const activity = calendarData.find(
-      (day) => day.weekActivityWeek === dateString
+      (day) => day.activityDate === dateString
     );
-    return activity?.weekActivityEmoji ?? ""; // Default to empty string if no match found
+    return activity?.activityEmoji ?? "";
   };
+  const selectedActivity = calendarData.find(
+    (day) => day.activityDate === selectedDate?.format("YYYY-MM-DD")
+  );
   return (
     <div className={isMobile ? "faq2" : "faq"}>
       <Grid container spacing={2}>
@@ -183,8 +204,8 @@ export default function DateCalendarServerRequest() {
                       day: (dayProps) => (
                         <ServerDay
                           {...dayProps}
-                          meetings={calendarData.map((activityWeek) =>
-                            dayjs(activityWeek.weekActivityWeek)
+                          meetings={calendarData.map((activity) =>
+                            dayjs(activity.activityDate)
                           )}
                           emoji={getEmojiForDay(dayProps.day)}
                         />
@@ -207,8 +228,8 @@ export default function DateCalendarServerRequest() {
                       day: (dayProps) => (
                         <ServerDay
                           {...dayProps}
-                          meetings={calendarData.map((activityWeek) =>
-                            dayjs(activityWeek.weekActivityWeek)
+                          meetings={calendarData.map((activity) =>
+                            dayjs(activity.activityDate)
                           )}
                           emoji={getEmojiForDay(dayProps.day)}
                         />
@@ -227,32 +248,14 @@ export default function DateCalendarServerRequest() {
               {selectedDate && (
                 <>
                   <h1 style={{ color: "black", paddingBottom: 10 }}>
-                    {calendarData.find(
-                      (day) =>
-                        day.weekActivityWeek ===
-                        selectedDate?.format("YYYY-MM-DD")
-                    )?.weekActivityTitle ?? "No Activity Found"}{" "}
+                    {selectedActivity?.activityTitle ?? "No Activity Found"}
                   </h1>
                   <h2 style={{ paddingBottom: 20 }}>
-                    {calendarData.find(
-                      (day) =>
-                        day.weekActivityWeek ===
-                        selectedDate?.format("YYYY-MM-DD")
-                    )?.weekActivityDetails ?? ""}
+                    {selectedActivity?.activityDetails ?? ""}
                   </h2>
                   <h4 style={{ paddingBottom: 40 }}>
-                    {calendarData.find(
-                      (day) =>
-                        day.weekActivityWeek ===
-                        selectedDate?.format("YYYY-MM-DD")
-                    )?.weekActivityHost
-                      ? "Hosted By " +
-                        calendarData.find(
-                          (day) =>
-                            day.weekActivityWeek ===
-                            selectedDate?.format("YYYY-MM-DD")
-                        )?.weekActivityHost
-                      : ""}
+                    {selectedActivity?.activityHost &&
+                      "Hosted By " + selectedActivity.activityHost}
                   </h4>
                 </>
               )}
@@ -261,8 +264,24 @@ export default function DateCalendarServerRequest() {
         </Grid>
       </Grid>
       <KeyComponent>
-        <b>KEY: </b>
-        <>&nbsp;</>Games=♟️ | Appreciation=🎵
+        <b style={{ marginLeft: 30 }}>KEY: </b>
+        <>&nbsp;</>
+        <h3
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            width: "100%",
+            marginLeft: 30,
+          }}
+        >
+          {emojis.map((emoticon: any, index: number) => (
+            <span key={index}>
+              <>&nbsp;</>
+              {emoticon.label}={emoticon.emoji}{" "}
+              {index !== emojis.length - 1 && " | "}
+            </span>
+          ))}
+        </h3>
       </KeyComponent>
       <Grid item xs={8}>
         <br />
