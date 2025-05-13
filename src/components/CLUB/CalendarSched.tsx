@@ -14,6 +14,8 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { db } from "../../firebase/FirebaseConfig";
 import { collection, getDocs } from "firebase/firestore";
 import emojis from "./emojisData.json";
+import { useLatestPickData } from "../DEV/useLatestPickData";
+
 const ItemMobile = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
@@ -92,8 +94,6 @@ function fakeFetch(date: Dayjs, { signal }: { signal: AbortSignal }) {
   });
 }
 
-const initialValue = dayjs("2025-05-15");
-
 function ServerDay(
   props: PickersDayProps<Dayjs> & { meetings?: Dayjs[]; emoji?: string }
 ) {
@@ -118,13 +118,22 @@ function ServerDay(
 }
 
 export default function DateCalendarServerRequest() {
+  const { latestISODate } = useLatestPickData();
+  const initialValue = dayjs(latestISODate);
   const requestAbortController = useRef<AbortController | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [highlightedDays, setHighlightedDays] = useState([1, 2, 15]);
-  const [selectedDate, setSelectedDate] = useState<Dayjs | null>(initialValue);
   const isMobile = useMediaQuery("(max-width: 768px)");
   const [calendarData, setCalendarData] = useState<any[]>([]);
-
+  const [selectedDate, setSelectedDate] = useState<Dayjs | null>(null);
+  useEffect(() => {
+    if (latestISODate) {
+      const parsed = dayjs(latestISODate);
+      if (parsed.isValid()) {
+        setSelectedDate(parsed);
+      }
+    }
+  }, [latestISODate]);
   useEffect(() => {
     const fetchCalendarData = async () => {
       try {
@@ -195,7 +204,7 @@ export default function DateCalendarServerRequest() {
               <ItemMobile>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                   <DateCalendar
-                    defaultValue={initialValue}
+                    value={selectedDate}
                     loading={isLoading}
                     onMonthChange={handleMonthChange}
                     onChange={handleDateChange}
@@ -219,7 +228,7 @@ export default function DateCalendarServerRequest() {
               <Item>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                   <DateCalendar
-                    defaultValue={initialValue}
+                    value={selectedDate}
                     loading={isLoading}
                     onMonthChange={handleMonthChange}
                     onChange={handleDateChange}
