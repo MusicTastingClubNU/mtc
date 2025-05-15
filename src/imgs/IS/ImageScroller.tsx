@@ -40,7 +40,6 @@ function ImageScroller() {
       try {
         const querySnapshot = await getDocs(collection(db, "pickData"));
         const allQuarters: Quarter[] = [];
-
         querySnapshot.forEach((doc) => {
           const data = doc.data();
           if (data?.weeks?.length) {
@@ -78,9 +77,8 @@ function ImageScroller() {
               })
             )
         );
-
         setImages(imageComponents);
-        setAnimationReady(true); // ✅ Trigger animation class
+        setAnimationReady(true);
       } catch (err) {
         console.error("Error loading image art from Firestore:", err);
       }

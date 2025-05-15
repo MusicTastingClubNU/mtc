@@ -1,34 +1,16 @@
-import React from "react";
 import googleFormImg from "../../imgs/companyLogos/googleformlogo.png";
 import groupmeImg from "../../imgs/companyLogos/groupmelogo.png";
 import "./phone-only-salespitch.css";
 import "./mission.css";
 import { useMediaQuery } from "@mui/material";
-import { useEffect, useState } from "react";
-import {
-  fetchGroupMeLink,
-  fetchInterestForm,
-} from "../../firebase/FirebaseFunctions";
-import { interestFormType, groupMeLinkType } from "../../firebase/models";
+import { useSocialLinks } from "../DEV/hooks/useSocialLinks";
 
 export default function SignUpPanel() {
   const isMobile = useMediaQuery("(max-width: 768px)");
-  const [interestForm, setInterestForm] = useState<interestFormType[]>([]);
-  const [groupMeLink, setGroupMeLink] = useState<groupMeLinkType[]>([]);
-  useEffect(() => {
-    const loadData = async () => {
-      const data = await fetchInterestForm();
-      setInterestForm(data);
-    };
-    loadData();
-  }, []);
-  useEffect(() => {
-    const loadData = async () => {
-      const data = await fetchGroupMeLink();
-      setGroupMeLink(data);
-    };
-    loadData();
-  }, []);
+  const { interestFormLinks, groupMeLinks, loading, error } = useSocialLinks();
+
+  if (loading) return <></>;
+  if (error) return <div>{error}</div>;
   return (
     <div className={isMobile ? "cont2" : "cont"} style={{ marginBottom: 50 }}>
       <h1 style={{ textAlign: "center", marginBottom: 10 }}>
@@ -39,7 +21,7 @@ export default function SignUpPanel() {
       >
         <div className="phone-su-inner-logo-cont">
           <a
-            href={interestForm[0]?.link ?? "#"}
+            href={interestFormLinks[0]?.link ?? "#"}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -60,7 +42,7 @@ export default function SignUpPanel() {
 
         <div className="phone-su-inner-logo-cont">
           <a
-            href={groupMeLink[0]?.link ?? "#"}
+            href={groupMeLinks[0]?.link ?? "#"}
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -14,7 +14,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { db } from "../../firebase/FirebaseConfig";
 import { collection, getDocs } from "firebase/firestore";
 import emojis from "./emojisData.json";
-import { useLatestPickData } from "../DEV/useLatestPickData";
+import { useLatestPickData } from "../DEV/hooks/useLatestPickData";
 
 const ItemMobile = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",

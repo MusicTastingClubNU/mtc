@@ -30,6 +30,7 @@ import HaveWeListenedToIt from "./HaveWeListenedToIt";
 import ThisWeeksPicks from "../SP/ThisWeeksPicks";
 import { db } from "../../firebase/FirebaseConfig";
 import { collection, getDocs } from "firebase/firestore";
+import { useRoomDayTime } from "../DEV/hooks/useRoomDateTime";
 //TODO: Organize previous picks by year
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -259,13 +260,13 @@ export default function WeeklyEntry() {
   const widthOfTabs = 100 / numberOfQuarterTabsBelowPREVIOUSPICKS;
   const stringThatDictatesNumberOfTabsBelowPREVIOUSPICKS =
     widthOfTabs.toString() + "%";
+  const { roomDayTime } = useRoomDayTime();
   return (
     <>
       <TitleAndDirectory />
       {isMobile ? <br /> : null}
-      <ThisWeeksPicks />
-      {/* <SeeYouNextQuarter /> */}
       {/* ||| HAVE WE LISTENED TO IT SEARCH BAR*/}
+      {roomDayTime?.onBreak ? <SeeYouNextQuarter /> : <ThisWeeksPicks />}
       <HaveWeListenedToIt />
       <div className={isMobile ? "cont2" : "cont"} style={{ marginTop: 40 }}>
         {/* ||| TITLE CODE ||| */}

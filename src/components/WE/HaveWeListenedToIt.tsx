@@ -78,7 +78,10 @@ export default function HaveWeListenedToIt() {
   }, []);
 
   return (
-    <div className={isMobile ? "cont2" : "cont"}>
+    <div
+      className={isMobile ? "faq2" : "faq"}
+      style={{ marginTop: -10, marginBottom: 50 }}
+    >
       <h3 style={{ fontSize: 35, textAlign: "center" }}>
         Have We Listened To It Yet?{" "}
         <span style={{ color: colorOfHWLToIt }}>{haveWeListenedToIt}</span>

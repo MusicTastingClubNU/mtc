@@ -36,7 +36,6 @@ const ClubPlaylists = () => {
       const data = await fetchSpecialSpotifyPlaylists();
       setPlaylists(data);
     };
-
     loadData();
   }, []);
   return (
@@ -61,8 +60,7 @@ const ClubPlaylists = () => {
             and you want to show images. I loop through the existing data, and the index of the entry corresponds with the */}
           {playlists.map((playlist, index) => (
             <>
-              {/* {value.name.includes("ShoutOuts!") && ( */}
-              <div className="spotify-playlists">
+              <div className="spotify-playlists" key={index}>
                 <a
                   href={playlist.link}
                   target="_blank"
@@ -97,7 +95,6 @@ const ClubPlaylists = () => {
                 </a>
                 <br />
               </div>
-              {/* )} */}
             </>
           ))}
         </div>

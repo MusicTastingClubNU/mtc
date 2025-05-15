@@ -7,57 +7,17 @@ import YsAlbumArt from "../../imgs/manualAlbumArt/WQ24_W2_AotW.png";
 import { db } from "../../firebase/FirebaseConfig";
 import { collection, getDocs, doc, getDoc } from "firebase/firestore";
 import spotifyImg from "../../imgs/companyLogos/spotlogo.png";
+import { useLatestPickData } from "../DEV/hooks/useLatestPickData";
+import { useRoomDayTime } from "../DEV/hooks/useRoomDateTime";
 export default function ThisWeeksPicks() {
   const isMobile = useMediaQuery("(max-width: 768px)");
+  const { latestWeek, picks } = useLatestPickData();
+  const { roomDayTime, error, loading } = useRoomDayTime();
+  const meetingDay = roomDayTime?.day;
+  const meetingTime = roomDayTime?.time;
+  const meetingLocation = roomDayTime?.room;
 
-  const meetingDay = "THURSDAY";
-  const meetingTime = "6:00-7:15";
-  const meetingLocation = "KRESGE 2440";
-
-  const [latestWeek, setLatestWeek] = useState<any | null>(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchLatestWeekData = async () => {
-      try {
-        // Step 1: Get all quarter docs
-        const querySnapshot = await getDocs(collection(db, "pickData"));
-        const allQuarters: any[] = [];
-        querySnapshot.forEach((docSnap) => {
-          allQuarters.push({ ...docSnap.data(), docId: docSnap.id });
-        });
-
-        // Step 2: Find quarter with highest quarterId
-        const latestQuarter = allQuarters.sort(
-          (a, b) => b.quarterId - a.quarterId
-        )[0];
-
-        if (!latestQuarter || !latestQuarter.docId) return;
-
-        // Step 3: Get full doc (to be safe if it's partial)
-        const docRef = doc(db, "pickData", latestQuarter.docId);
-        const fullDoc = await getDoc(docRef);
-        if (!fullDoc.exists()) return;
-
-        const fullData = fullDoc.data();
-
-        // Step 4: Find week with highest weekId
-        const latestWeekData = fullData.weeks.sort(
-          (a: any, b: any) => b.weekId - a.weekId
-        )[0];
-
-        setLatestWeek(latestWeekData);
-      } catch (err) {
-        console.error("Error fetching latest week:", err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchLatestWeekData();
-  }, []);
-
-  if (loading || !latestWeek) return null;
+  if (!latestWeek || !picks) return null;
 
   return (
     <div className={isMobile ? "faq2" : "faq"}>

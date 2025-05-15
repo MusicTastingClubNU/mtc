@@ -7,18 +7,23 @@ import "./mission.css";
 import SalespitchPanel from "./SalespitchPanel";
 import OurMissionPanel from "./OurMissionPanel";
 import SignUpPanel from "./SignUpPanel";
-import MTCLogo from "../../imgs/MTC_logo.png";
+import { useRoomDayTime } from "../DEV/hooks/useRoomDateTime";
 interface Props {}
 
 const SalesPitch = (props: Props) => {
   const isMobile = useMediaQuery("(max-width: 768px)");
+  const { roomDayTime, error, loading } = useRoomDayTime();
   return (
     <>
       {isMobile ? <br></br> : null}
       <SalespitchPanel />
       <OurMissionPanel />
-      <ThisWeeksPicks />
-      {/* <SeeYouNextQuarter /> */}
+      {!loading && roomDayTime?.onBreak ? (
+        <SeeYouNextQuarter />
+      ) : (
+        <ThisWeeksPicks />
+      )}
+
       <SignUpPanel />
     </>
   );
