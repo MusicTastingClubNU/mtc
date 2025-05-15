@@ -58,39 +58,38 @@ export default function MTCAotY() {
                           <img
                             src={pick.albumArt}
                             alt="albumOrSongArt"
-                            style={{ width: "90%", borderRadius: 10 }}
-                          ></img>
-                          <div
                             style={{
-                              fontWeight: "bold",
-                              margin: 5,
-                              fontSize: 18,
+                              width: 44,
+                              height: 44,
+                              borderRadius: 4,
+                              objectFit: "cover",
+                              flexShrink: 0,
                             }}
-                          >
-                            {pick.albumName !== "N/A" ? (
-                              <>{pick.albumName}</>
-                            ) : (
-                              "N/A"
-                            )}
-                          </div>
-                          <div
-                            style={{
-                              fontWeight: "bold",
-                              margin: 5,
-                              fontSize: 15,
-                            }}
-                          >
+                          />
+                          <div>
+                            <div
+                              style={{
+                                fontWeight: "bold",
+                                fontSize: 12,
+                                lineHeight: 1.2,
+                              }}
+                            >
+                              {pick.albumName !== "N/A"
+                                ? pick.albumName
+                                : "N/A"}
+                            </div>
                             {pick.albumName !== "N/A" && (
-                              <>by {pick.artistName}</>
+                              <div
+                                style={{
+                                  fontWeight: "normal",
+                                  fontSize: 10,
+                                  color: "#555",
+                                }}
+                              >
+                                by {pick.artistName}
+                              </div>
                             )}
                           </div>
-                          <div
-                            style={{
-                              fontWeight: "bold",
-                              margin: 5,
-                              fontSize: 12,
-                            }}
-                          ></div>
                         </div>
                       </>
                     ))}

@@ -273,7 +273,43 @@ export default function DateCalendarServerRequest() {
         </Grid>
       </Grid>
       <KeyComponent>
-        <b style={{ marginLeft: 30 }}>KEY: </b>
+        {isMobile ? (
+          <h3
+            style={{
+              width: "100%",
+              textAlign: "center",
+            }}
+          >
+            {emojis.map((emoticon: any, index: number) => (
+              <span key={index}>
+                &nbsp;
+                {emoticon.label}={emoticon.emoji}
+              </span>
+            ))}
+          </h3>
+        ) : (
+          <>
+            <b style={{ marginLeft: 30 }}>KEY: </b>
+            <>&nbsp;</>
+            <h3
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                width: "100%",
+                marginLeft: 30,
+              }}
+            >
+              {emojis.map((emoticon: any, index: number) => (
+                <span key={index}>
+                  <>&nbsp;</>
+                  {emoticon.label}={emoticon.emoji}{" "}
+                  {index !== emojis.length - 1 && " | "}
+                </span>
+              ))}
+            </h3>
+          </>
+        )}
+        {/* <b style={{ marginLeft: 30 }}>KEY: </b>
         <>&nbsp;</>
         <h3
           style={{
@@ -290,7 +326,7 @@ export default function DateCalendarServerRequest() {
               {index !== emojis.length - 1 && " | "}
             </span>
           ))}
-        </h3>
+        </h3> */}
       </KeyComponent>
       <Grid item xs={8}>
         <br />

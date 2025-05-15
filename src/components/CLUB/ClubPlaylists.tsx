@@ -1,6 +1,4 @@
 import React from "react";
-
-import specialSpotifyPlaylistData from "./specialSpotifyPlaylists.json";
 import spotifyImg from "../../imgs/companyLogos/spotlogo.png";
 // import EmailContent from "./EmailTest";
 import halloween24PlaylistImg from "../../imgs/spotifyPlaylistCovers/halloween24PlaylistImg.png";
@@ -55,45 +53,27 @@ const ClubPlaylists = () => {
             />
           </a>
         </h2>
-        <div className="spotify-cont">
+        <div className="playlist-cont">
           {/* I did the line below bc Typescript is finicky when you're looping through data 
             and you want to show images. I loop through the existing data, and the index of the entry corresponds with the */}
           {playlists.map((playlist, index) => (
             <>
-              <div className="spotify-playlists" key={index}>
+              <div className="special-spotify-playlist" key={index}>
                 <a
                   href={playlist.link}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <img
-                    src={logo}
-                    alt="Playlist Photo"
-                    className="company-logos"
-                    style={{
-                      borderRadius: 10,
-                      width: 125,
-                      height: 125,
-                      marginBottom: -10,
-                    }}
+                    src={playlistImgs[index] ?? logo}
+                    alt="Playlist Cover"
+                    className="playlist-cover"
                   />
                 </a>
-
-                <div style={{ padding: 10 }}>{playlist.name}</div>
-                <div>Made By {playlist.madeBy}</div>
-                <a
-                  href={playlist.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src={spotifyImg}
-                    alt="Spotify Logo"
-                    className="company-logos"
-                    style={{ width: 50, height: 50 }}
-                  />
-                </a>
-                <br />
+                <div className="playlist-text">
+                  <div className="playlist-title">{playlist.name}</div>
+                  <div className="playlist-author">by {playlist.madeBy}</div>
+                </div>
               </div>
             </>
           ))}

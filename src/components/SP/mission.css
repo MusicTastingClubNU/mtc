@@ -131,16 +131,71 @@ body {
   box-sizing: border-box;
   text-align: center;
 }
-
-.aoty {
-  width: 150px;
-  margin: 10px;
+.playlist-cont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
   padding: 10px;
+}
+.aoty {
+  display: flex;
+  align-items: center;
+  width: 220px;
+  margin: 6px;
+  padding: 6px;
   background-color: white;
-  border: 3px solid #b7b7b7;
-  border-radius: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
   box-sizing: border-box;
-  text-align: center;
+  text-align: left;
+  gap: 6px;
+}
+
+.special-spotify-playlist {
+  display: flex;
+  align-items: center;
+  width: 260px;
+  height: 72px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-sizing: border-box;
+  gap: 10px;
+  transition: box-shadow 0.2s ease;
+}
+
+.special-spotify-playlist:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.special-spotify-playlist img.playlist-cover {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.playlist-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.playlist-title {
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 1.2;
+  margin-bottom: 2px;
+}
+
+.playlist-author {
+  font-size: 11px;
+  color: #666;
+  margin-bottom: 4px;
 }
 
 .exec-board-img {
