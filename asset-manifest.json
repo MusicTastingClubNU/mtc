@@ -1,35 +1,27 @@
 {
   "files": {
     "main.css": "/static/css/main.03c8af7b.css",
-    "main.js": "/static/js/main.a46b2d9e.js",
+    "main.js": "/static/js/main.29a87411.js",
     "static/media/MTC_club_photo_FQ24.png": "/static/media/MTC_club_photo_FQ24.5d6dcd289e52275f5efe.png",
     "static/media/MTC_club_photo_WQ25.jpg": "/static/media/MTC_club_photo_WQ25.4b4d81f060f7ebdd6e75.jpg",
-    "static/media/SimonOlshanCantin.png": "/static/media/SimonOlshanCantin.1812dfb93638ca3313ab.png",
-    "static/media/ArchieSilverstein.png": "/static/media/ArchieSilverstein.750c9d4626dc9f1dd236.png",
-    "static/media/RyanMurphy.png": "/static/media/RyanMurphy.d232c7cb2fed48bc0fb4.png",
-    "static/media/DanielRivero.png": "/static/media/DanielRivero.54c106b35526cb9527eb.png",
     "static/media/hipHopWorkoutPlaylistImg.png": "/static/media/hipHopWorkoutPlaylistImg.628f14b032aaa3263c43.png",
-    "static/media/CoreyDubin.png": "/static/media/CoreyDubin.d07661d39df479d0c8c4.png",
     "static/media/WQ24_W2_AotW.png": "/static/media/WQ24_W2_AotW.3f6b617402633e9d2554.png",
-    "static/media/AndrewBarrett.png": "/static/media/AndrewBarrett.eb9837795179e306d73b.png",
-    "static/media/KatiePartee.png": "/static/media/KatiePartee.65cf65bc33b67560ff98.png",
     "static/media/halloween24PlaylistImg.png": "/static/media/halloween24PlaylistImg.ffdebaf1aa27f6d6eee8.png",
     "static/media/instalogo.png": "/static/media/instalogo.e905e80e3d57cc2b32c7.png",
     "static/media/holidays24PlaylistImg.png": "/static/media/holidays24PlaylistImg.a726d82144af0bbf5c35.png",
     "static/media/Roboto-Regular.ttf": "/static/media/Roboto-Regular.27f62b53b93858475a7f.ttf",
     "static/media/Roboto-Bold.ttf": "/static/media/Roboto-Bold.d50a80138ec4f2fb5e9f.ttf",
     "static/media/MTC_logo.png": "/static/media/MTC_logo.a4c1cbb58df44a722a1a.png",
-    "static/media/DannyRamirez.png": "/static/media/DannyRamirez.17011642e24e7d628d6c.png",
     "static/media/TheDailyASG.png": "/static/media/TheDailyASG.628b53cfedd3b6a29cfe.png",
     "static/media/CourierPrime-Regular.ttf": "/static/media/CourierPrime-Regular.7503a2e9660bb6f608fb.ttf",
     "static/media/googleformlogo.png": "/static/media/googleformlogo.f5e00191489875080207.png",
     "static/media/groupmelogo.png": "/static/media/groupmelogo.9dfc156ee6a940c187a1.png",
     "index.html": "/index.html",
     "main.03c8af7b.css.map": "/static/css/main.03c8af7b.css.map",
-    "main.a46b2d9e.js.map": "/static/js/main.a46b2d9e.js.map"
+    "main.29a87411.js.map": "/static/js/main.29a87411.js.map"
   },
   "entrypoints": [
     "static/css/main.03c8af7b.css",
-    "static/js/main.a46b2d9e.js"
+    "static/js/main.29a87411.js"
   ]
 }
