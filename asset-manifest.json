@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.03c8af7b.css",
-    "main.js": "/static/js/main.29a87411.js",
+    "main.js": "/static/js/main.fdf7b52f.js",
     "static/media/MTC_club_photo_FQ24.png": "/static/media/MTC_club_photo_FQ24.5d6dcd289e52275f5efe.png",
     "static/media/MTC_club_photo_WQ25.jpg": "/static/media/MTC_club_photo_WQ25.4b4d81f060f7ebdd6e75.jpg",
     "static/media/hipHopWorkoutPlaylistImg.png": "/static/media/hipHopWorkoutPlaylistImg.628f14b032aaa3263c43.png",
@@ -18,10 +18,10 @@
     "static/media/groupmelogo.png": "/static/media/groupmelogo.9dfc156ee6a940c187a1.png",
     "index.html": "/index.html",
     "main.03c8af7b.css.map": "/static/css/main.03c8af7b.css.map",
-    "main.29a87411.js.map": "/static/js/main.29a87411.js.map"
+    "main.fdf7b52f.js.map": "/static/js/main.fdf7b52f.js.map"
   },
   "entrypoints": [
     "static/css/main.03c8af7b.css",
-    "static/js/main.29a87411.js"
+    "static/js/main.fdf7b52f.js"
   ]
 }
