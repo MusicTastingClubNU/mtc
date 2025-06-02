@@ -8,6 +8,7 @@ import SalespitchPanel from "./SalespitchPanel";
 import OurMissionPanel from "./OurMissionPanel";
 import SignUpPanel from "./SignUpPanel";
 import { useRoomDayTime } from "../DEV/hooks/useRoomDateTime";
+import DateCalendarServerRequest from "../CLUB/CalendarSched";
 interface Props {}
 
 const SalesPitch = (props: Props) => {
@@ -23,10 +24,9 @@ const SalesPitch = (props: Props) => {
       ) : (
         <ThisWeeksPicks />
       )}
-
+      <DateCalendarServerRequest />
       <SignUpPanel />
     </>
   );
 };
-
 export default SalesPitch;

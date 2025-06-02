@@ -4,7 +4,7 @@ import aoty from "./aotyData.json";
 import { Tabs, Tab, Box, Typography } from "@mui/material";
 import "../BLOG/blog.css";
 import { useMediaQuery } from "@mui/material";
-
+import { auth, mtcgmailuid } from "../../firebase/FirebaseConfig";
 export default function MTCAotY() {
   const [activeTab, setActiveTab] = useState(0);
   const [yr, setYr] = useState(2024);
@@ -79,15 +79,32 @@ export default function MTCAotY() {
                                 : "N/A"}
                             </div>
                             {pick.albumName !== "N/A" && (
-                              <div
-                                style={{
-                                  fontWeight: "normal",
-                                  fontSize: 10,
-                                  color: "#555",
-                                }}
-                              >
-                                by {pick.artistName}
-                              </div>
+                              <>
+                                <div
+                                  style={{
+                                    fontWeight: "normal",
+                                    fontSize: 10,
+                                    color: "#555",
+                                  }}
+                                >
+                                  by {pick.artistName}
+                                  {/* <h4> */}
+                                  <br />
+                                  {/* </h4> */}
+                                </div>
+                                <h6
+                                  style={{
+                                    fontWeight: "normal",
+                                    fontSize: 10,
+                                  }}
+                                >
+                                  {" "}
+                                  (Picked By{" "}
+                                  {auth.currentUser?.uid === mtcgmailuid &&
+                                    pick.memberName}
+                                  )
+                                </h6>
+                              </>
                             )}
                           </div>
                         </div>
