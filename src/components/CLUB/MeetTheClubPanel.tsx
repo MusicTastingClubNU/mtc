@@ -6,6 +6,7 @@ import Box from "@mui/material/Box";
 import * as React from "react";
 import Image, { StaticImageData } from "next/image";
 import MTCClubPhotoWQ25 from "../../imgs/execBoardImgs/MTC_club_photo_WQ25.jpg";
+import MTCClubPhotoSQ25 from "../../imgs/execBoardImgs/MTC_club_photo_SQ25.jpg";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -98,7 +99,12 @@ export default function MeetTheClubPanel() {
   return (
     <div className={isMobile ? "faq2" : "faq"}>
       <h2 className="exec-board-title">
-        MEET THE CLUB! {value == 0 ? "(WQ25)" : value == 1 && "(FQ24)"}
+        MEET THE CLUB!{" "}
+        {value === 0
+          ? "(SQ25)"
+          : value === 1
+          ? "(WQ25)"
+          : value === 2 && "(FQ24)"}
       </h2>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs
@@ -106,11 +112,24 @@ export default function MeetTheClubPanel() {
           onChange={handleChange}
           aria-label="basic tabs example"
         >
-          <Tab label="WQ25" {...a11yProps(0)} />
-          <Tab label="FQ24" {...a11yProps(1)} />
+          <Tab label="SQ25" {...a11yProps(0)} />
+          <Tab label="WQ25" {...a11yProps(1)} />
+          <Tab label="FQ24" {...a11yProps(2)} />
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
+        <ClubPhotoComponent
+          src={MTCClubPhotoSQ25}
+          alt="MTCClubPhotoSQ25"
+          quarter="SQ25"
+          backRow="Daniel - Derrick - AJ - Abbie - Corey - Simon - Reed - Susanna - Cai"
+          frontRow="Andrew B - Archie - Grace - Katie - Ryan L - Sid - Ryan M - Jameson - Danny - Aidan - Andrew W - Carter"
+          notPictured="Not Pictured: Joseph"
+          photographerLink="https://www.jelkphoto.com/"
+          photographerName="Jonah Elkowitz"
+        />
+      </CustomTabPanel>
+      <CustomTabPanel value={value} index={1}>
         <ClubPhotoComponent
           src={MTCClubPhotoWQ25}
           alt="MTCClubPhotoWQ25"
@@ -122,7 +141,7 @@ export default function MeetTheClubPanel() {
           photographerName="Luis Castañeda"
         />
       </CustomTabPanel>
-      <CustomTabPanel value={value} index={1}>
+      <CustomTabPanel value={value} index={2}>
         <ClubPhotoComponent
           src={MTCClubPhotoFQ24}
           alt="MTCClubPhotoFQ24"
