@@ -1,0 +1,59 @@
+[
+  {
+    "photoId": 0,
+    "photoURL": "MTCClubPhotoFQ24",
+    "alt": "MTCClubPhotoFQ24",
+    "quarter": "FQ24",
+    "backRow": ["Arch", "Aidan", "Andrew", "Joseph", "Danny"],
+    "frontRow": ["Daniel", "Reed", "Simon", "Corey", "Susanna", "Maya", "Cai"],
+    "notPictured": ["Grace", "Ryan", "AJ", "Acton", "Zoey"],
+    "photographerLink": "https://www.jelkphoto.com/",
+    "photographerName": "Jonah Elkowitz"
+  },
+
+  {
+    "photoId": 1,
+    "photoURL": "MTCClubPhotoWQ25",
+    "alt": "MTCClubPhotoWQ25",
+    "quarter": "WQ25",
+    "backRow": ["Arch", "Katie", "Grace", "Aidan", "Danny", "Joseph", "Andrew"],
+    "frontRow": ["Daniel", "Jameson", "Simon", "Corey", "AJ", "Reed"],
+    "notPictured": ["Cai", "Isabel", "Susanna", "Ryan"],
+    "photographerLink": "https://luiscastaneda220.wixsite.com/lcmedia",
+    "photographerName": "Luis Castañeda"
+  },
+  {
+    "photoId": 2,
+    "photoURL": "ClubPhotos/MTCClubPhotoSQ25",
+    "alt": "MTCClubPhotoSQ25",
+    "quarter": "SQ25",
+    "backRow": [
+      "Daniel",
+      "Derrick",
+      "AJ",
+      "Abbie",
+      "Corey",
+      "Simon",
+      "Reed",
+      "Susanna",
+      "Cai"
+    ],
+    "frontRow": [
+      "Andrew B",
+      "Archie",
+      "Grace",
+      "Katie",
+      "Ryan L",
+      "Sid",
+      "Ryan M",
+      "Jameson",
+      "Danny",
+      "Aidan",
+      "Andrew W",
+      "Carter"
+    ],
+    "notPictured": ["Joseph"],
+    "photographerLink": "https://www.jelkphoto.com/",
+    "photographerName": "Jonah Elkowitz"
+  }
+]

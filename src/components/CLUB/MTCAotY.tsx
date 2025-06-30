@@ -11,7 +11,6 @@ export default function MTCAotY() {
   useEffect(() => {
     setYr(activeTab);
   }, [activeTab]);
-  console.log("yr" + yr);
   const isMobile = useMediaQuery("(max-width: 768px)");
   return (
     <>
