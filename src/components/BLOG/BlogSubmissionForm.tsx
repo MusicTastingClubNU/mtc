@@ -6,7 +6,7 @@ const BlogSubmissionForm = () => {
   const isMobile = useMediaQuery("(max-width: 768px)");
   return (
     <>
-      <div className={isMobile ? "faq2" : "faq"}>
+      <div className="blog-cont2">
         <h2 className="blog-titles">Submit Blog Posts Here!</h2>
         <div className="phone-su-inner-logo-cont">
           <a

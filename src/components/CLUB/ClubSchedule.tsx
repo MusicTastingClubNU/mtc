@@ -11,6 +11,52 @@ import TimelineOppositeContent, {
   timelineOppositeContentClasses,
 } from "@mui/lab/TimelineOppositeContent";
 import { useMediaQuery } from "@mui/material";
+import { addMinutes, format } from "date-fns";
+
+type TimelineEntry = {
+  startTime: Date;
+  endTime: Date;
+  label: string;
+};
+
+function buildTimeline(
+  start: Date,
+  activities: RawActivity[]
+): TimelineEntry[] {
+  const timeline: TimelineEntry[] = [];
+
+  let currentTime = start;
+
+  for (const activity of activities) {
+    const entry: TimelineEntry = {
+      label: activity.label,
+      startTime: currentTime,
+      endTime: addMinutes(currentTime, activity.durationMinutes),
+    };
+    timeline.push(entry);
+    currentTime = entry.endTime; // update time for next activity
+  }
+
+  return timeline;
+}
+
+const rawActivities: RawActivity[] = [
+  { label: "Intros/Recent Releases/Shout Outs", durationMinutes: 10 },
+  { label: "Discussion", durationMinutes: 35 },
+  { label: "Album/Song Pick Selection", durationMinutes: 5 },
+  { label: "In-Club Activity", durationMinutes: 25 },
+];
+// Example use:
+const startTime = new Date("2025-06-20T18:00:00");
+const timelineData = buildTimeline(startTime, rawActivities);
+
+type RawActivity = {
+  label: string;
+  durationMinutes: number;
+};
+
+const formatTimeRange = (start: Date, end: Date) =>
+  `${format(start, "h:mma")}-${format(end, "h:mma")}`;
 
 export default function MyClubSchedule() {
   // TODO: Need lines to be a straight line
@@ -20,47 +66,20 @@ export default function MyClubSchedule() {
       <h2 style={{ fontSize: 35, textAlign: "center", marginBottom: 15 }}>
         Club Schedule
       </h2>
-      <Timeline>
-        <TimelineItem>
-          <TimelineOppositeContent color="textSecondary">
-            6:00PM-6:10PM
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineDot />
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent>Intros/Recent Releases/Shout Outs</TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineOppositeContent color="textSecondary">
-            6:10PM-6:45PM
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineDot />
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent>Discussion</TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineOppositeContent color="textSecondary">
-            6:45PM-6:50PM
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineDot />
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent>Album/Song Pick Selection</TimelineContent>
-        </TimelineItem>
 
-        <TimelineItem>
-          <TimelineOppositeContent color="textSecondary">
-            6:50PM-7:15PM
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineDot />
-          </TimelineSeparator>
-          <TimelineContent>In-Club Activity</TimelineContent>
-        </TimelineItem>
+      <Timeline>
+        {timelineData.map((entry, index) => (
+          <TimelineItem key={index}>
+            <TimelineOppositeContent color="textSecondary">
+              {formatTimeRange(entry.startTime, entry.endTime)}
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineDot />
+              {index < timelineData.length - 1 && <TimelineConnector />}
+            </TimelineSeparator>
+            <TimelineContent>{entry.label}</TimelineContent>
+          </TimelineItem>
+        ))}
       </Timeline>
     </div>
   );

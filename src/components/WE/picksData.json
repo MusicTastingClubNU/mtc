@@ -1,5 +1,211 @@
 [
   {
+    "quarterId": 4,
+    "quarterName": "SQ25",
+    "weeks": [
+      {
+        "weekId": 33,
+        "weekName": "WEEK 1",
+        "weekDate": "(04/03/25)",
+        "picks": [
+          {
+            "pickId": 132,
+            "pickType": "Album of the Week",
+            "songOrAlbumName": "Takk...",
+            "artistName": "Sigur Rós ",
+            "memberName": "Andrew",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273ac13d37ce26e1a16e7d9cd24"
+          },
+          {
+            "pickId": 133,
+            "pickType": "Runner Up Album of the Week",
+            "songOrAlbumName": "Peripheral Vision",
+            "artistName": "Turnover",
+            "memberName": "Katie",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2738810645138bfcbd3707f2290"
+          },
+          {
+            "pickId": 134,
+            "pickType": "Song of the Week",
+            "songOrAlbumName": "Saint Steve Irwin",
+            "artistName": "Jesse Welles",
+            "memberName": "Corey",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273656ca055e88b9cca9e8fb99a"
+          },
+          {
+            "pickId": 135,
+            "pickType": "Runner Up Song of the Week",
+            "songOrAlbumName": "Big Calm",
+            "artistName": "Morcheeba",
+            "memberName": "Jameson",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273854db8ca631613dc9479c773"
+          }
+        ],
+        "spotifyPlaylistLink": "https://open.spotify.com/playlist/3ijRWOQSppaCFro2tGV8bS?si=ca2dxFL7RlirvcU8p_f_IA"
+      },
+      {
+        "weekId": 34,
+        "weekName": "WEEK 2",
+        "weekDate": "(04/10/25)",
+        "picks": [
+          {
+            "pickId": 136,
+            "pickType": "Album of the Week",
+            "songOrAlbumName": "You Forgot it in People",
+            "artistName": "Broken Social Scene",
+            "memberName": "Ryan",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b27303da841c188eb597c6cf3611"
+          },
+          {
+            "pickId": 137,
+            "pickType": "Runner Up Album of the Week",
+            "songOrAlbumName": "Ooh Rap I Yah",
+            "artistName": "George Clanton",
+            "memberName": "Reed",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273f63203e1ddd367b69808f5bb"
+          },
+          {
+            "pickId": 138,
+            "pickType": "Song of the Week",
+            "songOrAlbumName": "Demain",
+            "artistName": "Berry",
+            "memberName": "Sean",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e025f388eb9743f3a121f929661"
+          },
+          {
+            "pickId": 139,
+            "pickType": "Runner Up Song of the Week",
+            "songOrAlbumName": "Can't Run But",
+            "artistName": "Paul Simon",
+            "memberName": "Katarina",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2737117dac35f5fa0621d853480"
+          }
+        ],
+        "spotifyPlaylistLink": "https://open.spotify.com/playlist/58Gckx12ATuqiTRwJkXwEj?si=AwSucEJmTsKifF7xcXgpRw"
+      },
+      {
+        "weekId": 35,
+        "weekName": "WEEK 3",
+        "weekDate": "(04/17/25)",
+        "picks": [
+          {
+            "pickId": 140,
+            "pickType": "Album of the Week",
+            "songOrAlbumName": "choke enough",
+            "artistName": "Oklou",
+            "memberName": "Cai",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273620da415625eabce19e95625"
+          },
+          {
+            "pickId": 141,
+            "pickType": "Runner Up Album of the Week",
+            "songOrAlbumName": "World Clique",
+            "artistName": "Deee-Lite",
+            "memberName": "Grace",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273cbcb5083c56df2a557625bca"
+          },
+          {
+            "pickId": 142,
+            "pickType": "Song of the Week",
+            "songOrAlbumName": "Burfict!",
+            "artistName": "JPEGMAFIA / Danny Brown",
+            "memberName": "AJ",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2738cf4c85912fdeb106707fb4c"
+          },
+          {
+            "pickId": 143,
+            "pickType": "Runner Up Song of the Week",
+            "songOrAlbumName": "Future History",
+            "artistName": "Lucas Sital-Singh",
+            "memberName": "Aidan",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273b7684d7b59779e01be419092"
+          }
+        ],
+        "spotifyPlaylistLink": "https://open.spotify.com/playlist/6klFun9rIBt9hRQOoVHnSR?si=5a69_weXSYq31t-2jfRjTQ"
+      },
+      {
+        "weekId": 36,
+        "weekName": "WEEK 4",
+        "weekDate": "(04/24/25)",
+        "picks": [
+          {
+            "pickId": 144,
+            "pickType": "Album of the Week",
+            "songOrAlbumName": "Box for Buddy, Box For Star",
+            "artistName": "This is Lorelai",
+            "memberName": "Joseph",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2735df409c6f866c32ca4c2374e"
+          },
+          {
+            "pickId": 145,
+            "pickType": "Runner Up Album of the Week",
+            "songOrAlbumName": "22, A Million",
+            "artistName": "Bon Iver",
+            "memberName": "Abbie",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b27326a351da1ea9d77a1b45dc6b"
+          },
+          {
+            "pickId": 146,
+            "pickType": "Song of the Week",
+            "songOrAlbumName": "Alpha Kappa Fall Of Troy The Movie Part Deux",
+            "artistName": "Modern Baseball",
+            "memberName": "Derrick",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2731cbe5234b6563f39be4ddfda"
+          },
+          {
+            "pickId": 147,
+            "pickType": "Runner Up Song of the Week",
+            "songOrAlbumName": "Strange Weather",
+            "artistName": "Slaughter Beach, Dog",
+            "memberName": "Simon",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2737681b2b09229464b8d18b4c8"
+          }
+        ],
+        "spotifyPlaylistLink": "https://open.spotify.com/playlist/59fUoiGH0V5oCnoAVGPkoA?si=BwK9Klz_RAWGSUPeGQ3LXw"
+      },
+      {
+        "weekId": 37,
+        "weekName": "WEEK 5",
+        "weekDate": "(05/01/25)",
+        "picks": [
+          {
+            "pickId": 148,
+            "pickType": "Album of the Week",
+            "songOrAlbumName": "Introspection",
+            "artistName": "Luiz Bonfa",
+            "memberName": "Sid",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2733e675545232f670a2798b7ad"
+          },
+          {
+            "pickId": 149,
+            "pickType": "Runner Up Album of the Week",
+            "songOrAlbumName": "Dark Times",
+            "artistName": "Vince Staples",
+            "memberName": "Susanna",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2732129eda0ae3c8426c3d4dc7d"
+          },
+          {
+            "pickId": 150,
+            "pickType": "Song of the Week",
+            "songOrAlbumName": "5 Dollar Pony Rides",
+            "artistName": "Mac Miller",
+            "memberName": "Archie",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2739a9c4cd69a6f514dfbb7305a"
+          },
+          {
+            "pickId": 151,
+            "pickType": "Runner Up Song of the Week",
+            "songOrAlbumName": "Native New Yorker",
+            "artistName": "Odyssey",
+            "memberName": "Daniel",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2733c8cb1c41b25d18e728d01dc"
+          }
+        ],
+        "spotifyPlaylistLink": "https://open.spotify.com/playlist/3CxNm2U7Ck1xSsGCvl2V5H?si=Ds6GM53LSMOSH6UC4fzrpg"
+      }
+    ]
+  },
+  {
     "quarterId": 3,
     "quarterName": "WQ25",
     "weeks": [
@@ -282,6 +488,46 @@
           }
         ],
         "spotifyPlaylistLink": "https://open.spotify.com/playlist/7aCJKx16Bwlehoti7yV2Ox?si=ukIvTdd6QAuUZg6hsF4V2g"
+      },
+      {
+        "weekId": 32,
+        "weekName": "WEEK 8",
+        "weekDate": "(03/04/25)",
+        "picks": [
+          {
+            "pickId": 128,
+            "pickType": "Album of the Week",
+            "songOrAlbumName": "iridescence",
+            "artistName": "Brockhampton",
+            "memberName": "Cai",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273de91214392394303e66d1cb6"
+          },
+          {
+            "pickId": 129,
+            "pickType": "Runner Up Album of the Week",
+            "songOrAlbumName": "Smiling With No Teeth",
+            "artistName": "Genesis Owusu",
+            "memberName": "Arch",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2739f9db0feb918757a7bd8fcd0"
+          },
+          {
+            "pickId": 130,
+            "pickType": "Song of the Week",
+            "songOrAlbumName": "Believe Me",
+            "artistName": "Bôa",
+            "memberName": "Isabel",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2739d2941d4226a35c28ad25710"
+          },
+          {
+            "pickId": 131,
+            "pickType": "Runner Up Song of the Week",
+            "songOrAlbumName": "'Cause I'm a Man",
+            "artistName": "Tame Impala",
+            "memberName": "Aidan",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b2739e1cfc756886ac782e363d79"
+          }
+        ],
+        "spotifyPlaylistLink": "https://open.spotify.com/playlist/04J8kxxpVzw1O2qph64Ie3?si=mBoWwZ7xRoCYaMz4OQBYBQ"
       }
     ]
   },
@@ -1037,7 +1283,7 @@
             "pickId": 10,
             "pickType": "Song of the Week",
             "songOrAlbumName": "Garbage Pale Kids",
-            "artistName": "JPEGMAFIA/Danny Brown",
+            "artistName": "JPEGMAFIA / Danny Brown",
             "memberName": "Archie",
             "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e028cf4c85912fdeb106707fb4c"
           },
@@ -1060,7 +1306,7 @@
             "pickId": 12,
             "pickType": "Album of the Week",
             "songOrAlbumName": "SCARING THE HOES",
-            "artistName": "JPEGMAFIA/Danny Brown",
+            "artistName": "JPEGMAFIA / Danny Brown",
             "memberName": "Archie",
             "songOrAlbumArt": "https://i.scdn.co/image/ab67616d00001e028cf4c85912fdeb106707fb4c"
           },

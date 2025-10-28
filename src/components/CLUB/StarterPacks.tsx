@@ -27,7 +27,18 @@ export default function AccordionList() {
         }}
       >
         <h2 className="blog-titles" style={{ textAlign: "center" }}>
-          MTC Genre Starter Packs
+          MTC Genre Starter Packs{" "}
+          <a
+            href="https://open.spotify.com/user/31apxxxqaadrj24rjilx75insprq"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={spotifyImg}
+              alt="Spotify Img"
+              style={{ width: 50, height: 50, marginBottom: -12 }}
+            />
+          </a>
         </h2>
         <Grid container spacing={2} sx={{ justifyContent: "center" }}>
           {starterPackData.map((genre, index) => (
@@ -47,22 +58,27 @@ export default function AccordionList() {
                       sx={{
                         margin: 0,
                         lineHeight: 0.7,
+                        paddingTop: "10px",
                       }}
                     >
                       {genre.genreName}{" "}
                       <span
                         style={{
                           fontSize: "2rem",
-                          marginLeft: "0.3rem",
-                          position: "relative",
-                          top: "4px",
+                          // marginLeft: "0.3rem",
+
+                          top: "-4px",
+                          paddingLeft: "10px",
+                          marginTop: "10px",
+                          position: "absolute",
+                          paddingTop: "12px",
                         }}
                       >
                         {genre?.genreEmoji}
                         {/* TODO: Use Genmoji to make genre-specific emojis */}
                       </span>
                     </Typography>
-                    <a
+                    {/* <a
                       href={genre?.spotifyPlaylistLink}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -70,9 +86,13 @@ export default function AccordionList() {
                       <img
                         src={spotifyImg}
                         alt="Spotify Logo"
-                        className="genre-starter-pack-spotify-logo"
+                        style={{
+                          width: "50px",
+                          textAlign: "right",
+                          paddingLeft: 20,
+                        }}
                       />
-                    </a>
+                    </a> */}
                   </AccordionSummary>
 
                   {genre.recommendations.map((recs) => (

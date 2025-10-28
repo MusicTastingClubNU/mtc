@@ -23,7 +23,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-src/components/DEV/DevPAGE.tsx
-src/components/DEV/MTCoder.tsx
-src/components/DEV/AidanComponent.tsx
-src/components/DEV/DanielComponent.tsx
+
+src/components/DEV
+src/firebase
+

@@ -1,0 +1,80 @@
+bin/rails generate model Picksdata quarter_id:integer quarter_name:string ...
+- Generates a model named Picksdata, which has a `quarterName` column of type string 
+
+
+[
+  {
+    "quarterId": 3,
+    "quarterName": "WQ25",
+    "weeks": [
+      {
+        "weekId": 25,
+        "weekName": "WEEK 1",
+        "weekDate": "(01/14/25)",
+        "picks": [
+          {
+            "pickId": 100,
+            "pickType": "Album of the Week",
+            "songOrAlbumName": "Bucket List Project",
+            "artistName": "Saba",
+            "memberName": "Danny",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273819c0f21cca81b0088bed05d"
+          },
+          {
+            "pickId": 101,
+            "pickType": "Runner Up Album of the Week",
+            "songOrAlbumName": "\"In case I make it,\"",
+            "artistName": "Will Wood",
+            "memberName": "Isabel",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b27378a1762c3df46ddd8f994ffd"
+          },
+          {
+            "pickId": 102,
+            "pickType": "Song of the Week",
+            "songOrAlbumName": "Do It",
+            "artistName": "Nelly Furtado",
+            "memberName": "Daniel",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273a6f439c8957170652f9410e2"
+          },
+          {
+            "pickId": 103,
+            "pickType": "Runner Up Song of the Week",
+            "songOrAlbumName": "Cheer",
+            "artistName": "Whitelands",
+            "memberName": "Jameson",
+            "songOrAlbumArt": "https://i.scdn.co/image/ab67616d0000b273133ad6d801f904b1459e0af5"
+          }
+        ],
+        "spotifyPlaylistLink": "https://open.spotify.com/playlist/3MjKMmOcEVzOKtPFraRhv5?go=1&sp_cid=caa1929b821c7a1a03c8028cea1f1e0d"
+      },
+  }
+]
+
+A Request's Journey Through Rails
+Rails needs at minimum (to say "Hello")
+- a route
+- a controller with an action
+- a view
+
+To get Rails saying "Hello", you need to create at minimum a route, a controller with 
+an action, and a view. A route maps a request to a controller action. A controller 
+action performs the necessary work to handle the request, and prepares any data for
+ the view. A view displays data in a desired format.
+
+In terms of implementation: Routes are rules written in a Ruby DSL (Domain-Specific
+ Language). Controllers are Ruby classes, and their public methods are actions. And 
+ views are templates, usually written in a mixture of HTML and Ruby.
+
+That's the short of it, but we’re going to walk through each of these steps in more 
+detail next.
+
+
+### Routes
+http://example.org/products?sale=true&sort=asc
+- https is the protocol
+- example.org is the host
+- /products is the path
+- ?sale=true&sort=asc are the query parameters
+
+HTTP requests can make different API requests: GET, POST, PUT/PATCH, DELETE
+

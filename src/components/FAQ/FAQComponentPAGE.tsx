@@ -5,25 +5,52 @@ import Socials from "./socials";
 import { useMediaQuery } from "@mui/material";
 import DateCalendarServerRequest from "../CLUB/CalendarSched";
 import TitleAndDirectory from "../HOME/TitleAndDirectory";
-
+import { useSocialLinks } from "../DEV/hooks/useSocialLinks";
+import { useRoomDayTime } from "../DEV/hooks/useRoomDateTime";
 interface Props {}
 
 const FAQComponent = (props: Props) => {
   const isMobile = useMediaQuery("(max-width: 768px)");
+  const {
+    spotifyLinks,
+    loading: socialLoading,
+    error: socialError,
+  } = useSocialLinks();
+  const {
+    roomDayTime,
+    loading: roomLoading,
+    error: roomError,
+  } = useRoomDayTime();
 
+  const loading = roomLoading || socialLoading;
+  const meetingDay = roomDayTime?.day;
+  const meetingTime = roomDayTime?.time;
+  const meetingLocation = roomDayTime?.room;
+  const checkBackInNextQuarter =
+    "<h3 className='answers'>A: We currently haven't decided on a Day/Time/Room for next quarter. Stay tuned!<h3>";
+  const currentQuarterDayTimeLocation = `<h3 className='answers'>A: We meet every <u>${meetingDay}</u> from <u>${meetingTime}</u> in <u>${meetingLocation}</u>.</h3>`;
   return (
     <>
       <TitleAndDirectory />
+
       {isMobile ? <br /> : null}
       <div className={isMobile ? "faq2" : "faq"}>
         <h2 style={{ fontSize: 45, textAlign: "center", marginBottom: 15 }}>
           FAQ
         </h2>
         <h2>Q: When/Where does the club meet?</h2>
-        <h3 className="answers">
-          A: We meet every <b>Tuesday</b> at <b>6:00PM</b> in <b>TECH LG52</b>.
-        </h3>
-
+        {!loading && (
+          <>
+            <div
+              className="answers"
+              dangerouslySetInnerHTML={{
+                __html: roomDayTime?.onBreak
+                  ? checkBackInNextQuarter
+                  : currentQuarterDayTimeLocation,
+              }}
+            ></div>
+          </>
+        )}
         <h2>Q: What are the requirements to join the club?</h2>
         <h3 className="answers">
           A: Come with an open mind and a willingness to talk, (try) to listen
@@ -31,18 +58,23 @@ const FAQComponent = (props: Props) => {
         </h3>
 
         <h2>Q: Do I need to be in Bienen?</h2>
-        <h3 className="answers">
+        <h3 className="answers2">
           A: <b>NO!</b> Our club aims to be accessible to all students. You
           don't need to be in Bienen, be a music major, or have in-depth
           knowledge of music theory to participate!
         </h3>
 
+        <h4 className="answers">
+          Official MTC Inclusion Statement: The Music Tasting Club is open to
+          all Northwestern undergraduate students. There are no auditions, no
+          dues, and no educational requirements.
+        </h4>
         <h2>Q: What streaming service(s) do you primarily use for the club?</h2>
-        <h3 className="answers2">
+        <h3 className="answers">
           A:{" "}
           <b>
             <a
-              href="https://open.spotify.com/playlist/4M9DE3DCIpJ3xXLEmARFPW?si=0c3cc85fd8334e6c"
+              href={spotifyLinks[0]?.link ?? "#"}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -53,26 +85,6 @@ const FAQComponent = (props: Props) => {
           their financial situation) access to the music that we listen to week
           to week.
         </h3>
-
-        <h5
-          style={{
-            fontFamily: "Roboto-Regular",
-            fontStyle: "italic",
-            marginBottom: 50,
-          }}
-        >
-          NOTE: Spotify has the worst payout-per-stream rate among the major
-          streaming industries. If you're interested in learning more about
-          artist compensation from streaming services, here's a great article
-          that goes into more detail.{" "}
-          <a
-            href="https://dittomusic.com/en/blog/how-much-do-music-streaming-services-pay-musicians"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Source: DittoMusic.com
-          </a>
-        </h5>
 
         <h2>Q: How long are club meetings?</h2>
         <h3 className="answers">
@@ -88,7 +100,6 @@ const FAQComponent = (props: Props) => {
         </h3>
 
         <div className="outer-logo-cont">
-          <br />
           <Socials />
         </div>
       </div>

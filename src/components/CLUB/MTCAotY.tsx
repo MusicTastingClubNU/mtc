@@ -4,14 +4,13 @@ import aoty from "./aotyData.json";
 import { Tabs, Tab, Box, Typography } from "@mui/material";
 import "../BLOG/blog.css";
 import { useMediaQuery } from "@mui/material";
-
+import { auth, mtcgmailuid } from "../../firebase/FirebaseConfig";
 export default function MTCAotY() {
   const [activeTab, setActiveTab] = useState(0);
   const [yr, setYr] = useState(2024);
   useEffect(() => {
     setYr(activeTab);
   }, [activeTab]);
-  console.log("yr" + yr);
   const isMobile = useMediaQuery("(max-width: 768px)");
   return (
     <>
@@ -58,39 +57,55 @@ export default function MTCAotY() {
                           <img
                             src={pick.albumArt}
                             alt="albumOrSongArt"
-                            style={{ width: "90%", borderRadius: 10 }}
-                          ></img>
-                          <div
                             style={{
-                              fontWeight: "bold",
-                              margin: 5,
-                              fontSize: 18,
+                              width: 44,
+                              height: 44,
+                              borderRadius: 4,
+                              objectFit: "cover",
+                              flexShrink: 0,
                             }}
-                          >
-                            {pick.albumName !== "N/A" ? (
-                              <>{pick.albumName}</>
-                            ) : (
-                              "N/A"
-                            )}
-                          </div>
-                          <div
-                            style={{
-                              fontWeight: "bold",
-                              margin: 5,
-                              fontSize: 15,
-                            }}
-                          >
+                          />
+                          <div>
+                            <div
+                              style={{
+                                fontWeight: "bold",
+                                fontSize: 12,
+                                lineHeight: 1.2,
+                              }}
+                            >
+                              {pick.albumName !== "N/A"
+                                ? pick.albumName
+                                : "N/A"}
+                            </div>
                             {pick.albumName !== "N/A" && (
-                              <>by {pick.artistName}</>
+                              <>
+                                <div
+                                  style={{
+                                    fontWeight: "normal",
+                                    fontSize: 10,
+                                    color: "#555",
+                                  }}
+                                >
+                                  by {pick.artistName}
+                                  {/* <h4> */}
+                                  <br />
+                                  {/* </h4> */}
+                                </div>
+                                <h6
+                                  style={{
+                                    fontWeight: "normal",
+                                    fontSize: 10,
+                                  }}
+                                >
+                                  {" "}
+                                  (Picked By{" "}
+                                  {auth.currentUser?.uid === mtcgmailuid &&
+                                    pick.memberName}
+                                  )
+                                </h6>
+                              </>
                             )}
                           </div>
-                          <div
-                            style={{
-                              fontWeight: "bold",
-                              margin: 5,
-                              fontSize: 12,
-                            }}
-                          ></div>
                         </div>
                       </>
                     ))}

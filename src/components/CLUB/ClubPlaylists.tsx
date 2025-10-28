@@ -1,13 +1,18 @@
 import React from "react";
-
-import specialSpotifyPlaylistData from "./specialSpotifyPlaylists.json";
 import spotifyImg from "../../imgs/companyLogos/spotlogo.png";
 // import EmailContent from "./EmailTest";
 import halloween24PlaylistImg from "../../imgs/spotifyPlaylistCovers/halloween24PlaylistImg.png";
 import holidays24PlaylistImg from "../../imgs/spotifyPlaylistCovers/holidays24PlaylistImg.png";
 import hipHopWorkoutPlaylistImg from "../../imgs/spotifyPlaylistCovers/hipHopWorkoutPlaylistImg.png";
-import logo from "../../imgs/MTC_logo.png";
+import logo from "../../imgs/MTCLogo/MTC_logo.png";
 import { useMediaQuery } from "@mui/material";
+import { fetchSpecialSpotifyPlaylists } from "../../firebase/FirebaseFunctions";
+import { useEffect, useState } from "react";
+type specialSpotifyPlaylistType = {
+  name: string;
+  link: string;
+  madeBy: string;
+};
 const ClubPlaylists = () => {
   const playlistImgs = [
     logo,
@@ -17,8 +22,20 @@ const ClubPlaylists = () => {
     holidays24PlaylistImg,
     logo,
     logo,
+    logo,
+    logo,
+    logo,
   ];
   const isMobile = useMediaQuery("(max-width: 768px)");
+  const [playlists, setPlaylists] = useState<specialSpotifyPlaylistType[]>([]);
+
+  useEffect(() => {
+    const loadData = async () => {
+      const data = await fetchSpecialSpotifyPlaylists();
+      setPlaylists(data);
+    };
+    loadData();
+  }, []);
   return (
     <>
       <div className={isMobile ? "faq2" : "faq"}>
@@ -36,40 +53,30 @@ const ClubPlaylists = () => {
             />
           </a>
         </h2>
-        <div className="spotify-cont">
+        <div className="playlist-cont">
           {/* I did the line below bc Typescript is finicky when you're looping through data 
             and you want to show images. I loop through the existing data, and the index of the entry corresponds with the */}
-          {Object.entries(specialSpotifyPlaylistData).map(
-            ([key, value], index) => (
-              <div className="spotify-playlists">
-                <a href={value.link} target="_blank" rel="noopener noreferrer">
+          {playlists.map((playlist, index) => (
+            <>
+              <div className="special-spotify-playlist" key={index}>
+                <a
+                  href={playlist.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
-                    src={playlistImgs[index]}
-                    alt="Playlist Photo"
-                    className="company-logos"
-                    style={{
-                      borderRadius: 10,
-                      width: 125,
-                      height: 125,
-                      marginBottom: -10,
-                    }}
+                    src={playlistImgs[index] ?? logo}
+                    alt="Playlist Cover"
+                    className="playlist-cover"
                   />
                 </a>
-
-                <div style={{ padding: 10 }}>{value.name}</div>
-                <div>Made By {value.madeBy}</div>
-                <a href={value.link} target="_blank" rel="noopener noreferrer">
-                  <img
-                    src={spotifyImg}
-                    alt="Spotify Logo"
-                    className="company-logos"
-                    style={{ width: 50, height: 50 }}
-                  />
-                </a>
-                <br />
+                <div className="playlist-text">
+                  <div className="playlist-title">{playlist.name}</div>
+                  <div className="playlist-author">by {playlist.madeBy}</div>
+                </div>
               </div>
-            )
-          )}
+            </>
+          ))}
         </div>
       </div>
     </>

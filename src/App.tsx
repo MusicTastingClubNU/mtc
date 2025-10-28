@@ -2,6 +2,8 @@ import { Outlet, useNavigate } from "react-router-dom";
 import "./App.css";
 import ImageScroller from "./imgs/IS/ImageScroller";
 import { useEffect } from "react";
+import Login from "./firebase/Login";
+
 function App() {
   const navigate = useNavigate();
 

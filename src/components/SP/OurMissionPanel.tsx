@@ -1,5 +1,5 @@
 import { useMediaQuery } from "@mui/material";
-import img from "../../imgs/MTC_logo.png";
+import img from "../../imgs/MTCLogo/MTC_logo.png";
 
 export default function OurMissionPanel() {
   const isMobile = useMediaQuery("(max-width: 768px)");

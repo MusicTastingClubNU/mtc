@@ -4,9 +4,15 @@ import groupmeImg from "../../imgs/companyLogos/groupmelogo.png";
 import "./phone-only-salespitch.css";
 import "./mission.css";
 import { useMediaQuery } from "@mui/material";
+import { useEffect, useState } from "react";
+import { useSocialLinks } from "../DEV/hooks/useSocialLinks";
+import { groupMeLinkType } from "../../firebase/models";
 
 export default function ConditionalPhoneSignUp() {
   const isMobile = useMediaQuery("(max-width: 768px)");
+  const { interestFormLinks, groupMeLinks, loading, error } = useSocialLinks();
+  if (loading) return <></>;
+  if (error) return <div>{error}</div>;
 
   return (
     <div className={isMobile ? "cont2" : "cont"} style={{ marginBottom: 50 }}>
@@ -18,7 +24,7 @@ export default function ConditionalPhoneSignUp() {
       >
         <div className="phone-su-inner-logo-cont">
           <a
-            href="https://forms.gle/VL4r1N3DfV5GCQov9"
+            href={interestFormLinks[0]?.link ?? "#"}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -39,7 +45,7 @@ export default function ConditionalPhoneSignUp() {
 
         <div className="phone-su-inner-logo-cont">
           <a
-            href="https://groupme.com/join_group/98384670/EHkMPGSy"
+            href={groupMeLinks[0]?.link ?? "#"}
             target="_blank"
             rel="noopener noreferrer"
           >

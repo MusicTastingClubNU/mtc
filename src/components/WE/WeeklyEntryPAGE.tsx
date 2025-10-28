@@ -16,7 +16,6 @@ import {
 import { SelectChangeEvent } from "@mui/material/Select";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import picksData from "./picksData.json";
 import { useState, useEffect } from "react";
 import "../SP/mission.css";
 import PastGenres from "./PastGenres";
@@ -26,9 +25,12 @@ import Autocomplete from "@mui/material/Autocomplete";
 import YsAlbumArt from "../../imgs/manualAlbumArt/WQ24_W2_AotW.png";
 import SeeYouNextQuarter from "../SP/SeeYouNextQuarter";
 import spotifyImg from "../../imgs/companyLogos/spotlogo.png";
-import logo from "../../imgs/MTC_logo.png";
+import logo from "../../imgs/MTCLogo/MTC_logo.png";
 import HaveWeListenedToIt from "./HaveWeListenedToIt";
 import ThisWeeksPicks from "../SP/ThisWeeksPicks";
+import { db } from "../../firebase/FirebaseConfig";
+import { collection, getDocs } from "firebase/firestore";
+import { useRoomDayTime } from "../DEV/hooks/useRoomDateTime";
 //TODO: Organize previous picks by year
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -71,7 +73,39 @@ export default function WeeklyEntry() {
   const [value, setValue] = React.useState(0);
   const [pick, setPick] = useState("Album of the Week");
   const [openRow, setOpenRow] = useState<number | null>(null);
+  const [picksData, setPicksData] = useState<any[]>([]);
+  useEffect(() => {
+    const fetchPicksFromFirebase = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, "pickData"));
+        const allQuarters: any[] = [];
 
+        querySnapshot.forEach((doc) => {
+          const data = doc.data();
+
+          // Convert weeks object to array if needed
+          const weeks = Array.isArray(data.weeks)
+            ? data.weeks
+            : Object.values(data.weeks || {});
+
+          allQuarters.push({
+            ...data,
+            quarterName: data.quarterName,
+            weeks, // ✅ ensures this is always an array
+          });
+        });
+
+        // Sort by quarterId descending (optional)
+        allQuarters.sort((a, b) => b.quarterId - a.quarterId);
+
+        setPicksData(allQuarters);
+      } catch (err) {
+        console.error("Error fetching pickData from Firestore:", err);
+      }
+    };
+
+    fetchPicksFromFirebase();
+  }, []);
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
@@ -85,26 +119,9 @@ export default function WeeklyEntry() {
     setOpenRow(openRow === index ? null : index);
   };
 
-  const options = picksData.flatMap((quarter) =>
-    quarter.weeks.flatMap((week) =>
-      week.picks
-        .filter((pick) => pick.songOrAlbumName !== "N/A")
-        .map((pick) => ({
-          songOrAlbumName: pick.songOrAlbumName, // The text displayed in the dropdown
-          pickId: pick.pickId,
-          artistName: pick.artistName,
-          songOrAlbumArt:
-            pick.songOrAlbumArt === "Q1W2AotW"
-              ? YsAlbumArt
-              : pick.songOrAlbumArt,
-          memberName: pick.memberName,
-          pickType: pick.pickType,
-        }))
-    )
-  );
   const renderRows = (weeks: any) => {
     return weeks.map((week: any, index: number) => (
-      <React.Fragment key={week.weekId}>
+      <React.Fragment key={index}>
         <TableRow sx={{ "& > *": { borderBottom: "unset" } }}>
           {/* ||| DROP DOWN ARROW CODE ||| */}
           <TableCell>
@@ -239,17 +256,17 @@ export default function WeeklyEntry() {
   };
 
   //As of Winter Quarter 2025, there will be 4 quarters of MTC
-  const numberOfQuarterTabsBelowPREVIOUSPICKS = 4;
+  const numberOfQuarterTabsBelowPREVIOUSPICKS = picksData.length || 1;
   const widthOfTabs = 100 / numberOfQuarterTabsBelowPREVIOUSPICKS;
   const stringThatDictatesNumberOfTabsBelowPREVIOUSPICKS =
     widthOfTabs.toString() + "%";
+  const { roomDayTime } = useRoomDayTime();
   return (
     <>
       <TitleAndDirectory />
       {isMobile ? <br /> : null}
-      <ThisWeeksPicks />
-      {/* <SeeYouNextQuarter /> */}
       {/* ||| HAVE WE LISTENED TO IT SEARCH BAR*/}
+      {roomDayTime?.onBreak ? <SeeYouNextQuarter /> : <ThisWeeksPicks />}
       <HaveWeListenedToIt />
       <div className={isMobile ? "cont2" : "cont"} style={{ marginTop: 40 }}>
         {/* ||| TITLE CODE ||| */}
@@ -258,7 +275,7 @@ export default function WeeklyEntry() {
         </h3>
 
         {/* ||| QUARTER TABS ||| */}
-        {/* You can have as many tabs in the data (picksData.json atm) as you want, make 
+        {/* You can have as many tabs in the data as you want, make 
         sure you update numberOfQuarterTabsBelowPREVIOUSPICKS to the appropriate number 
         of quarters that have passed.*/}
         <Box>
@@ -271,7 +288,7 @@ export default function WeeklyEntry() {
             >
               {picksData.map((quarter, index) => (
                 <Tab
-                  key={quarter.quarterId}
+                  key={index}
                   label={`${quarter.quarterName} Picks`}
                   {...a11yProps(index)}
                   sx={{
@@ -284,13 +301,12 @@ export default function WeeklyEntry() {
 
           {/* ||| IMPLEMENTS WEEK PICK DROPDOWN CODE ||| */}
           {picksData.map((quarter, index) => (
-            <CustomTabPanel key={quarter.quarterId} value={value} index={index}>
+            <CustomTabPanel key={index} value={value} index={index}>
               <TableContainer component={Paper}>
                 <Table aria-label="collapsible table">
                   <TableBody>{renderRows(quarter.weeks)}</TableBody>
                 </Table>
               </TableContainer>
-              {/* {isMobile ? null : index === 1 ? <PastGenres /> : null} */}
             </CustomTabPanel>
           ))}
         </Box>

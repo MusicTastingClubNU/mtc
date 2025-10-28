@@ -26,5 +26,49 @@
       }
     ],
     "spotifyPlaylistLink": "https://open.spotify.com/playlist/3HqlMQeUVw170GfL1aaZNQ?si=B5avj0_JQLuiEd0fUkW-rQ"
+  },
+  {
+    "genreId": 1,
+    "genreName": "Breakcore",
+    "genreEmoji": "⛓️‍💥",
+    "recommendations": [
+      {
+        "recId": 4,
+        "albumName": "",
+        "artistName": ""
+      },
+      {
+        "recId": 5,
+        "albumName": "",
+        "artistName": ""
+      },
+      {
+        "recId": 6,
+        "albumName": "",
+        "artistName": ""
+      }
+    ]
+  },
+  {
+    "genreId": 2,
+    "genreName": "4th Wave Emo",
+    "genreEmoji": "🖤",
+    "recommendations": [
+      {
+        "recId": 7,
+        "albumName": "",
+        "artistName": ""
+      },
+      {
+        "recId": 8,
+        "albumName": "",
+        "artistName": ""
+      },
+      {
+        "recId": 9,
+        "albumName": "",
+        "artistName": ""
+      }
+    ]
   }
 ]
