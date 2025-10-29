@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.03c8af7b.css",
-    "main.js": "/static/js/main.fecf693d.js",
+    "main.js": "/static/js/main.c4b338ce.js",
     "static/media/hipHopWorkoutPlaylistImg.png": "/static/media/hipHopWorkoutPlaylistImg.628f14b032aaa3263c43.png",
     "static/media/WQ24_W2_AotW.png": "/static/media/WQ24_W2_AotW.3f6b617402633e9d2554.png",
     "static/media/halloween24PlaylistImg.png": "/static/media/halloween24PlaylistImg.ffdebaf1aa27f6d6eee8.png",
@@ -16,10 +16,10 @@
     "static/media/groupmelogo.png": "/static/media/groupmelogo.9dfc156ee6a940c187a1.png",
     "index.html": "/index.html",
     "main.03c8af7b.css.map": "/static/css/main.03c8af7b.css.map",
-    "main.fecf693d.js.map": "/static/js/main.fecf693d.js.map"
+    "main.c4b338ce.js.map": "/static/js/main.c4b338ce.js.map"
   },
   "entrypoints": [
     "static/css/main.03c8af7b.css",
-    "static/js/main.fecf693d.js"
+    "static/js/main.c4b338ce.js"
   ]
 }
