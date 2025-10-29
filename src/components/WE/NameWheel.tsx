@@ -29,6 +29,9 @@ interface PrizeWheelProps {
   handlePickChange: (event: SelectChangeEvent) => void;
 }
 
+const drumroll = new Audio("/sfx/drumroll.mp3");
+const applause = new Audio("/sfx/applause.mp3");
+
 const getFirestoreFieldFromPick = (pick: string): string | null => {
   switch (pick) {
     case "Album of the Week":
@@ -214,6 +217,8 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({
   const spin = () => {
     if (spinning) return;
 
+    drumroll.currentTime = 0;
+    drumroll.play().catch(error => {console.warn("Audio playback failed:", error)});
     setSpinning(true);
     const targetAngle = angle + 360 * (3 + Math.random() * 2);
     const duration = 4000;
@@ -231,6 +236,8 @@ const PrizeWheel: React.FC<PrizeWheelProps> = ({
       if (progress < 1) {
         requestAnimationFrame(animate);
       } else {
+        applause.currentTime = 0;
+        applause.play().catch(error => {console.warn("Audio playback failed:", error)});
         setSpinning(false);
         const finalAngle = newAngle % 360;
         const prizeIndex =
