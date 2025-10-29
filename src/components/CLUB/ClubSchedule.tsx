@@ -44,7 +44,7 @@ const rawActivities: RawActivity[] = [
   { label: "Intros/Recent Releases/Shout Outs", durationMinutes: 10 },
   { label: "Discussion", durationMinutes: 35 },
   { label: "Album/Song Pick Selection", durationMinutes: 5 },
-  { label: "In-Club Activity!", durationMinutes: 25 },
+  { label: "In-Club Activity!!", durationMinutes: 25 },
 ];
 // Example use:
 const startTime = new Date("2025-06-20T18:00:00");
