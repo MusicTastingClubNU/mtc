@@ -29,8 +29,8 @@ interface PrizeWheelProps {
   handlePickChange: (event: SelectChangeEvent) => void;
 }
 
-const drumroll = new Audio("/sfx/drumroll.mp3");
-const applause = new Audio("/sfx/applause.mp3");
+const drumroll = new Audio("public/sfx/drumroll.mp3");
+const applause = new Audio("public/sfx/applause.mp3");
 
 const getFirestoreFieldFromPick = (pick: string): string | null => {
   switch (pick) {
